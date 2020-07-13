@@ -3,15 +3,6 @@
 ## Overview
 The Research Hub is an extendable application for loading entities and providing a UI for searching and viewing the data for them. It uses DataHub and Entity Services for ingesting and harmonizing, and Grove React for the front end.
 
-## Resources
-Home page on wiki: https://wiki.marklogic.com/display/SE/Research+Hub (overview, video, tutorial)
-
-Slack channel: https://app.slack.com/client/TCL99750R/CTJHR7VQ9 #research-hub (questions, feedback)
-
-Bitbucket Repo: https://project.marklogic.com/repo/projects/INT/repos/research-hub/browse (code, README files)
-
-Bugs: https://project.marklogic.com/jira/projects/GRH/issues (submit bug, read open bugs)
-
 ## Getting Started
 There are two main steps to use this application:
 1. Install Research Hub
@@ -28,8 +19,6 @@ There are two main steps to use this application:
 #### 1.1 Prepare local environment
 
 It is recommended to use the default ports, DB names, and App Server names defined in the **gradle.properties** file.  Use our pre-configured Docker setup if you have conflicts with your local MarkLogic instance.
-
-See [**docker/DOCKER.md**](docker/DOCKER.md) for details.
 
 #### 1.2 Deploy DHF
 
