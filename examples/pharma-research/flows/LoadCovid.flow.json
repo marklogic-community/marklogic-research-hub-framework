@@ -1,0 +1,99 @@
+{
+  "name" : "LoadCovid",
+  "description" : "",
+  "batchSize" : 100,
+  "threadCount" : 4,
+  "stopOnError" : false,
+  "options" : { },
+  "version" : 0,
+  "steps" : {
+    "1" : {
+      "name" : "LoadCustom",
+      "description" : "",
+      "options" : {
+        "additionalCollections" : [ ],
+        "headers" : {
+          "sources" : [ {
+            "name" : "LoadCovid"
+          } ],
+          "createdOn" : "currentDateTime",
+          "createdBy" : "currentUser"
+        },
+        "sourceQuery" : "cts.collectionQuery([])",
+        "collections" : [ "LoadCustom" ],
+        "permissions" : "rest-reader,read,rest-writer,update",
+        "outputFormat" : "json",
+        "targetDatabase" : "data-hub-STAGING"
+      },
+      "customHook" : {
+        "module" : "",
+        "parameters" : { },
+        "user" : "",
+        "runBefore" : false
+      },
+      "retryLimit" : 0,
+      "batchSize" : 100,
+      "threadCount" : 4,
+      "stepDefinitionName" : "default-ingestion",
+      "stepDefinitionType" : "INGESTION",
+      "fileLocations" : {
+        "inputFilePath" : "data/pharma-research/coronavirus/tiny",
+        "inputFileType" : "json",
+        "outputURIReplacement" : ".*data/,''",
+        "separator" : ""
+      }
+    },
+    "2" : {
+      "name" : "HarmonizeCovidAuthors",
+      "description" : "",
+      "options" : {
+        "additionalCollections" : [ ],
+        "sourceQuery" : "cts.collectionQuery([\"LoadCustom\"])",
+        "targetEntity" : "Author",
+        "collections" : [ "Author", "authorUnprocessed", "authorContent" ],
+        "sourceDatabase" : "data-hub-STAGING",
+        "permissions" : "rest-reader,read,rest-writer,update",
+        "sourceCollection" : "LoadCustom",
+        "outputFormat" : "json",
+        "targetDatabase" : "data-hub-FINAL"
+      },
+      "customHook" : {
+        "module" : "",
+        "parameters" : { },
+        "user" : "",
+        "runBefore" : false
+      },
+      "retryLimit" : null,
+      "batchSize" : 100,
+      "threadCount" : 4,
+      "stepDefinitionName" : "HarmonizeCovidAuthors",
+      "stepDefinitionType" : "MAPPING"
+    },
+    "3" : {
+      "name" : "HarmonizeCovid",
+      "description" : "",
+      "options" : {
+        "additionalCollections" : [ ],
+        "sourceQuery" : "cts.collectionQuery([\"LoadCustom\"])",
+        "targetEntity" : "publication",
+        "collections" : [ "HarmonizeCovid", "publication" ],
+        "sourceDatabase" : "data-hub-STAGING",
+        "permissions" : "rest-reader,read,rest-writer,update",
+        "sourceCollection" : "LoadCustom",
+        "outputFormat" : "xml",
+        "targetDatabase" : "data-hub-FINAL"
+      },
+      "customHook" : {
+        "module" : "",
+        "parameters" : { },
+        "user" : "",
+        "runBefore" : false
+      },
+      "retryLimit" : 0,
+      "batchSize" : 100,
+      "threadCount" : 4,
+      "stepDefinitionName" : "HarmonizeCovid",
+      "stepDefinitionType" : "MAPPING"
+    }
+  }
+}

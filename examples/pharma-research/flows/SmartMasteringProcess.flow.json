@@ -1,0 +1,339 @@
+{
+  "name" : "SmartMasteringProcess",
+  "description" : "This is the default flow containing all of the default steps",
+  "batchSize" : 100,
+  "threadCount" : 4,
+  "stopOnError" : false,
+  "options" : { },
+  "version" : 0,
+  "steps" : {
+    "1" : {
+      "name" : "AuthorMatching",
+      "description" : "",
+      "options" : {
+        "stepUpdate" : false,
+        "additionalCollections" : [ ],
+        "sourceQuery" : "cts.uris(null, null, cts.andQuery([cts.collectionQuery('authorContent'),cts.collectionQuery('authorUnprocessed'),cts.notQuery(cts.collectionQuery('authorMerged'))]))",
+        "acceptsBatch" : true,
+        "targetEntity" : null,
+        "sourceDatabase" : "data-hub-FINAL",
+        "collections" : [ ],
+        "matchOptions" : {
+          "dataFormat" : "json",
+          "propertyDefs" : {
+            "property" : [ {
+              "localname" : "personGivenName",
+              "name" : "personGivenName"
+            }, {
+              "localname" : "personSurName",
+              "name" : "personSurName"
+            }, {
+              "localname" : "personName",
+              "name" : "personName"
+            } ]
+          },
+          "algorithms" : {
+            "algorithm" : [ {
+              "name" : "double-metaphone",
+              "function" : "double-metaphone",
+              "namespace" : "http://marklogic.com/smart-mastering/algorithms",
+              "at" : "/com.marklogic.smart-mastering/algorithms/double-metaphone.xqy"
+            }, {
+              "name" : "thesaurus",
+              "function" : "thesaurus",
+              "namespace" : "http://marklogic.com/smart-mastering/algorithms",
+              "at" : "/com.marklogic.smart-mastering/algorithms/thesaurus.xqy"
+            }, {
+              "name" : "zip-match",
+              "function" : "zip-match",
+              "namespace" : "http://marklogic.com/smart-mastering/algorithms",
+              "at" : "/com.marklogic.smart-mastering/algorithms/zip.xqy"
+            }, {
+              "name" : "standard-reduction",
+              "function" : "standard-reduction"
+            } ]
+          },
+          "collections" : {
+            "content" : [ "authorContent" ]
+          },
+          "scoring" : {
+            "add" : [ {
+              "propertyName" : "personGivenName",
+              "weight" : "30"
+            }, {
+              "propertyName" : "personSurName",
+              "weight" : "30"
+            }, {
+              "propertyName" : "organizationName",
+              "weight" : "15"
+            } ],
+            "expand" : []
+          },
+          "actions" : {
+            "action" : [ ]
+          },
+          "thresholds" : {
+            "threshold" : [ {
+              "above" : "50",
+              "label" : "Definitive Match",
+              "action" : "merge"
+            } ]
+          },
+          "tuning" : {
+            "maxScan" : 200
+          }
+        },
+        "sourceCollection" : "",
+        "outputFormat" : "json",
+        "targetDatabase" : "data-hub-FINAL"
+      },
+      "customHook" : {
+        "module" : "",
+        "parameters" : { },
+        "user" : "",
+        "runBefore" : false
+      },
+      "retryLimit" : 0,
+      "batchSize" : 100,
+      "threadCount" : 4,
+      "stepDefinitionName" : "default-matching",
+      "stepDefinitionType" : "MATCHING"
+    },
+    "2" : {
+      "name" : "AuthorMerging",
+      "description" : "",
+      "options" : {
+        "stepUpdate" : false,
+        "additionalCollections" : [ ],
+        "sourceQuery" : "cts.trueQuery()",
+        "acceptsBatch" : false,
+        "targetEntity" : null,
+        "sourceDatabase" : "data-hub-FINAL",
+        "collections" : [ ],
+        "mergeOptions" : {
+          "matchOptions" : "",
+          "propertyDefs" : {
+            "properties" : [ {
+              "namespace" : "",
+              "localname" : "personSurName",
+              "name" : "personSurName"
+            }, {
+              "namespace" : "",
+              "localname" : "personGivenName",
+              "name" : "personGivenName"
+            }, {
+              "namespace" : "",
+              "localname" : "personMiddleName",
+              "name" : "personMiddleName"
+            }, {
+              "namespace" : "",
+              "localname" : "personName",
+              "name" : "personName"
+            }, {
+              "namespace" : "",
+              "localname" : "lastestTimeStamp",
+              "name" : "lastestTimeStamp"
+            }, {
+              "namespace" : "",
+              "localname" : "sources",
+              "name" : "sources"
+            }, {
+              "namespace" : "",
+              "localname" : "commonFacets",
+              "name" : "commonFacets"
+            }, {
+              "namespace" : "",
+              "localname" : "affiliations",
+              "name" : "affiliations"
+            }, {
+              "namespace" : "",
+              "localname" : "authorPreferredName",
+              "name" : "authorPreferredName"
+            }, {
+              "namespace" : "",
+              "localname" : "coAuthors",
+              "name" : "coAuthors"
+            }, {
+              "namespace" : "",
+              "localname" : "institutionPreferredName",
+              "name" : "institutionPreferredName"
+            } ],
+            "namespaces" : { }
+          },
+          "algorithms" : {
+            "stdAlgorithm" : {
+              "timestamp" : {
+                "path" : "/*:envelope/*:headers/*:lastestTimeStamp"
+              }
+            },
+            "custom" : [ {
+              "name" : "coAuthorMerge",
+              "function" : "coAuthorMerge",
+              "at" : "/lib/custom-coAuthor-merge.sjs"
+            } ],
+            "collections" : {
+              "onMerge" : {
+                "add" : {
+                  "collection" : [ "authorMerged" ]
+                },
+                "remove" : {
+                  "collection" : "authorUnprocessed"
+                },
+                "set" : {
+                  "collection" : [ ]
+                }
+              },
+              "onArchive" : {
+                "add" : {
+                  "collection" : [ ]
+                },
+                "remove" : {
+                  "collection" : "authorUnprocessed"
+                },
+                "set" : {
+                  "collection" : [ ]
+                }
+              },
+              "onNoMatch" : {
+                "add" : {
+                  "collection" : [ "authorProcessed", "Author" ]
+                },
+                "remove" : {
+                  "collection" : "authorUnprocessed"
+                },
+                "set" : {
+                  "collection" : [ ]
+                }
+              },
+              "onNotification" : {
+                "add" : {
+                  "collection" : [ ]
+                },
+                "remove" : {
+                  "collection" : [ ]
+                },
+                "set" : {
+                  "collection" : [ ]
+                }
+              }
+            }
+          },
+          "mergeStrategies" : [ ],
+          "merging" : [ {
+            "propertyName" : "personSurName",
+            "maxValues" : "1",
+            "length" : {
+              "weight" : "8"
+            },
+            "sourceWeights" : [ ]
+          }, {
+            "propertyName" : "personGivenName",
+            "maxValues" : "1",
+            "length" : {
+              "weight" : "8"
+            },
+            "sourceWeights" : [ ]
+          }, {
+            "propertyName" : "personMiddleName",
+            "maxValues" : "1",
+            "length" : {
+              "weight" : "8"
+            },
+            "sourceWeights" : [ ]
+          }, {
+            "propertyName" : "personName",
+            "maxValues" : "1",
+            "sourceWeights" : [ ]
+          }, {
+            "propertyName" : "lastestTimeStamp",
+            "maxValues" : "1",
+            "sourceWeights" : [ ]
+          }, {
+            "propertyName" : "sources",
+            "maxValues" : "1",
+            "sourceWeights" : [ ]
+          }, {
+            "propertyName" : "commonFacets",
+            "maxValues" : "1",
+            "maxSources" : "1",
+            "sourceWeights" : [ ]
+          }, {
+            "propertyName" : "affiliations",
+            "maxValues" : "1",
+            "sourceWeights" : [ ]
+          }, {
+            "propertyName" : "authorPreferredName",
+            "maxValues" : "1",
+            "sourceWeights" : [ ]
+          }, {
+            "propertyName" : "coAuthors",
+            "algorithmRef" : "coAuthorMerge",
+            "sourceWeights" : [ ]
+          }, {
+            "propertyName" : "institutionPreferredName",
+            "maxValues" : "1",
+            "length" : {
+              "weight" : "8"
+            },
+            "sourceWeights" : [ ]
+          }, {
+            "propertyName" : "authorPreferredName",
+            "maxValues" : "1",
+            "length" : {
+              "weight" : "8"
+            },
+            "sourceWeights" : [ ]
+          } ]
+        },
+        "sourceCollection" : "",
+        "outputFormat" : "json",
+        "targetDatabase" : "data-hub-FINAL"
+      },
+      "customHook" : {
+        "module" : "",
+        "parameters" : { },
+        "user" : "",
+        "runBefore" : false
+      },
+      "retryLimit" : 0,
+      "batchSize" : 100,
+      "threadCount" : 4,
+      "stepDefinitionName" : "default-merging",
+      "stepDefinitionType" : "MERGING"
+    },
+    "3" : {
+      "name" : "rewriteHeadersTriples",
+      "description" : "This is the custom step to rewrite headers and triples",
+      "options" : {
+        "sourceQuery" : "cts.uris(null,null,cts.andNotQuery(cts.collectionQuery('authorMerged'), cts.collectionQuery('authorProcessed')))",
+        "sourceDatabase" : "data-hub-FINAL",
+        "collections" : [ "authorProcessed", "default-mastering", "mastered", "mdm-content", "authorMerged", "authorContent", "Author" ],
+        "outputFormat" : "json",
+        "targetDatabase" : "data-hub-FINAL"
+      },
+      "customHook" : null,
+      "retryLimit" : 0,
+      "batchSize" : 0,
+      "threadCount" : 0,
+      "stepDefinitionName" : "rewriteHeadersTriples",
+      "stepDefinitionType" : "CUSTOM"
+    },
+    "4" : {
+      "name" : "rewriteNoMatchCollection",
+      "description" : "This is the custom step to fix no-match action issue",
+      "options" : {
+        "sourceQuery" : "cts.uris(null,null,cts.andNotQuery(cts.collectionQuery('authorUnprocessed'),cts.orQuery([cts.collectionQuery('authorMerged'),cts.collectionQuery('authorArchived')])))",
+        "sourceDatabase" : "data-hub-FINAL",
+        "collections" : [ "authorProcessed", "Author", "authorContent" ],
+        "outputFormat" : "json",
+        "targetDatabase" : "data-hub-FINAL"
+      },
+      "customHook" : null,
+      "retryLimit" : 0,
+      "batchSize" : 0,
+      "threadCount" : 0,
+      "stepDefinitionName" : "rewriteNoMatchCollection",
+      "stepDefinitionType" : "CUSTOM"
+    }
+  }
+}

@@ -1,0 +1,357 @@
+/*
+Defines the global site font and spacing
+Ignores i tags for font-awesome, and
+glyphicon for the glyphicon pack
+*/
+html :not(.glyphicon):not(i) {
+    font-family: Open Sans !important;
+    letter-spacing: 0.5px !important;
+}
+
+/* HTML COMPONENTS */
+h1 {
+    font-size: 32px;
+    line-height: 52px;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 24px;
+    line-height: 39px
+}
+
+h3 {
+    font-size: 18px;
+    line-height: 29px;
+}
+
+h4 {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 29px;
+}
+
+h5 {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 23px;
+    text-transform: uppercase;
+}
+
+h6 {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 23px;
+}
+
+body {
+    font-size: 16px;
+    line-height: 31px;
+}
+
+body p {
+    font-size: 14px;
+    line-height: 27px;
+}
+
+button {
+    box-shadow: none !important;
+}
+
+/* ----------------------------------------- *\
+    Button Types
+    Primary: Filled background
+    Secondary: Bordered
+    Tertiary: Backgroundless and borderless
+\* ----------------------------------------- */
+.btn .primary {
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.btn .secondary {
+    border-radius: 4px;
+    border-style: solid;
+    border-width: 2px;
+    box-sizing: border-box;
+}
+
+.btn .tertiary {
+    border-radius: 4px;
+    border-style: hidden;
+    box-sizing: border-box;
+}
+
+.quick-section {
+  margin-bottom: 2em;
+}
+
+.quicklink-content {
+    height: 250vh;
+}
+
+#controls {
+    display: inline-block;
+    width: 200px;
+    position: fixed;
+}
+
+#controls ul {
+    list-style: none;
+    padding: 5px;
+}
+
+#controls li {
+    padding: 5px;
+}
+
+#controls ul a {
+    list-style: none;
+    color: #2196f3;
+    padding: 5px;
+    text-decoration: none;
+}
+
+#controls ul a.active {
+    border-bottom: 2px solid #ecf0f1;
+    font-weight: bold;
+    background-color: #2196f3;
+    color: white;
+}
+
+#content {
+    margin-left: 200px;
+
+}
+
+section {
+    width: 100%;
+    min-height: 50px;
+    clear: both;
+}
+
+.card-list {
+    list-style: none;
+}
+
+.sidebar .sections {
+    position: sticky;
+    top: 120px;
+}
+
+.sidebar .sections li {
+    list-style-type: none;
+}
+
+.navbar {
+    margin-bottom: 1rem;
+}
+
+.navbar-brand {
+    padding: 8px 15px;
+}
+
+.navbar-brand span {
+    padding: 16px 15px;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.user-icon-button {
+    font-size: 24px;
+    /* margin-left: 80px;
+    margin-top: 15.5px; */
+}
+
+.ml-facet-add-pos {
+    color: #A2AAAD;
+}
+
+.ml-facet-remove-filter {
+    color: #A2AAAD;
+}
+
+.ml-facet {
+    border: 0px none #ffffff;
+    box-shadow: none;margin-top: 20px;
+    margin-bottom: 20px;
+    padding-left: 16px;
+    padding-right: 14px;
+}
+
+.modh1, .modh2, .modh3, .modh5 {
+    font-style: normal;
+}
+
+.modh1 {
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 52px;
+}
+
+.modh2 {
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 39px;
+}
+
+.modh3 {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 29px;
+}
+
+.modh5 {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 23px;
+}
+
+.login-h1 {
+    border: 2px solid #D0D3D4;
+    border-top-left-radius: 32px;
+    border-top-right-radius: 32px;
+    background-color: #f9f9f9;
+}
+
+.login-body {
+    border: 2px solid #D0D3D4 !important;
+    border-top: 0px !important;
+    border-top-left-radius: 0px !important;
+    border-top-right-radius: 0px !important;
+    border-bottom-left-radius: 32px !important;
+    border-bottom-right-radius: 32px !important;
+    background-color: #ffffff;
+    padding-left: 32px !important;
+    padding-right: 32px !important;
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.login-form {
+    margin-top: 5%;
+}
+
+.login-field {
+    margin-bottom: 36px;
+}
+
+.facets, .sections {
+    border-right: 1px solid #D0D3D4;
+}
+
+.ml-list-view-button, .ml-graph-view-button {
+    margin-bottom: 10px;
+    color: #F4364C;
+    background: #FFFFFF;
+    box-shadow: none;
+    border: 2px solid #F4364C;
+    border-radius: 8px;
+}
+
+.ml-list-view-button:hover, .ml-graph-view-button:hover, .ml-list-view-button:focus, .ml-graph-view-button:focus {
+    color: #F4364C;
+    background: #F3F4F4;
+    border: 2px solid #F4364C;
+}
+
+.ml-list-view-button {
+    margin-right: 3px;
+}
+
+.ml-graph-view-button {
+    margin-left: 3px;
+}
+
+.selected-view-button {
+    background: #F4364C;
+    color: #FFFFFF;
+}
+
+.selected-view-button:hover {
+    background: #FB637E;
+    border: 2px solid #FB637E;
+    color: #FFFFFF;
+}
+
+a .hover-link {
+  color: inherit;
+}
+
+.hover-link:hover {
+  color: #A6ADB1;
+}
+
+button.remove {
+    position: absolute;
+    right: 20px;
+    margin-top: 6px;
+    z-index: 99;
+}
+
+.ml-facet .glyphicon-plus-sign:before {
+    content: "\f0c8";
+    font-family: "Font Awesome 5 Free"
+}
+
+.ml-facet .glyphicon-remove-circle:before {
+    content: "\f14a";
+    font-family: "Font Awesome 5 Free";
+}
+
+.ml-facet .grove-current-filter .glyphicon-remove-circle:before {
+    font-weight: 900;
+}
+
+.detail-view {
+    background-color: #fafbfc;
+    padding-top: 2rem;
+}
+
+.detail-view .fa-bookmark {
+    font-size: 3rem;
+    margin: 1rem 1.5rem;
+}
+
+.detail-view h1 {
+    margin-top: 0;
+}
+
+.workspace-navigator {
+    margin-left: 1.5rem;
+}
+
+.workspace-navigator h2 {
+    margin-top: 0;
+}
+
+.detail-header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: #fff;
+    border-bottom: solid #d0d3d4 1px;
+}
+
+.detail-header button {
+    line-height: 4;
+}
+
+.detail-toggle button {
+    line-height: 3;
+    color: #999;
+}
+
+.vis-tooltip {
+    background-color: lightskyblue !important;
+}
+
+.vis-tooltip p {
+    line-height: 5px;
+}

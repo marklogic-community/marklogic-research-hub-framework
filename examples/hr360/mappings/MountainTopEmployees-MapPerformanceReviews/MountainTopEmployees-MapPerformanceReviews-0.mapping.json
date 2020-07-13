@@ -1,0 +1,30 @@
+{
+  "lang" : "zxx",
+  "name" : "MountainTopEmployees-MapPerformanceReviews",
+  "description" : "",
+  "version" : 0,
+  "targetEntityType" : "http://marklogic.com/topgun/jobreview-0.0.1/jobreview",
+  "sourceContext" : "/",
+  "sourceURI" : "./data/hr360/MountainTopEmployees/MountaintopEmployeeReviews/a50833e2-c972-46b2-aef0-eccbac218e16.json",
+  "properties" : {
+    "reviewDate" : {
+      "sourcedFrom" : "parseDate(perfReviewDate,\"MM/DD/YYYY\")"
+    },
+    "reviewCode" : {
+      "sourcedFrom" : "reviewScore"
+    },
+    "employeeId" : {
+      "sourcedFrom" : "employeeId"
+    },
+    "reviewer" : {
+      "sourcedFrom" : "reviewer"
+    },
+    "reasonType" : {
+      "sourcedFrom" : "reasonType"
+    },
+    "reviewId" : {
+      "sourcedFrom" : "perfReviewID"
+    }
+  },
+  "namespaces" : { }
+}

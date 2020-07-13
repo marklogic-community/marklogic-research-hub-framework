@@ -1,0 +1,36 @@
+{
+  "lang" : "zxx",
+  "name" : "LoadStudy-StudyMapper",
+  "description" : "",
+  "version" : 26,
+  "targetEntityType" : "http://example.org/Study-0.0.1/Study",
+  "sourceContext" : "/",
+  "sourceURI" : "/drugStudyData/NCT02898714.xml",
+  "properties" : {
+    "summary" : {
+      "sourcedFrom" : "clinical_study/brief_summary/textblock"
+    },
+    "studyIds" : {
+      "sourcedFrom" : "distinctValues(clinical_study/*:id_info/(*:org_study_id|*:secondary_id)/string())"
+    },
+    "drugs" : {
+      "sourcedFrom" : "getDrugs(.)"
+    },
+    "nctId" : {
+      "sourcedFrom" : "clinical_study/id_info/nct_id"
+    },
+    "linkUrl" : {
+      "sourcedFrom" : "fn:head(clinical_study//required_header/url/fn:string(.))"
+    },
+    "armType" : {
+      "sourcedFrom" : "if (clinical_study/number_of_arms/xs:int(.)  > 1) then 'parallel' else if (clinical_study/number_of_arms/xs:int(.)  = 1) then 'single' else 'unknown'"
+    },
+    "title" : {
+      "sourcedFrom" : "clinical_study/(official_title|brief_title)[1]"
+    },
+    "armCount" : {
+      "sourcedFrom" : "(clinical_study/number_of_arms, 0)[1]"
+    }
+  },
+  "namespaces" : { }
+}

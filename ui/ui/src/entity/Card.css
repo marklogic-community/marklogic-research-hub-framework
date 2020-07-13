@@ -1,0 +1,101 @@
+.ml-search-result .panel-body {
+  height: inherit !important;
+}
+
+.date {
+  text-align: right;
+}
+
+h5 {
+  margin-top: 0;
+}
+
+h6 {
+  margin: 0;
+}
+
+.profile-section {
+  margin-bottom: 5px;
+  padding: 5px;
+  border-bottom: 2px solid #eee;
+}
+
+.profile-section ul {
+  margin: 0;
+  padding: 0;
+}
+
+.ml-search-result p {
+  margin: 0;
+}
+
+.profile-section li {
+  list-style-type: none;
+  display: inline-block;
+  margin: 5px;
+  padding: 5px;
+  background: #f5f5f5;
+  border-radius: 10px;
+}
+
+.card-stats {
+  margin-bottom: 5px;
+  border: 1px solid #C0C0C0;
+  padding: 10px;
+  min-width: 25%;
+}
+
+.card-stats td {
+  padding: 5px 10px;
+}
+
+.card-stats td:first-child {
+  font-weight: bold;
+}
+
+.card-stats td:nth-child(2) {
+  text-align: center;
+}
+
+.journal table td:first-child {
+  background: #f9f9f9;
+  font-weight: bold;
+}
+
+.profile-section dt, .profile-section dd {
+  display: inline-block;
+}
+
+.entity-response-view .profile-card footer {
+  display: none;
+}
+
+.profile-card .panel-body {
+  position: relative;
+  padding-bottom: 4rem;
+}
+
+.profile-card footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  font-size: 1.1rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.profile-card footer .fa-bookmark {
+  font-size: 3rem;
+  margin: 0;
+}
+
+/* WORKSPACE LIST STYLE */
+.workspace-label {
+  background-color: #f5f5f5 !important;
+  color: #666666 !important;
+  border: none !important;
+  margin-right: 0.5rem;
+}

@@ -1,0 +1,52 @@
+{
+  "envelope": {
+    "headers": {
+      "sources": [
+        {
+          "name": "LoadEmployee"
+        }
+      ],
+      "createdOn": "2020-02-05T13:47:48.991357Z",
+      "createdBy": "admin",
+      "createdUsingFile": "/Users/phare/src/ml/research-hub/./data/person-position-matching/employees/employees.csv"
+    },
+    "triples": [],
+    "instance": {
+      "info": {
+        "title": "Person",
+        "version": "0.0.1",
+        "baseUri": "http://example.org/"
+      },
+      "Person": {
+        "birthdate": "1981-02-01",
+        "skill": [
+          "SPARQL",
+          "JSON"
+        ],
+        "name": "Jane Jo"
+      }
+    },
+    "attachments": {
+      "envelope": {
+        "headers": {
+          "sources": [
+            {
+              "name": "LoadEmployee"
+            }
+          ],
+          "createdOn": "2020-02-05T13:47:48.991357Z",
+          "createdBy": "admin",
+          "createdUsingFile": "/Users/phare/src/ml/research-hub/./data/person-position-matching/employees/employees.csv"
+        },
+        "triples": [],
+        "instance": {
+          "ID": "Emp2",
+          "Name": "Jane Jo",
+          "DOB": "1981-02-01",
+          "Skills": "SPARQL,JSON"
+        },
+        "attachments": null
+      }
+    }
+  }
+}

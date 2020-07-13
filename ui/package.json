@@ -1,0 +1,46 @@
+{
+  "name": "grove-react-template",
+  "version": "1.0.0-rc.1",
+  "description": "React/Redux template for MarkLogic Grove",
+  "devDependencies": {
+    "concurrently": "^3.6.1",
+    "cross-env": "^5.2.1"
+  },
+  "dependencies": {},
+  "scripts": {
+    "build": "cd ui && npm run build",
+    "lint": "cd middle-tier && npm run lint; cd ../ui && npm run lint",
+    "lint:fix": "cd middle-tier && npm run lint:fix; cd ../ui && npm run lint:fix",
+    "postinstall": "node scripts/postinstall.js",
+    "start": "concurrently --kill-others \"npm run middleTier\" \"npm run ui\" ",
+    "middleTier": "cd middle-tier && npm start",
+    "ui": "cd ui && npm start",
+    "test": "cross-env CI=true concurrently 'cd middle-tier && npm test' 'cd ui && npm test'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@project.marklogic.com:7999/nacw/grove-react-template.git"
+  },
+  "keywords": [
+    "MarkLogic",
+    "Grove",
+    "UI",
+    "search",
+    "React"
+  ],
+  "license": "Apache-2.0",
+  "contributors": [
+    {
+      "name": "Patrick McElwee",
+      "url": "https://github.com/patrickmcelwee"
+    },
+    {
+      "name": "Marianne Myers",
+      "url": "https://github.com/mariannemyers"
+    },
+    {
+      "name": "Geert Josten",
+      "url": "https://github.com/grtjn"
+    }
+  ]
+}

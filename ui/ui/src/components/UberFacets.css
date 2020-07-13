@@ -1,0 +1,41 @@
+.uber-facets ul {
+  padding: 10px 0 0 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.uber-facets li {
+  display: inline-block;
+  list-style-type: none;
+  padding-top: 1px;
+  margin: auto;
+}
+
+.uber-facets li span {
+  margin-right: 5px;
+}
+
+.uber-facets button {
+  border-radius: 20px;
+  background: #D0D3D4;
+  color: #ffffff;
+}
+
+.uber-facets button:hover {
+  background: #A6ADB1;
+  color: #ffffff;
+}
+
+.uber-facets button:focus {
+  color: #ffffff;
+}
+
+.uber-facets .selected {
+  background: #7C878E;
+  color: #ffffff;
+}
+
+.uf-icon {
+  margin-right: 8px;
+}

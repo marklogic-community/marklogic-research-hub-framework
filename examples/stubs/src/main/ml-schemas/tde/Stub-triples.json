@@ -1,0 +1,46 @@
+{
+  "template": {
+    "context": "/envelope[instance/Stub]",
+    "collections": ["Stub"],
+
+    "vars": [{
+
+      "name": "PRHPrefix",
+      "val": "'PRH:'"
+
+    },{
+
+      "name": "stubIri",
+      "val": "sem:iri(xdmp:node-uri(.))"
+
+    }],
+
+    "templates": [{
+
+      "context": "instance/Stub",
+
+      "triples": [{
+        "subject": {
+          "val": "$stubIri"
+        },
+        "predicate": {
+          "val": "sem:iri($PRHPrefix || 'entityType')"
+        },
+        "object": {
+          "val": "lower-case(name(.))"
+        }
+      },{
+        "subject": {
+          "val": "$stubIri"
+        },
+        "predicate": {
+          "val": "sem:iri($PRHPrefix || 'preferredName')"
+        },
+        "object": {
+          "val": "string(name)"
+        }
+      }]
+
+    }]
+  }
+}

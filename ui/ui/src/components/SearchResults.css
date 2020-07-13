@@ -1,0 +1,50 @@
+.ml-search-results.row .col-md-12 {
+    padding-left: 0;
+}
+
+.ml-search-result .panel {
+    box-shadow: none;
+}
+
+.well {
+    background-color: #ffffff;
+    padding-top: 0;
+}
+
+.add-to-case-button {
+    margin-left: 20px;
+}
+
+.search-metrics.row .col-md-12 {
+    padding-left: 6px;
+}
+
+.entity-response-view {
+    margin-left: 20px;
+}
+.entity-response-view h4 {
+    margin-left: 12px;
+}
+.profile-section {
+    padding-left: 0;
+    border-bottom: none;
+}
+
+.ml-search-results {
+    margin-left: -30px;
+}
+
+.ml-search-result {
+    margin-left: -20px;
+}
+
+.ml-search-result .entity-icon {
+    width: 42px;
+    margin-top: 12px;
+    font-size: 22px;
+}
+
+.ml-search-result .panel h2 {
+    min-height: 25px;
+    margin-top: 5px;
+}

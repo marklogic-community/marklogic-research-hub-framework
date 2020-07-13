@@ -1,0 +1,45 @@
+{
+  "name" : "LoadProtein",
+  "description" : "This is the default flow containing all of the default steps",
+  "batchSize" : 100,
+  "threadCount" : 4,
+  "stopOnError" : false,
+  "options" : {
+    "sourceQuery" : null
+  },
+  "version" : 0,
+  "steps" : {
+    "1" : {
+      "name" : "loadProteinInput",
+      "description" : "This is the default ingestion step",
+      "options" : {
+        "entity" : "Protein",
+        "targetDatabase" : "data-hub-STAGING"
+      },
+      "customHook" : null,
+      "retryLimit" : 0,
+      "batchSize" : 0,
+      "threadCount" : 0,
+      "stepDefinitionName" : "loadProteinInput",
+      "stepDefinitionType" : "INGESTION",
+      "fileLocations" : { }
+    },
+    "2" : {
+      "name" : "harmonizeProtein",
+      "description" : "This is the custom harmonization step",
+      "options" : {
+        "sourceQuery" : "cts.uris(null, null, cts.andQuery([cts.collectionQuery('Protein'),cts.elementValueQuery(fn.QName('http://uniprot.org/uniprot', 'name'), 'Homo sapiens', 'exact')]))",
+        "sourceDatabase" : "data-hub-STAGING",
+        "collections" : [ "Protein" ],
+        "outputFormat" : "json",
+        "targetDatabase" : "data-hub-FINAL"
+      },
+      "customHook" : null,
+      "retryLimit" : 0,
+      "batchSize" : 0,
+      "threadCount" : 0,
+      "stepDefinitionName" : "harmonizeProtein",
+      "stepDefinitionType" : "CUSTOM"
+    }
+  }
+}

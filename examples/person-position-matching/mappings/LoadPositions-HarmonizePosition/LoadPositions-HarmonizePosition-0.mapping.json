@@ -1,0 +1,18 @@
+{
+  "lang" : "zxx",
+  "name" : "LoadPositions-HarmonizePosition",
+  "description" : "",
+  "version" : 0,
+  "targetEntityType" : "http://example.org/Position-0.0.1/Position",
+  "sourceContext" : "/",
+  "sourceURI" : "/person-position-matching/positions/7ad03b11-3c37-44f0-8c77-5c88d87307de.json",
+  "properties" : {
+    "description" : {
+      "sourcedFrom" : "Name"
+    },
+    "requiredSkill" : {
+      "sourcedFrom" : "tokenize(Requirements,\",\")"
+    }
+  },
+  "namespaces" : { }
+}

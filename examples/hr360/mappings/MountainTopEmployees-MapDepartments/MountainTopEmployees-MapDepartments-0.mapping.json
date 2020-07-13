@@ -1,0 +1,24 @@
+{
+  "lang" : "zxx",
+  "name" : "MountainTopEmployees-MapDepartments",
+  "description" : "",
+  "version" : 0,
+  "targetEntityType" : "http://marklogic.com/topgun/department-0.0.1/department",
+  "sourceContext" : "/",
+  "sourceURI" : "./data/hr360/MountainTopEmployees/Departments/625e38c6-48a7-4a09-8999-42395c3f8b4d.json",
+  "properties" : {
+    "departmentName" : {
+      "sourcedFrom" : "dept_name"
+    },
+    "departmentId" : {
+      "sourcedFrom" : "dept_num"
+    },
+    "location" : {
+      "sourcedFrom" : "location"
+    },
+    "employeeId" : {
+      "sourcedFrom" : "empId"
+    }
+  },
+  "namespaces" : { }
+}

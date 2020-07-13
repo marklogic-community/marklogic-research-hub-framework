@@ -1,0 +1,341 @@
+{
+  "name" : "MountainTopEmployees",
+  "description" : "null",
+  "batchSize" : 100,
+  "threadCount" : 4,
+  "stopOnError" : false,
+  "options" : { },
+  "version" : 0,
+  "steps" : {
+    "1" : {
+      "name" : "IngestEmployees",
+      "description" : "",
+      "options" : {
+        "additionalCollections" : [ ],
+        "headers" : {
+          "sources" : [ {
+            "name" : "MountainTopEmployees"
+          } ],
+          "createdOn" : "currentDateTime",
+          "createdBy" : "currentUser"
+        },
+        "sourceQuery" : "cts.collectionQuery([])",
+        "collections" : [ "IngestEmployees" ],
+        "permissions" : "rest-reader,read,rest-writer,update",
+        "outputFormat" : "json",
+        "targetDatabase" : "data-hub-STAGING"
+      },
+      "customHook" : {
+        "module" : "",
+        "parameters" : { },
+        "user" : "",
+        "runBefore" : false
+      },
+      "retryLimit" : 0,
+      "batchSize" : 100,
+      "threadCount" : 4,
+      "stepDefinitionName" : "default-ingestion",
+      "stepDefinitionType" : "INGESTION",
+      "fileLocations" : {
+        "inputFilePath" : "./data/hr360/MountainTopEmployees/MountainTopEmployees",
+        "inputFileType" : "csv",
+        "outputURIReplacement" : ".*data/hr360/,''",
+        "separator" : ","
+      }
+    },
+    "2" : {
+      "name" : "IngestDepartments",
+      "description" : "",
+      "options" : {
+        "additionalCollections" : [ ],
+        "headers" : {
+          "sources" : [ {
+            "name" : "MountainTopEmployees"
+          } ],
+          "createdOn" : "currentDateTime",
+          "createdBy" : "currentUser"
+        },
+        "sourceQuery" : "cts.collectionQuery([])",
+        "collections" : [ "IngestDepartments" ],
+        "permissions" : "rest-reader,read,rest-writer,update",
+        "outputFormat" : "json",
+        "targetDatabase" : "data-hub-STAGING"
+      },
+      "customHook" : {
+        "module" : "",
+        "parameters" : { },
+        "user" : "",
+        "runBefore" : false
+      },
+      "retryLimit" : 0,
+      "batchSize" : 100,
+      "threadCount" : 4,
+      "stepDefinitionName" : "default-ingestion",
+      "stepDefinitionType" : "INGESTION",
+      "fileLocations" : {
+        "inputFilePath" : "./data/hr360/MountainTopEmployees/Departments",
+        "inputFileType" : "csv",
+        "outputURIReplacement" : ".*data/hr360/,''",
+        "separator" : ","
+      }
+    },
+    "3" : {
+      "name" : "IngestJobOpenings",
+      "description" : "",
+      "options" : {
+        "additionalCollections" : [ ],
+        "headers" : {
+          "sources" : [ {
+            "name" : "MountainTopEmployees"
+          } ],
+          "createdOn" : "currentDateTime",
+          "createdBy" : "currentUser"
+        },
+        "sourceQuery" : "cts.collectionQuery([])",
+        "collections" : [ "IngestJobOpenings" ],
+        "permissions" : "rest-reader,read,rest-writer,update",
+        "outputFormat" : "json",
+        "targetDatabase" : "data-hub-STAGING"
+      },
+      "customHook" : {
+        "module" : "",
+        "parameters" : { },
+        "user" : "",
+        "runBefore" : false
+      },
+      "retryLimit" : 0,
+      "batchSize" : 100,
+      "threadCount" : 4,
+      "stepDefinitionName" : "default-ingestion",
+      "stepDefinitionType" : "INGESTION",
+      "fileLocations" : {
+        "inputFilePath" : "./data/hr360/MountainTopEmployees/JobOpenings",
+        "inputFileType" : "csv",
+        "outputURIReplacement" : ".*data/hr360/,''",
+        "separator" : ","
+      }
+    },
+    "4" : {
+      "name" : "IngestPerformanceReviews",
+      "description" : "",
+      "options" : {
+        "additionalCollections" : [ ],
+        "headers" : {
+          "sources" : [ {
+            "name" : "MountainTopEmployees"
+          } ],
+          "createdOn" : "currentDateTime",
+          "createdBy" : "currentUser"
+        },
+        "sourceQuery" : "cts.collectionQuery([])",
+        "collections" : [ "IngestPerformanceReviews" ],
+        "permissions" : "rest-reader,read,rest-writer,update",
+        "outputFormat" : "json",
+        "targetDatabase" : "data-hub-STAGING"
+      },
+      "customHook" : {
+        "module" : "",
+        "parameters" : { },
+        "user" : "",
+        "runBefore" : false
+      },
+      "retryLimit" : 0,
+      "batchSize" : 100,
+      "threadCount" : 4,
+      "stepDefinitionName" : "default-ingestion",
+      "stepDefinitionType" : "INGESTION",
+      "fileLocations" : {
+        "inputFilePath" : "./data/hr360/MountainTopEmployees/MountaintopEmployeeReviews",
+        "inputFileType" : "csv",
+        "outputURIReplacement" : ".*data/hr360/,''",
+        "separator" : ","
+      }
+    },
+    "5" : {
+      "name" : "IngestResumes",
+      "description" : "",
+      "options" : {
+        "additionalCollections" : [ ],
+        "headers" : {
+          "sources" : [ {
+            "name" : "MountainTopEmployees"
+          } ],
+          "createdOn" : "currentDateTime",
+          "createdBy" : "currentUser"
+        },
+        "sourceQuery" : "cts.collectionQuery([])",
+        "collections" : [ "IngestResumes" ],
+        "permissions" : "rest-reader,read,rest-writer,update",
+        "outputFormat" : "json",
+        "targetDatabase" : "data-hub-STAGING"
+      },
+      "customHook" : {
+        "module" : "",
+        "parameters" : { },
+        "user" : "",
+        "runBefore" : false
+      },
+      "retryLimit" : 0,
+      "batchSize" : 100,
+      "threadCount" : 4,
+      "stepDefinitionName" : "default-ingestion",
+      "stepDefinitionType" : "INGESTION",
+      "fileLocations" : {
+        "inputFilePath" : "./data/hr360/MountainTopEmployees/MountainTopResumes",
+        "inputFileType" : "csv",
+        "outputURIReplacement" : ".*data/hr360/,''",
+        "separator" : ","
+      }
+    },
+    "6" : {
+      "name" : "MapDepartments",
+      "description" : "",
+      "options" : {
+        "additionalCollections" : [ ],
+        "sourceQuery" : "cts.collectionQuery([\"IngestDepartments\"])",
+        "mapping" : {
+          "name" : "MountainTopEmployees-MapDepartments",
+          "version" : 0
+        },
+        "targetEntity" : "department",
+        "sourceDatabase" : "data-hub-STAGING",
+        "collections" : [ "MapDepartments", "department" ],
+        "validateEntity" : false,
+        "sourceCollection" : "IngestDepartments",
+        "outputFormat" : "json",
+        "targetDatabase" : "data-hub-FINAL"
+      },
+      "customHook" : {
+        "module" : "",
+        "parameters" : { },
+        "user" : "",
+        "runBefore" : false
+      },
+      "retryLimit" : null,
+      "batchSize" : 100,
+      "threadCount" : 4,
+      "stepDefinitionName" : "entity-services-mapping",
+      "stepDefinitionType" : "MAPPING"
+    },
+    "7" : {
+      "name" : "MapEmployees",
+      "description" : "",
+      "options" : {
+        "additionalCollections" : [ ],
+        "sourceQuery" : "cts.collectionQuery([\"IngestEmployees\"])",
+        "mapping" : {
+          "name" : "MountainTopEmployees-MapEmployees",
+          "version" : 0
+        },
+        "targetEntity" : "employee",
+        "sourceDatabase" : "data-hub-STAGING",
+        "collections" : [ "MapEmployees", "employee" ],
+        "validateEntity" : false,
+        "sourceCollection" : "IngestEmployees",
+        "outputFormat" : "json",
+        "targetDatabase" : "data-hub-FINAL"
+      },
+      "customHook" : {
+        "module" : "/custom-modules/custom/employee-add-headers-hook.sjs",
+        "parameters" : { },
+        "user" : "",
+        "runBefore" : false
+      },
+      "retryLimit" : 0,
+      "batchSize" : 100,
+      "threadCount" : 4,
+      "stepDefinitionName" : "entity-services-mapping",
+      "stepDefinitionType" : "MAPPING"
+    },
+    "8" : {
+      "name" : "MapJobOpenings",
+      "description" : "",
+      "options" : {
+        "additionalCollections" : [ ],
+        "sourceQuery" : "cts.collectionQuery([\"IngestJobOpenings\"])",
+        "mapping" : {
+          "name" : "MountainTopEmployees-MapJobOpenings",
+          "version" : 0
+        },
+        "targetEntity" : "jobopening",
+        "sourceDatabase" : "data-hub-STAGING",
+        "collections" : [ "MapJobOpenings", "jobopening" ],
+        "validateEntity" : false,
+        "sourceCollection" : "IngestJobOpenings",
+        "outputFormat" : "json",
+        "targetDatabase" : "data-hub-FINAL"
+      },
+      "customHook" : {
+        "module" : "/custom-modules/custom/jobopening-add-headers-hook.sjs",
+        "parameters" : { },
+        "user" : "",
+        "runBefore" : false
+      },
+      "retryLimit" : 0,
+      "batchSize" : 100,
+      "threadCount" : 4,
+      "stepDefinitionName" : "entity-services-mapping",
+      "stepDefinitionType" : "MAPPING"
+    },
+    "9" : {
+      "name" : "MapPerformanceReviews",
+      "description" : "",
+      "options" : {
+        "additionalCollections" : [ ],
+        "sourceQuery" : "cts.collectionQuery([\"IngestPerformanceReviews\"])",
+        "mapping" : {
+          "name" : "MountainTopEmployees-MapPerformanceReviews",
+          "version" : 0
+        },
+        "targetEntity" : "jobreview",
+        "sourceDatabase" : "data-hub-STAGING",
+        "collections" : [ "MapPerformanceReviews", "jobreview" ],
+        "validateEntity" : false,
+        "sourceCollection" : "IngestPerformanceReviews",
+        "outputFormat" : "json",
+        "targetDatabase" : "data-hub-FINAL"
+      },
+      "customHook" : {
+        "module" : "/custom-modules/custom/jobreview-add-headers-hook.sjs",
+        "parameters" : { },
+        "user" : "",
+        "runBefore" : false
+      },
+      "retryLimit" : 0,
+      "batchSize" : 100,
+      "threadCount" : 4,
+      "stepDefinitionName" : "entity-services-mapping",
+      "stepDefinitionType" : "MAPPING"
+    },
+    "10" : {
+      "name" : "MapResumes",
+      "description" : "",
+      "options" : {
+        "additionalCollections" : [ ],
+        "sourceQuery" : "cts.collectionQuery([\"IngestResumes\"])",
+        "mapping" : {
+          "name" : "MountainTopEmployees-MapResumes",
+          "version" : 0
+        },
+        "targetEntity" : "resume",
+        "sourceDatabase" : "data-hub-STAGING",
+        "collections" : [ "MapResumes", "resume" ],
+        "validateEntity" : false,
+        "sourceCollection" : "IngestResumes",
+        "outputFormat" : "json",
+        "targetDatabase" : "data-hub-FINAL"
+      },
+      "customHook" : {
+        "module" : "/custom-modules/custom/resume-add-headers-hook.sjs",
+        "parameters" : { },
+        "user" : "",
+        "runBefore" : false
+      },
+      "retryLimit" : 0,
+      "batchSize" : 100,
+      "threadCount" : 4,
+      "stepDefinitionName" : "entity-services-mapping",
+      "stepDefinitionType" : "MAPPING"
+    }
+  }
+}

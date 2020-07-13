@@ -1,0 +1,21 @@
+perfReviewID,employeeId,perfReviewDate,reviewer,reviewScore,reasonType
+1,1,7/28/1811,Employee 360,90,Reorganization
+2,2,11/19/0950,Direct Manager,Notice,Goal Based
+3,3,11/5/1853,Project Director,100,Reorganization
+4,4,9/1/1455,Project Leader,90,Annual
+5,5,6/19/1926,Project Manager,80,Reorganization
+6,6,11/18/1734,Project Leader,Notice,Goal Based
+7,7,1/21/0319,Project Director,80,Initial
+8,8,6/15/0932,Direct Manager,80,Initial
+9,9,10/22/0606,Project Manager,80,Annual
+10,10,1/8/1337,Direct Manager,80,Goal Based
+11,11,11/27/1109,Direct Manager,Notice,Goal Based
+12,12,12/20/1408,Direct Manager,80,Annual
+13,13,5/22/1556,Employee 360,Probation,Initial
+14,14,2/22/1003,Project Director,100,Annual
+15,15,5/15/1263,Employee 360,Probation,Annual
+16,16,9/3/1612,Direct Manager,Notice,Goal Based
+17,17,3/14/1329,Project Leader,90,Reorganization
+18,18,7/18/1648,Employee 360,80,Initial
+19,19,8/24/0710,Project Director,80,Goal Based
+20,20,4/2/1790,Project Manager,90,Reorganization

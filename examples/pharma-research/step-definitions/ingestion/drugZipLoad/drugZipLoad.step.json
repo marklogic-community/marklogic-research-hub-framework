@@ -1,0 +1,16 @@
+{
+  "lang" : "zxx",
+  "name" : "drugZipLoad",
+  "description" : null,
+  "type" : "INGESTION",
+  "version" : 1,
+  "options" : {
+    "collections" : [ "Drug", "loadzipDrug", "input" ],
+    "outputFormat" : "xml",
+    "targetDatabase" : "data-hub-STAGING"
+  },
+  "modulePath" : "/custom-modules/ingestion/drugZipLoad/main.sjs",
+  "retryLimit" : 0,
+  "batchSize" : 100,
+  "threadCount" : 32
+}

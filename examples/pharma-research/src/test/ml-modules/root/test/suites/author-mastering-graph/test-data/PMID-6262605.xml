@@ -1,0 +1,2891 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<envelope
+  xmlns="http://marklogic.com/entity-services">
+  <headers>
+    <systemDateTimeCreated
+      xmlns="">2020-05-13T20:26:43.987434Z
+    </systemDateTimeCreated>
+    <journalPreferredName
+      xmlns="">Journal of Clinical Medicine
+    </journalPreferredName>
+    <topics
+      xmlns="">
+      <topicPreferredName>cardiac diastolic dysfunction</topicPreferredName>
+      <topicPreferredName>heart failure with preserved ejection fraction</topicPreferredName>
+      <topicPreferredName>biomarkers</topicPreferredName>
+      <topicPreferredName>cardiac magnetic resonance imaging</topicPreferredName>
+      <topicPreferredName>fibrosis</topicPreferredName>
+    </topics>
+    <lastModifiedDate
+      xmlns="">2018-11-11
+    </lastModifiedDate>
+    <authors
+      xmlns="">
+      <authorPreferredName>Cho-Kai Wu</authorPreferredName>
+      <authorPreferredName>Mao-Yuan M. Su</authorPreferredName>
+      <authorPreferredName>Yi-Fan Wu</authorPreferredName>
+      <authorPreferredName>Juey-Jen Hwang</authorPreferredName>
+      <authorPreferredName>Lian-Yu Lin</authorPreferredName>
+    </authors>
+    <institutions
+      xmlns="">
+      <institutionPreferredName> (J.-J.H.)</institutionPreferredName>
+      <institutionPreferredName>Department of Medical Imaging, National Taiwan University Hospital, Taipei 100, Taiwan; </institutionPreferredName>
+      <institutionPreferredName>Department of Family Medicine, Taipei City Hospital Renai Branch, Taipei 106, Taiwan; </institutionPreferredName>
+    </institutions>
+  </headers>
+  <triples>
+    <sem:triple
+      xmlns:sem="http://marklogic.com/semantics">
+      <sem:subject>/PubMed/PMID-6262605.xml</sem:subject>
+      <sem:predicate>PRH:preferredName</sem:predicate>
+      <sem:object datatype="http://www.w3.org/2001/XMLSchema#string">Combination of Plasma Biomarkers and Clinical Data for the Detection of Myocardial Fibrosis or Aggravation of Heart Failure Symptoms in Heart Failure with Preserved Ejection Fraction Patients</sem:object>
+    </sem:triple>
+    <sem:triple
+      xmlns:sem="http://marklogic.com/semantics">
+      <sem:subject>/PubMed/PMID-6262605.xml</sem:subject>
+      <sem:predicate>PRH:entityType</sem:predicate>
+      <sem:object datatype="http://www.w3.org/2001/XMLSchema#string">publication</sem:object>
+    </sem:triple>
+    <sem:triple
+      xmlns:sem="http://marklogic.com/semantics">
+      <sem:subject>/PubMed/PMID-6262605.xml</sem:subject>
+      <sem:predicate>PRH:isRelated</sem:predicate>
+      <sem:object>/gene/3958.json</sem:object>
+    </sem:triple>
+    <sem:triple
+      xmlns:sem="http://marklogic.com/semantics">
+      <sem:subject>/PubMed/PMID-6262605.xml</sem:subject>
+      <sem:predicate>PRH:isRelated</sem:predicate>
+      <sem:object>/gene/1906.json</sem:object>
+    </sem:triple>
+    <sem:triple
+      xmlns:sem="http://marklogic.com/semantics">
+      <sem:subject>/PubMed/PMID-6262605.xml</sem:subject>
+      <sem:predicate>PRH:isRelated</sem:predicate>
+      <sem:object>/gene/6761.json</sem:object>
+    </sem:triple>
+    <sem:triple
+      xmlns:sem="http://marklogic.com/semantics">
+      <sem:subject>/PubMed/PMID-6262605.xml</sem:subject>
+      <sem:predicate>PRH:isRelated</sem:predicate>
+      <sem:object>/gene/1401.json</sem:object>
+    </sem:triple>
+    <sem:triple
+      xmlns:sem="http://marklogic.com/semantics">
+      <sem:subject>/PubMed/PMID-6262605.xml</sem:subject>
+      <sem:predicate>PRH:isRelated</sem:predicate>
+      <sem:object>/Protein/uniprot_sprot.xml-0-468481.json</sem:object>
+    </sem:triple>
+    <sem:triple
+      xmlns:sem="http://marklogic.com/semantics">
+      <sem:subject>/PubMed/PMID-6262605.xml</sem:subject>
+      <sem:predicate>PRH:isRelated</sem:predicate>
+      <sem:object>/Protein/uniprot_sprot.xml-0-181234.json</sem:object>
+    </sem:triple>
+    <sem:triple
+      xmlns:sem="http://marklogic.com/semantics">
+      <sem:subject>/PubMed/PMID-6262605.xml</sem:subject>
+      <sem:predicate>PRH:isRelated</sem:predicate>
+      <sem:object>/Protein/uniprot_sprot.xml-0-177913.json</sem:object>
+    </sem:triple>
+    <sem:triple
+      xmlns:sem="http://marklogic.com/semantics">
+      <sem:subject>/PubMed/PMID-6262605.xml</sem:subject>
+      <sem:predicate>PRH:isAbout</sem:predicate>
+      <sem:object>/topic/cardiacDiastolicDysfunction.json</sem:object>
+    </sem:triple>
+    <sem:triple
+      xmlns:sem="http://marklogic.com/semantics">
+      <sem:subject>/topic/cardiacDiastolicDysfunction.json</sem:subject>
+      <sem:predicate>PRH:preferredName</sem:predicate>
+      <sem:object datatype="http://www.w3.org/2001/XMLSchema#string">cardiac diastolic dysfunction</sem:object>
+    </sem:triple>
+    <sem:triple
+      xmlns:sem="http://marklogic.com/semantics">
+      <sem:subject>/topic/cardiacDiastolicDysfunction.json</sem:subject>
+      <sem:predicate>PRH:entityType</sem:predicate>
+      <sem:object datatype="http://www.w3.org/2001/XMLSchema#string">topic</sem:object>
+    </sem:triple>
+    <sem:triple
+      xmlns:sem="http://marklogic.com/semantics">
+      <sem:subject>/PubMed/PMID-6262605.xml</sem:subject>
+      <sem:predicate>PRH:isAbout</sem:predicate>
+      <sem:object>/topic/heartFailureWithPreservedEjectionFraction.json</sem:object>
+    </sem:triple>
+    <sem:triple
+      xmlns:sem="http://marklogic.com/semantics">
+      <sem:subject>/topic/heartFailureWithPreservedEjectionFraction.json</sem:subject>
+      <sem:predicate>PRH:preferredName</sem:predicate>
+      <sem:object datatype="http://www.w3.org/2001/XMLSchema#string">heart failure with preserved ejection fraction</sem:object>
+    </sem:triple>
+    <sem:triple
+      xmlns:sem="http://marklogic.com/semantics">
+      <sem:subject>/topic/heartFailureWithPreservedEjectionFraction.json</sem:subject>
+      <sem:predicate>PRH:entityType</sem:predicate>
+      <sem:object datatype="http://www.w3.org/2001/XMLSchema#string">topic</sem:object>
+    </sem:triple>
+    <sem:triple
+      xmlns:sem="http://marklogic.com/semantics">
+      <sem:subject>/PubMed/PMID-6262605.xml</sem:subject>
+      <sem:predicate>PRH:isAbout</sem:predicate>
+      <sem:object>/topic/biomarkers.json</sem:object>
+    </sem:triple>
+    <sem:triple
+      xmlns:sem="http://marklogic.com/semantics">
+      <sem:subject>/topic/biomarkers.json</sem:subject>
+      <sem:predicate>PRH:preferredName</sem:predicate>
+      <sem:object datatype="http://www.w3.org/2001/XMLSchema#string">biomarkers</sem:object>
+    </sem:triple>
+    <sem:triple
+      xmlns:sem="http://marklogic.com/semantics">
+      <sem:subject>/topic/biomarkers.json</sem:subject>
+      <sem:predicate>PRH:entityType</sem:predicate>
+      <sem:object datatype="http://www.w3.org/2001/XMLSchema#string">topic</sem:object>
+    </sem:triple>
+    <sem:triple
+      xmlns:sem="http://marklogic.com/semantics">
+      <sem:subject>/PubMed/PMID-6262605.xml</sem:subject>
+      <sem:predicate>PRH:isAbout</sem:predicate>
+      <sem:object>/topic/cardiacMagneticResonanceImaging.json</sem:object>
+    </sem:triple>
+    <sem:triple
+      xmlns:sem="http://marklogic.com/semantics">
+      <sem:subject>/topic/cardiacMagneticResonanceImaging.json</sem:subject>
+      <sem:predicate>PRH:preferredName</sem:predicate>
+      <sem:object datatype="http://www.w3.org/2001/XMLSchema#string">cardiac magnetic resonance imaging</sem:object>
+    </sem:triple>
+    <sem:triple
+      xmlns:sem="http://marklogic.com/semantics">
+      <sem:subject>/topic/cardiacMagneticResonanceImaging.json</sem:subject>
+      <sem:predicate>PRH:entityType</sem:predicate>
+      <sem:object datatype="http://www.w3.org/2001/XMLSchema#string">topic</sem:object>
+    </sem:triple>
+    <sem:triple
+      xmlns:sem="http://marklogic.com/semantics">
+      <sem:subject>/PubMed/PMID-6262605.xml</sem:subject>
+      <sem:predicate>PRH:isAbout</sem:predicate>
+      <sem:object>/topic/fibrosis.json</sem:object>
+    </sem:triple>
+    <sem:triple
+      xmlns:sem="http://marklogic.com/semantics">
+      <sem:subject>/topic/fibrosis.json</sem:subject>
+      <sem:predicate>PRH:preferredName</sem:predicate>
+      <sem:object datatype="http://www.w3.org/2001/XMLSchema#string">fibrosis</sem:object>
+    </sem:triple>
+    <sem:triple
+      xmlns:sem="http://marklogic.com/semantics">
+      <sem:subject>/topic/fibrosis.json</sem:subject>
+      <sem:predicate>PRH:entityType</sem:predicate>
+      <sem:object datatype="http://www.w3.org/2001/XMLSchema#string">topic</sem:object>
+    </sem:triple>
+  </triples>
+  <instance>
+    <info>
+      <title>publication</title>
+      <version>0.0.1</version>
+    </info>
+    <publication>
+      <article
+        xmlns="">
+        <articleTitle>Combination of Plasma Biomarkers and Clinical Data for the Detection of Myocardial Fibrosis or Aggravation of Heart Failure Symptoms in Heart Failure with Preserved Ejection Fraction Patients</articleTitle>
+        <pudMedId>30413105</pudMedId>
+        <pudMedCentralKey>6262605</pudMedCentralKey>
+        <authors>
+          <author>
+            <preferredName>Cho-Kai Wu</preferredName>
+            <institutions>
+              <institution> (J.-J.H.)</institution>
+            </institutions>
+          </author>
+          <author>
+            <preferredName>Mao-Yuan M. Su</preferredName>
+            <institutions>
+              <institution>Department of Medical Imaging, National Taiwan University Hospital, Taipei 100, Taiwan; </institution>
+            </institutions>
+          </author>
+          <author>
+            <preferredName>Yi-Fan Wu</preferredName>
+            <institutions>
+              <institution>Department of Family Medicine, Taipei City Hospital Renai Branch, Taipei 106, Taiwan; </institution>
+            </institutions>
+          </author>
+          <author>
+            <preferredName>Juey-Jen Hwang</preferredName>
+            <institutions>
+              <institution> (J.-J.H.)</institution>
+            </institutions>
+          </author>
+          <author>
+            <preferredName>Lian-Yu Lin</preferredName>
+            <institutions>
+              <institution> (J.-J.H.)</institution>
+            </institutions>
+          </author>
+        </authors>
+        <journal>
+          <title>Journal of Clinical Medicine</title>
+          <volume/>
+          <pub-date pub-type="epub">
+            <day>08</day>
+            <month>11</month>
+            <year>2018</year>
+          </pub-date>
+        </journal>
+        <abstracts>
+          <abstract>
+            <abstractTitle>Main</abstractTitle>
+            <abstractMessage>Background: Heart failure with preserved ejection fraction (HFpEF) is characterized by heart failure symptoms and structural change (including fibrosis). The relationship between novel biomarkers and the above components remains unclear. Methods: Seventy-seven HFpEF patients were recruited. All patients underwent echocardiography with tissue doppler imaging, cardiac magnetic resonance imaging (CMRI), and measurement of plasma inflammatory, remodelling, endothelial function, and heart failure biomarker levels. Myocardial fibrosis was defined by CMRI-extracellular volume. Forward conditional logistic regression was applied to demonstrate the determinants of myocardial fibrosis or heart failure symptoms. Results: The levels of growth differentiation factor, tissue inhibitor of metalloproteinase (TIMP)-1, galectin-3, and N-terminal pro b-type natriuretic peptide (NT-proBNP) were significantly higher in patients with more myocardial fibrosis. Matrix metalloproteinase-2 (MMP-2) and galectin-3 were independent markers of ECV. After adjusting for confounding factors, plasma galectin-3 and MMP-2 levels were correlated with myocardial fibrosis levels (odds ratio (OR): 1.05, 95% confidence interval (CI): 1.02 to 1.09, p = 0.005 and OR: 2.11, 95% CI: 1.35–3.28, respectively), while NT-proBNP level only was associated with heart failure symptoms. We developed a score system consisted of biomarkers and clinical parameters. The area under the curve of the scoring system receiver operating characteristic curve is 0.838 to predict the degree of myocardial diffuse fibrosis. Conclusions: In conclusion, we found that galectin-3 and MMP-2 were significantly associated with global cardiac fibrosis in HFpEF patients. We also combined plasma biomarkers and clinical data to identify HFpEF patients with more severe cardiac fibrosis.</abstractMessage>
+          </abstract>
+        </abstracts>
+        <topics>
+          <topic>cardiac diastolic dysfunction</topic>
+          <topic>heart failure with preserved ejection fraction</topic>
+          <topic>biomarkers</topic>
+          <topic>cardiac magnetic resonance imaging</topic>
+          <topic>fibrosis</topic>
+        </topics>
+        <citations>
+          <NumberOfCitations>40</NumberOfCitations>
+          <citation>
+            <pudMedId>14746527</pudMedId>
+            <articleTitle>Left ventricular diastolic dysfunction and diastolic heart failure</articleTitle>
+          </citation>
+          <citation>
+            <pudMedId>10362198</pudMedId>
+            <articleTitle>Congestive heart failure in subjects with normal versus reduced left ventricular ejection fraction: Prevalence and mortality in a population-based cohort</articleTitle>
+          </citation>
+          <citation>
+            <pudMedId>12578862</pudMedId>
+            <articleTitle>Evaluation and management of diastolic heart failure</articleTitle>
+          </citation>
+          <citation>
+            <pudMedId>22105201</pudMedId>
+            <articleTitle>Heart failure with preserved ejection fraction</articleTitle>
+          </citation>
+          <citation>
+            <pudMedId>21350055</pudMedId>
+            <articleTitle>Plasma biomarkers that reflect determinants of matrix composition identify the presence of left ventricular hypertrophy and diastolic heart failure</articleTitle>
+          </citation>
+          <citation>
+            <pudMedId>19808353</pudMedId>
+            <articleTitle>Association between elevated fibrosis markers and heart failure in the elderly: The cardiovascular health study</articleTitle>
+          </citation>
+          <citation>
+            <pudMedId>28803400</pudMedId>
+            <articleTitle>Novel Biomarkers for the Risk Stratification of Heart Failure with Preserved Ejection Fraction</articleTitle>
+          </citation>
+          <citation>
+            <pudMedId>26493383</pudMedId>
+            <articleTitle>Role of biomarkers in cardiac structure phenotyping in heart failure with preserved ejection fraction: Critical appraisal and practical use</articleTitle>
+          </citation>
+          <citation>
+            <pudMedId>24036385</pudMedId>
+            <articleTitle>Cardiac magnetic resonance postcontrast T1 time is associated with outcome in patients with heart failure and preserved ejection fraction</articleTitle>
+          </citation>
+          <citation>
+            <pudMedId>22123333</pudMedId>
+            <articleTitle>Myocardial T1 and extracellular volume fraction mapping at 3 tesla</articleTitle>
+          </citation>
+          <citation>
+            <pudMedId>25240451</pudMedId>
+            <articleTitle>CMR-verified diffuse myocardial fibrosis is associated with diastolic dysfunction in HFpEF</articleTitle>
+          </citation>
+          <citation>
+            <pudMedId>17428822</pudMedId>
+            <articleTitle>How to diagnose diastolic heart failure: A consensus statement on the diagnosis of heart failure with normal left ventricular ejection fraction by the Heart Failure and Echocardiography Associations of the European Society of Cardiology</articleTitle>
+          </citation>
+          <citation>
+            <pudMedId>21263314</pudMedId>
+            <articleTitle>Plasma levels of tumor necrosis factor-alpha and interleukin-6 are associated with diastolic heart failure through downregulation of sarcoplasmic reticulum Ca2+ ATPase</articleTitle>
+          </citation>
+          <citation>
+            <pudMedId>19330904</pudMedId>
+            <articleTitle>Genetic polymorphisms of the angiotensin II type 1 receptor gene and diastolic heart failure</articleTitle>
+          </citation>
+          <citation>
+            <pudMedId>11810682</pudMedId>
+            <articleTitle>Phase-sensitive inversion recovery for detecting myocardial infarction using gadolinium-delayed hyperenhancement</articleTitle>
+          </citation>
+          <citation>
+            <pudMedId>22851543</pudMedId>
+            <articleTitle>Association between extracellular matrix expansion quantified by cardiovascular magnetic resonance and short-term mortality</articleTitle>
+          </citation>
+          <citation>
+            <pudMedId>12549232</pudMedId>
+            <articleTitle>Normal systolic and diastolic functions of the left ventricle and left atrium by cine magnetic resonance imaging</articleTitle>
+          </citation>
+          <citation>
+            <pudMedId>22279111</pudMedId>
+            <articleTitle>Extracellular volume imaging by magnetic resonance imaging provides insights into overt and sub-clinical myocardial pathology</articleTitle>
+          </citation>
+          <citation>
+            <pudMedId>20507952</pudMedId>
+            <articleTitle>N-terminal proBNP—marker of cardiac dysfunction, fluid overload, or malnutrition in hemodialysis patients?</articleTitle>
+          </citation>
+          <citation>
+            <pudMedId>19281919</pudMedId>
+            <articleTitle>Heart failure with normal left ventricular ejection fraction</articleTitle>
+          </citation>
+          <citation>
+            <pudMedId>16014646</pudMedId>
+            <articleTitle>The role of NT-proBNP in the diagnostics of isolated diastolic dysfunction: Correlation with echocardiographic and invasive measurements</articleTitle>
+          </citation>
+          <citation>
+            <pudMedId>16115798</pudMedId>
+            <articleTitle>Increased left atrial volume index is an independent predictor of raised serum natriuretic peptide in patients with suspected heart failure but normal left ventricular ejection fraction: Implication for diagnosis of diastolic heart failure</articleTitle>
+          </citation>
+          <citation>
+            <pudMedId>16487838</pudMedId>
+            <articleTitle>B-type natriuretic peptide strongly reflects diastolic wall stress in patients with chronic heart failure: Comparison between systolic and diastolic heart failure</articleTitle>
+          </citation>
+          <citation>
+            <pudMedId>23716130</pudMedId>
+            <articleTitle>Biomarkers of diastolic dysfunction and myocardial fibrosis: Application to heart failure with a preserved ejection fraction</articleTitle>
+          </citation>
+          <citation>
+            <pudMedId>24122286</pudMedId>
+            <articleTitle>Circulating biomarkers in patients with heart failure and preserved ejection fraction</articleTitle>
+          </citation>
+          <citation>
+            <pudMedId>18549522</pudMedId>
+            <articleTitle>Galectins: Structure, function and therapeutic potential</articleTitle>
+          </citation>
+          <citation>
+            <pudMedId>26582585</pudMedId>
+            <articleTitle>Galectin-3 level and the severity of cardiac diastolic dysfunction using cellular and animal models and clinical indices</articleTitle>
+          </citation>
+          <citation>
+            <pudMedId>12975244</pudMedId>
+            <articleTitle>Ventricular remodeling after infarction and the extracellular collagen matrix: When is enough enough?</articleTitle>
+          </citation>
+          <citation>
+            <pudMedId>17283265</pudMedId>
+            <articleTitle>Diastolic heart failure: Evidence of increased myocardial collagen turnover linked to diastolic dysfunction</articleTitle>
+          </citation>
+          <citation>
+            <pudMedId>23500300</pudMedId>
+            <articleTitle>B-type natriuretic peptide and prognosis in heart failure patients with preserved and reduced ejection fraction</articleTitle>
+          </citation>
+          <citation>
+            <pudMedId>25046483</pudMedId>
+            <articleTitle>Association between cardiovascular vs. non-cardiovascular co-morbidities and outcomes in heart failure with preserved ejection fraction</articleTitle>
+          </citation>
+          <citation>
+            <pudMedId>21189092</pudMedId>
+            <articleTitle>Predictive value of plasma galectin-3 levels in heart failure with reduced and preserved ejection fraction</articleTitle>
+          </citation>
+          <citation>
+            <pudMedId>26754625</pudMedId>
+            <articleTitle>Plasma Biomarkers Reflecting Profibrotic Processes in Heart Failure with a Preserved Ejection Fraction: Data from the Prospective Comparison of ARNI with ARB on Management of Heart Failure with Preserved Ejection Fraction Study</articleTitle>
+          </citation>
+          <citation>
+            <pudMedId>23845797</pudMedId>
+            <articleTitle>Biomarkers of heart failure with normal ejection fraction: A systematic review</articleTitle>
+          </citation>
+          <citation>
+            <pudMedId>21329845</pudMedId>
+            <articleTitle>Diastolic tissue Doppler indexes correlate with the degree of collagen expression and cross-linking in heart failure and normal ejection fraction</articleTitle>
+          </citation>
+          <citation>
+            <pudMedId>21075869</pudMedId>
+            <articleTitle>Cardiac inflammation contributes to changes in the extracellular matrix in patients with heart failure and normal ejection fraction</articleTitle>
+          </citation>
+          <citation>
+            <pudMedId>9466976</pudMedId>
+            <articleTitle>Nitric oxide, atrial natriuretic peptide, and cyclic GMP inhibit the growth-promoting effects of norepinephrine in cardiac myocytes and fibroblasts</articleTitle>
+          </citation>
+          <citation>
+            <pudMedId>23684677</pudMedId>
+            <articleTitle>A novel paradigm for heart failure with preserved ejection fraction: Comorbidities drive myocardial dysfunction and remodeling through coronary microvascular endothelial inflammation</articleTitle>
+          </citation>
+          <citation>
+            <pudMedId>25277997</pudMedId>
+            <articleTitle>Elevation in high-sensitivity troponin T in heart failure and preserved ejection fraction and influence of treatment with the angiotensin receptor neprilysin inhibitor LCZ696</articleTitle>
+          </citation>
+          <citation>
+            <pudMedId>25982111</pudMedId>
+            <articleTitle>Older Adults, “Malignant” Left Ventricular Hypertrophy, and Associated Cardiac-Specific Biomarker Phenotypes to Identify the Differential Risk of New-Onset Reduced versus Preserved Ejection Fraction Heart Failure: CHS (Cardiovascular Health Study)</articleTitle>
+          </citation>
+        </citations>
+        <mle:enrichment
+          xmlns:mle="http://marklogic.com/phr/lib/enrichment">
+          <mle:meta>
+            <mle:entities>
+              <mle:Genes>
+                <mle:Gene preferredName="galectin 3" uri="/gene/3958.json" confidence="0.6123962"/>
+                <mle:Gene preferredName="endothelin 1" uri="/gene/1906.json" confidence="0.4587003"/>
+                <mle:Gene preferredName="suppression of tumorigenicity 2" uri="/gene/6761.json" confidence="0.3581286"/>
+                <mle:Gene preferredName="C-reactive protein" uri="/gene/1401.json" confidence="0.3034017"/>
+              </mle:Genes>
+              <mle:Proteins>
+                <mle:Protein preferredName="Galectin-3" uri="/Protein/uniprot_sprot.xml-0-468481.json" confidence="0.5405834"/>
+                <mle:Protein preferredName="Endothelin-1" uri="/Protein/uniprot_sprot.xml-0-181234.json" confidence="0.4081315"/>
+                <mle:Protein preferredName="C-reactive protein" uri="/Protein/uniprot_sprot.xml-0-177913.json" confidence="0.3034017"/>
+              </mle:Proteins>
+              <mle:Drugs/>
+            </mle:entities>
+          </mle:meta>
+        </mle:enrichment>
+      </article>
+    </publication>
+  </instance>
+  <attachments>
+    <article article-type="research-article"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      xmlns:mml="http://www.w3.org/1998/Math/MathML"
+      xmlns="">
+      <?properties open_access?>
+      <front>
+        <journal-meta>
+          <journal-id journal-id-type="nlm-ta">J Clin Med</journal-id>
+          <journal-id journal-id-type="iso-abbrev">J Clin Med</journal-id>
+          <journal-id journal-id-type="publisher-id">jcm</journal-id>
+          <journal-title-group>
+            <journal-title>Journal of Clinical Medicine</journal-title>
+          </journal-title-group>
+          <issn pub-type="epub">2077-0383</issn>
+          <publisher>
+            <publisher-name>MDPI</publisher-name>
+          </publisher>
+        </journal-meta>
+        <article-meta>
+          <article-id pub-id-type="pmid">30413105</article-id>
+          <article-id pub-id-type="pmc">6262605</article-id>
+          <article-id pub-id-type="doi">10.3390/jcm7110427</article-id>
+          <article-id pub-id-type="publisher-id">jcm-07-00427</article-id>
+          <article-categories>
+            <subj-group subj-group-type="heading">
+              <subject>Article</subject>
+            </subj-group>
+          </article-categories>
+          <title-group>
+            <article-title>Combination of Plasma Biomarkers and Clinical Data for the Detection of Myocardial Fibrosis or Aggravation of Heart Failure Symptoms in Heart Failure with Preserved Ejection Fraction Patients</article-title>
+          </title-group>
+          <contrib-group>
+            <contrib contrib-type="author">
+              <name>
+                <surname>Wu</surname>
+                <given-names>Cho-Kai</given-names>
+              </name>
+              <xref ref-type="aff" rid="af1-jcm-07-00427">1</xref>
+            </contrib>
+            <contrib contrib-type="author">
+              <contrib-id contrib-id-type="orcid" authenticated="true">https://orcid.org/0000-0002-6699-2298</contrib-id>
+              <name>
+                <surname>Su</surname>
+                <given-names>Mao-Yuan M.</given-names>
+              </name>
+              <xref ref-type="aff" rid="af2-jcm-07-00427">2</xref>
+            </contrib>
+            <contrib contrib-type="author">
+              <name>
+                <surname>Wu</surname>
+                <given-names>Yi-Fan</given-names>
+              </name>
+              <xref ref-type="aff" rid="af3-jcm-07-00427">3</xref>
+            </contrib>
+            <contrib contrib-type="author">
+              <name>
+                <surname>Hwang</surname>
+                <given-names>Juey-Jen</given-names>
+              </name>
+              <xref ref-type="aff" rid="af1-jcm-07-00427">1</xref>
+            </contrib>
+            <contrib contrib-type="author">
+              <name>
+                <surname>Lin</surname>
+                <given-names>Lian-Yu</given-names>
+              </name>
+              <xref ref-type="aff" rid="af1-jcm-07-00427">1</xref>
+              <xref rid="c1-jcm-07-00427" ref-type="corresp">*</xref>
+            </contrib>
+          </contrib-group>
+          <aff id="af1-jcm-07-00427">
+            <label>1</label>Division of Cardiology, Department of Internal Medicine, National Taiwan University College of Medicine and Hospital, Taipei 100, Taiwan;
+            <email>wuchokai@gmail.com</email> (C.-K.W.);
+            <email>jueyhwang@ntu.edu.tw</email> (J.-J.H.)
+          </aff>
+          <aff id="af2-jcm-07-00427">
+            <label>2</label>Department of Medical Imaging, National Taiwan University Hospital, Taipei 100, Taiwan;
+            <email>maoyuansu@gmail.com</email>
+          </aff>
+          <aff id="af3-jcm-07-00427">
+            <label>3</label>Department of Family Medicine, Taipei City Hospital Renai Branch, Taipei 106, Taiwan;
+            <email>geniuspenny@hotmail.com</email>
+          </aff>
+          <author-notes>
+            <corresp id="c1-jcm-07-00427">
+              <label>*</label>Correspondence:
+              <email>hspenos@gmail.com</email>; Tel.: +886-2-2312-3456 (ext. 5002); Fax: +886-2-2395-1841
+            </corresp>
+          </author-notes>
+          <pub-date pub-type="epub">
+            <day>08</day>
+            <month>11</month>
+            <year>2018</year>
+          </pub-date>
+          <pub-date pub-type="collection">
+            <month>11</month>
+            <year>2018</year>
+          </pub-date>
+          <volume>7</volume>
+          <issue>11</issue>
+          <elocation-id>427</elocation-id>
+          <history>
+            <date date-type="received">
+              <day>13</day>
+              <month>9</month>
+              <year>2018</year>
+            </date>
+            <date date-type="accepted">
+              <day>05</day>
+              <month>11</month>
+              <year>2018</year>
+            </date>
+          </history>
+          <permissions>
+            <copyright-statement>© 2018 by the authors.</copyright-statement>
+            <copyright-year>2018</copyright-year>
+            <license license-type="open-access">
+              <license-p>Licensee MDPI, Basel, Switzerland. This article is an open access article distributed under the terms and conditions of the Creative Commons Attribution (CC BY) license (
+                <ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by/4.0/">http://creativecommons.org/licenses/by/4.0/</ext-link>).
+              </license-p>
+            </license>
+          </permissions>
+          <abstract>
+            <p>
+              <bold>Background:</bold> Heart failure with preserved ejection fraction (HFpEF) is characterized by heart failure symptoms and structural change (including fibrosis). The relationship between novel biomarkers and the above components remains unclear.
+              <bold>Methods:</bold> Seventy-seven HFpEF patients were recruited. All patients underwent echocardiography with tissue doppler imaging, cardiac magnetic resonance imaging (CMRI), and measurement of plasma inflammatory, remodelling, endothelial function, and heart failure biomarker levels. Myocardial fibrosis was defined by CMRI-extracellular volume. Forward conditional logistic regression was applied to demonstrate the determinants of myocardial fibrosis or heart failure symptoms.
+              <bold>Results:</bold> The levels of growth differentiation factor, tissue inhibitor of metalloproteinase (TIMP)-1, galectin-3, and N-terminal pro b-type natriuretic peptide (NT-proBNP) were significantly higher in patients with more myocardial fibrosis. Matrix metalloproteinase-2 (MMP-2) and galectin-3 were independent markers of ECV. After adjusting for confounding factors, plasma galectin-3 and MMP-2 levels were correlated with myocardial fibrosis levels (odds ratio (OR): 1.05, 95% confidence interval (CI): 1.02 to 1.09,
+              <italic>p</italic> = 0.005 and OR: 2.11, 95% CI: 1.35–3.28, respectively), while NT-proBNP level only was associated with heart failure symptoms. We developed a score system consisted of biomarkers and clinical parameters. The area under the curve of the scoring system receiver operating characteristic curve is 0.838 to predict the degree of myocardial diffuse fibrosis.
+              <bold>Conclusions:</bold> In conclusion, we found that galectin-3 and MMP-2 were significantly associated with global cardiac fibrosis in HFpEF patients. We also combined plasma biomarkers and clinical data to identify HFpEF patients with more severe cardiac fibrosis.
+            </p>
+          </abstract>
+          <kwd-group>
+            <kwd>cardiac diastolic dysfunction</kwd>
+            <kwd>heart failure with preserved ejection fraction</kwd>
+            <kwd>biomarkers</kwd>
+            <kwd>cardiac magnetic resonance imaging</kwd>
+            <kwd>fibrosis</kwd>
+          </kwd-group>
+        </article-meta>
+      </front>
+      <body>
+        <sec id="sec1-jcm-07-00427">
+          <title>1. Introduction</title>
+          <p>In recent years, population-based studies have indicated that the prevalence of heart failure with preserved ejection fraction (HFpEF) has been increasing [
+            <xref rid="B1-jcm-07-00427" ref-type="bibr">1</xref>]. The morbidity associated with HFpEF, especially the hospitalization rate, is proposed to be similar to that associated with systolic heart failure [
+            <xref rid="B2-jcm-07-00427" ref-type="bibr">2</xref>]. However, the treatment of this clinical entity has been limited because the mechanism of the disease is not yet fully understood. There are several possible mechanisms for the development of HEpEF, including dysfunction of myocardial calcium handling proteins, increased passive stiffness, endocardial and pericardial disorders, disproportional microvascular flow, and abnormal neurohormonal regulation [
+            <xref rid="B3-jcm-07-00427" ref-type="bibr">3</xref>]. One report suggested that the cardiac interstitium may play a pivotal role in the pathophysiology of HFpEF [
+            <xref rid="B4-jcm-07-00427" ref-type="bibr">4</xref>].
+          </p>
+          <p>Although previous studies have shown that plasma biomarkers that reflect changes in extracellular matrix fibrillar collagen synthesis and degradation may predict the presence of HFpEF [
+            <xref rid="B5-jcm-07-00427" ref-type="bibr">5</xref>] and that biomarkers associated with myocardial fibrosis could be associated with major adverse cardiovascular events [
+            <xref rid="B6-jcm-07-00427" ref-type="bibr">6</xref>], the key plasma biomarkers associated with the degree of cardiac fibrosis remain unknown. Zile et al. examined various biomarkers and concluded that “fibrosis” plasma biomarkers have higher prediction rates for HFpEF than N-terminal pro–B-type natriuretic peptide (NT-proBNP) or clinical variables do. Therefore, it can be hypothesized that fibrosis biomarkers could actually reflect the severity of cardiac fibrosis, which is a major determinant of the symptoms or prognosis of HFpEF. Hence, it is crucial to discover the biomarkers associated with global myocardial fibrosis to improve the treatment, follow-up, and evaluation of HFpEF. Various biomarkers have been proposed to be associated with HFpEF [
+            <xref rid="B7-jcm-07-00427" ref-type="bibr">7</xref>,
+            <xref rid="B8-jcm-07-00427" ref-type="bibr">8</xref>]. For example, a biomarker associated with myocardial stress and stretch, NT-proBNP maintains prognostic value for composite of all-cause mortality and HF re-hospitalization at 1 year regardless of ejection fraction in a cohort study [
+            <xref rid="B7-jcm-07-00427" ref-type="bibr">7</xref>]. Biomarkers that associated with fibrosis, matrix metalloproteinases-2, for example, had also been proposed to have equal or better sensitivity and specificity than BNP in predicting HFpEF [
+            <xref rid="B7-jcm-07-00427" ref-type="bibr">7</xref>]. In addition, inflammatory biomarkers such as C-reactive protein, also have been reported to have stronger prognostic value for all-cause mortality and CV mortality in HFpEF than in HFrEF [
+            <xref rid="B7-jcm-07-00427" ref-type="bibr">7</xref>].
+          </p>
+          <p>Owing to the importance of evaluating the extent of global cardiac fibrosis by non-invasive methods, several studies have focused on post-contrast cardiac magnetic resonance imaging (CMRI) myocardial T1 time as the gold standard to quantify diffuse myocardial fibrosis in patients with cardiomyopathies [
+            <xref rid="B9-jcm-07-00427" ref-type="bibr">9</xref>]. Nevertheless, this method is subject to variation and interference by the magnetic field used, acquisition timing, amount of contrast injected, and the renal function of the patients. In recent years, myocardial extracellular volume (ECV) adjusted by blood T1 time has been shown to be a more reliable method for identifying cardiac fibrosis especially for HFpEF patients [
+            <xref rid="B10-jcm-07-00427" ref-type="bibr">10</xref>,
+            <xref rid="B11-jcm-07-00427" ref-type="bibr">11</xref>].
+          </p>
+          <p>We aimed to examine a variety of novel fibrosis and inflammatory biomarkers that has been proposed recently [
+            <xref rid="B7-jcm-07-00427" ref-type="bibr">7</xref>,
+            <xref rid="B8-jcm-07-00427" ref-type="bibr">8</xref>] in patients from the Taiwan Diastolic Heart Failure Registry (TDHFR) and to investigate the biomarkers associated with myocardial global fibrosis or those associated with aggravation of HF symptoms.
+          </p>
+        </sec>
+        <sec id="sec2-jcm-07-00427">
+          <title>2. Materials and Methods</title>
+          <sec id="sec2dot1-jcm-07-00427" sec-type="subjects">
+            <title>2.1. Study Participants and Study Design</title>
+            <p>The study group consisted of patients with heart failure admitted to the cardiovascular ward or outpatient clinics of the National Taiwan University Hospital from December 2011 to October 2015. Patients with a diagnosis of HFpEF (as defined in previous reports as well as by the 2007 consensus statement of the European Society of Cardiology) were enrolled from the TDHFR [
+              <xref rid="B12-jcm-07-00427" ref-type="bibr">12</xref>]. In brief, HFpEF was defined as: (1) heart failure defined according to the Framingham criteria and normal systolic function (ejection fraction ≥ 50%); and (2) echocardiographic evidence of left ventricular diastolic dysfunction: (1) a mitral inflow E/A ratio &lt; 1, deceleration time &gt; 220 cm/s, and decreased peak annular early diastolic velocity of the lateral mitral annulus &lt; 8 cm/s in tissue doppler imaging (2) tissue doppler imaging E/e’ level more than 15 (3) 15 &gt; E/e’ &gt; 8 and left atrial volume index &gt; 40 mL/m
+              <sup>2</sup> or left ventricular mass index &gt; 122 g/m
+              <sup>2</sup> in female, &gt;149 g/m
+              <sup>2</sup> in male. (4) 15 &gt; E/e’ &gt; 8 and NT-proBNP &gt; 220 pg/mL. Signs or symptoms of congestive heart failure include lung crepitations, pulmonary oedema, ankle swelling, hepatomegaly, dyspnoea on exertion, and fatigue. Significant hepatic disease, secondary hypertension, pericardial disease, severe valvular heart disease, cancer, and chronic obstructive pulmonary disease were excluded [
+              <xref rid="B13-jcm-07-00427" ref-type="bibr">13</xref>,
+              <xref rid="B14-jcm-07-00427" ref-type="bibr">14</xref>]. All patients included in the current study underwent echocardiographic examinations, blood sampling for the examination of biomarkers and CMRI. This study was performed in accordance with the Declaration of Helsinki and was approved by the institutional review board of the National Taiwan University Hospital (approval ID: 20070313R), and all subjects provided their written informed consent prior to participation in the study. The methods were carried out in accordance with the approved guidelines. We evaluated the patients and compared their NYHA HF function class, medication history with their baseline condition (defined as a stable condition 3 months before the study of MRI). We also defined aggravation of HF symptoms including an increase in the NYHA functional class by at least one degree and/or new prescription of one or more additional diuretics for HF.
+            </p>
+          </sec>
+          <sec id="sec2dot2-jcm-07-00427">
+            <title>2.2. Measurement of Plasma Fibrosis and Inflammation Biomarkers</title>
+            <p>All blood samples were collected from each patient after 12 h of fasting. Biomarkers that were reported to be associated with HFpEF were examined. The blood was spun at 2000×
+              <italic>g</italic> for 15 min, and then the plasma was separated and stored at −80 °C until use.
+            </p>
+            <p>Levels of plasma inflammatory markers (tissue necrosis factor alpha (catalog no. HSTA00D; R &amp; D Systems, 614 McKinley Place NE, Minneapolis, MN 55413, USA), interleukin-1 beta (catalog no. HSLB00C; R &amp; D Systems, Minneapolis, MN, USA), interleukin-6 (catalog no. HST600B; R &amp; D Systems, Minneapolis, MN, USA), C-reactive protein (catalog no. DCRP00. R &amp; D Systems, Minneapolis, MN, USA), growth differentiation factor (GDF-15) (catalog no. DGD150, R &amp; D Systems, Minneapolis, MN, USA) and osteopontin-A (catalog no. DOST00, R &amp; D Systems, Minneapolis, MN, USA)), remodelling markers (tissue inhibitor of metalloproteinase 1 (TIMP1) (catalog no. DTM100, R &amp; D Systems, Minneapolis, MN, USA), tissue inhibitor of metalloproteinase-2 (TIMP2) (catalog no. DTM200, R &amp; D Systems, Minneapolis, MN, USA), matrix metalloproteinase-2 (MMP-2) (catalog no. MMP200, R &amp; D Systems, Minneapolis, MN, USA), matrix metalloproteinase-9 (catalog no. DMP900, R &amp; D Systems, Minneapolis, MN, USA), procollagen type I (cat no. MK101, Takara Bio Inc., Nojihigashi 7-4-38, Kusatsu, Shiga, Japan), galectin-3 (catalog no. DGAL30, R &amp; D Systems, Minneapolis, MN, USA) and connective tissue growth factor (CTGF) (Cloud-Clone Corp, USCN life science Inc., 11271 Richmond Avenue, Suite H104, Houston, TX 77082, USA)), endothelial function markers (endothelin-1) (catalog no. DET100, R &amp; D Systems, Minneapolis, MN, USA), and heart failure markers (suppression of tumorigenicity-2 (ST2) (catalog no. DST200, R &amp; D Systems, Minneapolis, MN, USA) and N-terminal of the prohormone brain natriuretic peptide (NT-proBNP) (catalog no. BE6905796, IBL-America, 8201 Central Ave NE, Suite P, Minneapolis, MN 55432, USA)) were measured with high-sensitivity enzyme-linked immunosorbent assays.</p>
+          </sec>
+          <sec id="sec2dot3-jcm-07-00427">
+            <title>2.3. Echocardiography</title>
+            <p>Left atrial (LA) diameter, left ventricular (LV) end diastolic diameter, systolic diameter, interventricular septum thickness, LV posterior wall thickness, mitral inflow early rapid filling wave (E), peak velocity of the late filling wave due to atrial contraction (A), E/A ratio, E wave deceleration time, and mitral annular early diastolic velocity were measured according to the American Society of Echocardiography’s guidelines by using an iE33 xMATRIX echocardiography system (Philips Healthcare, Best, The Netherlands). The peak annular early and late diastolic velocities of the lateral mitral annulus in tissue Doppler imaging (e’ and a’) were also recorded. Doppler and colour Doppler studies were performed to detect valvular heart disease. Significant valvular heart disease was defined as at least moderate aortic or mitral stenosis/regurgitation.</p>
+          </sec>
+          <sec id="sec2dot4-jcm-07-00427">
+            <title>2.4. Magnetic Resonance Imaging Acquisition</title>
+            <p>MRI was performed on a 3-T MRI system (Trio, Siemens, Erlangen, Germany) with an 8-channel cardiovascular phased array torso coil. Myocardial T1 mapping was performed with an electrocardiography (ECG)-triggered Modified Look Locker Inversion recovery (MOLLI) sequence before and 10 min after a 0.15 mmol/kg intravenous administration of the gadolinium-based contrast agent (Omniscan, Winthrop Laboratories, GE Health care, Princeton, NJ, USA). The MOLLI protocol used two Look-Locker cycles to acquire seven images over 11 heart beats, and the scanning parameters were: TR/TE, 1.9 ms/1.0 ms; flip angle, 35°; minimum inversion time, 110 ms; inversion time increment, 80 ms; matrix size, 256 × 192; slice thickness, 6 mm; spatial resolution, 1.28 mm; GRAPPA acceleration factor, 2; number of inversions, 2; images acquired after first inversion, 5; pause 4 heart beats and images acquired after second inversion, 2. Five evenly spaced short-axis slices were acquired sequentially from the LV base to apex. After post-contrast T1 acquisition, late gadoninium enhancement (LGE) images were acquired using an ECG-triggered phase-sensitive inversion recovery prepared segmented fast gradient echo pulse sequence [
+              <xref rid="B15-jcm-07-00427" ref-type="bibr">15</xref>] at the same short-axis slices as those in the myocardial T1 mapping to identify focal fibrosis or scaring.
+            </p>
+            <p>Cine MRI was performed using a segmented balanced steady-state gradient echo pulse sequence with a retrospective ECG R-wave trigger. The scanning parameters were: TR/TE, 3.0 ms/1.5 ms; flip angle, 46°; matrix size, 256 × 208 and spatial resolution, 1.21 mm. Multiple short-axis slices were obtained from the mitral orifice to the LV apex with a slice thickness of 8 mm and a gap of 2 mm. The true temporal resolution was 63 ms, and 30 cardiac phases were reconstructed retrospectively for each slice level.</p>
+          </sec>
+          <sec id="sec2dot5-jcm-07-00427">
+            <title>2.5. Magnetic Resonance Imaging Analysis</title>
+            <p>Quantitative analysis of myocardial ECV was performed on T1 maps [
+              <xref rid="B8-jcm-07-00427" ref-type="bibr">8</xref>]. The regions of interest (ROIs) in the blood and the myocardium of the LV were drawn in the central area of the LV cavity and the septal myocardium on T1 maps for each slice, respectively. If the septal myocardium showed regional hyperenhancement on the LGE images, the ROI of the myocardium was re-drawn in the other unenhanced myocardial regions. The averaged T1 values of the segmented ROIs were then computed. After subtracting the pre-contrast values from the post-contrast values, the changes in the relaxation rate (1/T1) in the blood and in the myocardium were obtained. Myocardial ECV values were calculated using the ratio of the change in relaxation rate in the myocardium to that in the blood and multiplied by: (1-hematocrit). After excluding myocardium areas with LGE, we averaged each myocardial ECV value over five short-axis slices for each subject [
+              <xref rid="B16-jcm-07-00427" ref-type="bibr">16</xref>].
+            </p>
+            <p>For LV function and mass analysis, endocardial and epicardial contours of the LV were determined at each slice level on cine MRI and the area enclosed by each contour was computed [
+              <xref rid="B17-jcm-07-00427" ref-type="bibr">17</xref>]. LV volumes for each time point were then determined by Simpson’s rule to obtain the volume-time curve of the LV. LV end diastolic volume (LVEDV) and LV end systolic volume (LVESV) were assessed from the volume-time curve for the maximal and minimal values and were used to compute LVEFs. LV mass was computed as the difference between LV epicardial volume at end-diastole and LVEDV, multiplied by the density of the myocardium, 1.05 g/cc. LV volumes and mass indexed to body surface area (BSA) were also measured from LVEDV (LVEDVi), LVESV (LVESVi), and LVM (LVMi) divided by BSA.
+            </p>
+          </sec>
+          <sec id="sec2dot6-jcm-07-00427">
+            <title>2.6. Statistical Analysis</title>
+            <p>Data were analysed using SPSS 15.0 software (SPSS Inc., Chicago, IL, USA). The normality of continuous variables was tested by Kolmogorov–Smirnov test. Since we found that most of the serum cytokine levels were not normally distributed, all the serum cytokine levels were expressed by median plus quartiles (25–75%). Variables with normal distribution were represented as mean values ± standard deviation, while categorical variables were represented as frequencies. Comparisons between continuous data with and without normal distribution were performed by using the Student’s
+              <italic>t</italic> test and Mann–Whitney
+              <italic>U</italic> test respectively while comparisons between categorical variables made using Pearson’s chi-square test. Multiple logistic regression modelling was applied followed by a forward stepwise analysis method to determine the factors associated with two outcomes CMRI fibrosis (ECV &lt; 28% vs. ≥28%) and clinical heart failure. Factors including all the baselines, MRI, and laboratory parameters listed in
+              <xref rid="jcm-07-00427-t001" ref-type="table">Table 1</xref> were used as independent variables. The median value of ECV (28%) was similar to that (27%) reported in a previous study as a cut point for normal and abnormal values [
+              <xref rid="B18-jcm-07-00427" ref-type="bibr">18</xref>]. The result of the logistic regression was also used to create a scoring system to predict abnormal ECV. The nearest integer of the odds ratio of each variable with significant correlation with the ECV was used as the “score” of that variable if the variable was over the cut point level. The cut point of a specific variable was determined by receiver operating characteristic curve (ROC) analysis with the largest area under curve (AUC) used to predict abnormal ECV. The total score was the sum of the score of each variable. The predictive ability of the scoring system was tested by calculating the area under curve (AUC) of the receiver operating characteristic curve (ROC). For all tests, a
+              <italic>p</italic>-value &lt; 0.05 was considered statistically significant.
+            </p>
+          </sec>
+        </sec>
+        <sec id="sec3-jcm-07-00427">
+          <title>3. Results</title>
+          <sec id="sec3dot1-jcm-07-00427" sec-type="subjects">
+            <title>3.1. Baseline Characteristics and Echocardiographic Characteristics of Patients</title>
+            <p>A total of 77 patients with diastolic dysfunction were included in the study cohort. The baseline characteristics according to fibrosis (ECV value) severity are shown in
+              <xref rid="jcm-07-00427-t001" ref-type="table">Table 1</xref>. The baseline characteristics and comorbidities in both groups were comparable except for diabetes mellitus, indicating that this was an important factor for myocardial fibrosis. We also noted that patients with diastolic dysfunction with higher ECV had higher chances of experiencing symptoms of clinical heart failure (
+              <xref rid="jcm-07-00427-t001" ref-type="table">Table 1</xref>).
+            </p>
+          </sec>
+          <sec id="sec3dot2-jcm-07-00427">
+            <title>3.2. Plasma Levels of Biomarkers in Patients with Diastolic Dysfunction</title>
+            <p>Inflammatory, remodelling, endothelial, and heart failure markers were all examined. The detailed results of cytokines in each group were shown in
+              <xref rid="jcm-07-00427-t001" ref-type="table">Table 1</xref>. The levels of inflammatory marker plasma GDF-15 were significantly higher in patients with high-ECV than those in patients with low-ECV (high-ECV, 1297.50 (697.85–2543.90) pg/mL; low-ECV, 847.40 (625.50–1301.30);
+              <italic>p</italic> = 0.018) (
+              <xref rid="jcm-07-00427-t001" ref-type="table">Table 1</xref>). Remodelling marker levels, including those of plasma MMP-2 and Galectin-3, were significantly higher in patients with high-ECV (MMP-2, high-ECV, 188.68 (149.79–254.82) ng/mL vs. low-ECV, 147.96 (131.61–184.50);
+              <italic>p</italic> = 0.02; Galectin-3, high-ECV, 9.92 (7.70–15.41) ng/mL vs. low-ECV, 6.81 (5.59–8.67) ng/mL;
+              <italic>p</italic> &lt; 0.001). In addition, levels of NT-proBNP, the well-known heart failure marker, were also higher in the high-ECV group (high-ECV, 1530.0 (739.0–3150.0) pg/mL; low-ECV, 850.0 (439.5–1335.0);
+              <italic>p</italic> = 0.021).
+            </p>
+          </sec>
+          <sec id="sec3dot3-jcm-07-00427">
+            <title>3.3. Factors (Biomarkers) Associated with Cardiac Fibrosis and Aggravated Heart Failure</title>
+            <p>The correlations among ECV and CMRI diastolic and systolic function parameters and biomarkers were assessed. We then applied a forward stepwise analysis method to determine the factors associated with ECV. The results are demonstrated in
+              <xref rid="jcm-07-00427-t002" ref-type="table">Table 2</xref>. Diabetes mellitus was a traditional risk factor associated with cardiac fibrosis in this cohort. MMP-2 and Galectin-3 levels were associated with higher rates of ECV (odds ratio (OR): 1.05, 95% confidence interval (CI): 1.02 to 1.09,
+              <italic>p</italic> = 0.005 and OR: 2.11, 95% CI: 1.35–3.28, respectively)), whereas endothelin-1 had a borderline relationship with the development of higher cardiac fibrosis (OR: 16.207, 95% CI: 0.961–273.333,
+              <italic>p</italic> = 0.053). For the determinants of aggravated heart failure, we performed another forward stepwise analysis and found that TIMP1 and NT-proBNP were the major determinants for the presence of aggravated heart failure (OR: 1.025, 95% CI: 1.001–1.050 and OR: 1.010, 95% CI: 1.003–1.017, respectively).
+            </p>
+            <p>We created a scoring system by using diabetes mellitus status (yes = 2, no = 0) and the median levels of MMP-2 (2 vs. 0), galectin-3 (1 vs. 0) and endothelin-1 (2 vs. 0), as cut-off points. The results of this scoring system are presented in
+              <xref rid="jcm-07-00427-t003" ref-type="table">Table 3</xref>. The ROC for ECV is shown in
+              <xref ref-type="fig" rid="jcm-07-00427-f001">Figure 1</xref>. The AUC of the scoring system was 0.838 (0.737–0.939).
+            </p>
+          </sec>
+        </sec>
+        <sec id="sec4-jcm-07-00427">
+          <title>4. Discussion</title>
+          <p>In the current study, we evaluated all patients with HFpEF by using CMRI and determined the global absolute cardiac fibrosis value. We were able to identify the extent of fibrosis in each patient with HFpEF and measured a variety of inflammation, cardiac remodelling, endothelial function, and heart failure cytokine levels. We found that galectin-3 and MMP-2 were significantly associated with global cardiac fibrosis, even after adjusting for confounding risk factors, whereas TIMP2 and NT-proBNP were significantly associated with the aggravation of heart failure symptoms. We also developed a cytokine model along with inclusion of clinical parameters to identify HFpEF patients with more severe cardiac fibrosis. To the best of our knowledge, this is the first report to demonstrate and differentiate the relationship between a variety of cytokines and cardiac ECV (fibrosis content) or heart failure symptoms in a prospective HFpEF cohort. With our models, a clinical physician could decide the level of fibrosis and actual severity of HFpEF patients by blood tests and clinical history.</p>
+          <sec id="sec4dot1-jcm-07-00427">
+            <title>4.1. Major Findings</title>
+            <p>We found that NT-proBNP level was unable to differentiate the degree of fibrosis well, and that it was significantly associated with heart failure symptoms. One possible explanation for this is that NT-proBNP is a marker of volume overload rather than of cardiac dysfunction [
+              <xref rid="B19-jcm-07-00427" ref-type="bibr">19</xref>]. Previous studies showed that NT-proBNP level can indicate diastolic dysfunction in patients with HFpEF with moderate tissue Doppler E/Ea ratios [
+              <xref rid="B20-jcm-07-00427" ref-type="bibr">20</xref>]. NT-proBNP levels are also related to atrial volume enlargement, which is considered an indirect marker of filling pressure [
+              <xref rid="B21-jcm-07-00427" ref-type="bibr">21</xref>,
+              <xref rid="B22-jcm-07-00427" ref-type="bibr">22</xref>]. In patients with HFpEF, increased NT-proBNP level is directly related to increased LV diastolic filling pressure and end diastolic wall stress [
+              <xref rid="B23-jcm-07-00427" ref-type="bibr">23</xref>]. NT-proBNP level is more closely related to LV diastolic wall stress. Therefore, NT-proBNP level decreases when LV diastolic pressure decreases in response to volume reduction [
+              <xref rid="B24-jcm-07-00427" ref-type="bibr">24</xref>]. Hence, in patients with LVDD who have a smaller LV cavity size with much lower end diastolic wall stress than that in patients with HFpEF, even in the context of high diastolic pressures, a lower stimulus for the production of NT-proBNP is present. In this context, NT-proBNP level may correlate with the development of heart failure symptoms, but not with the actual extent of fibrosis or possible long-term outcomes in patients with LVDD. In addition, TIMPs have multiple mechanisms of action and targets for activity. Generally, TIMPs may bind to active MMPs and inactivate their protease activity, leading to a reduction in collagen degradation. Alternatively, TIMPs may affect myocardial growth, fibroblast proliferation, and activity. Increasing TIMPs levels correlate with increased fibroblast growth factors and can stimulate profibrotic signalling cascades and contribute to fibrosis [
+              <xref rid="B24-jcm-07-00427" ref-type="bibr">24</xref>,
+              <xref rid="B25-jcm-07-00427" ref-type="bibr">25</xref>]. In the present cohort, TIMPs levels were significantly higher in patients with greater degrees of myocardial fibrosis (TIMP1,
+              <xref rid="jcm-07-00427-t001" ref-type="table">Table 1</xref>), which could reflect changes in collagen homeostasis. Patients with increasing TIMPs levels also had significant manifestations of heart failure symptoms after adjusting for potential confounding factors (
+              <xref rid="jcm-07-00427-t002" ref-type="table">Table 2</xref>). TIMPs may represent the transition from antecedent diseases like hypertension to clinically symptomatic heart failure. The patients in this cohort did not suffer from obvious LV hypertrophy, and LVDD mainly resulted from myocardial fibrosis. TIMPs control upstream myocardial collagen turnover and may, therefore, be associated with both heart failure symptoms and the severity of myocardial fibrosis in this cohort. In addition, our current scoring system incorporated clinical parameters and biomarkers to provide precise prediction for the severity of myocardial fibrosis (
+              <xref ref-type="fig" rid="jcm-07-00427-f001">Figure 1</xref>). Current prevalent biomarkers (ST2, NT-proBNP, etc.) mostly predicted the fluid status of HFpEF patients but cannot predict actual fibrotic severity for the patients. Using this new scoring system could help clinical physicians to differentiate those with advanced-stage (more fibrotic) HFpEF by a simple blood test. For those with higher scores, we realized that these patients are fragile and could develop severe symptoms with little fluid status change. Therefore, strict fluid limitation, blood pressure control, or even aggressive therapies should be performed even if the patients remain asymptomatic or the NT-proBNP level is within normal range.
+            </p>
+            <p>We calculated the degree of diffuse cardiac fibrosis by CMRI-ECV, which should not be affected by confounding factors such as magnetic field, acquisition timing, the amount of contrast injected, and the renal function of patients. CMRI-ECV has been shown to be stable over a wide time range after contrast administration [
+              <xref rid="B10-jcm-07-00427" ref-type="bibr">10</xref>]. Galectin-3 and MMP-2 correlate to CMRI-ECV even after adjusting for other comorbidities. Galectin-3 is secreted by activated macrophages and modulates several physiological and pathological processes that are associated with the development of HFpEF, including inflammation and fibrosis [
+              <xref rid="B26-jcm-07-00427" ref-type="bibr">26</xref>]. Our previous studies concluded that mechanical stretching increased galectin-3 secretion in cultured cardiomyocytes, and both plasma and myocardial galectin-3 levels were found to be correlated with the severity of cardiac diastolic dysfunction. We also provided evidence for the possibility that the myocardium could secret galectin-3 under the stimulation of myocardial stretching (or pressure overload), and that the secreted galectin-3 may in turn trigger myocardial fibrosis, resulting in LV diastolic dysfunction [
+              <xref rid="B27-jcm-07-00427" ref-type="bibr">27</xref>]. Furthermore, the myocardial extracellular matrix (ECM) plays a critical role in cardiac architecture and function [
+              <xref rid="B28-jcm-07-00427" ref-type="bibr">28</xref>]. ECM balance is regulated by complex interactions between MMPs, which degrade collagen and other ECM components, and their specific tissue inhibitors. Checking plasma MMP levels may be a method for quantifying collagen turnover in HFpEF, with implications for assessing disease severity, prognosis, and responses to treatment. Compared to more thoroughly investigated MMPs, increases in MMP-2 levels have been reported most consistently in patients with HFpEF [
+              <xref rid="B5-jcm-07-00427" ref-type="bibr">5</xref>,
+              <xref rid="B29-jcm-07-00427" ref-type="bibr">29</xref>]. Hence, in our current cohort of patients with LV dysfunction, only MMP-2 had a significant correlation with global cardiac fibrosis. Therefore, biomarkers representative of true cardiac fibrosis such as galectin-3 and MMP-2 may reflect the severity of diastolic dysfunction more stably, while biomarkers associated with diastolic filling pressure (e.g., NT-proBNP) reflect current disease status or the severity of acute heart failure symptoms. BNP has been shown to be a strong predictor of short-term outcomes or symptoms in patients with HFpEF [
+              <xref rid="B30-jcm-07-00427" ref-type="bibr">30</xref>,
+              <xref rid="B31-jcm-07-00427" ref-type="bibr">31</xref>], but patients with HFpEF with higher galectin-3 or MMP-2 levels had poorer long-term prognoses [
+              <xref rid="B32-jcm-07-00427" ref-type="bibr">32</xref>].
+            </p>
+            <p>Various studies have assessed biomarkers and HFpEF. Most studies examined single biomarkers or groups of similar biomarkers, and thus the results were often inconsistent. A recent study included a group of patients with HFpEF from the PARAMOUNT trial and compared the predictive value of four biomarkers (ST2, galectin-3, MMP-2, and collagen III N-terminal propeptide). The authors concluded that in patients with HFpEF, the levels of biomarkers that reflect collagen homeostasis were correlated with the severity of disease and underlying pathophysiology and may modify the structural response to treatment [
+              <xref rid="B33-jcm-07-00427" ref-type="bibr">33</xref>]. The most important components for diastolic function in heart failure are chamber stiffness and relaxation. Efficient diagnostic and prognostic biomarkers remain undetermined in this population. Biomarkers that mostly extensively examined in HFpEF are extracellular matrix or remodelling biomarkers. Zile et al. examined a panel of remodelling biomarkers along with clinical variables in a group of left ventricular hypertrophy patients and those who have development of HFpEF [
+              <xref rid="B5-jcm-07-00427" ref-type="bibr">5</xref>]. A plasma multibiomarker panel consisting of increased remodelling biomarkers (MMPs, TIMPs) and NT-proBNP predicted the presence of left ventricular hypertrophy well. The authors then concluded that plasma biomarkers reflecting changes in extracellular matrix fibrillar collagen homeostasis have discriminative value in identifying the presence of HFpEF, possibly better then clinical indices. Furthermore, according to a recent review and our previous studies, several biomarkers, including biomarkers of myocyte stress, inflammation, GDF-15, cystatin C, and galectin-3, were associated with development of HFpEF and even with clinical outcomes of HFNEF patients in terms of morbidity and mortality [
+              <xref rid="B13-jcm-07-00427" ref-type="bibr">13</xref>,
+              <xref rid="B27-jcm-07-00427" ref-type="bibr">27</xref>,
+              <xref rid="B34-jcm-07-00427" ref-type="bibr">34</xref>]. Besides, fibrosis in HFpEF is closely linked to inflammation. Histological study for HFpEF myocardium revealed an increased collagen volume fraction, higher expression of collagen type I, and more collagen cross-linking, which all contributed to diastolic LV dysfunction, which was in agreement with our cohort [
+              <xref rid="B35-jcm-07-00427" ref-type="bibr">35</xref>]. The authors proposed that myocardial collagen deposition might result from differentiation of fibroblasts into myofibroblasts induced by inflammation released by monocytes [
+              <xref rid="B36-jcm-07-00427" ref-type="bibr">36</xref>]. These inflammations could reduce NO bioavailability and increase the function of profibrotic action of endothelin-1 or angiotensin II [
+              <xref rid="B37-jcm-07-00427" ref-type="bibr">37</xref>]. Therefore, inflammatory response could stimulate cardiac diastolic dysfunction initially [
+              <xref rid="B13-jcm-07-00427" ref-type="bibr">13</xref>] and could result in myocardial fibrosis [
+              <xref rid="B38-jcm-07-00427" ref-type="bibr">38</xref>].
+            </p>
+            <p>To summarize the results from numerous studies and a review article, myocardial fibrosis could be resulted from multiple pathways and unlike most previous studies [
+              <xref rid="B39-jcm-07-00427" ref-type="bibr">39</xref>,
+              <xref rid="B40-jcm-07-00427" ref-type="bibr">40</xref>], we evaluated modern biomarkers from all aspects, including inflammatory, collagen turnover, and heat failure indicators. The goal of this project was to test the discriminative value of a large portfolio of candidate biomarkers from multiple pathways in HFpEF patients. All patients included in this study underwent CMRI-ECV examination, and we were able to assess the degree of LV fibrosis precisely. Therefore, we provide evidence in support of the concept above that only biomarkers related to collagen turnover (galectin-3, MMP-2) were associated with structural changes and could be targets for further therapy or predictors of treatment response.
+            </p>
+          </sec>
+          <sec id="sec4dot2-jcm-07-00427">
+            <title>4.2. Study Limitations</title>
+            <p>The present study had several limitations. First, this was a cross-sectional study, and the number of patients included was small. Further large-scale studies are warranted to determine the prognostic value cytokine levels in patients with HFpEF. Second, the findings were purely correlative, and are not sufficient to indicate any causative relationships. Third, we did not directly measure tissue biomarker expression in patients with HFpEF. Theoretically, this is not feasible in human studies. However, we successfully measured the severity of tissue fibrosis by using CMRI-ECV and confirmed the presence of correlations between various novel cytokines and fibrosis or heart failure symptoms. We believe that CMRI-ECV is the most reliable non-invasive method for elucidating the relationships between cytokines and tissue or clinical expression.</p>
+            <p>In conclusion, we successfully studied the associations between plasma biomarkers with myocardial fibrosis or heart failure symptoms in a cohort of HFpEF patients. We found a significant correlation among plasma NT-proBNP, TIMP, and the development of heart failure symptoms. We also demonstrated that galectin-3 and MMP-2 levels increased according to the severity of myocardial fibrosis after adjusting for confounding factors. The results of this study indicated that different biomarkers could be important intermediaries in promoting further fibrosis and/or inflammatory cascades, or may reflect the elevation of cardiac diastolic filling pressure. While there is little information available regarding the medical management of HFpEF, novel therapies that downregulate the expression of these biomarkers may represent a new direction. Through examination of cytokine levels, the status, aetiology, or severity of cardiac fibrosis and LV diastolic dysfunction can be determined. This may allow more individualized therapies to be developed in the future.</p>
+          </sec>
+        </sec>
+      </body>
+      <back>
+        <notes>
+          <title>Author Contributions</title>
+          <p>C.-K.W.: study design, designed experiments conducted experiments, analysed data, data discussion, collected samples, manuscript drafting. M.-Y.S.: performed the laboratory work, collected and analyzed the clinical data. Y.-F.W.: study design, designed experiments conducted experiments. J.-J.H.: recruited the patients. L.-Y.L.: study design, designed experiments conducted experiments, analysed data, data discussion, collected samples, manuscript drafting.</p>
+        </notes>
+        <notes>
+          <title>Funding</title>
+          <p>This research received no external funding.</p>
+        </notes>
+        <notes notes-type="COI-statement">
+          <title>Conflicts of Interest</title>
+          <p>The authors declare no conflict of interest.</p>
+        </notes>
+        <ref-list>
+          <title>References</title>
+          <ref id="B1-jcm-07-00427">
+            <label>1.</label>
+            <element-citation publication-type="journal">
+              <person-group person-group-type="author">
+                <name>
+                  <surname>Gaasch</surname>
+                  <given-names>W.H.</given-names>
+                </name>
+                <name>
+                  <surname>Zile</surname>
+                  <given-names>M.R.</given-names>
+                </name>
+              </person-group>
+              <article-title>Left ventricular diastolic dysfunction and diastolic heart failure</article-title>
+              <source>Annu. Rev. Med.</source>
+              <year>2004</year>
+              <volume>55</volume>
+              <fpage>373</fpage>
+              <lpage>394</lpage>
+              <pub-id pub-id-type="doi">10.1146/annurev.med.55.091902.104417</pub-id>
+              <pub-id pub-id-type="pmid">14746527</pub-id>
+            </element-citation>
+          </ref>
+          <ref id="B2-jcm-07-00427">
+            <label>2.</label>
+            <element-citation publication-type="journal">
+              <person-group person-group-type="author">
+                <name>
+                  <surname>Vasan</surname>
+                  <given-names>R.S.</given-names>
+                </name>
+                <name>
+                  <surname>Larson</surname>
+                  <given-names>M.G.</given-names>
+                </name>
+                <name>
+                  <surname>Benjamin</surname>
+                  <given-names>E.J.</given-names>
+                </name>
+                <name>
+                  <surname>Evans</surname>
+                  <given-names>J.C.</given-names>
+                </name>
+                <name>
+                  <surname>Reiss</surname>
+                  <given-names>C.K.</given-names>
+                </name>
+                <name>
+                  <surname>Levy</surname>
+                  <given-names>D.</given-names>
+                </name>
+              </person-group>
+              <article-title>Congestive heart failure in subjects with normal versus reduced left ventricular ejection fraction: Prevalence and mortality in a population-based cohort</article-title>
+              <source>J. Am. Coll. Cardiol.</source>
+              <year>1999</year>
+              <volume>33</volume>
+              <fpage>1948</fpage>
+              <lpage>1955</lpage>
+              <pub-id pub-id-type="doi">10.1016/S0735-1097(99)00118-7</pub-id>
+              <pub-id pub-id-type="pmid">10362198</pub-id>
+            </element-citation>
+          </ref>
+          <ref id="B3-jcm-07-00427">
+            <label>3.</label>
+            <element-citation publication-type="journal">
+              <person-group person-group-type="author">
+                <name>
+                  <surname>Angeja</surname>
+                  <given-names>B.G.</given-names>
+                </name>
+                <name>
+                  <surname>Grossman</surname>
+                  <given-names>W.</given-names>
+                </name>
+              </person-group>
+              <article-title>Evaluation and management of diastolic heart failure</article-title>
+              <source>Circulation</source>
+              <year>2003</year>
+              <volume>107</volume>
+              <fpage>659</fpage>
+              <lpage>663</lpage>
+              <pub-id pub-id-type="doi">10.1161/01.CIR.0000053948.10914.49</pub-id>
+              <pub-id pub-id-type="pmid">12578862</pub-id>
+            </element-citation>
+          </ref>
+          <ref id="B4-jcm-07-00427">
+            <label>4.</label>
+            <element-citation publication-type="journal">
+              <person-group person-group-type="author">
+                <name>
+                  <surname>Udelson</surname>
+                  <given-names>J.E.</given-names>
+                </name>
+              </person-group>
+              <article-title>Heart failure with preserved ejection fraction</article-title>
+              <source>Circulation</source>
+              <year>2011</year>
+              <volume>124</volume>
+              <fpage>540</fpage>
+              <lpage>543</lpage>
+              <pub-id pub-id-type="doi">10.1161/CIRCULATIONAHA.111.071696</pub-id>
+              <pub-id pub-id-type="pmid">22105201</pub-id>
+            </element-citation>
+          </ref>
+          <ref id="B5-jcm-07-00427">
+            <label>5.</label>
+            <element-citation publication-type="journal">
+              <person-group person-group-type="author">
+                <name>
+                  <surname>Zile</surname>
+                  <given-names>M.R.</given-names>
+                </name>
+                <name>
+                  <surname>Desantis</surname>
+                  <given-names>S.M.</given-names>
+                </name>
+                <name>
+                  <surname>Baicu</surname>
+                  <given-names>C.F.</given-names>
+                </name>
+                <name>
+                  <surname>Stroud</surname>
+                  <given-names>R.E.</given-names>
+                </name>
+                <name>
+                  <surname>Thompson</surname>
+                  <given-names>S.B.</given-names>
+                </name>
+                <name>
+                  <surname>McClure</surname>
+                  <given-names>C.D.</given-names>
+                </name>
+                <name>
+                  <surname>Mehurg</surname>
+                  <given-names>S.M.</given-names>
+                </name>
+                <name>
+                  <surname>Spinale</surname>
+                  <given-names>F.G.</given-names>
+                </name>
+              </person-group>
+              <article-title>Plasma biomarkers that reflect determinants of matrix composition identify the presence of left ventricular hypertrophy and diastolic heart failure</article-title>
+              <source>Circ. Heart Fail.</source>
+              <year>2011</year>
+              <volume>4</volume>
+              <fpage>246</fpage>
+              <lpage>256</lpage>
+              <pub-id pub-id-type="doi">10.1161/CIRCHEARTFAILURE.110.958199</pub-id>
+              <pub-id pub-id-type="pmid">21350055</pub-id>
+            </element-citation>
+          </ref>
+          <ref id="B6-jcm-07-00427">
+            <label>6.</label>
+            <element-citation publication-type="journal">
+              <person-group person-group-type="author">
+                <name>
+                  <surname>Barasch</surname>
+                  <given-names>E.</given-names>
+                </name>
+                <name>
+                  <surname>Gottdiener</surname>
+                  <given-names>J.S.</given-names>
+                </name>
+                <name>
+                  <surname>Aurigemma</surname>
+                  <given-names>G.</given-names>
+                </name>
+                <name>
+                  <surname>Kitzman</surname>
+                  <given-names>D.W.</given-names>
+                </name>
+                <name>
+                  <surname>Han</surname>
+                  <given-names>J.</given-names>
+                </name>
+                <name>
+                  <surname>Kop</surname>
+                  <given-names>W.J.</given-names>
+                </name>
+                <name>
+                  <surname>Tracy</surname>
+                  <given-names>R.P.</given-names>
+                </name>
+              </person-group>
+              <article-title>Association between elevated fibrosis markers and heart failure in the elderly: The cardiovascular health study</article-title>
+              <source>Circ. Heart Fail.</source>
+              <year>2009</year>
+              <volume>2</volume>
+              <fpage>303</fpage>
+              <lpage>310</lpage>
+              <pub-id pub-id-type="doi">10.1161/CIRCHEARTFAILURE.108.828343</pub-id>
+              <pub-id pub-id-type="pmid">19808353</pub-id>
+            </element-citation>
+          </ref>
+          <ref id="B7-jcm-07-00427">
+            <label>7.</label>
+            <element-citation publication-type="journal">
+              <person-group person-group-type="author">
+                <name>
+                  <surname>Cypen</surname>
+                  <given-names>J.</given-names>
+                </name>
+                <name>
+                  <surname>Ahmad</surname>
+                  <given-names>T.</given-names>
+                </name>
+                <name>
+                  <surname>Testani</surname>
+                  <given-names>J.M.</given-names>
+                </name>
+                <name>
+                  <surname>DeVore</surname>
+                  <given-names>A.D.</given-names>
+                </name>
+              </person-group>
+              <article-title>Novel Biomarkers for the Risk Stratification of Heart Failure with Preserved Ejection Fraction</article-title>
+              <source>Curr. Heart Fail. Rep.</source>
+              <year>2017</year>
+              <volume>14</volume>
+              <fpage>434</fpage>
+              <lpage>443</lpage>
+              <pub-id pub-id-type="doi">10.1007/s11897-017-0358-4</pub-id>
+              <pub-id pub-id-type="pmid">28803400</pub-id>
+            </element-citation>
+          </ref>
+          <ref id="B8-jcm-07-00427">
+            <label>8.</label>
+            <element-citation publication-type="journal">
+              <person-group person-group-type="author">
+                <name>
+                  <surname>D’Elia</surname>
+                  <given-names>E.</given-names>
+                </name>
+                <name>
+                  <surname>Vaduganathan</surname>
+                  <given-names>M.</given-names>
+                </name>
+                <name>
+                  <surname>Gori</surname>
+                  <given-names>M.</given-names>
+                </name>
+                <name>
+                  <surname>Gavazzi</surname>
+                  <given-names>A.</given-names>
+                </name>
+                <name>
+                  <surname>Butler</surname>
+                  <given-names>J.</given-names>
+                </name>
+                <name>
+                  <surname>Senni</surname>
+                  <given-names>M.</given-names>
+                </name>
+              </person-group>
+              <article-title>Role of biomarkers in cardiac structure phenotyping in heart failure with preserved ejection fraction: Critical appraisal and practical use</article-title>
+              <source>Eur J. Heart Fail.</source>
+              <year>2015</year>
+              <volume>17</volume>
+              <fpage>1231</fpage>
+              <lpage>1239</lpage>
+              <pub-id pub-id-type="doi">10.1002/ejhf.430</pub-id>
+              <pub-id pub-id-type="pmid">26493383</pub-id>
+            </element-citation>
+          </ref>
+          <ref id="B9-jcm-07-00427">
+            <label>9.</label>
+            <element-citation publication-type="journal">
+              <person-group person-group-type="author">
+                <name>
+                  <surname>Mascherbauer</surname>
+                  <given-names>J.</given-names>
+                </name>
+                <name>
+                  <surname>Marzluf</surname>
+                  <given-names>B.A.</given-names>
+                </name>
+                <name>
+                  <surname>Tufaro</surname>
+                  <given-names>C.</given-names>
+                </name>
+                <name>
+                  <surname>Pfaffenberger</surname>
+                  <given-names>S.</given-names>
+                </name>
+                <name>
+                  <surname>Graf</surname>
+                  <given-names>A.</given-names>
+                </name>
+                <name>
+                  <surname>Wexberg</surname>
+                  <given-names>P.</given-names>
+                </name>
+                <name>
+                  <surname>Panzenbock</surname>
+                  <given-names>A.</given-names>
+                </name>
+                <name>
+                  <surname>Jakowitsch</surname>
+                  <given-names>J.</given-names>
+                </name>
+                <name>
+                  <surname>Bangert</surname>
+                  <given-names>C.</given-names>
+                </name>
+                <name>
+                  <surname>Laimer</surname>
+                  <given-names>D.</given-names>
+                </name>
+                <etal/>
+              </person-group>
+              <article-title>Cardiac magnetic resonance postcontrast T1 time is associated with outcome in patients with heart failure and preserved ejection fraction</article-title>
+              <source>Circ. Cardiovasc. Imaging</source>
+              <year>2013</year>
+              <volume>6</volume>
+              <fpage>1056</fpage>
+              <lpage>1065</lpage>
+              <pub-id pub-id-type="doi">10.1161/CIRCIMAGING.113.000633</pub-id>
+              <pub-id pub-id-type="pmid">24036385</pub-id>
+            </element-citation>
+          </ref>
+          <ref id="B10-jcm-07-00427">
+            <label>10.</label>
+            <element-citation publication-type="journal">
+              <person-group person-group-type="author">
+                <name>
+                  <surname>Lee</surname>
+                  <given-names>J.J.</given-names>
+                </name>
+                <name>
+                  <surname>Liu</surname>
+                  <given-names>S.</given-names>
+                </name>
+                <name>
+                  <surname>Nacif</surname>
+                  <given-names>M.S.</given-names>
+                </name>
+                <name>
+                  <surname>Ugander</surname>
+                  <given-names>M.</given-names>
+                </name>
+                <name>
+                  <surname>Han</surname>
+                  <given-names>J.</given-names>
+                </name>
+                <name>
+                  <surname>Kawel</surname>
+                  <given-names>N.</given-names>
+                </name>
+                <name>
+                  <surname>Sibley</surname>
+                  <given-names>C.T.</given-names>
+                </name>
+                <name>
+                  <surname>Kellman</surname>
+                  <given-names>P.</given-names>
+                </name>
+                <name>
+                  <surname>Arai</surname>
+                  <given-names>A.E.</given-names>
+                </name>
+                <name>
+                  <surname>Bluemke</surname>
+                  <given-names>D.A.</given-names>
+                </name>
+              </person-group>
+              <article-title>Myocardial T1 and extracellular volume fraction mapping at 3 tesla</article-title>
+              <source>J. Cardiovasc. Magn. Reson.</source>
+              <year>2011</year>
+              <volume>13</volume>
+              <fpage>75</fpage>
+              <pub-id pub-id-type="doi">10.1186/1532-429X-13-75</pub-id>
+              <pub-id pub-id-type="pmid">22123333</pub-id>
+            </element-citation>
+          </ref>
+          <ref id="B11-jcm-07-00427">
+            <label>11.</label>
+            <element-citation publication-type="journal">
+              <person-group person-group-type="author">
+                <name>
+                  <surname>Su</surname>
+                  <given-names>M.Y.</given-names>
+                </name>
+                <name>
+                  <surname>Lin</surname>
+                  <given-names>L.Y.</given-names>
+                </name>
+                <name>
+                  <surname>Tseng</surname>
+                  <given-names>Y.H.</given-names>
+                </name>
+                <name>
+                  <surname>Chang</surname>
+                  <given-names>C.C.</given-names>
+                </name>
+                <name>
+                  <surname>Wu</surname>
+                  <given-names>C.K.</given-names>
+                </name>
+                <name>
+                  <surname>Lin</surname>
+                  <given-names>J.L.</given-names>
+                </name>
+                <name>
+                  <surname>Tseng</surname>
+                  <given-names>W.Y.</given-names>
+                </name>
+              </person-group>
+              <article-title>CMR-verified diffuse myocardial fibrosis is associated with diastolic dysfunction in HFpEF</article-title>
+              <source>JACC Cardiovasc. Imaging</source>
+              <year>2014</year>
+              <volume>7</volume>
+              <fpage>991</fpage>
+              <lpage>997</lpage>
+              <pub-id pub-id-type="doi">10.1016/j.jcmg.2014.04.022</pub-id>
+              <pub-id pub-id-type="pmid">25240451</pub-id>
+            </element-citation>
+          </ref>
+          <ref id="B12-jcm-07-00427">
+            <label>12.</label>
+            <element-citation publication-type="journal">
+              <person-group person-group-type="author">
+                <name>
+                  <surname>Paulus</surname>
+                  <given-names>W.J.</given-names>
+                </name>
+                <name>
+                  <surname>Tschope</surname>
+                  <given-names>C.</given-names>
+                </name>
+                <name>
+                  <surname>Sanderson</surname>
+                  <given-names>J.E.</given-names>
+                </name>
+                <name>
+                  <surname>Rusconi</surname>
+                  <given-names>C.</given-names>
+                </name>
+                <name>
+                  <surname>Flachskampf</surname>
+                  <given-names>F.A.</given-names>
+                </name>
+                <name>
+                  <surname>Rademakers</surname>
+                  <given-names>F.E.</given-names>
+                </name>
+                <name>
+                  <surname>Marino</surname>
+                  <given-names>P.</given-names>
+                </name>
+                <name>
+                  <surname>Smiseth</surname>
+                  <given-names>O.A.</given-names>
+                </name>
+                <name>
+                  <surname>De Keulenaer</surname>
+                  <given-names>G.</given-names>
+                </name>
+                <name>
+                  <surname>Leite-Moreira</surname>
+                  <given-names>A.F.</given-names>
+                </name>
+                <etal/>
+              </person-group>
+              <article-title>How to diagnose diastolic heart failure: A consensus statement on the diagnosis of heart failure with normal left ventricular ejection fraction by the Heart Failure and Echocardiography Associations of the European Society of Cardiology</article-title>
+              <source>Eur. Heart J.</source>
+              <year>2007</year>
+              <volume>28</volume>
+              <fpage>2539</fpage>
+              <lpage>2550</lpage>
+              <pub-id pub-id-type="doi">10.1093/eurheartj/ehm037</pub-id>
+              <pub-id pub-id-type="pmid">17428822</pub-id>
+            </element-citation>
+          </ref>
+          <ref id="B13-jcm-07-00427">
+            <label>13.</label>
+            <element-citation publication-type="journal">
+              <person-group person-group-type="author">
+                <name>
+                  <surname>Wu</surname>
+                  <given-names>C.K.</given-names>
+                </name>
+                <name>
+                  <surname>Lee</surname>
+                  <given-names>J.K.</given-names>
+                </name>
+                <name>
+                  <surname>Chiang</surname>
+                  <given-names>F.T.</given-names>
+                </name>
+                <name>
+                  <surname>Yang</surname>
+                  <given-names>C.H.</given-names>
+                </name>
+                <name>
+                  <surname>Huang</surname>
+                  <given-names>S.W.</given-names>
+                </name>
+                <name>
+                  <surname>Hwang</surname>
+                  <given-names>J.J.</given-names>
+                </name>
+                <name>
+                  <surname>Lin</surname>
+                  <given-names>J.L.</given-names>
+                </name>
+                <name>
+                  <surname>Tseng</surname>
+                  <given-names>C.D.</given-names>
+                </name>
+                <name>
+                  <surname>Chen</surname>
+                  <given-names>J.J.</given-names>
+                </name>
+                <name>
+                  <surname>Tsai</surname>
+                  <given-names>C.T.</given-names>
+                </name>
+              </person-group>
+              <article-title>Plasma levels of tumor necrosis factor-alpha and interleukin-6 are associated with diastolic heart failure through downregulation of sarcoplasmic reticulum Ca
+                <sup>2+</sup> ATPase
+              </article-title>
+              <source>Crit. Care Med.</source>
+              <year>2011</year>
+              <volume>39</volume>
+              <fpage>984</fpage>
+              <lpage>992</lpage>
+              <pub-id pub-id-type="doi">10.1097/CCM.0b013e31820a91b9</pub-id>
+              <pub-id pub-id-type="pmid">21263314</pub-id>
+            </element-citation>
+          </ref>
+          <ref id="B14-jcm-07-00427">
+            <label>14.</label>
+            <element-citation publication-type="journal">
+              <person-group person-group-type="author">
+                <name>
+                  <surname>Wu</surname>
+                  <given-names>C.K.</given-names>
+                </name>
+                <name>
+                  <surname>Tsai</surname>
+                  <given-names>C.T.</given-names>
+                </name>
+                <name>
+                  <surname>Chang</surname>
+                  <given-names>Y.C.</given-names>
+                </name>
+                <name>
+                  <surname>Luo</surname>
+                  <given-names>J.L.</given-names>
+                </name>
+                <name>
+                  <surname>Wang</surname>
+                  <given-names>Y.C.</given-names>
+                </name>
+                <name>
+                  <surname>Hwang</surname>
+                  <given-names>J.J.</given-names>
+                </name>
+                <name>
+                  <surname>Lin</surname>
+                  <given-names>J.L.</given-names>
+                </name>
+                <name>
+                  <surname>Tseng</surname>
+                  <given-names>C.D.</given-names>
+                </name>
+                <name>
+                  <surname>Chiang</surname>
+                  <given-names>F.T.</given-names>
+                </name>
+              </person-group>
+              <article-title>Genetic polymorphisms of the angiotensin II type 1 receptor gene and diastolic heart failure</article-title>
+              <source>J. Hypertens.</source>
+              <year>2009</year>
+              <volume>27</volume>
+              <fpage>502</fpage>
+              <lpage>507</lpage>
+              <pub-id pub-id-type="doi">10.1097/HJH.0b013e32831fda3a</pub-id>
+              <pub-id pub-id-type="pmid">19330904</pub-id>
+            </element-citation>
+          </ref>
+          <ref id="B15-jcm-07-00427">
+            <label>15.</label>
+            <element-citation publication-type="journal">
+              <person-group person-group-type="author">
+                <name>
+                  <surname>Kellman</surname>
+                  <given-names>P.</given-names>
+                </name>
+                <name>
+                  <surname>Arai</surname>
+                  <given-names>A.E.</given-names>
+                </name>
+                <name>
+                  <surname>McVeigh</surname>
+                  <given-names>E.R.</given-names>
+                </name>
+                <name>
+                  <surname>Aletras</surname>
+                  <given-names>A.H.</given-names>
+                </name>
+              </person-group>
+              <article-title>Phase-sensitive inversion recovery for detecting myocardial infarction using gadolinium-delayed hyperenhancement</article-title>
+              <source>Magn. Reson. Med.</source>
+              <year>2002</year>
+              <volume>47</volume>
+              <fpage>372</fpage>
+              <lpage>383</lpage>
+              <pub-id pub-id-type="doi">10.1002/mrm.10051</pub-id>
+              <pub-id pub-id-type="pmid">11810682</pub-id>
+            </element-citation>
+          </ref>
+          <ref id="B16-jcm-07-00427">
+            <label>16.</label>
+            <element-citation publication-type="journal">
+              <person-group person-group-type="author">
+                <name>
+                  <surname>Wong</surname>
+                  <given-names>T.C.</given-names>
+                </name>
+                <name>
+                  <surname>Piehler</surname>
+                  <given-names>K.</given-names>
+                </name>
+                <name>
+                  <surname>Meier</surname>
+                  <given-names>C.G.</given-names>
+                </name>
+                <name>
+                  <surname>Testa</surname>
+                  <given-names>S.M.</given-names>
+                </name>
+                <name>
+                  <surname>Klock</surname>
+                  <given-names>A.M.</given-names>
+                </name>
+                <name>
+                  <surname>Aneizi</surname>
+                  <given-names>A.A.</given-names>
+                </name>
+                <name>
+                  <surname>Shakesprere</surname>
+                  <given-names>J.</given-names>
+                </name>
+                <name>
+                  <surname>Kellman</surname>
+                  <given-names>P.</given-names>
+                </name>
+                <name>
+                  <surname>Shroff</surname>
+                  <given-names>S.G.</given-names>
+                </name>
+                <name>
+                  <surname>Schwartzman</surname>
+                  <given-names>D.S.</given-names>
+                </name>
+                <etal/>
+              </person-group>
+              <article-title>Association between extracellular matrix expansion quantified by cardiovascular magnetic resonance and short-term mortality</article-title>
+              <source>Circulation</source>
+              <year>2012</year>
+              <volume>126</volume>
+              <fpage>1206</fpage>
+              <lpage>1216</lpage>
+              <pub-id pub-id-type="doi">10.1161/CIRCULATIONAHA.111.089409</pub-id>
+              <pub-id pub-id-type="pmid">22851543</pub-id>
+            </element-citation>
+          </ref>
+          <ref id="B17-jcm-07-00427">
+            <label>17.</label>
+            <element-citation publication-type="journal">
+              <person-group person-group-type="author">
+                <name>
+                  <surname>Tseng</surname>
+                  <given-names>W.Y.</given-names>
+                </name>
+                <name>
+                  <surname>Liao</surname>
+                  <given-names>T.Y.</given-names>
+                </name>
+                <name>
+                  <surname>Wang</surname>
+                  <given-names>J.L.</given-names>
+                </name>
+              </person-group>
+              <article-title>Normal systolic and diastolic functions of the left ventricle and left atrium by cine magnetic resonance imaging</article-title>
+              <source>J. Cardiovasc. Magn. Reson.</source>
+              <year>2002</year>
+              <volume>4</volume>
+              <fpage>443</fpage>
+              <lpage>457</lpage>
+              <pub-id pub-id-type="doi">10.1081/JCMR-120016383</pub-id>
+              <pub-id pub-id-type="pmid">12549232</pub-id>
+            </element-citation>
+          </ref>
+          <ref id="B18-jcm-07-00427">
+            <label>18.</label>
+            <element-citation publication-type="journal">
+              <person-group person-group-type="author">
+                <name>
+                  <surname>Ugander</surname>
+                  <given-names>M.</given-names>
+                </name>
+                <name>
+                  <surname>Oki</surname>
+                  <given-names>A.J.</given-names>
+                </name>
+                <name>
+                  <surname>Hsu</surname>
+                  <given-names>L.Y.</given-names>
+                </name>
+                <name>
+                  <surname>Kellman</surname>
+                  <given-names>P.</given-names>
+                </name>
+                <name>
+                  <surname>Greiser</surname>
+                  <given-names>A.</given-names>
+                </name>
+                <name>
+                  <surname>Aletras</surname>
+                  <given-names>A.H.</given-names>
+                </name>
+                <name>
+                  <surname>Sibley</surname>
+                  <given-names>C.T.</given-names>
+                </name>
+                <name>
+                  <surname>Chen</surname>
+                  <given-names>M.Y.</given-names>
+                </name>
+                <name>
+                  <surname>Bandettini</surname>
+                  <given-names>W.P.</given-names>
+                </name>
+                <name>
+                  <surname>Arai</surname>
+                  <given-names>A.E.</given-names>
+                </name>
+              </person-group>
+              <article-title>Extracellular volume imaging by magnetic resonance imaging provides insights into overt and sub-clinical myocardial pathology</article-title>
+              <source>Eur. Heart J.</source>
+              <year>2012</year>
+              <volume>33</volume>
+              <fpage>1268</fpage>
+              <lpage>1278</lpage>
+              <pub-id pub-id-type="doi">10.1093/eurheartj/ehr481</pub-id>
+              <pub-id pub-id-type="pmid">22279111</pub-id>
+            </element-citation>
+          </ref>
+          <ref id="B19-jcm-07-00427">
+            <label>19.</label>
+            <element-citation publication-type="journal">
+              <person-group person-group-type="author">
+                <name>
+                  <surname>Booth</surname>
+                  <given-names>J.</given-names>
+                </name>
+                <name>
+                  <surname>Pinney</surname>
+                  <given-names>J.</given-names>
+                </name>
+                <name>
+                  <surname>Davenport</surname>
+                  <given-names>A.</given-names>
+                </name>
+              </person-group>
+              <article-title>N-terminal proBNP—marker of cardiac dysfunction, fluid overload, or malnutrition in hemodialysis patients?</article-title>
+              <source>Clin. J. Am. Soc. Nephrol.</source>
+              <year>2010</year>
+              <volume>5</volume>
+              <fpage>1036</fpage>
+              <lpage>1040</lpage>
+              <pub-id pub-id-type="doi">10.2215/CJN.09001209</pub-id>
+              <pub-id pub-id-type="pmid">20507952</pub-id>
+            </element-citation>
+          </ref>
+          <ref id="B20-jcm-07-00427">
+            <label>20.</label>
+            <element-citation publication-type="journal">
+              <person-group person-group-type="author">
+                <name>
+                  <surname>Maeder</surname>
+                  <given-names>M.T.</given-names>
+                </name>
+                <name>
+                  <surname>Kaye</surname>
+                  <given-names>D.M.</given-names>
+                </name>
+              </person-group>
+              <article-title>Heart failure with normal left ventricular ejection fraction</article-title>
+              <source>J. Am. Coll. Cardiol.</source>
+              <year>2009</year>
+              <volume>53</volume>
+              <fpage>905</fpage>
+              <lpage>918</lpage>
+              <pub-id pub-id-type="doi">10.1016/j.jacc.2008.12.007</pub-id>
+              <pub-id pub-id-type="pmid">19281919</pub-id>
+            </element-citation>
+          </ref>
+          <ref id="B21-jcm-07-00427">
+            <label>21.</label>
+            <element-citation publication-type="journal">
+              <person-group person-group-type="author">
+                <name>
+                  <surname>Tschope</surname>
+                  <given-names>C.</given-names>
+                </name>
+                <name>
+                  <surname>Kasner</surname>
+                  <given-names>M.</given-names>
+                </name>
+                <name>
+                  <surname>Westermann</surname>
+                  <given-names>D.</given-names>
+                </name>
+                <name>
+                  <surname>Gaub</surname>
+                  <given-names>R.</given-names>
+                </name>
+                <name>
+                  <surname>Poller</surname>
+                  <given-names>W.C.</given-names>
+                </name>
+                <name>
+                  <surname>Schultheiss</surname>
+                  <given-names>H.P.</given-names>
+                </name>
+              </person-group>
+              <article-title>The role of NT-proBNP in the diagnostics of isolated diastolic dysfunction: Correlation with echocardiographic and invasive measurements</article-title>
+              <source>Eur. Heart J.</source>
+              <year>2005</year>
+              <volume>26</volume>
+              <fpage>2277</fpage>
+              <lpage>2284</lpage>
+              <pub-id pub-id-type="doi">10.1093/eurheartj/ehi406</pub-id>
+              <pub-id pub-id-type="pmid">16014646</pub-id>
+            </element-citation>
+          </ref>
+          <ref id="B22-jcm-07-00427">
+            <label>22.</label>
+            <element-citation publication-type="journal">
+              <person-group person-group-type="author">
+                <name>
+                  <surname>Lim</surname>
+                  <given-names>T.K.</given-names>
+                </name>
+                <name>
+                  <surname>Ashrafian</surname>
+                  <given-names>H.</given-names>
+                </name>
+                <name>
+                  <surname>Dwivedi</surname>
+                  <given-names>G.</given-names>
+                </name>
+                <name>
+                  <surname>Collinson</surname>
+                  <given-names>P.O.</given-names>
+                </name>
+                <name>
+                  <surname>Senior</surname>
+                  <given-names>R.</given-names>
+                </name>
+              </person-group>
+              <article-title>Increased left atrial volume index is an independent predictor of raised serum natriuretic peptide in patients with suspected heart failure but normal left ventricular ejection fraction: Implication for diagnosis of diastolic heart failure</article-title>
+              <source>Eur. J. Heart Fail.</source>
+              <year>2006</year>
+              <volume>8</volume>
+              <fpage>38</fpage>
+              <lpage>45</lpage>
+              <pub-id pub-id-type="doi">10.1016/j.ejheart.2005.05.008</pub-id>
+              <pub-id pub-id-type="pmid">16115798</pub-id>
+            </element-citation>
+          </ref>
+          <ref id="B23-jcm-07-00427">
+            <label>23.</label>
+            <element-citation publication-type="journal">
+              <person-group person-group-type="author">
+                <name>
+                  <surname>Iwanaga</surname>
+                  <given-names>Y.</given-names>
+                </name>
+                <name>
+                  <surname>Nishi</surname>
+                  <given-names>I.</given-names>
+                </name>
+                <name>
+                  <surname>Furuichi</surname>
+                  <given-names>S.</given-names>
+                </name>
+                <name>
+                  <surname>Noguchi</surname>
+                  <given-names>T.</given-names>
+                </name>
+                <name>
+                  <surname>Sase</surname>
+                  <given-names>K.</given-names>
+                </name>
+                <name>
+                  <surname>Kihara</surname>
+                  <given-names>Y.</given-names>
+                </name>
+                <name>
+                  <surname>Goto</surname>
+                  <given-names>Y.</given-names>
+                </name>
+                <name>
+                  <surname>Nonogi</surname>
+                  <given-names>H.</given-names>
+                </name>
+              </person-group>
+              <article-title>B-type natriuretic peptide strongly reflects diastolic wall stress in patients with chronic heart failure: Comparison between systolic and diastolic heart failure</article-title>
+              <source>J. Am. Coll. Cardiol.</source>
+              <year>2006</year>
+              <volume>47</volume>
+              <fpage>742</fpage>
+              <lpage>748</lpage>
+              <pub-id pub-id-type="doi">10.1016/j.jacc.2005.11.030</pub-id>
+              <pub-id pub-id-type="pmid">16487838</pub-id>
+            </element-citation>
+          </ref>
+          <ref id="B24-jcm-07-00427">
+            <label>24.</label>
+            <element-citation publication-type="journal">
+              <person-group person-group-type="author">
+                <name>
+                  <surname>Zile</surname>
+                  <given-names>M.R.</given-names>
+                </name>
+                <name>
+                  <surname>Baicu</surname>
+                  <given-names>C.F.</given-names>
+                </name>
+              </person-group>
+              <article-title>Biomarkers of diastolic dysfunction and myocardial fibrosis: Application to heart failure with a preserved ejection fraction</article-title>
+              <source>J. Cardiovasc. Transl. Res.</source>
+              <year>2013</year>
+              <volume>6</volume>
+              <fpage>501</fpage>
+              <lpage>515</lpage>
+              <pub-id pub-id-type="doi">10.1007/s12265-013-9472-1</pub-id>
+              <pub-id pub-id-type="pmid">23716130</pub-id>
+            </element-citation>
+          </ref>
+          <ref id="B25-jcm-07-00427">
+            <label>25.</label>
+            <element-citation publication-type="journal">
+              <person-group person-group-type="author">
+                <name>
+                  <surname>O’Meara</surname>
+                  <given-names>E.</given-names>
+                </name>
+                <name>
+                  <surname>de Denus</surname>
+                  <given-names>S.</given-names>
+                </name>
+                <name>
+                  <surname>Rouleau</surname>
+                  <given-names>J.L.</given-names>
+                </name>
+                <name>
+                  <surname>Desai</surname>
+                  <given-names>A.</given-names>
+                </name>
+              </person-group>
+              <article-title>Circulating biomarkers in patients with heart failure and preserved ejection fraction</article-title>
+              <source>Curr. Heart Fail. Rep.</source>
+              <year>2013</year>
+              <volume>10</volume>
+              <fpage>350</fpage>
+              <lpage>358</lpage>
+              <pub-id pub-id-type="doi">10.1007/s11897-013-0160-x</pub-id>
+              <pub-id pub-id-type="pmid">24122286</pub-id>
+            </element-citation>
+          </ref>
+          <ref id="B26-jcm-07-00427">
+            <label>26.</label>
+            <element-citation publication-type="journal">
+              <person-group person-group-type="author">
+                <name>
+                  <surname>Yang</surname>
+                  <given-names>R.Y.</given-names>
+                </name>
+                <name>
+                  <surname>Rabinovich</surname>
+                  <given-names>G.A.</given-names>
+                </name>
+                <name>
+                  <surname>Liu</surname>
+                  <given-names>F.T.</given-names>
+                </name>
+              </person-group>
+              <article-title>Galectins: Structure, function and therapeutic potential</article-title>
+              <source>Expert Rev. Mol. Med.</source>
+              <year>2008</year>
+              <volume>10</volume>
+              <fpage>e17</fpage>
+              <pub-id pub-id-type="doi">10.1017/S1462399408000719</pub-id>
+              <pub-id pub-id-type="pmid">18549522</pub-id>
+            </element-citation>
+          </ref>
+          <ref id="B27-jcm-07-00427">
+            <label>27.</label>
+            <element-citation publication-type="journal">
+              <person-group person-group-type="author">
+                <name>
+                  <surname>Wu</surname>
+                  <given-names>C.K.</given-names>
+                </name>
+                <name>
+                  <surname>Su</surname>
+                  <given-names>M.Y.</given-names>
+                </name>
+                <name>
+                  <surname>Lee</surname>
+                  <given-names>J.K.</given-names>
+                </name>
+                <name>
+                  <surname>Chiang</surname>
+                  <given-names>F.T.</given-names>
+                </name>
+                <name>
+                  <surname>Hwang</surname>
+                  <given-names>J.J.</given-names>
+                </name>
+                <name>
+                  <surname>Lin</surname>
+                  <given-names>J.L.</given-names>
+                </name>
+                <name>
+                  <surname>Chen</surname>
+                  <given-names>J.J.</given-names>
+                </name>
+                <name>
+                  <surname>Liu</surname>
+                  <given-names>F.T.</given-names>
+                </name>
+                <name>
+                  <surname>Tsai</surname>
+                  <given-names>C.T.</given-names>
+                </name>
+              </person-group>
+              <article-title>Galectin-3 level and the severity of cardiac diastolic dysfunction using cellular and animal models and clinical indices</article-title>
+              <source>Sci. Rep.</source>
+              <year>2015</year>
+              <volume>5</volume>
+              <fpage>17007</fpage>
+              <pub-id pub-id-type="doi">10.1038/srep17007</pub-id>
+              <pub-id pub-id-type="pmid">26582585</pub-id>
+            </element-citation>
+          </ref>
+          <ref id="B28-jcm-07-00427">
+            <label>28.</label>
+            <element-citation publication-type="journal">
+              <person-group person-group-type="author">
+                <name>
+                  <surname>Jugdutt</surname>
+                  <given-names>B.I.</given-names>
+                </name>
+              </person-group>
+              <article-title>Ventricular remodeling after infarction and the extracellular collagen matrix: When is enough enough?</article-title>
+              <source>Circulation</source>
+              <year>2003</year>
+              <volume>108</volume>
+              <fpage>1395</fpage>
+              <lpage>1403</lpage>
+              <pub-id pub-id-type="doi">10.1161/01.CIR.0000085658.98621.49</pub-id>
+              <pub-id pub-id-type="pmid">12975244</pub-id>
+            </element-citation>
+          </ref>
+          <ref id="B29-jcm-07-00427">
+            <label>29.</label>
+            <element-citation publication-type="journal">
+              <person-group person-group-type="author">
+                <name>
+                  <surname>Martos</surname>
+                  <given-names>R.</given-names>
+                </name>
+                <name>
+                  <surname>Baugh</surname>
+                  <given-names>J.</given-names>
+                </name>
+                <name>
+                  <surname>Ledwidge</surname>
+                  <given-names>M.</given-names>
+                </name>
+                <name>
+                  <surname>O’Loughlin</surname>
+                  <given-names>C.</given-names>
+                </name>
+                <name>
+                  <surname>Conlon</surname>
+                  <given-names>C.</given-names>
+                </name>
+                <name>
+                  <surname>Patle</surname>
+                  <given-names>A.</given-names>
+                </name>
+                <name>
+                  <surname>Donnelly</surname>
+                  <given-names>S.C.</given-names>
+                </name>
+                <name>
+                  <surname>McDonald</surname>
+                  <given-names>K.</given-names>
+                </name>
+              </person-group>
+              <article-title>Diastolic heart failure: Evidence of increased myocardial collagen turnover linked to diastolic dysfunction</article-title>
+              <source>Circulation</source>
+              <year>2007</year>
+              <volume>115</volume>
+              <fpage>888</fpage>
+              <lpage>895</lpage>
+              <pub-id pub-id-type="doi">10.1161/CIRCULATIONAHA.106.638569</pub-id>
+              <pub-id pub-id-type="pmid">17283265</pub-id>
+            </element-citation>
+          </ref>
+          <ref id="B30-jcm-07-00427">
+            <label>30.</label>
+            <element-citation publication-type="journal">
+              <person-group person-group-type="author">
+                <name>
+                  <surname>van Veldhuisen</surname>
+                  <given-names>D.J.</given-names>
+                </name>
+                <name>
+                  <surname>Linssen</surname>
+                  <given-names>G.C.</given-names>
+                </name>
+                <name>
+                  <surname>Jaarsma</surname>
+                  <given-names>T.</given-names>
+                </name>
+                <name>
+                  <surname>van Gilst</surname>
+                  <given-names>W.H.</given-names>
+                </name>
+                <name>
+                  <surname>Hoes</surname>
+                  <given-names>A.W.</given-names>
+                </name>
+                <name>
+                  <surname>Tijssen</surname>
+                  <given-names>J.G.</given-names>
+                </name>
+                <name>
+                  <surname>Paulus</surname>
+                  <given-names>W.J.</given-names>
+                </name>
+                <name>
+                  <surname>Voors</surname>
+                  <given-names>A.A.</given-names>
+                </name>
+                <name>
+                  <surname>Hillege</surname>
+                  <given-names>H.L.</given-names>
+                </name>
+              </person-group>
+              <article-title>B-type natriuretic peptide and prognosis in heart failure patients with preserved and reduced ejection fraction</article-title>
+              <source>J. Am. Coll. Cardiol.</source>
+              <year>2013</year>
+              <volume>61</volume>
+              <fpage>1498</fpage>
+              <lpage>1506</lpage>
+              <pub-id pub-id-type="doi">10.1016/j.jacc.2012.12.044</pub-id>
+              <pub-id pub-id-type="pmid">23500300</pub-id>
+            </element-citation>
+          </ref>
+          <ref id="B31-jcm-07-00427">
+            <label>31.</label>
+            <element-citation publication-type="journal">
+              <person-group person-group-type="author">
+                <name>
+                  <surname>Lund</surname>
+                  <given-names>L.H.</given-names>
+                </name>
+                <name>
+                  <surname>Donal</surname>
+                  <given-names>E.</given-names>
+                </name>
+                <name>
+                  <surname>Oger</surname>
+                  <given-names>E.</given-names>
+                </name>
+                <name>
+                  <surname>Hage</surname>
+                  <given-names>C.</given-names>
+                </name>
+                <name>
+                  <surname>Persson</surname>
+                  <given-names>H.</given-names>
+                </name>
+                <name>
+                  <surname>Haugen-Lofman</surname>
+                  <given-names>I.</given-names>
+                </name>
+                <name>
+                  <surname>Ennezat</surname>
+                  <given-names>P.V.</given-names>
+                </name>
+                <name>
+                  <surname>Sportouch-Dukhan</surname>
+                  <given-names>C.</given-names>
+                </name>
+                <name>
+                  <surname>Drouet</surname>
+                  <given-names>E.</given-names>
+                </name>
+                <name>
+                  <surname>Daubert</surname>
+                  <given-names>J.C.</given-names>
+                </name>
+                <etal/>
+              </person-group>
+              <article-title>Association between cardiovascular vs. non-cardiovascular co-morbidities and outcomes in heart failure with preserved ejection fraction</article-title>
+              <source>Eur. J. Heart Fail.</source>
+              <year>2014</year>
+              <volume>16</volume>
+              <fpage>992</fpage>
+              <lpage>1001</lpage>
+              <pub-id pub-id-type="pmid">25046483</pub-id>
+            </element-citation>
+          </ref>
+          <ref id="B32-jcm-07-00427">
+            <label>32.</label>
+            <element-citation publication-type="journal">
+              <person-group person-group-type="author">
+                <name>
+                  <surname>de Boer</surname>
+                  <given-names>R.A.</given-names>
+                </name>
+                <name>
+                  <surname>Lok</surname>
+                  <given-names>D.J.</given-names>
+                </name>
+                <name>
+                  <surname>Jaarsma</surname>
+                  <given-names>T.</given-names>
+                </name>
+                <name>
+                  <surname>van der Meer</surname>
+                  <given-names>P.</given-names>
+                </name>
+                <name>
+                  <surname>Voors</surname>
+                  <given-names>A.A.</given-names>
+                </name>
+                <name>
+                  <surname>Hillege</surname>
+                  <given-names>H.L.</given-names>
+                </name>
+                <name>
+                  <surname>van Veldhuisen</surname>
+                  <given-names>D.J.</given-names>
+                </name>
+              </person-group>
+              <article-title>Predictive value of plasma galectin-3 levels in heart failure with reduced and preserved ejection fraction</article-title>
+              <source>Ann. Med.</source>
+              <year>2011</year>
+              <volume>43</volume>
+              <fpage>60</fpage>
+              <lpage>68</lpage>
+              <pub-id pub-id-type="doi">10.3109/07853890.2010.538080</pub-id>
+              <pub-id pub-id-type="pmid">21189092</pub-id>
+            </element-citation>
+          </ref>
+          <ref id="B33-jcm-07-00427">
+            <label>33.</label>
+            <element-citation publication-type="journal">
+              <person-group person-group-type="author">
+                <name>
+                  <surname>Zile</surname>
+                  <given-names>M.R.</given-names>
+                </name>
+                <name>
+                  <surname>Jhund</surname>
+                  <given-names>P.S.</given-names>
+                </name>
+                <name>
+                  <surname>Baicu</surname>
+                  <given-names>C.F.</given-names>
+                </name>
+                <name>
+                  <surname>Claggett</surname>
+                  <given-names>B.L.</given-names>
+                </name>
+                <name>
+                  <surname>Pieske</surname>
+                  <given-names>B.</given-names>
+                </name>
+                <name>
+                  <surname>Voors</surname>
+                  <given-names>A.A.</given-names>
+                </name>
+                <name>
+                  <surname>Prescott</surname>
+                  <given-names>M.F.</given-names>
+                </name>
+                <name>
+                  <surname>Shi</surname>
+                  <given-names>V.</given-names>
+                </name>
+                <name>
+                  <surname>Lefkowitz</surname>
+                  <given-names>M.</given-names>
+                </name>
+                <name>
+                  <surname>McMurray</surname>
+                  <given-names>J.J.</given-names>
+                </name>
+                <etal/>
+              </person-group>
+              <article-title>Plasma Biomarkers Reflecting Profibrotic Processes in Heart Failure with a Preserved Ejection Fraction: Data from the Prospective Comparison of ARNI with ARB on Management of Heart Failure with Preserved Ejection Fraction Study</article-title>
+              <source>Circ. Heart Fail.</source>
+              <year>2016</year>
+              <volume>9</volume>
+              <fpage>e002551</fpage>
+              <pub-id pub-id-type="doi">10.1161/CIRCHEARTFAILURE.115.002551</pub-id>
+              <pub-id pub-id-type="pmid">26754625</pub-id>
+            </element-citation>
+          </ref>
+          <ref id="B34-jcm-07-00427">
+            <label>34.</label>
+            <element-citation publication-type="journal">
+              <person-group person-group-type="author">
+                <name>
+                  <surname>Cheng</surname>
+                  <given-names>J.M.</given-names>
+                </name>
+                <name>
+                  <surname>Akkerhuis</surname>
+                  <given-names>K.M.</given-names>
+                </name>
+                <name>
+                  <surname>Battes</surname>
+                  <given-names>L.C.</given-names>
+                </name>
+                <name>
+                  <surname>van Vark</surname>
+                  <given-names>L.C.</given-names>
+                </name>
+                <name>
+                  <surname>Hillege</surname>
+                  <given-names>H.L.</given-names>
+                </name>
+                <name>
+                  <surname>Paulus</surname>
+                  <given-names>W.J.</given-names>
+                </name>
+                <name>
+                  <surname>Boersma</surname>
+                  <given-names>E.</given-names>
+                </name>
+                <name>
+                  <surname>Kardys</surname>
+                  <given-names>I.</given-names>
+                </name>
+              </person-group>
+              <article-title>Biomarkers of heart failure with normal ejection fraction: A systematic review</article-title>
+              <source>Eur. J. Heart Fail.</source>
+              <year>2013</year>
+              <volume>15</volume>
+              <fpage>1350</fpage>
+              <lpage>1362</lpage>
+              <pub-id pub-id-type="doi">10.1093/eurjhf/hft106</pub-id>
+              <pub-id pub-id-type="pmid">23845797</pub-id>
+            </element-citation>
+          </ref>
+          <ref id="B35-jcm-07-00427">
+            <label>35.</label>
+            <element-citation publication-type="journal">
+              <person-group person-group-type="author">
+                <name>
+                  <surname>Kasner</surname>
+                  <given-names>M.</given-names>
+                </name>
+                <name>
+                  <surname>Westermann</surname>
+                  <given-names>D.</given-names>
+                </name>
+                <name>
+                  <surname>Lopez</surname>
+                  <given-names>B.</given-names>
+                </name>
+                <name>
+                  <surname>Gaub</surname>
+                  <given-names>R.</given-names>
+                </name>
+                <name>
+                  <surname>Escher</surname>
+                  <given-names>F.</given-names>
+                </name>
+                <name>
+                  <surname>Kuhl</surname>
+                  <given-names>U.</given-names>
+                </name>
+                <name>
+                  <surname>Schultheiss</surname>
+                  <given-names>H.P.</given-names>
+                </name>
+                <name>
+                  <surname>Tschope</surname>
+                  <given-names>C.</given-names>
+                </name>
+              </person-group>
+              <article-title>Diastolic tissue Doppler indexes correlate with the degree of collagen expression and cross-linking in heart failure and normal ejection fraction</article-title>
+              <source>J. Am. Coll. Cardiol.</source>
+              <year>2011</year>
+              <volume>57</volume>
+              <fpage>977</fpage>
+              <lpage>985</lpage>
+              <pub-id pub-id-type="doi">10.1016/j.jacc.2010.10.024</pub-id>
+              <pub-id pub-id-type="pmid">21329845</pub-id>
+            </element-citation>
+          </ref>
+          <ref id="B36-jcm-07-00427">
+            <label>36.</label>
+            <element-citation publication-type="journal">
+              <person-group person-group-type="author">
+                <name>
+                  <surname>Westermann</surname>
+                  <given-names>D.</given-names>
+                </name>
+                <name>
+                  <surname>Lindner</surname>
+                  <given-names>D.</given-names>
+                </name>
+                <name>
+                  <surname>Kasner</surname>
+                  <given-names>M.</given-names>
+                </name>
+                <name>
+                  <surname>Zietsch</surname>
+                  <given-names>C.</given-names>
+                </name>
+                <name>
+                  <surname>Savvatis</surname>
+                  <given-names>K.</given-names>
+                </name>
+                <name>
+                  <surname>Escher</surname>
+                  <given-names>F.</given-names>
+                </name>
+                <name>
+                  <surname>von Schlippenbach</surname>
+                  <given-names>J.</given-names>
+                </name>
+                <name>
+                  <surname>Skurk</surname>
+                  <given-names>C.</given-names>
+                </name>
+                <name>
+                  <surname>Steendijk</surname>
+                  <given-names>P.</given-names>
+                </name>
+                <name>
+                  <surname>Riad</surname>
+                  <given-names>A.</given-names>
+                </name>
+                <etal/>
+              </person-group>
+              <article-title>Cardiac inflammation contributes to changes in the extracellular matrix in patients with heart failure and normal ejection fraction</article-title>
+              <source>Circ. Heart Fail.</source>
+              <year>2011</year>
+              <volume>4</volume>
+              <fpage>44</fpage>
+              <lpage>52</lpage>
+              <pub-id pub-id-type="doi">10.1161/CIRCHEARTFAILURE.109.931451</pub-id>
+              <pub-id pub-id-type="pmid">21075869</pub-id>
+            </element-citation>
+          </ref>
+          <ref id="B37-jcm-07-00427">
+            <label>37.</label>
+            <element-citation publication-type="journal">
+              <person-group person-group-type="author">
+                <name>
+                  <surname>Calderone</surname>
+                  <given-names>A.</given-names>
+                </name>
+                <name>
+                  <surname>Thaik</surname>
+                  <given-names>C.M.</given-names>
+                </name>
+                <name>
+                  <surname>Takahashi</surname>
+                  <given-names>N.</given-names>
+                </name>
+                <name>
+                  <surname>Chang</surname>
+                  <given-names>D.L.</given-names>
+                </name>
+                <name>
+                  <surname>Colucci</surname>
+                  <given-names>W.S.</given-names>
+                </name>
+              </person-group>
+              <article-title>Nitric oxide, atrial natriuretic peptide, and cyclic GMP inhibit the growth-promoting effects of norepinephrine in cardiac myocytes and fibroblasts</article-title>
+              <source>J. Clin. Investg.</source>
+              <year>1998</year>
+              <volume>101</volume>
+              <fpage>812</fpage>
+              <lpage>818</lpage>
+              <pub-id pub-id-type="doi">10.1172/JCI119883</pub-id>
+              <pub-id pub-id-type="pmid">9466976</pub-id>
+            </element-citation>
+          </ref>
+          <ref id="B38-jcm-07-00427">
+            <label>38.</label>
+            <element-citation publication-type="journal">
+              <person-group person-group-type="author">
+                <name>
+                  <surname>Paulus</surname>
+                  <given-names>W.J.</given-names>
+                </name>
+                <name>
+                  <surname>Tschope</surname>
+                  <given-names>C.</given-names>
+                </name>
+              </person-group>
+              <article-title>A novel paradigm for heart failure with preserved ejection fraction: Comorbidities drive myocardial dysfunction and remodeling through coronary microvascular endothelial inflammation</article-title>
+              <source>J. Am. Coll. Cardiol.</source>
+              <year>2013</year>
+              <volume>62</volume>
+              <fpage>263</fpage>
+              <lpage>271</lpage>
+              <pub-id pub-id-type="doi">10.1016/j.jacc.2013.02.092</pub-id>
+              <pub-id pub-id-type="pmid">23684677</pub-id>
+            </element-citation>
+          </ref>
+          <ref id="B39-jcm-07-00427">
+            <label>39.</label>
+            <element-citation publication-type="journal">
+              <person-group person-group-type="author">
+                <name>
+                  <surname>Jhund</surname>
+                  <given-names>P.S.</given-names>
+                </name>
+                <name>
+                  <surname>Claggett</surname>
+                  <given-names>B.L.</given-names>
+                </name>
+                <name>
+                  <surname>Voors</surname>
+                  <given-names>A.A.</given-names>
+                </name>
+                <name>
+                  <surname>Zile</surname>
+                  <given-names>M.R.</given-names>
+                </name>
+                <name>
+                  <surname>Packer</surname>
+                  <given-names>M.</given-names>
+                </name>
+                <name>
+                  <surname>Pieske</surname>
+                  <given-names>B.M.</given-names>
+                </name>
+                <name>
+                  <surname>Kraigher-Krainer</surname>
+                  <given-names>E.</given-names>
+                </name>
+                <name>
+                  <surname>Shah</surname>
+                  <given-names>A.M.</given-names>
+                </name>
+                <name>
+                  <surname>Prescott</surname>
+                  <given-names>M.F.</given-names>
+                </name>
+                <name>
+                  <surname>Shi</surname>
+                  <given-names>V.</given-names>
+                </name>
+                <etal/>
+              </person-group>
+              <article-title>Elevation in high-sensitivity troponin T in heart failure and preserved ejection fraction and influence of treatment with the angiotensin receptor neprilysin inhibitor LCZ696</article-title>
+              <source>Circ. Heart Fail.</source>
+              <year>2014</year>
+              <volume>7</volume>
+              <fpage>953</fpage>
+              <lpage>959</lpage>
+              <pub-id pub-id-type="doi">10.1161/CIRCHEARTFAILURE.114.001427</pub-id>
+              <pub-id pub-id-type="pmid">25277997</pub-id>
+            </element-citation>
+          </ref>
+          <ref id="B40-jcm-07-00427">
+            <label>40.</label>
+            <element-citation publication-type="journal">
+              <person-group person-group-type="author">
+                <name>
+                  <surname>Seliger</surname>
+                  <given-names>S.L.</given-names>
+                </name>
+                <name>
+                  <surname>de Lemos</surname>
+                  <given-names>J.</given-names>
+                </name>
+                <name>
+                  <surname>Neeland</surname>
+                  <given-names>I.J.</given-names>
+                </name>
+                <name>
+                  <surname>Christenson</surname>
+                  <given-names>R.</given-names>
+                </name>
+                <name>
+                  <surname>Gottdiener</surname>
+                  <given-names>J.</given-names>
+                </name>
+                <name>
+                  <surname>Drazner</surname>
+                  <given-names>M.H.</given-names>
+                </name>
+                <name>
+                  <surname>Berry</surname>
+                  <given-names>J.</given-names>
+                </name>
+                <name>
+                  <surname>Sorkin</surname>
+                  <given-names>J.</given-names>
+                </name>
+                <name>
+                  <surname>deFilippi</surname>
+                  <given-names>C.</given-names>
+                </name>
+              </person-group>
+              <article-title>Older Adults, “Malignant” Left Ventricular Hypertrophy, and Associated Cardiac-Specific Biomarker Phenotypes to Identify the Differential Risk of New-Onset Reduced versus Preserved Ejection Fraction Heart Failure: CHS (Cardiovascular Health Study)</article-title>
+              <source>JACC Heart Fail.</source>
+              <year>2015</year>
+              <volume>3</volume>
+              <fpage>445</fpage>
+              <lpage>455</lpage>
+              <pub-id pub-id-type="doi">10.1016/j.jchf.2014.12.018</pub-id>
+              <pub-id pub-id-type="pmid">25982111</pub-id>
+            </element-citation>
+          </ref>
+        </ref-list>
+      </back>
+      <floats-group>
+        <fig id="jcm-07-00427-f001" orientation="portrait" position="float">
+          <label>Figure 1</label>
+          <caption>
+            <p>Receiver operating characteristic curve (ROC) of the scoring system used to predict the degree of myocardial diffuse fibrosis. The area under curve is 0.838.</p>
+          </caption>
+          <graphic xlink:href="jcm-07-00427-g001"/>
+        </fig>
+        <table-wrap id="jcm-07-00427-t001" orientation="portrait" position="float">
+          <object-id pub-id-type="pii">jcm-07-00427-t001_Table 1</object-id>
+          <label>Table 1</label>
+          <caption>
+            <p>Comparison of basic characteristics, risk factors, comorbidities, medications, and serum biomarkers between patients with low and high ECV in the study group.</p>
+          </caption>
+          <table frame="hsides" rules="groups">
+            <thead>
+              <tr>
+                <th align="center" valign="middle" style="border-top:solid thin;border-bottom:solid thin" rowspan="1" colspan="1"></th>
+                <th align="center" valign="middle" style="border-top:solid thin;border-bottom:solid thin" rowspan="1" colspan="1">ECV &lt; 28%
+                  <break/>(
+                  <italic>n</italic> = 39)
+                </th>
+                <th align="center" valign="middle" style="border-top:solid thin;border-bottom:solid thin" rowspan="1" colspan="1">ECV ≥ 28%
+                  <break/>(
+                  <italic>n</italic> = 38)
+                </th>
+                <th align="center" valign="middle" style="border-top:solid thin;border-bottom:solid thin" rowspan="1" colspan="1">
+                  <italic>p</italic>-Value
+                </th>
+              </tr>
+            </thead>
+            <tfoot>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">DM (%)</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">12.8</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">44.7</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">0.002 *</td>
+              </tr>
+            </tfoot>
+            <tbody>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Baseline</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1"></td>
+                <td align="center" valign="middle" rowspan="1" colspan="1"></td>
+                <td align="center" valign="middle" rowspan="1" colspan="1"></td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Age (mean ± SD)</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">67.2 ± 10.4</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">68.4 ± 12.6</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">0.632</td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Sex, M (%)</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">51.3</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">36.8</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">0.202</td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Risk factors</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1"></td>
+                <td align="center" valign="middle" rowspan="1" colspan="1"></td>
+                <td align="center" valign="middle" rowspan="1" colspan="1"></td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">HTN (%)</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">84.6</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">78.9</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">0.519</td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Dyslipidemia (%)</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">48.7</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">42.1</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">0.560</td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Comorbidities</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1"></td>
+                <td align="center" valign="middle" rowspan="1" colspan="1"></td>
+                <td align="center" valign="middle" rowspan="1" colspan="1"></td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">CAD (%)
+                  <break/>PCI (%)
+                  <break/>CABG (%)
+                </td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">41.0
+                  <break/>41.0
+                  <break/>0.0
+                </td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">36.8
+                  <break/>36.8
+                  <break/>5.3
+                </td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">0.707
+                  <break/>0.707
+                  <break/>0.240
+                </td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Stroke</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">2.6</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">5.3</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">0.615</td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">PAD (%)</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">5.1</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">2.6</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">0.552</td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Previous MI (%)</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">7.7</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">5.3</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">1.000</td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">CKD (%)</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">2.6</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">7.9</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">0.358</td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">eGFR, mL/min/1.73 m
+                  <sup>2</sup> (mean ± SD)
+                </td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">78.39 ± 18.76</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">70.21 ± 17.96</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">0.054</td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Aggravation of HF (%)</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">28.2</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">52.6</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">0.029 *</td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Medications</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1"></td>
+                <td align="center" valign="middle" rowspan="1" colspan="1"></td>
+                <td align="center" valign="middle" rowspan="1" colspan="1"></td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Anti-platelet (%)</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">28.2</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">36.8</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">0.418</td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">ACEI (%)</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">0.0</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">2.6</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">0.494</td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">ARB (%)</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">53.8</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">52.6</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">0.915</td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">MRI parameters</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1"></td>
+                <td align="center" valign="middle" rowspan="1" colspan="1"></td>
+                <td align="center" valign="middle" rowspan="1" colspan="1"></td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">LVEDVi, mL/m
+                  <sup>2</sup> (mean ± SD)
+                </td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">48.43 ± 12.15</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">51.37 ± 10.70</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">0.265</td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">LVESVi, mL/m
+                  <sup>2</sup> (mean ± SD)
+                </td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">10.25 ± 5.16</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">11.25 ± 6.15</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">0.444</td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">LVMi, g/m
+                  <sup>2</sup> (mean ± SD)
+                </td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">59.76 ± 11.71</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">61.63 ± 13.86</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">0.525</td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">LVEF, % (mean ± SD)</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">78.54 ± 7.11</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">77.80 ± 9.01</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">0.723</td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Inflammatory markers **</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1"></td>
+                <td align="center" valign="middle" rowspan="1" colspan="1"></td>
+                <td align="center" valign="middle" rowspan="1" colspan="1"></td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">TNF-α, pg/mL</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">1.98 (1.65–2.51)</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">1.80 (1.58–2.16)</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">0.300</td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">IL-1β, pg/mL</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">0.44 (0.34–0.62)</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">0.34 (0.22–0.47)</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">0.108</td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">IL-6, pg/mL</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">1.68 (1.12–2.39)</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">1.51 (1.16–3.34)</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">0.756</td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">CRP, ug/mL</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">1.31 (0.77–2.45)</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">1.27 (0.79–3.64)</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">0.395</td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">GDF15, pg/mL</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">847.40 (625.50–1301.30)</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">1297.50 (697.85–2543.90)</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">0.018 *</td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">OPN, ng/mL</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">106.37 (83.39–124.51)</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">101.90 (84.62–130.91)</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">0.965</td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Remodeling markers **</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1"></td>
+                <td align="center" valign="middle" rowspan="1" colspan="1"></td>
+                <td align="center" valign="middle" rowspan="1" colspan="1"></td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">TIMP1, ng/mL</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">112.94 (98.75–123.96)</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">124.58 (96.21–163.48)</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">0.081</td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">TIMP2, ng/mL</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">130.00 (108.90–147.60)</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">144.90 (85.85–183.33)</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">0.190</td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">MMP-2, ng/mL</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">147.96 (131.61–184.50)</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">188.68 (149.79–254.82)</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">0.020</td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">MMP-9, ng/mL</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">178.40 (116.00–294.30)</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">159.95 (88.38–449.0)</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">0.815</td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">PIP, ng/mL</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">202.02 (158.64–236.55)</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">202.86 (162.05–300.74)</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">0.492</td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Galectin-3, ng/mL</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">6.81 (5.59–8.67)</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">9.92 (7.70–15.41)</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">&lt;0.001 *</td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">CTGF, ng/mL</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">0.11 (0.00–1.97)</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">0.07 (0.00–13.81)</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">0.704</td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Endothelial function **</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1"></td>
+                <td align="center" valign="middle" rowspan="1" colspan="1"></td>
+                <td align="center" valign="middle" rowspan="1" colspan="1"></td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Endothelin-1, pg/mL</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">0.96 (0.80–1.24)</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">1.15 (0.88–1.34)</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">0.203</td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Heart failure markers **</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1"></td>
+                <td align="center" valign="middle" rowspan="1" colspan="1"></td>
+                <td align="center" valign="middle" rowspan="1" colspan="1"></td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">NT-proBNP, pg/mL</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">850.0 (439.5–1335.0)</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">153.00 (739.0–3150.0)</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">0.021 *</td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1">ST2, ng/mL</td>
+                <td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1">8.79 (6.71–13.52)</td>
+                <td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1">8.96 (7.17–12.95)</td>
+                <td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1">0.951</td>
+              </tr>
+            </tbody>
+          </table>
+          <table-wrap-foot>
+            <fn>
+              <p>Abbreviations: BSA, body surface area; HTN, hypertension, defined as blood pressure greater than 140/90 mmHg or use of antihypertensive drug; DM, diabetes mellitus; CKD, chronic kidney disease, defined as eGFR &lt; 60 mL/min/1.73 m
+                <sup>2</sup>; Dyslipidemia, defined as high density lipoprotein &lt; 40 mg/dL or low density cholesterol &gt; 130 mg/dL or triglyceride &gt; 150 mg/dL or use of statins/fibrates; HF, heart failure; eGFR, estimated glomerular filtration rate; CAD, coronary artery disease, defined as a coronary artery stenosis &gt; 50%; PCI, percutaneous coronary intervention; CABG, coronary artery bypass graft; MI, myocardial infarction; PAD, peripheral arterial occlusive disease; ECV, extracellular volume fraction; ACEI, angiotensin converting enzyme inhibitor; ARB, angiotensin receptor blocker; MRI, Magnetic Resonance Imaging; ECV, extracellular volume fraction; LVEDVi, left ventricular end-diastolic volume index; LVESVi, left ventricular end-systolic volume index; LVMi, left ventricular mass index; LVEF, left ventricular ejection fraction; TNF-α, tissue necrosis factor alpha; IL-1β, interleukin-1 beta; IL-6, interleukin-6; CRP, C-reactive protein; GDF-15, growth differentiation factor; OPN, osteopontin-A; TIMP1, tissue inhibitor of metalloproteinase 1; TIMP2, tissue inhibitor of metalloproteinase-2; MMP-2, matrix metalloproteinase-2; MMP-9, matrix metalloproteinase-9; PIP-1, procollagen type I; CTGF, connective tissue growth factor; NT-proBNP, N-terminal of the prohormone brain natriuretic peptide; ST2, suppression of tumorigenicity-2. *
+                <italic>p</italic> &lt; 0.05; ** All biomarker levels were shown as median plus (quartiles 25–75%).
+              </p>
+            </fn>
+          </table-wrap-foot>
+        </table-wrap>
+        <table-wrap id="jcm-07-00427-t002" orientation="portrait" position="float">
+          <object-id pub-id-type="pii">jcm-07-00427-t002_Table 2</object-id>
+          <label>Table 2</label>
+          <caption>
+            <p>Logistic regression analysis demonstrating the determinants of ECV and heart failure.</p>
+          </caption>
+          <table frame="hsides" rules="groups">
+            <thead>
+              <tr>
+                <th align="center" valign="middle" style="border-top:solid thin;border-bottom:solid thin" rowspan="1" colspan="1"></th>
+                <th align="center" valign="middle" style="border-top:solid thin;border-bottom:solid thin" rowspan="1" colspan="1">OR</th>
+                <th align="center" valign="middle" style="border-top:solid thin;border-bottom:solid thin" rowspan="1" colspan="1">95% CI</th>
+                <th align="center" valign="middle" style="border-top:solid thin;border-bottom:solid thin" rowspan="1" colspan="1">
+                  <italic>p</italic>-Value
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">ECV
+                  <sup>a</sup>
+                </td>
+                <td align="center" valign="middle" rowspan="1" colspan="1"></td>
+                <td align="center" valign="middle" rowspan="1" colspan="1"></td>
+                <td align="center" valign="middle" rowspan="1" colspan="1"></td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">DM</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">10.732</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">1.542–74.696</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">0.017</td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">MMP-2</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">1.053</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">1.016–1.091</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">0.005 *</td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Galectin-3</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">2.105</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">1.352–3.277</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">0.001 *</td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Endothelin-1</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">16.207</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">0.961–273.333</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">0.053</td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Heart failure
+                  <sup>b</sup>
+                </td>
+                <td align="center" valign="middle" rowspan="1" colspan="1"></td>
+                <td align="center" valign="middle" rowspan="1" colspan="1"></td>
+                <td align="center" valign="middle" rowspan="1" colspan="1"></td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">TIMP2</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">1.025</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">1.001–1.050</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">0.044 *</td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1">NT-proBNP</td>
+                <td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1">1.010</td>
+                <td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1">1.003–1.017</td>
+                <td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1">0.004 *</td>
+              </tr>
+            </tbody>
+          </table>
+          <table-wrap-foot>
+            <fn>
+              <p>Forward conditional logistic regression;
+                <sup>a</sup> Cox and Snell R square: 0.534;
+                <sup>b</sup> Cox and Snell R square: 0.393; Abbreviations: DM, diabetes; MMP-2, matrix metalloproteinase-2; TIMP2, tissue inhibitor of metalloproteinase-2; NT-proBNP, N-terminal of the prohormone brain natriuretic peptide; OR, odds ratio; CI, confidence interval; ECV, extracellular volume fraction. *
+                <italic>p</italic> &lt; 0.05.
+              </p>
+            </fn>
+          </table-wrap-foot>
+        </table-wrap>
+        <table-wrap id="jcm-07-00427-t003" orientation="portrait" position="float">
+          <object-id pub-id-type="pii">jcm-07-00427-t003_Table 3</object-id>
+          <label>Table 3</label>
+          <caption>
+            <p>Scoring system and area under curve (AUC) to predict the degree of myocardial diffuse fibrosis by using median values as cut-off points.</p>
+          </caption>
+          <table frame="hsides" rules="groups">
+            <thead>
+              <tr>
+                <th align="center" valign="middle" style="border-top:solid thin;border-bottom:solid thin" rowspan="1" colspan="1"></th>
+                <th align="center" valign="middle" style="border-top:solid thin;border-bottom:solid thin" rowspan="1" colspan="1">Cut Point</th>
+                <th align="center" valign="middle" style="border-top:solid thin;border-bottom:solid thin" rowspan="1" colspan="1">OR (95% CI)</th>
+                <th align="center" valign="middle" style="border-top:solid thin;border-bottom:solid thin" rowspan="1" colspan="1">Beta Coefficient</th>
+                <th align="center" valign="middle" style="border-top:solid thin;border-bottom:solid thin" rowspan="1" colspan="1">Score</th>
+                <th align="center" valign="middle" style="border-top:solid thin;border-bottom:solid thin" rowspan="1" colspan="1">AUC (95% CI)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">DM</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Yes</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">7.808
+                  <break/>(1.654–36.854)
+                </td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">2.055</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">2</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">0.660
+                  <break/>(0.536–0.783)
+                </td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">MMP-2</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">≥164.75 ng/mL</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">5.654
+                  <break/>(1.321–24.128)
+                </td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">1.731</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">2</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">0.636
+                  <break/>(0.511–0.761)
+                </td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Galectin</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">≥8.32 ng/mL</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">4.413
+                  <break/>(1.141–17.075)
+                </td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">1.485</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">1</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">0.662
+                  <break/>(0.540–0.785)
+                </td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Endothelin-1</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">≥1.02 pg/mL</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">5.681
+                  <break/>(1.389–23.238)
+                </td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">1.737</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">2</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">0.617
+                  <break/>(0.474–0.760)
+                </td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1">Combine</td>
+                <td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"></td>
+                <td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"></td>
+                <td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"></td>
+                <td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1">0–7</td>
+                <td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1">0.838
+                  <break/>(0.737–0.939)
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <table-wrap-foot>
+            <fn>
+              <p>Abbreviations: DM, diabetes; MMP-2, matrix metalloproteinase-2; OR, odds ratio; CI, confidence interval.</p>
+            </fn>
+          </table-wrap-foot>
+        </table-wrap>
+      </floats-group>
+    </article>
+  </attachments>
+</envelope>

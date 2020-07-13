@@ -1,0 +1,13 @@
+.dropdown-menu > li > span {
+  display: block;
+  padding: 3px 20px;
+  clear: both;
+  font-weight: 400;
+  line-height: 1.846;
+  color: #666666;
+  white-space: nowrap;
+}
+
+.dropdown-menu > li > span > a {
+  color: #666666;
+}

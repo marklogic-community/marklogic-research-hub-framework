@@ -1,0 +1,190 @@
+{
+  "envelope": {
+    "headers": {
+      "sources": [
+        {
+          "name": "pubmed"
+        }
+      ],
+      "lastestTimeStamp": "2019-09-05T14:15:23.7371741-04:00",
+      "version": "1.0",
+      "createdBy": "admin",
+      "stageDocID": "/PubMed/PMID-6456941.nxml",
+      "commonFacets": {
+        "authorPreferredName": "Peter Hanlon",
+        "systemDateTimeCreated": "2019-09-05T14:15:23.7371741-04:00",
+        "lastModifiedDate": "2019-04-04",
+        "institutionPreferredName": [
+          "University of Glasgow"
+        ],
+        "topicPreferredName": [
+          "Multimorbidity",
+          "Mortality",
+          "Cancer mortality",
+          "Vascular mortality",
+          "Condition clusters"
+        ]
+      }
+    },
+    "triples": [
+      {
+        "triple": {
+          "subject": "/foo/1/PubMed/PMID-9999991.json",
+          "predicate": "PRH:affiliatedWith",
+          "object": "/institution/universityOfGlasgow.json"
+        }
+      },
+      {
+        "triple": {
+          "subject": "/institution/universityOfGlasgow.json",
+          "predicate": "PRH:preferredName",
+          "object": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "value": "University of Glasgow"
+          }
+        }
+      },
+      {
+        "triple": {
+          "subject": "/institution/universityOfGlasgow.json",
+          "predicate": "PRH:entityType",
+          "object": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "value": "institution"
+          }
+        }
+      },
+      {
+        "triple": {
+          "subject": "/institution/universityOfGlasgow.json",
+          "predicate": "PRH:inCity",
+          "object": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "value": "Glasgow"
+          }
+        }
+      },
+      {
+        "triple": {
+          "subject": "/institution/universityOfGlasgow.json",
+          "predicate": "PRH:inCountry",
+          "object": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "value": "UK"
+          }
+        }
+      },
+      {
+        "triple": {
+          "subject": "/institution/universityOfGlasgow.json",
+          "predicate": "PRH:hasDepartment",
+          "object": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "value": "General Practice and Primary Care, Institute of Health and Wellbeing, College of Medical, Veterinary and Life Sciences_University of Glasgow"
+          }
+        }
+      },
+      {
+        "triple": {
+          "subject": "/foo/1/PubMed/PMID-9999991.json",
+          "predicate": "PRH:wroteAbout",
+          "object": "/topic/multimorbidity.json"
+        }
+      },
+      {
+        "triple": {
+          "subject": "/foo/1/PubMed/PMID-9999991.json",
+          "predicate": "PRH:wroteAbout",
+          "object": "/topic/mortality.json"
+        }
+      },
+      {
+        "triple": {
+          "subject": "/foo/1/PubMed/PMID-9999991.json",
+          "predicate": "PRH:wroteAbout",
+          "object": "/topic/cancerMortality.json"
+        }
+      },
+      {
+        "triple": {
+          "subject": "/foo/1/PubMed/PMID-9999991.json",
+          "predicate": "PRH:wroteAbout",
+          "object": "/topic/vascularMortality.json"
+        }
+      },
+      {
+        "triple": {
+          "subject": "/foo/1/PubMed/PMID-9999991.json",
+          "predicate": "PRH:wroteAbout",
+          "object": "/topic/conditionClusters.json"
+        }
+      }
+    ],
+    "instance": {
+      "info": {
+        "title": "Foo",
+        "version": "0.0.3"
+      },
+      "docId": "/foo/1/PubMed/PMID-9999991.json",
+      "personName": "Peter Hanlon",
+      "personSurName": "Hanlon",
+      "personGivenName": "Peter",
+      "personEmail": null,
+      "publications": [
+        "/PubMed/PMID-6456941.xml"
+      ],
+      "publicationEntities": [
+        {
+          "uri": "/PubMed/PMID-6456941.xml",
+          "preferredName": "Relationship between multimorbidity, demographic factors and mortality: findings from the UK Biobank cohort"
+        }
+      ],
+      "coAuthors": [
+        {
+          "author": "Bhautesh Dinesh Jani"
+        },
+        {
+          "author": "Barbara I. Nicholl"
+        },
+        {
+          "author": "Ross McQueenie"
+        },
+        {
+          "author": "Katie I. Gallacher"
+        },
+        {
+          "author": "Duncan Lee"
+        },
+        {
+          "author": "Frances S. Mair"
+        }
+      ],
+      "affiliations": [
+        {
+          "organizationDivision": "General Practice and Primary Care, Institute of Health and Wellbeing, College of Medical, Veterinary and Life Sciences",
+          "organizationName": "University of Glasgow",
+          "organizationCity": "Glasgow",
+          "organizationCountry": "UK"
+        }
+      ],
+      "topics": [
+        {
+          "topic": "Multimorbidity"
+        },
+        {
+          "topic": "Mortality"
+        },
+        {
+          "topic": "Cancer mortality"
+        },
+        {
+          "topic": "Vascular mortality"
+        },
+        {
+          "topic": "Condition clusters"
+        }
+      ]
+    },
+    "attachments": null
+  }
+}

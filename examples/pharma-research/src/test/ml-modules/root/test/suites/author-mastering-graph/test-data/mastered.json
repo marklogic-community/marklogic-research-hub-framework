@@ -1,0 +1,685 @@
+{
+  "envelope": {
+    "headers": {
+      "lastestTimeStamp": "2020-05-13T19:11:36.106555Z",
+      "merge-options": {
+        "lang": "zxx",
+        "value": "504B03041400000008005960AE50FD42144432020000810C0000110000006D657267652D6F7074696F6E732E786D6CCD574D8F9B3010BDF757208E9558ABB72A22917A694F5BADB4ED0F70CD006EFD81EC21DDFEFB0E10C0041CA5D226DD53C6F19B376FCC9897E4B641698D4F5EB4327E9FD688CD8E31CDDD2F652B291E84D5CCD31233CD3D8293A6621A5C459FE921D71C459D9D38D8216F9C6DC0E19FAC80D2CFCBC4700DFB94626FCD73EBBED232EDBFF40D17B49326CA0AAEB6602C42F3451EC15C43340363548FB228145CC315206364D7D044085477C21EBF490DCFC87513A75921D764DEB64E808F738C80752A3D736DCD674AC10BF90BD49A8497A55492F793112759A036485AACAD7B72508273505C3EDB2DF056739F7ADCC5CE46C83A5D1A8F12DB4EF095B2A21944CECE2E0C579575126B1DC667C21FE9F651B9B235A2E35C6D70DCA74CC91F4CB41EADCEC6EDACBBB6F0E07FF66D792CB2A9C221479A24DF4D52D270AC89E0FD0ECC1114A9A3B0065ED0E052B43578EC8C4B58A5A0D7465D5833D4A57E8A22DC3BF0597491B36023673DD481B647D848F96EE8D46872FD2A6F4CF1809DAEB93645DC895A1E071DEC95D8274E8A8DCDFAB761ACD1A76DD6201E1ED3CD8E6216D82F509652F0011D1E095BE68430B678B22C1CD66087524F063104904C43BE69039ABF6447AE5A20FBF9900E46B43B31FCB321293015D6C96F90554DF7E0633F9FA721B820263093B7202734A4B7A0E7D595B048B9B503DEA1E8E49477A8B5B4D6B382DDF224E6660296B67C878E372DFC2E273DF9FCF4A2CA48C5CA2F6F513CFE2BE1FF5EE75B3F8CCB924658E72DC35F86C3BBBF504B010200001400000008005960AE50FD42144432020000810C00001100000000000000010000000000000000006D657267652D6F7074696F6E732E786D6C504B050600000000010001003F000000610200000000"
+      },
+      "commonFacets": {
+        "authorPreferredName": "Juey-Jen Hwang",
+        "systemDateTimeCreated": "2020-05-13T19:11:36.106555Z",
+        "lastModifiedDate": "2004-05-05",
+        "institutionPreferredName": [
+          "National Taiwan University Hospital"
+        ],
+        "topicPreferredName": [
+          "Severe acute respiratory syndrome (SARS)",
+          "Multiple organ dysfunction syndrome (MODS)",
+          "Recombinant human activated protein C (rhAPC)"
+        ]
+      },
+      "stageDocID": [
+        "/PubMed/PMID-7080097.nxml",
+        "/PubMed/PMID-6306753.nxml",
+        "/PubMed/PMID-6262605.nxml",
+        "/PubMed/PMID-5383544.nxml"
+      ],
+      "sources": [
+        {
+          "name": "pubmed"
+        }
+      ],
+      "createdBy": "demo",
+      "merges": [
+        {
+          "document-uri": "/author/2/PubMed/PMID-5383544.json",
+          "last-merge": "2020-05-14T12:02:51.089727Z"
+        },
+        {
+          "document-uri": "/author/4/PubMed/PMID-6262605.json",
+          "last-merge": "2020-05-14T12:02:51.089727Z"
+        },
+        {
+          "document-uri": "/author/4/PubMed/PMID-7080097.json",
+          "last-merge": "2020-05-14T12:02:51.089727Z"
+        },
+        {
+          "document-uri": "/author/5/PubMed/PMID-6306753.json",
+          "last-merge": "2020-05-14T12:02:51.089727Z"
+        }
+      ],
+      "version": "1.0",
+      "id": "/com.marklogic.smart-mastering/merged/4570777bc64fed0ace9a3a5cc43154c6.json"
+    },
+    "triples": [
+      {
+        "triple": {
+          "subject": "/author/2/PubMed/PMID-5383544.json",
+          "predicate": "PRH:affiliatedWith",
+          "object": "/institution/nationalTaiwanUniversityHospital.json"
+        }
+      },
+      {
+        "triple": {
+          "subject": "/author/4/PubMed/PMID-6262605.json",
+          "predicate": "PRH:affiliatedWith",
+          "object": "/institution/nationalTaiwanUniversityCollegeOfMedicineAndHospital.json"
+        }
+      },
+      {
+        "triple": {
+          "subject": "/author/4/PubMed/PMID-7080097.json",
+          "predicate": "PRH:affiliatedWith",
+          "object": "/institution/nationalTaiwanUniversityHospital.json"
+        }
+      },
+      {
+        "triple": {
+          "subject": "/author/5/PubMed/PMID-6306753.json",
+          "predicate": "PRH:affiliatedWith",
+          "object": "/institution/nationalTaiwanUniversityCollegeOfMedicineAndHospital.json"
+        }
+      },
+      {
+        "triple": {
+          "subject": "/author/5/PubMed/PMID-6306753.json",
+          "predicate": "PRH:affiliatedWith",
+          "object": "/institution/nationalTaiwanUniversityHospitalYun-LinBranch.json"
+        }
+      },
+      {
+        "triple": {
+          "subject": "/author/2/PubMed/PMID-5383544.json",
+          "predicate": "PRH:authored",
+          "object": "/PubMed/PMID-5383544.xml"
+        }
+      },
+      {
+        "triple": {
+          "subject": "/author/4/PubMed/PMID-6262605.json",
+          "predicate": "PRH:authored",
+          "object": "/PubMed/PMID-6262605.xml"
+        }
+      },
+      {
+        "triple": {
+          "subject": "/author/4/PubMed/PMID-7080097.json",
+          "predicate": "PRH:authored",
+          "object": "/PubMed/PMID-7080097.xml"
+        }
+      },
+      {
+        "triple": {
+          "subject": "/author/5/PubMed/PMID-6306753.json",
+          "predicate": "PRH:authored",
+          "object": "/PubMed/PMID-6306753.xml"
+        }
+      },
+      {
+        "triple": {
+          "subject": "/author/2/PubMed/PMID-5383544.json",
+          "predicate": "PRH:entityType",
+          "object": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "value": "author"
+          }
+        }
+      },
+      {
+        "triple": {
+          "subject": "/author/4/PubMed/PMID-6262605.json",
+          "predicate": "PRH:entityType",
+          "object": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "value": "author"
+          }
+        }
+      },
+      {
+        "triple": {
+          "subject": "/author/4/PubMed/PMID-7080097.json",
+          "predicate": "PRH:entityType",
+          "object": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "value": "author"
+          }
+        }
+      },
+      {
+        "triple": {
+          "subject": "/author/5/PubMed/PMID-6306753.json",
+          "predicate": "PRH:entityType",
+          "object": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "value": "author"
+          }
+        }
+      },
+      {
+        "triple": {
+          "subject": "/institution/nationalTaiwanUniversityCollegeOfMedicineAndHospital.json",
+          "predicate": "PRH:entityType",
+          "object": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "value": "institution"
+          }
+        }
+      },
+      {
+        "triple": {
+          "subject": "/institution/nationalTaiwanUniversityHospital.json",
+          "predicate": "PRH:entityType",
+          "object": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "value": "institution"
+          }
+        }
+      },
+      {
+        "triple": {
+          "subject": "/institution/nationalTaiwanUniversityHospitalYun-LinBranch.json",
+          "predicate": "PRH:entityType",
+          "object": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "value": "institution"
+          }
+        }
+      },
+      {
+        "triple": {
+          "subject": "/institution/nationalTaiwanUniversityCollegeOfMedicineAndHospital.json",
+          "predicate": "PRH:hasDepartment",
+          "object": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "value": "Division of Cardiology, Department of Internal Medicine_National Taiwan University College of Medicine and Hospital"
+          }
+        }
+      },
+      {
+        "triple": {
+          "subject": "/institution/nationalTaiwanUniversityHospital.json",
+          "predicate": "PRH:hasDepartment",
+          "object": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "value": "Department of Internal Medicine_National Taiwan University Hospital"
+          }
+        }
+      },
+      {
+        "triple": {
+          "subject": "/institution/nationalTaiwanUniversityHospital.json",
+          "predicate": "PRH:hasDepartment",
+          "object": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "value": "Division of Cardiology, Department of Internal Medicine_National Taiwan University Hospital"
+          }
+        }
+      },
+      {
+        "triple": {
+          "subject": "/institution/nationalTaiwanUniversityHospitalYun-LinBranch.json",
+          "predicate": "PRH:hasDepartment",
+          "object": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "value": "Department of Internal Medicine_National Taiwan University Hospital Yun-Lin Branch"
+          }
+        }
+      },
+      {
+        "triple": {
+          "subject": "/institution/nationalTaiwanUniversityCollegeOfMedicineAndHospital.json",
+          "predicate": "PRH:inCity",
+          "object": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "value": "Taipei"
+          }
+        }
+      },
+      {
+        "triple": {
+          "subject": "/institution/nationalTaiwanUniversityHospital.json",
+          "predicate": "PRH:inCity",
+          "object": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "value": "Taipei"
+          }
+        }
+      },
+      {
+        "triple": {
+          "subject": "/institution/nationalTaiwanUniversityHospitalYun-LinBranch.json",
+          "predicate": "PRH:inCity",
+          "object": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "value": "Yun-Lin"
+          }
+        }
+      },
+      {
+        "triple": {
+          "subject": "/institution/nationalTaiwanUniversityCollegeOfMedicineAndHospital.json",
+          "predicate": "PRH:inCountry",
+          "object": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "value": "(J.-J.H.)"
+          }
+        }
+      },
+      {
+        "triple": {
+          "subject": "/institution/nationalTaiwanUniversityHospital.json",
+          "predicate": "PRH:inCountry",
+          "object": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "value": "Taiwan"
+          }
+        }
+      },
+      {
+        "triple": {
+          "subject": "/institution/nationalTaiwanUniversityHospitalYun-LinBranch.json",
+          "predicate": "PRH:inCountry",
+          "object": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "value": "Taiwan;"
+          }
+        }
+      },
+      {
+        "triple": {
+          "subject": "/author/2/PubMed/PMID-5383544.json",
+          "predicate": "PRH:preferredName",
+          "object": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "value": "Juey-Jen Hwang"
+          }
+        }
+      },
+      {
+        "triple": {
+          "subject": "/author/4/PubMed/PMID-6262605.json",
+          "predicate": "PRH:preferredName",
+          "object": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "value": "Juey-Jen Hwang"
+          }
+        }
+      },
+      {
+        "triple": {
+          "subject": "/author/4/PubMed/PMID-7080097.json",
+          "predicate": "PRH:preferredName",
+          "object": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "value": "Juey-Jen Hwang"
+          }
+        }
+      },
+      {
+        "triple": {
+          "subject": "/author/5/PubMed/PMID-6306753.json",
+          "predicate": "PRH:preferredName",
+          "object": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "value": "Juey-Jen Hwang"
+          }
+        }
+      },
+      {
+        "triple": {
+          "subject": "/institution/nationalTaiwanUniversityCollegeOfMedicineAndHospital.json",
+          "predicate": "PRH:preferredName",
+          "object": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "value": "National Taiwan University College of Medicine and Hospital"
+          }
+        }
+      },
+      {
+        "triple": {
+          "subject": "/institution/nationalTaiwanUniversityHospital.json",
+          "predicate": "PRH:preferredName",
+          "object": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "value": "National Taiwan University Hospital"
+          }
+        }
+      },
+      {
+        "triple": {
+          "subject": "/institution/nationalTaiwanUniversityHospitalYun-LinBranch.json",
+          "predicate": "PRH:preferredName",
+          "object": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "value": "National Taiwan University Hospital Yun-Lin Branch"
+          }
+        }
+      },
+      {
+        "triple": {
+          "subject": "/author/2/PubMed/PMID-5383544.json",
+          "predicate": "PRH:wroteAbout",
+          "object": "/topic/docosahexaenoicAcid.json"
+        }
+      },
+      {
+        "triple": {
+          "subject": "/author/2/PubMed/PMID-5383544.json",
+          "predicate": "PRH:wroteAbout",
+          "object": "/topic/eicosapentaenoicAcid.json"
+        }
+      },
+      {
+        "triple": {
+          "subject": "/author/2/PubMed/PMID-5383544.json",
+          "predicate": "PRH:wroteAbout",
+          "object": "/topic/ethnicChinese.json"
+        }
+      },
+      {
+        "triple": {
+          "subject": "/author/2/PubMed/PMID-5383544.json",
+          "predicate": "PRH:wroteAbout",
+          "object": "/topic/hypertriglyceridemia.json"
+        }
+      },
+      {
+        "triple": {
+          "subject": "/author/2/PubMed/PMID-5383544.json",
+          "predicate": "PRH:wroteAbout",
+          "object": "/topic/omacor.json"
+        }
+      },
+      {
+        "triple": {
+          "subject": "/author/2/PubMed/PMID-5383544.json",
+          "predicate": "PRH:wroteAbout",
+          "object": "/topic/omega-3FattyAcids.json"
+        }
+      },
+      {
+        "triple": {
+          "subject": "/author/4/PubMed/PMID-6262605.json",
+          "predicate": "PRH:wroteAbout",
+          "object": "/topic/biomarkers.json"
+        }
+      },
+      {
+        "triple": {
+          "subject": "/author/4/PubMed/PMID-6262605.json",
+          "predicate": "PRH:wroteAbout",
+          "object": "/topic/cardiacDiastolicDysfunction.json"
+        }
+      },
+      {
+        "triple": {
+          "subject": "/author/4/PubMed/PMID-6262605.json",
+          "predicate": "PRH:wroteAbout",
+          "object": "/topic/cardiacMagneticResonanceImaging.json"
+        }
+      },
+      {
+        "triple": {
+          "subject": "/author/4/PubMed/PMID-6262605.json",
+          "predicate": "PRH:wroteAbout",
+          "object": "/topic/fibrosis.json"
+        }
+      },
+      {
+        "triple": {
+          "subject": "/author/4/PubMed/PMID-6262605.json",
+          "predicate": "PRH:wroteAbout",
+          "object": "/topic/heartFailureWithPreservedEjectionFraction.json"
+        }
+      },
+      {
+        "triple": {
+          "subject": "/author/4/PubMed/PMID-7080097.json",
+          "predicate": "PRH:wroteAbout",
+          "object": "/topic/multipleOrganDysfunctionSyndrome(MODS).json"
+        }
+      },
+      {
+        "triple": {
+          "subject": "/author/4/PubMed/PMID-7080097.json",
+          "predicate": "PRH:wroteAbout",
+          "object": "/topic/recombinantHumanActivatedProteinC(RhAPC).json"
+        }
+      },
+      {
+        "triple": {
+          "subject": "/author/4/PubMed/PMID-7080097.json",
+          "predicate": "PRH:wroteAbout",
+          "object": "/topic/severeAcuteRespiratorySyndrome(SARS).json"
+        }
+      },
+      {
+        "triple": {
+          "subject": "/author/5/PubMed/PMID-6306753.json",
+          "predicate": "PRH:wroteAbout",
+          "object": "/topic/hAS2.json"
+        }
+      },
+      {
+        "triple": {
+          "subject": "/author/5/PubMed/PMID-6306753.json",
+          "predicate": "PRH:wroteAbout",
+          "object": "/topic/rNASeq.json"
+        }
+      },
+      {
+        "triple": {
+          "subject": "/author/5/PubMed/PMID-6306753.json",
+          "predicate": "PRH:wroteAbout",
+          "object": "/topic/varicoseVeins.json"
+        }
+      }
+    ],
+    "instance": {
+      "info": {
+        "title": "Author",
+        "version": "0.0.3"
+      },
+      "Author": {
+        "topics": [
+          {
+            "topic": "Severe acute respiratory syndrome (SARS)"
+          },
+          {
+            "topic": "Multiple organ dysfunction syndrome (MODS)"
+          },
+          {
+            "topic": "Recombinant human activated protein C (rhAPC)"
+          },
+          {
+            "topic": "varicose veins"
+          },
+          {
+            "topic": "HAS2"
+          },
+          {
+            "topic": "RNA seq"
+          },
+          {
+            "topic": "cardiac diastolic dysfunction"
+          },
+          {
+            "topic": "heart failure with preserved ejection fraction"
+          },
+          {
+            "topic": "biomarkers"
+          },
+          {
+            "topic": "cardiac magnetic resonance imaging"
+          },
+          {
+            "topic": "fibrosis"
+          },
+          {
+            "topic": "Hypertriglyceridemia"
+          },
+          {
+            "topic": "Omega-3 fatty acids"
+          },
+          {
+            "topic": "Omacor"
+          },
+          {
+            "topic": "Docosahexaenoic acid"
+          },
+          {
+            "topic": "Eicosapentaenoic acid"
+          },
+          {
+            "topic": "Ethnic chinese"
+          }
+        ],
+        "personEmail": null,
+        "personGivenName": "Juey-Jen",
+        "personSurName": "Hwang",
+        "affiliations": [
+          {
+            "organizationDivision": "Department of Internal Medicine",
+            "organizationName": "National Taiwan University Hospital",
+            "organizationCity": "Taipei",
+            "organizationCountry": "Taiwan"
+          }
+        ],
+        "publications": [
+          "/PubMed/PMID-7080097.xml",
+          "/PubMed/PMID-6306753.xml",
+          "/PubMed/PMID-6262605.xml",
+          "/PubMed/PMID-5383544.xml"
+        ],
+        "docId": [
+          "/author/4/PubMed/PMID-7080097.json",
+          "/author/5/PubMed/PMID-6306753.json",
+          "/author/4/PubMed/PMID-6262605.json",
+          "/author/2/PubMed/PMID-5383544.json"
+        ],
+        "publicationEntities": [
+          {
+            "uri": "/PubMed/PMID-7080097.xml",
+            "preferredName": "Relapse of SARS upon tapering corticosteroid"
+          },
+          {
+            "uri": "/PubMed/PMID-6306753.xml",
+            "preferredName": "Global Expression Profiling Identifies a Novel Hyaluronan Synthases 2 Gene in the Pathogenesis of Lower Extremity Varicose Veins"
+          },
+          {
+            "uri": "/PubMed/PMID-6262605.xml",
+            "preferredName": "Combination of Plasma Biomarkers and Clinical Data for the Detection of Myocardial Fibrosis or Aggravation of Heart Failure Symptoms in Heart Failure with Preserved Ejection Fraction Patients"
+          },
+          {
+            "uri": "/PubMed/PMID-5383544.xml",
+            "preferredName": "A Randomized, Double-Blind, Placebo-Controlled Clinical Trial to Assess the Efficacy and Safety of Ethyl-Ester Omega-3 Fatty Acid in Taiwanese Hypertriglyceridemic Patients"
+          }
+        ],
+        "coAuthors": [
+          {
+            "spell": "kxns-",
+            "author": "Chia-Shan Hsieh"
+          },
+          {
+            "spell": "ktts-",
+            "author": "Chia-Ti Tsai"
+          },
+          {
+            "spell": "xk-",
+            "author": "Cho-Kai Wu"
+          },
+          {
+            "spell": "xnkjn-",
+            "author": "Chong-Jen Yu"
+          },
+          {
+            "spell": "xntntsnk-",
+            "author": "Chuen-Den Tseng"
+          },
+          {
+            "spell": "arkxnk-arkknk",
+            "author": "Eric Y. Chuang"
+          },
+          {
+            "spell": "ftnknk-",
+            "author": "Fu-Tien Chiang"
+          },
+          {
+            "spell": "a-",
+            "author": "I-Hui Wu"
+          },
+          {
+            "spell": "jsmlrslfr-asmlrslfr",
+            "author": "José Emilio Ruiz Olivar"
+          },
+          {
+            "spell": "jnknxn-anknkn",
+            "author": "Jung-Yien Chien"
+          },
+          {
+            "spell": "kxnnk-kknnk",
+            "author": "Kuo-Chin Huang"
+          },
+          {
+            "spell": "klnkxn-klnkkn",
+            "author": "Kuo-Liong Chien"
+          },
+          {
+            "spell": "knknk-",
+            "author": "Kuo-Yang Wang"
+          },
+          {
+            "spell": "lnln-",
+            "author": "Lian-Yu Lin"
+          },
+          {
+            "spell": "mnms-",
+            "author": "Mao-Yuan M. Su"
+          },
+          {
+            "spell": "mnjxrnk-mnjkrnk",
+            "author": "Min-Ji Charng"
+          },
+          {
+            "spell": "pnxrnk-pnkrnk",
+            "author": "Pan-Chyr Yang"
+          },
+          {
+            "spell": "prns-",
+            "author": "Po-Ren Hsueh"
+          },
+          {
+            "spell": "rnrfj-rnrfk",
+            "author": "Runar Vige"
+          },
+          {
+            "spell": "xnxnxnk-xnknknk",
+            "author": "Shan-Chwen Chang"
+          },
+          {
+            "spell": "xnknnxnk-xnknnknk",
+            "author": "Sheng-Nan Chang"
+          },
+          {
+            "spell": "txns-tkns",
+            "author": "Ta-Chen Su"
+          },
+          {
+            "spell": "axnts-fknts",
+            "author": "Wei-Chuan Tsai"
+          },
+          {
+            "spell": "ankxn-ankkn",
+            "author": "Yau-Hung Chen"
+          },
+          {
+            "spell": "afn-",
+            "author": "Yi-Fan Wu"
+          }
+        ],
+        "personName": "Juey-Jen Hwang"
+      }
+    }
+  }
+}

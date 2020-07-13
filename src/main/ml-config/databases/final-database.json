@@ -1,0 +1,80 @@
+{
+  "database-name": "%%mlFinalDbName%%",
+  "schema-database": "%%mlFinalSchemasDbName%%",
+  "triggers-database": "%%mlFinalTriggersDbName%%",
+  "triple-index": true,
+  "collection-lexicon": true,
+  "uri-lexicon": true,
+  "fast-reverse-searches": true,
+  "stemmed-searches": "advanced",
+  "range-element-index": [
+    {
+      "scalar-type": "date",
+      "namespace-uri": "",
+      "localname": "lastModifiedDate",
+      "collation": "http://marklogic.com/collation/codepoint",
+      "range-value-positions": false,
+      "invalid-values": "reject"
+    },
+    {
+      "scalar-type": "dateTime",
+      "namespace-uri": "",
+      "localname": "systemDateTimeCreated",
+      "collation": "http://marklogic.com/collation/codepoint",
+      "range-value-positions": false,
+      "invalid-values": "reject"
+    }
+  ],
+  "range-path-index": [
+  ],
+  "field": [
+    {
+      "field-name": "datahubCreatedInFlow",
+      "metadata": "",
+      "stemmed-searches": "advanced",
+      "word-searches": true,
+      "field-value-searches": true
+    },
+    {
+      "field-name": "datahubCreatedByStep",
+      "metadata": "",
+      "stemmed-searches": "advanced",
+      "word-searches": true,
+      "field-value-searches": true,
+      "tokenizer-override": [
+        {
+          "character": "_",
+          "tokenizer-class": "remove"
+        },
+        {
+          "character": "-",
+          "tokenizer-class": "remove"
+        }
+      ]
+    },
+    {
+      "field-name": "datahubCreatedByJob",
+      "metadata": "",
+      "stemmed-searches": "advanced",
+      "word-searches": true,
+      "field-value-searches": true,
+      "tokenizer-override": [
+        {
+          "character": "-",
+          "tokenizer-class": "remove"
+        }
+      ]
+    },
+    {
+      "field-name": "datahubCreatedOn",
+      "metadata": "",
+      "stemmed-searches": "advanced",
+      "field-value-searches": true,
+      "field-value-positions": true
+    },
+    {
+      "field-name": "",
+      "include-root": true
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "info" : {
+    "title" : "resume",
+    "version" : "0.0.1",
+    "baseUri" : "http://marklogic.com/topgun/"
+  },
+  "definitions" : {
+    "resume" : {
+      "required" : [ ],
+      "pii" : [ ],
+      "elementRangeIndex" : [ "category" ],
+      "rangeIndex" : [ ],
+      "wordLexicon" : [ ],
+      "properties" : {
+        "category" : {
+          "datatype" : "string",
+          "collation" : "http://marklogic.com/collation/codepoint"
+        },
+        "employeeId" : {
+          "datatype" : "string",
+          "collation" : "http://marklogic.com/collation/codepoint"
+        },
+        "resumeId" : {
+          "datatype" : "string",
+          "collation" : "http://marklogic.com/collation/codepoint"
+        },
+        "resumeText" : {
+          "datatype" : "string",
+          "collation" : "http://marklogic.com/collation/codepoint"
+        }
+      }
+    }
+  }
+}

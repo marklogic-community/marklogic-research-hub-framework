@@ -1,0 +1,24 @@
+{
+  "lang" : "zxx",
+  "name" : "MountainTopEmployees-MapResumes",
+  "description" : "",
+  "version" : 0,
+  "targetEntityType" : "http://marklogic.com/topgun/resume-0.0.1/resume",
+  "sourceContext" : "/",
+  "sourceURI" : "./data/hr360/MountainTopEmployees/MountainTopResumes/64383682-e54c-45c0-aa33-ae31aff49a80.json",
+  "properties" : {
+    "resumeText" : {
+      "sourcedFrom" : "Resume"
+    },
+    "resumeId" : {
+      "sourcedFrom" : "ID"
+    },
+    "employeeId" : {
+      "sourcedFrom" : "EmployeeId"
+    },
+    "category" : {
+      "sourcedFrom" : "Category"
+    }
+  },
+  "namespaces" : { }
+}

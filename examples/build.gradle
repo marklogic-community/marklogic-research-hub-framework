@@ -1,0 +1,210 @@
+
+task checkExampleProperty(group: project.name) {
+  doFirst {
+    if ("$example" == "") {
+      throw new Exception("Please provide a value for the `example` property using -Pexample=...")
+    }
+  }
+}
+
+task checkExampleDirectory(group: project.name) {
+  dependsOn checkExampleProperty
+  doFirst {
+    if (! new File("$rootProject.projectDir/examples/$example").exists()) {
+      throw new Exception("Directory $rootProject.projectDir/examples/$example not found")
+    }
+  }
+}
+
+task copyAll(group: project.name) {
+  // check the `example` property
+  dependsOn checkExampleDirectory
+
+  doLast {
+    // Figure out which files are provided in the example
+    def list = []
+    fileTree("$rootProject.projectDir/examples/$example") {
+      include "data/**"
+      include "entities/**"
+      include "flows/**"
+      include "mappings/**"
+      include "ui/**"
+      include "src/**"
+      include "step-definitions/**"
+    }.each {
+      def src = it
+      def relSrc = src.path.replace("$rootProject.projectDir" + File.separator, "")
+
+      // rewrite the path from example to installed location
+      def target = new File(src.canonicalPath.replace(File.separator + "examples" + File.separator + "$example" + File.separator, File.separator))
+
+      // copy if not installed
+      if (!target.exists()) {
+        println "Copying ${relSrc} -> ${target}.."
+        copy {
+          from src
+          into target.parentFile // target directory
+        }
+      }
+      else {
+        println "Skipped ${relSrc} -> ${target} to avoid overwrite.."
+      }
+    }
+  }
+}
+
+/**
+ * Print the diff command that can be used for comparing files between the example dir and the GRH dir.
+ * TODO: this should be further improved to execute 'diff' and print modified filenames for convenience.
+ */
+task diffFiles(group: project.name) {
+  // check the `example` property
+  dependsOn checkExampleDirectory
+
+  doLast {
+    // Figure out which files are provided in the example
+    def list = [
+      "data",
+      "entities",
+      "flows",
+      "mappings",
+      "ui",
+      "src",
+      "step-definitions"
+    ]
+    list.each {
+      def src = file("${example}/${it}")
+      def relSrc = src.path.replace("$rootProject.projectDir" + File.separator, "")
+      def target = new File(src.canonicalPath.replace(File.separator + "examples" + File.separator + "$example" + File.separator, File.separator))
+
+      println "diff -rb ${relSrc} ${target}"
+    }
+  }
+}
+
+task install(group: project.name) {
+  dependsOn copyAll
+}
+
+task deleteFiles(group: project.name) {
+  // check the `example` property
+  dependsOn checkExampleDirectory
+
+  doLast {
+    // Figure out which files are provided in the example
+    def list = []
+    fileTree("$rootProject.projectDir/examples/$example") {
+      include "data/**"
+      include "entities/**"
+      include "flows/**"
+      include "mappings/**"
+      include "ui/**"
+      include "src/**"
+      include "step-definitions/**"
+    }.each {
+      // rewrite the path from example to installed location
+      def file = new File(it.path.replace("/examples/$example/", "/"))
+
+      // delete if installed
+      if (file.exists()) {
+        println "Deleting file ${file}.."
+        file.delete()
+      }
+    }
+  }
+}
+
+task deleteAll(group: project.name) {
+  // delete files first
+  dependsOn deleteFiles
+  mustRunAfter deleteFiles
+
+  doLast {
+    // scan for empty directories
+    def dirs = []
+    fileTree("$rootProject.projectDir/examples/$example") {
+      include "data/**"
+      include "entities/**"
+      include "flows/**"
+      include "mappings/**"
+      include "ui/**"
+      include "src/**"
+      include "step-definitions/**"
+    }.each {
+      // rewrite the path from example to installed location
+      def file = new File(it.path.replace("/examples/$example/", "/"))
+      def dir = file.parentFile
+
+      // delete empty dirs
+      if (dir.exists() && dir.list().length == 0) {
+        println "Deleting empty dir ${dir}.."
+        dir.delete()
+      }
+    }
+  }
+}
+
+task createExample(group: project.name) {
+  dependsOn checkExampleProperty
+
+  doLast {
+    [
+      "$rootProject.projectDir/examples/$example/data/$example",
+      "$rootProject.projectDir/examples/$example/entities",
+      "$rootProject.projectDir/examples/$example/flows",
+      "$rootProject.projectDir/examples/$example/mappings",
+      "$rootProject.projectDir/examples/$example/ui/ui/src/concept",
+      "$rootProject.projectDir/examples/$example/ui/ui/src/entity",
+      "$rootProject.projectDir/examples/$example/src/main/ml-config/databases",
+      "$rootProject.projectDir/examples/$example/src/main/ml-modules/options",
+      "$rootProject.projectDir/examples/$example/src/main/ml-modules/root/entities",
+      "$rootProject.projectDir/examples/$example/src/main/ml-schemas/tde",
+      "$rootProject.projectDir/examples/$example/step-definitions"
+    ].each {
+      def dir = new File(it)
+      if (! dir.exists()) {
+        println "Creating ${it}.."
+        dir.mkdirs()
+      }
+    }
+  }
+}
+
+task updateExample(group: project.name) {
+  // check the `example` property
+  dependsOn checkExampleDirectory
+
+  doLast {
+    // Figure out which files are provided in the example
+    def list = []
+    fileTree("$rootProject.projectDir/examples/$example") {
+      //include "data/**"
+      include "entities/**"
+      include "flows/**"
+      include "mappings/**"
+      include "ui/**"
+      include "src/**"
+      include "step-definitions/**"
+    }.each {
+      def src = it
+      def relSrc = src.path.replace("$rootProject.projectDir/", "")
+
+      // rewrite the path from example to installed location
+      def target = new File(src.path.replace("/examples/$example/", "/"))
+
+      // copy if not installed
+      if (target.exists()) {
+        println "Copying ${target} -> ${relSrc}.."
+        copy {
+          from target
+          into src.parentFile // target directory
+        }
+      }
+    }
+  }
+}
+
+task uninstall(group: project.name) {
+  dependsOn deleteAll
+}
+

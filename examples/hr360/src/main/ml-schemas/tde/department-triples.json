@@ -1,0 +1,46 @@
+{
+  "template": {
+    "context": "/envelope[instance/department]",
+    "collections": ["department"],
+
+    "vars": [{
+
+      "name": "PRHPrefix",
+      "val": "'PRH:'"
+
+    },{
+
+      "name": "departmentIri",
+      "val": "sem:iri(xdmp:node-uri(.))"
+
+    }],
+
+    "templates": [{
+
+      "context": "instance/department",
+
+      "triples": [{
+        "subject": {
+          "val": "$departmentIri"
+        },
+        "predicate": {
+          "val": "sem:iri($PRHPrefix || 'entityType')"
+        },
+        "object": {
+          "val": "lower-case(name(.))"
+        }
+      },{
+        "subject": {
+          "val": "$departmentIri"
+        },
+        "predicate": {
+          "val": "sem:iri($PRHPrefix || 'preferredName')"
+        },
+        "object": {
+          "val": "string(departmentName)"
+        }
+      }]
+
+    }]
+  }
+}

@@ -1,0 +1,24 @@
+
+ext {
+  RunFlowTask = rootProject.RunFlowTask
+}
+
+task loadEmployee(type: RunFlowTask, group: project.name) {
+  flowName = "LoadEmployee"
+}
+
+task loadPositions(type: RunFlowTask, group: project.name) {
+  flowName = "LoadPositions"
+}
+
+// run via - ./gradlew -i examples:person-position-matching:runAll
+task runAll {
+  dependsOn loadEmployee
+  dependsOn loadPositions
+}
+
+// run via - ./gradlew -i examples:person-position-matching:runAndDeployAll
+task runAndDeployAll {
+  dependsOn rootProject.tasks.mlDeploy
+  dependsOn(':examples:person-position-matching:runAll')
+}

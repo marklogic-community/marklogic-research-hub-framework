@@ -1,0 +1,150 @@
+#controls li { text-transform: capitalize; }
+
+article.workspace-detail #entities .entity-detail {
+  display: flex;
+  align-items: baseline;
+}
+
+article.workspace-detail #entities .entity-detail h5 {
+  margin: 0 0.75em;
+}
+
+article.workspace-detail #description h2 { font-size: 2rem; font-weight: normal; color: #333; }
+
+.entity-type-badge {
+  background-color: #444;
+  line-height: 1;
+  padding: 1em;
+  border-radius: 14px;
+  color: #FFF;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/* TODO: make generic */
+.entity-type-badge.entity-type-author { background-color: #7b59b2; }
+.entity-type-badge.entity-type-gene { background-color: #3ad6bc   ; }
+.entity-type-badge.entity-type-drug { background-color: #8e9fff; }
+.entity-type-badge.entity-type-publication { background-color: #6068b2; }
+
+.fa-bookmark { cursor: pointer; }
+.fa-bookmark.fas { color: #FFBD3E; }
+
+button.trigger {
+  border: none;
+  background-color: transparent;
+}
+
+section header h4 {
+  color: #777;
+  font-weight: lighter;
+  font-size: 1.45rem;
+  text-transform: uppercase;
+}
+.fa-pencil-alt { font-size: 0.75em; color: #a9a9a9;}
+
+article.workspace-detail .entity-list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+
+article.workspace-detail .entity-list .panel {
+  border: none;
+  box-shadow: none;
+}
+
+.entity-list .entity-card {
+  border: solid 1px #eee;
+  border-top: solid 8px #aaa;
+  border-radius: 6px 6px 0 0;
+  flex: 0 0 22%;
+  margin-right: 2em;
+  margin-bottom: 2em;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  position: relative;
+  background-color: #FFF;
+}
+
+.entity-list .entity-card .entity-detail,
+.entity-list .entity-card .entity-detail .profile-card,
+.entity-list .entity-card .entity-detail .panel-body {
+  height: 100%;
+}
+
+.entity-list .entity-card h2 {
+  font-size: 1.8rem;
+  line-height: 1.5;
+}
+
+.entity-card p.description {
+  max-height: 105px;
+  overflow: hidden;
+}
+
+.gene-info-container div.col-md-6 {
+  width: 100%
+}
+
+.entity-card[data-entity-predicate="definite"], .entity-card[data-entity-predicate="Definite"] {
+  border-top-color: #00b388;
+}
+
+.entity-card[data-entity-predicate="likely"] {
+  border-top-color: #fbd872;
+}
+
+.entity-card[data-entity-predicate="not"] {
+  border-top-color: #f4364c;
+}
+
+form.edit-form {
+  display: flex;
+  flex-flow: column;
+  justify-content: stretch;
+  padding: 0.5em;
+  background-color: #f3f3f3;
+  position: relative;
+}
+
+form.edit-form textarea {
+  padding: 0.5em;
+}
+
+form.edit-form .edit-actions {
+  min-height: auto;
+  position: absolute;
+  bottom: -4rem;
+  right: 0;
+  font-size: 2.5rem;
+  width: auto;
+  border-radius: 0 0 12px 12px;
+  background-color: #f3f3f3;
+  display: flex;
+  flex-flow: row-reverse;
+  padding: 0.15em;
+}
+
+.edit-actions button[type="submit"] {
+  color: #00b388;
+}
+
+h1.inline {
+  display: inline;
+}
+
+button.btn-header {
+  margin-left: 12px;
+  margin-bottom: 11.5px;
+}
+
+div.button-container {
+  display: inline;
+}
+
+button.btn-header-right {
+  margin-right: 12px;
+  margin-bottom: 11.5px;
+}

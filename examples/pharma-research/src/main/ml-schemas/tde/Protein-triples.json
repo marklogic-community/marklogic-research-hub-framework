@@ -1,0 +1,320 @@
+{
+  "template": {
+    "context": "/envelope[instance/Protein]",
+    "collections": ["Protein"],
+
+    "vars": [{
+
+      "name": "PRHPrefix",
+      "val": "'PRH:'"
+
+    },{
+
+      "name": "proteinIri",
+      "val": "sem:iri(xdmp:node-uri(.))"
+
+    }],
+
+    "templates": [{
+
+      "context": "instance/Protein",
+
+      "triples": [{
+
+        "subject": {
+          "val": "$proteinIri"
+        },
+        "predicate": {
+          "val": "sem:iri($PRHPrefix || 'entityType')"
+        },
+        "object": {
+          "val": "lower-case(name(.))"
+        }
+
+      },{
+
+        "subject": {
+          "val": "$proteinIri"
+        },
+        "predicate": {
+          "val": "sem:iri($PRHPrefix || 'preferredName')"
+        },
+        "object": {
+          "val": "string(fullName)"
+        }
+
+      }]
+
+    },{
+
+      "context": "instance/Protein/mediatesExpressionOf",
+
+      "vars": [{
+
+        "name": "mediationIRI",
+        "val": "sem:iri( replace($proteinIri, '.json', '') || '_mediated_' || expression )"
+
+      }],
+
+      "triples": [{
+
+        "subject": {
+          "val": "$proteinIri"
+        },
+        "predicate": {
+          "val": "sem:iri($PRHPrefix || 'expressesMediation')"
+        },
+        "object": {
+          "val": "$mediationIRI"
+        }
+
+      },{
+
+        "subject": {
+          "val": "$mediationIRI"
+        },
+        "predicate": {
+          "val": "sem:iri($PRHPrefix || 'entityType')"
+        },
+        "object": {
+          "val": "'mediator'"
+        }
+
+      },{
+
+        "subject": {
+          "val": "$mediationIRI"
+        },
+        "predicate": {
+          "val": "sem:iri($PRHPrefix || 'preferredName')"
+        },
+        "object": {
+          "val": "string(../../fullName) || ' mediates expression of ' || name"
+        }
+
+      },{
+
+        "subject": {
+          "val": "sem:iri(expression)"
+        },
+        "predicate": {
+          "val": "sem:iri($PRHPrefix || 'mediationExpressedIn')"
+        },
+        "object": {
+          "val": "$mediationIRI"
+        }
+
+      }]
+
+    },{
+
+      "context": "instance/Protein/similarProtein[exists(family) and (family != '')]",
+
+      "vars": [{
+
+        "name": "familyIRI",
+        "val": "sem:iri( family )"
+
+      }],
+
+      "triples": [{
+
+        "subject": {
+          "val": "$proteinIri"
+        },
+        "predicate": {
+          "val": "sem:iri($PRHPrefix || 'belongsToFamily')"
+        },
+        "object": {
+          "val": "$familyIRI"
+        }
+
+      },{
+
+        "subject": {
+          "val": "$familyIRI"
+        },
+        "predicate": {
+          "val": "sem:iri($PRHPrefix || 'entityType')"
+        },
+        "object": {
+          "val": "'proteinFamily'"
+        }
+
+      },{
+
+        "subject": {
+          "val": "$familyIRI"
+        },
+        "predicate": {
+          "val": "sem:iri($PRHPrefix || 'preferredName')"
+        },
+        "object": {
+          "val": "string(family)"
+        }
+
+      }]
+
+    },{
+
+      "context": "instance/Protein/similarProtein[exists(subfamily) and (subfamily != '')]",
+
+      "vars": [{
+
+        "name": "subfamilyIRI",
+        "val": "sem:iri( subfamily )"
+
+      }],
+
+      "triples": [{
+
+        "subject": {
+          "val": "$proteinIri"
+        },
+        "predicate": {
+          "val": "sem:iri($PRHPrefix || 'belongsToSubFamily')"
+        },
+        "object": {
+          "val": "$subfamilyIRI"
+        }
+
+      },{
+
+        "subject": {
+          "val": "$subfamilyIRI"
+        },
+        "predicate": {
+          "val": "sem:iri($PRHPrefix || 'entityType')"
+        },
+        "object": {
+          "val": "'proteinFamily'"
+        }
+
+      },{
+
+        "subject": {
+          "val": "$subfamilyIRI"
+        },
+        "predicate": {
+          "val": "sem:iri($PRHPrefix || 'preferredName')"
+        },
+        "object": {
+          "val": "string(subfamily)"
+        }
+
+      }]
+
+    },{
+
+      "context": "instance/Protein/similarProtein[exists(subsubfamily) and (subsubfamily != '')]",
+
+      "vars": [{
+
+        "name": "subsubfamilyIRI",
+        "val": "sem:iri( subsubfamily )"
+
+      }],
+
+      "triples": [{
+
+        "subject": {
+          "val": "$proteinIri"
+        },
+        "predicate": {
+          "val": "sem:iri($PRHPrefix || 'belongsToSubSubFamily')"
+        },
+        "object": {
+          "val": "$subsubfamilyIRI"
+        }
+
+      },{
+
+        "subject": {
+          "val": "$subsubfamilyIRI"
+        },
+        "predicate": {
+          "val": "sem:iri($PRHPrefix || 'entityType')"
+        },
+        "object": {
+          "val": "'proteinFamily'"
+        }
+
+      },{
+
+        "subject": {
+          "val": "$subsubfamilyIRI"
+        },
+        "predicate": {
+          "val": "sem:iri($PRHPrefix || 'preferredName')"
+        },
+        "object": {
+          "val": "string(subsubfamily)"
+        }
+
+      }]
+
+    },{
+
+      "context": "headers/relatedDrugs",
+
+      "vars": [{
+
+        "name": "drugIRI",
+        "val": "sem:iri( . )"
+
+      }],
+
+      "triples": [{
+
+        "subject": {
+          "val": "$drugIRI"
+        },
+        "predicate": {
+          "val": "sem:iri($PRHPrefix || 'targets')"
+        },
+        "object": {
+          "val": "$proteinIri"
+        }
+
+      }]
+
+    },{
+
+      "context": "headers/relatedGenes",
+
+      "vars": [{
+
+        "name": "geneIRI",
+        "val": "sem:iri( . )"
+
+      }],
+
+      "triples": [{
+
+        "subject": {
+          "val": "$geneIRI"
+        },
+        "predicate": {
+          "val": "sem:iri($PRHPrefix || 'isRelated')"
+        },
+        "object": {
+          "val": "$proteinIri"
+        }
+
+      },{
+
+        "subject": {
+          "val": "$proteinIri"
+        },
+        "predicate": {
+          "val": "sem:iri($PRHPrefix || 'isRelated')"
+        },
+        "object": {
+          "val": "$geneIRI"
+        }
+
+      }]
+
+    }]
+  }
+}

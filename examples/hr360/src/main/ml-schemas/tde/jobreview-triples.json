@@ -1,0 +1,59 @@
+{
+  "template": {
+    "context": "/envelope[instance/jobreview]",
+    "collections": ["jobreview"],
+
+    "vars": [{
+
+      "name": "PRHPrefix",
+      "val": "'PRH:'"
+
+    },{
+      "name": "jobreviewIri",
+      "val": "sem:iri(xdmp:node-uri(.))"
+    }],
+    "templates": [
+      {
+        "context": "instance/jobreview",
+
+        "triples": [
+          {
+            "subject": {
+              "val": "$jobreviewIri"
+            },
+            "predicate": {
+              "val": "sem:iri($PRHPrefix || 'entityType')"
+            },
+            "object": {
+              "val": "lower-case(name(.))"
+            }
+          },{
+            "subject": {
+              "val": "$jobreviewIri"
+            },
+            "predicate": {
+              "val": "sem:iri($PRHPrefix || 'preferredName')"
+            },
+            "object": {
+              "val": "string(reviewCode)"
+            }
+          }
+        ]
+      },
+      {
+        "context": "headers",
+        "triples": [{
+          "subject": {
+            "val": "sem:iri(employeeUri)"
+          },
+          "predicate": {
+            "val": "sem:iri($PRHPrefix || 'hasJobReview')"
+          },
+          "object": {
+            "val": "$jobreviewIri"
+          }
+        }]
+      }
+    ]
+  }
+}

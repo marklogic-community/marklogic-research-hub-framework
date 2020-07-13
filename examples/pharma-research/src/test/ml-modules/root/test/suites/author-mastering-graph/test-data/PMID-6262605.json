@@ -1,0 +1,186 @@
+{
+  "envelope": {
+    "headers": {
+      "sources": [
+        {
+          "name": "pubmed"
+        }
+      ],
+      "lastestTimeStamp": "2020-05-13T18:59:39.810198Z",
+      "version": "1.0",
+      "createdBy": "demo",
+      "stageDocID": "/PubMed/PMID-6262605.nxml",
+      "commonFacets": {
+        "authorPreferredName": "Mao-Yuan M. Su",
+        "systemDateTimeCreated": "2020-05-13T18:59:39.810198Z",
+        "lastModifiedDate": "2018-11-11",
+        "institutionPreferredName": [
+          "National Taiwan University Hospital"
+        ],
+        "topicPreferredName": [
+          "cardiac diastolic dysfunction",
+          "heart failure with preserved ejection fraction",
+          "biomarkers",
+          "cardiac magnetic resonance imaging",
+          "fibrosis"
+        ]
+      }
+    },
+    "triples": [
+      {
+        "triple": {
+          "subject": "/author/2/PubMed/PMID-6262605.json",
+          "predicate": "PRH:affiliatedWith",
+          "object": "/institution/nationalTaiwanUniversityHospital.json"
+        }
+      },
+      {
+        "triple": {
+          "subject": "/institution/nationalTaiwanUniversityHospital.json",
+          "predicate": "PRH:preferredName",
+          "object": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "value": "National Taiwan University Hospital"
+          }
+        }
+      },
+      {
+        "triple": {
+          "subject": "/institution/nationalTaiwanUniversityHospital.json",
+          "predicate": "PRH:entityType",
+          "object": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "value": "institution"
+          }
+        }
+      },
+      {
+        "triple": {
+          "subject": "/institution/nationalTaiwanUniversityHospital.json",
+          "predicate": "PRH:inCity",
+          "object": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "value": "Taipei"
+          }
+        }
+      },
+      {
+        "triple": {
+          "subject": "/institution/nationalTaiwanUniversityHospital.json",
+          "predicate": "PRH:inCountry",
+          "object": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "value": "Taiwan;"
+          }
+        }
+      },
+      {
+        "triple": {
+          "subject": "/institution/nationalTaiwanUniversityHospital.json",
+          "predicate": "PRH:hasDepartment",
+          "object": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "value": "Department of Medical Imaging_National Taiwan University Hospital"
+          }
+        }
+      },
+      {
+        "triple": {
+          "subject": "/author/2/PubMed/PMID-6262605.json",
+          "predicate": "PRH:wroteAbout",
+          "object": "/topic/cardiacDiastolicDysfunction.json"
+        }
+      },
+      {
+        "triple": {
+          "subject": "/author/2/PubMed/PMID-6262605.json",
+          "predicate": "PRH:wroteAbout",
+          "object": "/topic/heartFailureWithPreservedEjectionFraction.json"
+        }
+      },
+      {
+        "triple": {
+          "subject": "/author/2/PubMed/PMID-6262605.json",
+          "predicate": "PRH:wroteAbout",
+          "object": "/topic/biomarkers.json"
+        }
+      },
+      {
+        "triple": {
+          "subject": "/author/2/PubMed/PMID-6262605.json",
+          "predicate": "PRH:wroteAbout",
+          "object": "/topic/cardiacMagneticResonanceImaging.json"
+        }
+      },
+      {
+        "triple": {
+          "subject": "/author/2/PubMed/PMID-6262605.json",
+          "predicate": "PRH:wroteAbout",
+          "object": "/topic/fibrosis.json"
+        }
+      }
+    ],
+    "instance": {
+      "Author": {
+        "docId": "/author/2/PubMed/PMID-6262605.json",
+        "personName": "Mao-Yuan M. Su",
+        "personSurName": "Su",
+        "personGivenName": "Mao-Yuan M.",
+        "personEmail": null,
+        "publications": [
+          "/PubMed/PMID-6262605.xml"
+        ],
+        "publicationEntities": [
+          {
+            "uri": "/PubMed/PMID-6262605.xml",
+            "preferredName": "Combination of Plasma Biomarkers and Clinical Data for the Detection of Myocardial Fibrosis or Aggravation of Heart Failure Symptoms in Heart Failure with Preserved Ejection Fraction Patients"
+          }
+        ],
+        "coAuthors": [
+          {
+            "author": "Cho-Kai Wu"
+          },
+          {
+            "author": "Yi-Fan Wu"
+          },
+          {
+            "author": "Juey-Jen Hwang"
+          },
+          {
+            "author": "Lian-Yu Lin"
+          }
+        ],
+        "affiliations": [
+          {
+            "organizationDivision": "Department of Medical Imaging",
+            "organizationName": "National Taiwan University Hospital",
+            "organizationCity": "Taipei",
+            "organizationCountry": "Taiwan;"
+          }
+        ],
+        "topics": [
+          {
+            "topic": "cardiac diastolic dysfunction"
+          },
+          {
+            "topic": "heart failure with preserved ejection fraction"
+          },
+          {
+            "topic": "biomarkers"
+          },
+          {
+            "topic": "cardiac magnetic resonance imaging"
+          },
+          {
+            "topic": "fibrosis"
+          }
+        ]
+      },
+      "info": {
+        "title": "Author",
+        "version": "0.0.3"
+      }
+    },
+    "attachments": null
+  }
+}

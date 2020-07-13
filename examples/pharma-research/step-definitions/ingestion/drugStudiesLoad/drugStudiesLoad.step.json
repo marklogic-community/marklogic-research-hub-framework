@@ -1,0 +1,15 @@
+{
+  "lang" : "zxx",
+  "name" : "drugStudiesLoad",
+  "description" : null,
+  "type" : "INGESTION",
+  "version" : 1,
+  "options" : {
+    "collections" : [ "Study", "loadDrugStudies", "input" ],
+    "outputFormat" : "xml",
+    "targetDatabase" : "data-hub-STAGING"
+  },
+  "retryLimit" : 0,
+  "batchSize" : 100,
+  "threadCount" : 32
+}

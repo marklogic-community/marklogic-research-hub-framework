@@ -1,0 +1,99 @@
+{
+  "template": {
+    "context": "/envelope[instance/Gene]",
+    "collections": ["Gene"],
+
+    "vars": [{
+
+      "name": "PRHPrefix",
+      "val": "'PRH:'"
+
+    },{
+
+      "name": "geneIri",
+      "val": "sem:iri(xdmp:node-uri(.))"
+
+    }],
+
+    "templates": [{
+
+      "context": "instance/Gene",
+
+      "triples": [{
+
+        "subject": {
+          "val": "$geneIri"
+        },
+        "predicate": {
+          "val": "sem:iri($PRHPrefix || 'entityType')"
+        },
+        "object": {
+          "val": "lower-case(name(.))"
+        }
+
+      },{
+
+        "subject": {
+          "val": "$geneIri"
+        },
+        "predicate": {
+          "val": "sem:iri($PRHPrefix || 'preferredName')"
+        },
+        "object": {
+          "val": "string(fullName)"
+        }
+
+      }]
+
+    },{
+
+      "context": "headers/relatedDiseases",
+
+      "vars": [{
+
+        "name": "diseaseIRI",
+        "val": "sem:iri( uri )"
+
+      }],
+
+      "triples": [{
+
+        "subject": {
+          "val": "$geneIri"
+        },
+        "predicate": {
+          "val": "sem:iri($PRHPrefix || 'impacts')"
+        },
+        "object": {
+          "val": "$diseaseIRI"
+        }
+
+      },{
+
+        "subject": {
+          "val": "$diseaseIRI"
+        },
+        "predicate": {
+          "val": "sem:iri($PRHPrefix || 'entityType')"
+        },
+        "object": {
+          "val": "'disease'"
+        }
+
+      },{
+
+        "subject": {
+          "val": "$diseaseIRI"
+        },
+        "predicate": {
+          "val": "sem:iri($PRHPrefix || 'preferredName')"
+        },
+        "object": {
+          "val": "string(name)"
+        }
+
+      }]
+
+    }]
+  }
+}

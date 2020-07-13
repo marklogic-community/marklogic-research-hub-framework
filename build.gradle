@@ -1,0 +1,274 @@
+import java.text.SimpleDateFormat;
+
+buildscript {
+  repositories {
+     maven {url 'http://developer.marklogic.com/maven2/'}
+     mavenLocal()
+     jcenter()
+  }
+  dependencies {
+    classpath "com.marklogic:marklogic-unit-test-client:1.0.0"
+  }
+}
+
+plugins {
+    id 'java'
+    id 'eclipse'
+    id 'idea'
+
+    // We don't need to add ml-gradle since DHS and DHF comes with it.
+
+    // This plugin allows you to create different environments
+    // for your gradle deploy. Each environment is represented
+    // by a gradle-${env}.properties file
+    // See https://github.com/stevesaliman/gradle-properties-plugin
+    // specify the env on the command line with:
+    // gradle -PenvironmentName=x ...
+    id 'net.saliman.properties' version '1.4.6'
+
+    // This gradle plugin extends the ml-gradle plugin with
+    // commands that make the Data Hub Framework do its magic
+    id 'com.marklogic.ml-data-hub' version '5.1.0'
+}
+
+repositories {
+    jcenter()
+    maven {url 'http://developer.marklogic.com/maven2/'}
+}
+
+configurations {
+    mlcp
+}
+
+dependencies {
+    if ("true".equalsIgnoreCase(project.findProperty("isDeployUnitTestFramework"))) {
+        // Needed to execute tests written using marklogic-unit-test
+        mlBundle "com.marklogic:marklogic-unit-test-modules:1.0.0"
+    }
+
+    compile 'com.marklogic:marklogic-data-hub:5.1.0'
+    mlcp "com.marklogic:mlcp:10.0.2"
+
+    if ("true".equalsIgnoreCase(project.findProperty("isDeployUnitTestFramework"))) {
+      testCompile "com.marklogic:marklogic-unit-test-client:1.0.beta"
+      testCompile "junit:junit:4.12"
+    }
+    mlcp files("lib")
+}
+
+ext {
+    rpaasGroup = "RPaaS Group"
+    rpaasTestGroup = "RPaaS Development"
+    defaultHarmonizeThreads = harmonizeThreadCount.toInteger()
+    defaultLoadThreads = loadThreadCount.toInteger()
+
+    // providing access to classes and configs for subprojects
+    configurations = configurations
+    MlcpTask = com.marklogic.gradle.task.MlcpTask
+    RunFlowTask = com.marklogic.gradle.task.RunFlowTask
+    ServerEvalTask = com.marklogic.gradle.task.ServerEvalTask
+}
+
+task prepareMlcpLog() {
+    mkdir "./lib/"
+    def props = new File('./lib/log4j.properties')
+    props.text = [
+            "log4j.rootLogger=INFO, stdout",
+            "log4j.appender.stdout=org.apache.log4j.ConsoleAppender",
+            "log4j.appender.stdout.Target=System.out",
+            "log4j.appender.stdout.layout=org.apache.log4j.PatternLayout",
+            "log4j.appender.stdout.layout.ConversionPattern=%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n"
+    ].join("\n")
+}
+
+def buildTime() {
+    // we use this with the ontology
+    def df = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SX':00'")
+    return df.format(new Date())
+}
+
+// Database client config for mlUnitTest
+ext {
+  mlUnitTest.databaseClientConfig.host = mlHost
+  mlUnitTest.databaseClientConfig.port = mlTestFinalPort.toInteger()
+  mlUnitTest.databaseClientConfig.username = mlUsername
+  mlUnitTest.databaseClientConfig.password = mlPassword
+}
+
+/**
+ * Delete a collection in the Final Database.
+ * Usage: ./gradlew mlDeleteCollectionFinal -Pcollection=<collection name>
+ */
+task mlDeleteCollectionFinal {
+    outputs.upToDateWhen { false }
+    doLast {
+        println "Deleting collection " + collection + " in Final database ...\n"
+        def client = hubConfig.newFinalClient()
+        def job = new com.marklogic.client.ext.datamovement.job.DeleteCollectionsJob(collection)
+        try {job.run(client)} finally {client.release()}
+    }
+}
+
+/**
+ * Delete a collection in the Staging Database.
+ * Usage: ./gradlew mlDeleteCollectionStaging -Pcollection=<collection name>
+ */
+task mlDeleteCollectionStaging {
+    outputs.upToDateWhen { false }
+    doLast {
+        println "Deleting collection " + collection + " in Staging database ...\n"
+        def client = hubConfig.newStagingClient()
+        def job = new com.marklogic.client.ext.datamovement.job.DeleteCollectionsJob(collection)
+        try {job.run(client)} finally {client.release()}
+        println "Delection of " + collection + " collection completed.\n"
+    }
+}
+
+/*** TEST INFRASTRUCTURE *****
+ ***
+ *** Creates data-hub-FINAL-TEST, data-hub-STAGING-TEST
+ ***
+ ***/
+
+/**
+ * The below tasks are used for deploying and undeploying test resources for a DHF 5 application. Just copy everything below
+ * this comment into the build.gradle file in your DHF application - no properties need to be set for these tasks to work.
+ *
+ * The task "hubDeployTestResources" will deploy test versions of your staging and final databases and app servers. You
+ * can customize these tasks if you don't like the resource names and ports that are used by them. This task is automatically
+ * run with mlDeploy as long as isDeployUnitTestFramework=true is set in the gradle.properties file
+ *
+ * The task "hubUndeployTestResources" will undeploy any test resources that were created. mlUndeploy does depend on
+ * this task as there's typically no downside to undeploying these resources - if they don't exist, the task will
+ * quickly complete.
+ */
+
+task createTestDirs {
+  doFirst {
+    (new File(buildDir, "/test-results/marklogic-unit-tests")).mkdirs()
+  }
+}
+
+if ("true".equalsIgnoreCase(project.findProperty("isDeployUnitTestFramework"))) {
+  (new File(buildDir, "/test-results/marklogic-unit-tests")).mkdirs()
+  def testStagingDbFile = new File(buildDir, "test-staging-database.json")
+  testStagingDbFile.write(new File("src/main/hub-internal-config/databases/staging-database.json").text)
+
+  def testFinalDbFile = new File(buildDir, "test-final-database.json")
+  testFinalDbFile.write(new File("src/main/ml-config/databases/final-database.json").text)
+
+  def newCommands = new ArrayList<>()
+  for (def c : mlAppDeployer.commands) {
+    newCommands.add(c)
+    if (c instanceof com.marklogic.appdeployer.command.databases.DeployOtherDatabasesCommand) {
+      newCommands.add(new DeployHubTestDatabaseCommand(hubConfig, testStagingDbFile, "staging-database.json", mlStagingDbName + "-TEST"))
+      newCommands.add(new DeployHubTestDatabaseCommand(hubConfig, testFinalDbFile, "final-database.json", mlFinalDbName + "-TEST"))
+    }
+    // Loading roles in two phases breaks the preview feature, so it's disabled
+    else if (c instanceof com.marklogic.hub.deploy.commands.DeployHubOtherServersCommand) {
+      newCommands.add(new DeployHubTestServerCommand(dataHub, "staging-server.json", mlStagingAppserverName + "-TEST", mlTestStagingPort.toInteger(), mlStagingDbName + "-TEST"))
+      newCommands.add(new DeployHubTestServerCommand(dataHub, "final-server.json", mlFinalAppserverName + "-TEST", mlTestFinalPort.toInteger(), mlFinalDbName + "-TEST"))
+    }
+  }
+  mlAppDeployer.commands = newCommands
+}
+
+task hubUndeployTestResources(type: com.marklogic.gradle.task.MarkLogicTask) {
+    description = "Undeploys the test servers and databases that were created via hubDeployTestResources"
+    doLast {
+        mlAdminManager.invokeActionRequiringRestart({
+            new com.marklogic.mgmt.resource.appservers.ServerManager(mlManageClient).deleteByIdField(mlStagingAppserverName + "-TEST")
+            return true
+        })
+        mlAdminManager.invokeActionRequiringRestart({
+            new com.marklogic.mgmt.resource.appservers.ServerManager(mlManageClient).deleteByIdField(mlFinalAppserverName + "-TEST")
+            return true
+        })
+        def dbManager = new com.marklogic.mgmt.resource.databases.DatabaseManager(mlManageClient)
+        dbManager.deleteByName(mlStagingDbName + "-TEST")
+        dbManager.deleteByName(mlFinalDbName + "-TEST")
+    }
+}
+mlUndeploy.dependsOn hubUndeployTestResources
+
+task doctor(type: com.marklogic.grh.DoctorTask) {}
+task createEntity(type: com.marklogic.grh.CreateEntityTask) {}
+task deleteEntity(type: com.marklogic.grh.DeleteEntityTask) {}
+task createConcept(type: com.marklogic.grh.CreateConceptTask) {}
+task deleteConcept(type: com.marklogic.grh.DeleteConceptTask) {}
+
+import com.fasterxml.jackson.databind.ObjectMapper
+import com.fasterxml.jackson.databind.node.ObjectNode
+import com.fasterxml.jackson.databind.node.TextNode
+import com.marklogic.appdeployer.command.CommandContext;
+import com.marklogic.hub.HubConfig
+import com.marklogic.hub.DataHub
+import java.util.regex.Pattern
+
+class DeployHubTestDatabaseCommand extends com.marklogic.hub.deploy.commands.DeployHubDatabaseCommand {
+    String testDatabaseName
+
+    DeployHubTestDatabaseCommand(HubConfig config, File testDbFile, String sourceDatabaseFilename, String testDatabaseName) {
+        super(config, testDbFile, sourceDatabaseFilename)
+        this.testDatabaseName = testDatabaseName
+    }
+
+    @Override
+    protected String getPayload(CommandContext context) {
+        String payload = super.getPayload(context)
+        ObjectNode node = new ObjectMapper().readTree(payload)
+        node.set("database-name", new TextNode(testDatabaseName))
+        return node.toString()
+    }
+}
+
+class DeployHubTestServerCommand extends com.marklogic.hub.deploy.commands.DeployHubOtherServersCommand {
+    String serverName
+    int port
+    String contentDatabaseName
+
+    DeployHubTestServerCommand(DataHub dataHub, String serverFilenamePattern, String serverName, int port, String contentDatabaseName) {
+        super(dataHub)
+        setResourceFilenamesIncludePattern(Pattern.compile(serverFilenamePattern))
+        this.serverName = serverName
+        this.port = port
+        this.contentDatabaseName = contentDatabaseName
+    }
+
+    @Override
+    protected String copyFileToString(File f) {
+        String payload = super.copyFileToString(f)
+        ObjectNode node = new ObjectMapper().readTree(payload)
+        node.set("server-name", new TextNode(serverName))
+        node.set("port", new TextNode(port + ""))
+        node.set("content-database", new TextNode(contentDatabaseName))
+        return node.toString()
+    }
+}
+
+task clearStagingDatabase(type: com.marklogic.gradle.task.databases.ClearDatabaseTask) {
+  doFirst {
+    project.ext.database = project.properties.mlStagingDbName
+    project.ext.confirm = "true"
+  }
+  outputs.upToDateWhen { false }
+}
+task clearFinalDatabase(type: com.marklogic.gradle.task.databases.ClearDatabaseTask) {
+  doFirst {
+    project.ext.database = project.properties.mlFinalDbName
+    project.ext.confirm = "true"
+  }
+  outputs.upToDateWhen { false }
+}
+task clearJobDatabase(type: com.marklogic.gradle.task.databases.ClearDatabaseTask) {
+  doFirst {
+    project.ext.database = project.properties.mlJobDbName
+    project.ext.confirm = "true"
+  }
+  outputs.upToDateWhen { false }
+}
+task clearDatabases() {
+  dependsOn clearStagingDatabase
+  dependsOn clearFinalDatabase
+  dependsOn clearJobDatabase
+}

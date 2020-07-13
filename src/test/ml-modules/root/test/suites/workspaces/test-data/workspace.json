@@ -1,0 +1,79 @@
+{
+    "envelope": {
+        "headers": {
+            "loadDate": "2019-09-10T14:26:35.8306094-04:00"
+        },
+        "triples": [
+            {
+                "triple": {
+                    "subject": "/user/admin.json",
+                    "predicate": {
+                        "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                        "value": "hasWorkspace"
+                    },
+                    "object": "/workspace/secworkspace.json"
+                }
+            }
+        ],
+        "instance": {
+            "workspace": {
+                "name": "SecondaryWorkspace",
+                "description": "",
+                "id": "secworkspace",
+                "creator": {
+                    "uri": "/user/admin.json",
+                    "preferredName": "admin"
+                },
+                "created": "2019-09-10T14:26:35.8306094-04:00",
+                "lastModified": "2019-09-12T15:23:42.4058759-04:00",
+                "entities": {
+                    "/author/1/PubMed/PMID-9999991.json": {
+                        "preferredName": "Peter Hanlon",
+                        "type": "author",
+                        "predicates": {
+                            "isExpert": "Definite"
+                        }
+                    },
+                    "/drug/99991.json": {
+                        "preferredName": "Lorazepam",
+                        "type": "drug",
+                        "predicates": {
+                            "isExpert": "Definite"
+                        }
+                    },
+                    "/gene/99991.json": {
+                        "preferredName": "zinc finger protein 610",
+                        "type": "gene",
+                        "predicates": {
+                            "isExpert": "Definite"
+                        }
+                    },
+                    "/Protein/99991.json": {
+                        "preferredName": "Abnormal spindle-like microcephaly-associated protein",
+                        "type": "protein",
+                        "predicates": {
+                            "isExpert": "Definite"
+                        }
+                    },
+                    "/PubMed/PMID-9999991.xml": {
+                        "preferredName": "Development of PCR markers specific to Dasypyrum villosum genome based on transcriptome data and their application in breeding Triticum aestivum-D. villosum#4 alien chromosome lines",
+                        "type": "publication",
+                        "predicates": {
+                            "isExpert": "Definite"
+                        }
+                    }
+                },
+                "sharedWith": {}
+            },
+            "info": {
+                "title": "workspace"
+            }
+        },
+        "attachments": {
+            "input": {
+                "name": "TestWorkspace",
+                "entities": {}
+            }
+        }
+    }
+}

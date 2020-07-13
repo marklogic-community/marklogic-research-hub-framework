@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<envelope
+  xmlns="http://marklogic.com/entity-services">
+  <headers>
+    <systemDateTimeCreated
+      xmlns="">2020-05-13T20:49:41.365126Z
+    </systemDateTimeCreated>
+    <journalPreferredName
+      xmlns="">Intensive Care Medicine
+    </journalPreferredName>
+    <topics
+      xmlns="">
+      <topicPreferredName>Severe acute respiratory syndrome (SARS)</topicPreferredName>
+      <topicPreferredName>Multiple organ dysfunction syndrome (MODS)</topicPreferredName>
+      <topicPreferredName>Recombinant human activated protein C (rhAPC)</topicPreferredName>
+    </topics>
+    <lastModifiedDate
+      xmlns="">2004-05-05
+    </lastModifiedDate>
+    <authors
+      xmlns="">
+      <authorPreferredName>Jung-Yien Chien</authorPreferredName>
+      <authorPreferredName>Po-Ren Hsueh</authorPreferredName>
+      <authorPreferredName>Shan-Chwen Chang</authorPreferredName>
+      <authorPreferredName>Juey-Jen Hwang</authorPreferredName>
+      <authorPreferredName>Chong-Jen Yu</authorPreferredName>
+      <authorPreferredName>Pan-Chyr Yang</authorPreferredName>
+    </authors>
+    <institutions
+      xmlns="">
+      <institutionPreferredName>Department of Internal Medicine, National Taiwan University Hospital, </institutionPreferredName>
+      <institutionPreferredName>Department of Laboratory Medicine, National Taiwan University Hospital, </institutionPreferredName>
+    </institutions>
+  </headers>
+  <triples>
+    <sem:triple
+      xmlns:sem="http://marklogic.com/semantics">
+      <sem:subject>/PubMed/PMID-7080097.xml</sem:subject>
+      <sem:predicate>PRH:preferredName</sem:predicate>
+      <sem:object datatype="http://www.w3.org/2001/XMLSchema#string">Relapse of SARS upon tapering corticosteroid</sem:object>
+    </sem:triple>
+    <sem:triple
+      xmlns:sem="http://marklogic.com/semantics">
+      <sem:subject>/PubMed/PMID-7080097.xml</sem:subject>
+      <sem:predicate>PRH:entityType</sem:predicate>
+      <sem:object datatype="http://www.w3.org/2001/XMLSchema#string">publication</sem:object>
+    </sem:triple>
+    <sem:triple
+      xmlns:sem="http://marklogic.com/semantics">
+      <sem:subject>/PubMed/PMID-7080097.xml</sem:subject>
+      <sem:predicate>PRH:isRelated</sem:predicate>
+      <sem:object>/gene/3569.json</sem:object>
+    </sem:triple>
+    <sem:triple
+      xmlns:sem="http://marklogic.com/semantics">
+      <sem:subject>/PubMed/PMID-7080097.xml</sem:subject>
+      <sem:predicate>PRH:isAbout</sem:predicate>
+      <sem:object>/topic/severeAcuteRespiratorySyndrome(SARS).json</sem:object>
+    </sem:triple>
+    <sem:triple
+      xmlns:sem="http://marklogic.com/semantics">
+      <sem:subject>/topic/severeAcuteRespiratorySyndrome(SARS).json</sem:subject>
+      <sem:predicate>PRH:preferredName</sem:predicate>
+      <sem:object datatype="http://www.w3.org/2001/XMLSchema#string">Severe acute respiratory syndrome (SARS)</sem:object>
+    </sem:triple>
+    <sem:triple
+      xmlns:sem="http://marklogic.com/semantics">
+      <sem:subject>/topic/severeAcuteRespiratorySyndrome(SARS).json</sem:subject>
+      <sem:predicate>PRH:entityType</sem:predicate>
+      <sem:object datatype="http://www.w3.org/2001/XMLSchema#string">topic</sem:object>
+    </sem:triple>
+    <sem:triple
+      xmlns:sem="http://marklogic.com/semantics">
+      <sem:subject>/PubMed/PMID-7080097.xml</sem:subject>
+      <sem:predicate>PRH:isAbout</sem:predicate>
+      <sem:object>/topic/multipleOrganDysfunctionSyndrome(MODS).json</sem:object>
+    </sem:triple>
+    <sem:triple
+      xmlns:sem="http://marklogic.com/semantics">
+      <sem:subject>/topic/multipleOrganDysfunctionSyndrome(MODS).json</sem:subject>
+      <sem:predicate>PRH:preferredName</sem:predicate>
+      <sem:object datatype="http://www.w3.org/2001/XMLSchema#string">Multiple organ dysfunction syndrome (MODS)</sem:object>
+    </sem:triple>
+    <sem:triple
+      xmlns:sem="http://marklogic.com/semantics">
+      <sem:subject>/topic/multipleOrganDysfunctionSyndrome(MODS).json</sem:subject>
+      <sem:predicate>PRH:entityType</sem:predicate>
+      <sem:object datatype="http://www.w3.org/2001/XMLSchema#string">topic</sem:object>
+    </sem:triple>
+    <sem:triple
+      xmlns:sem="http://marklogic.com/semantics">
+      <sem:subject>/PubMed/PMID-7080097.xml</sem:subject>
+      <sem:predicate>PRH:isAbout</sem:predicate>
+      <sem:object>/topic/recombinantHumanActivatedProteinC(RhAPC).json</sem:object>
+    </sem:triple>
+    <sem:triple
+      xmlns:sem="http://marklogic.com/semantics">
+      <sem:subject>/topic/recombinantHumanActivatedProteinC(RhAPC).json</sem:subject>
+      <sem:predicate>PRH:preferredName</sem:predicate>
+      <sem:object datatype="http://www.w3.org/2001/XMLSchema#string">Recombinant human activated protein C (rhAPC)</sem:object>
+    </sem:triple>
+    <sem:triple
+      xmlns:sem="http://marklogic.com/semantics">
+      <sem:subject>/topic/recombinantHumanActivatedProteinC(RhAPC).json</sem:subject>
+      <sem:predicate>PRH:entityType</sem:predicate>
+      <sem:object datatype="http://www.w3.org/2001/XMLSchema#string">topic</sem:object>
+    </sem:triple>
+  </triples>
+  <instance>
+    <info>
+      <title>publication</title>
+      <version>0.0.1</version>
+    </info>
+    <publication>
+      <article
+        xmlns="">
+        <articleTitle>Relapse of SARS upon tapering corticosteroid</articleTitle>
+        <pudMedId>15127187</pudMedId>
+        <pudMedCentralKey>7080097</pudMedCentralKey>
+        <authors>
+          <author>
+            <preferredName>Jung-Yien Chien</preferredName>
+            <institutions>
+              <institution>Department of Internal Medicine, National Taiwan University Hospital, </institution>
+            </institutions>
+          </author>
+          <author>
+            <preferredName>Po-Ren Hsueh</preferredName>
+            <institutions>
+              <institution>Department of Laboratory Medicine, National Taiwan University Hospital, </institution>
+            </institutions>
+          </author>
+          <author>
+            <preferredName>Shan-Chwen Chang</preferredName>
+            <institutions>
+              <institution>Department of Internal Medicine, National Taiwan University Hospital, </institution>
+            </institutions>
+          </author>
+          <author>
+            <preferredName>Juey-Jen Hwang</preferredName>
+            <institutions>
+              <institution>Department of Internal Medicine, National Taiwan University Hospital, </institution>
+            </institutions>
+          </author>
+          <author>
+            <preferredName>Chong-Jen Yu</preferredName>
+            <institutions>
+              <institution>Department of Internal Medicine, National Taiwan University Hospital, </institution>
+            </institutions>
+          </author>
+          <author>
+            <preferredName>Pan-Chyr Yang</preferredName>
+            <institutions>
+              <institution>Department of Internal Medicine, National Taiwan University Hospital, </institution>
+            </institutions>
+          </author>
+        </authors>
+        <journal>
+          <title>Intensive Care Medicine</title>
+          <volume/>
+          <pub-date pub-type="epub">
+            <day>1</day>
+            <month>5</month>
+            <year>2004</year>
+          </pub-date>
+        </journal>
+        <abstracts>
+          <abstract>
+            <abstractTitle>Main</abstractTitle>
+            <abstractMessage/>
+          </abstract>
+        </abstracts>
+        <topics>
+          <topic>Severe acute respiratory syndrome (SARS)</topic>
+          <topic>Multiple organ dysfunction syndrome (MODS)</topic>
+          <topic>Recombinant human activated protein C (rhAPC)</topic>
+        </topics>
+        <citations>
+          <NumberOfCitations>5</NumberOfCitations>
+          <citation>
+            <pudMedId>14681510</pudMedId>
+            <articleTitle/>
+          </citation>
+          <citation>
+            <pudMedId>12781536</pudMedId>
+            <articleTitle/>
+          </citation>
+          <citation>
+            <pudMedId>12747883</pudMedId>
+            <articleTitle/>
+          </citation>
+          <citation>
+            <pudMedId>12947028</pudMedId>
+            <articleTitle/>
+          </citation>
+          <citation>
+            <pudMedId>11236773</pudMedId>
+            <articleTitle/>
+          </citation>
+        </citations>
+        <mle:enrichment
+          xmlns:mle="http://marklogic.com/phr/lib/enrichment">
+          <mle:meta>
+            <mle:entities>
+              <mle:Genes>
+                <mle:Gene preferredName="interleukin 6" uri="/gene/3569.json" confidence="0.3303019"/>
+              </mle:Genes>
+              <mle:Proteins/>
+              <mle:Drugs/>
+            </mle:entities>
+          </mle:meta>
+        </mle:enrichment>
+      </article>
+    </publication>
+  </instance>
+  <attachments>
+    <article article-type="letter"
+      xmlns:mml="http://www.w3.org/1998/Math/MathML"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      xmlns="">
+      <front>
+        <journal-meta>
+          <journal-id journal-id-type="nlm-ta">Intensive Care Med</journal-id>
+          <journal-id journal-id-type="iso-abbrev">Intensive Care Med</journal-id>
+          <journal-title-group>
+            <journal-title>Intensive Care Medicine</journal-title>
+          </journal-title-group>
+          <issn pub-type="ppub">0342-4642</issn>
+          <issn pub-type="epub">1432-1238</issn>
+          <publisher>
+            <publisher-name>Springer-Verlag</publisher-name>
+            <publisher-loc>Berlin/Heidelberg</publisher-loc>
+          </publisher>
+        </journal-meta>
+        <article-meta>
+          <article-id pub-id-type="pmid">15127187</article-id>
+          <article-id pub-id-type="pmc">7080097</article-id>
+          <article-id pub-id-type="publisher-id">2287</article-id>
+          <article-id pub-id-type="doi">10.1007/s00134-004-2287-4</article-id>
+          <article-categories>
+            <subj-group subj-group-type="heading">
+              <subject>Correspondence</subject>
+            </subj-group>
+          </article-categories>
+          <title-group>
+            <article-title>Relapse of SARS upon tapering corticosteroid</article-title>
+          </title-group>
+          <contrib-group>
+            <contrib contrib-type="author">
+              <name>
+                <surname>Chien</surname>
+                <given-names>Jung-Yien</given-names>
+              </name>
+              <xref ref-type="aff" rid="Aff1">1</xref>
+            </contrib>
+            <contrib contrib-type="author">
+              <name>
+                <surname>Hsueh</surname>
+                <given-names>Po-Ren</given-names>
+              </name>
+              <xref ref-type="aff" rid="Aff2">2</xref>
+            </contrib>
+            <contrib contrib-type="author">
+              <name>
+                <surname>Chang</surname>
+                <given-names>Shan-Chwen</given-names>
+              </name>
+              <xref ref-type="aff" rid="Aff1">1</xref>
+            </contrib>
+            <contrib contrib-type="author">
+              <name>
+                <surname>Hwang</surname>
+                <given-names>Juey-Jen</given-names>
+              </name>
+              <xref ref-type="aff" rid="Aff1">1</xref>
+            </contrib>
+            <contrib contrib-type="author" corresp="yes">
+              <name>
+                <surname>Yu</surname>
+                <given-names>Chong-Jen</given-names>
+              </name>
+              <address>
+                <phone>+886-2-23562905</phone>
+                <fax>+886-2-23582867</fax>
+                <email>jeffery@ntumc.org</email>
+              </address>
+              <xref ref-type="aff" rid="Aff1">1</xref>
+            </contrib>
+            <contrib contrib-type="author">
+              <name>
+                <surname>Yang</surname>
+                <given-names>Pan-Chyr</given-names>
+              </name>
+              <xref ref-type="aff" rid="Aff1">1</xref>
+            </contrib>
+            <aff id="Aff1">
+              <label>1</label>
+              <institution-wrap>
+                <institution-id institution-id-type="GRID">grid.412094.a</institution-id>
+                <institution-id institution-id-type="ISNI">0000000405727815</institution-id>
+                <institution>Department of Internal Medicine, </institution>
+                <institution>National Taiwan University Hospital, </institution>
+              </institution-wrap>No. 7 Chung-Shan South Road, Taipei, Taiwan
+            </aff>
+            <aff id="Aff2">
+              <label>2</label>
+              <institution-wrap>
+                <institution-id institution-id-type="GRID">grid.412094.a</institution-id>
+                <institution-id institution-id-type="ISNI">0000000405727815</institution-id>
+                <institution>Department of Laboratory Medicine, </institution>
+                <institution>National Taiwan University Hospital, </institution>
+              </institution-wrap>Taipei, Taiwan
+            </aff>
+          </contrib-group>
+          <pub-date pub-type="epub">
+            <day>1</day>
+            <month>5</month>
+            <year>2004</year>
+          </pub-date>
+          <pub-date pub-type="ppub">
+            <year>2004</year>
+          </pub-date>
+          <volume>30</volume>
+          <issue>6</issue>
+          <fpage>1240</fpage>
+          <lpage>1241</lpage>
+          <permissions>
+            <copyright-statement>© Springer-Verlag 2004</copyright-statement>
+            <license>
+              <license-p>This article is made available via the PMC Open Access Subset for unrestricted research re-use and secondary analysis in any form or by any means with acknowledgement of the original source. These permissions are granted for the duration of the World Health Organization (WHO) declaration of COVID-19 as a global pandemic.</license-p>
+            </license>
+          </permissions>
+          <kwd-group xml:lang="en">
+            <title>Keywords</title>
+            <kwd>Severe acute respiratory syndrome (SARS)</kwd>
+            <kwd>Multiple organ dysfunction syndrome (MODS)</kwd>
+            <kwd>Recombinant human activated protein C (rhAPC)</kwd>
+          </kwd-group>
+          <custom-meta-group>
+            <custom-meta>
+              <meta-name>issue-copyright-statement</meta-name>
+              <meta-value>© Springer-Verlag 2004</meta-value>
+            </custom-meta>
+          </custom-meta-group>
+        </article-meta>
+      </front>
+      <body>
+        <p>Sir: Corticosteroid has been generally considered beneficial for patients with severe acute respiratory syndrome (SARS), but the standard treatment protocol is still uncertain [
+          <xref ref-type="bibr" rid="CR1">1</xref>]. We describe a SARS patient who twice experienced relapse of SARS which was complicated with shock and acute disseminated intravascular coagulopathy (DIC) during stepping down the corticosteroid dose.
+        </p>
+        <p>A 56-year-old woman experiencing fever and progressive dyspnea visited our emergency service on the 5th day of fever. Hypoxia was noted and chest radiography showed bilateral lung infiltrates. Mechanical ventilatory support was given and she was admitted to an isolated room. Nasopharyngeal aspirates were positive for SARS-CoV RNA by RT-PCR assay and oral ribavirin (2,000 mg stat, then 1,000 mg daily for 7 days), moxifloxacin (400 mg daily), and intravenous methylprednisolone (2 mg·kg·day) were given from admission onwards (5th day of fever).</p>
+        <p>Because fever subsided and oxygenation improved, corticosteroid was tapered to oral prednisolone 0.5 mg·kg·day during the 8th to 16th day of fever (Fig. 
+          <xref rid="Fig1" ref-type="fig">1</xref>). Unfortunately, fever and hypoxia recurred on the 16th day of fever and intravenous methylprednisolone 2 mg·kg·day were reinstituted, with subsequent improvement in fever and hypoxia.
+          <fig id="Fig1">
+            <label>Fig. 1</label>
+            <caption>
+              <p> Time-course evolution of platelet count (
+                <italic>middle panel, bar</italic>), P/F ratio (
+                <italic>middle panel, solid line</italic>), and pro-inflammatory cytokines (
+                <italic>bottom panel</italic>) in a SARS patient.
+                <italic> Top panel</italic> denotes the dosage of corticosteroid. [
+                <italic>Pulse</italic> high-dose pulse corticosteroid,
+                <italic> rhAPC</italic> recombinant human activated protein C,
+                <italic> P/F ratio</italic> PaO
+                <sub>2</sub>/FiO
+                <sub>2</sub>,
+                <italic> IL-8</italic> interleukin 8 (
+                <italic>open square</italic>),
+                <italic> IL-6</italic> interleukin 6 (
+                <italic>solid circle</italic>)]
+              </p>
+            </caption>
+            <graphic xlink:href="s00134-004-2287-4fhb1" id="d29e261"/>
+          </fig>
+        </p>
+        <p>The corticosteroid dose was reduced again from the 28th day of fever and the patient was weaned from ventilatory support on the 33rd day of fever. However, severe hypoxemia with profuse lung infiltrates occurred on the next day. Even under broad-spectrum empirical antibiotics (imipenem with cilastatin sodium and vancomycin), she still developed signs of multiple organ dysfunction syndrome (MODS): persistent shock, hypoxemia, and acute DIC (D-dimer 5510 ng/ml, prothrombin time (PT) 15.5 s, activated partial thromboplastin time (aPTT) 50.3 s). A surge in serum concentrations of interleukin-6 (IL-6) and interleukin-8 (IL-8) was also observed. A combination therapy of recombinant human activated protein C (rhAPC, 24 μg·kg·h continuous IV for 96 h) and pulsed methylprednisolone (500 mg daily IV for 3 days) was administered. The levels of cytokines reduced rapidly and oxygenation and, thrombocytopenia improved from the 72nd h of therapy onwards. Of particular note, coagulopathy improved within 48 h after initiating therapy and returned to normal range 48 h after therapy completion (PT 12.2 s, aPTT 30.9 s). Finally, the analysis of sputum, urine, catheter tips, blood, and serologic tests for common and atypical pathogens during these episodes were all negative. Without residual organ-system dysfunction, she was discharged from hospital 2 months later.</p>
+        <p>The most important finding of this case is that the recurrent relapses of SARS were closely associated with repeated attempts to taper the dose of corticosteroid. Although corticosteroid has been cited as an important therapy for SARS [
+          <xref ref-type="bibr" rid="CR2">2</xref>], some SARS patients experienced rebound of fever during step-down of corticosteroid and required subsequent rescue pulse steroid therapy [
+          <xref ref-type="bibr" rid="CR3">3</xref>,
+          <xref ref-type="bibr" rid="CR4">4</xref>]. Cytokine overproduction has been known to induce tissue damage, acute DIC, MODS, and death [
+          <xref ref-type="bibr" rid="CR5">5</xref>]. In this patient, hypercytokinemia was associated with the relapse of SARS upon tapering corticosteroid. Although in this particular patient we successfully reversed acute DIC-associated MODS using a combination of pulse corticosteroid and a novel drug with immunomodulatory and anticoagulant effects, rhAPC, further controlled trials are strongly recommended to clarify the standard of care for avoiding disease relapse and associated catastrophic complications.
+        </p>
+      </body>
+      <back>
+        <ref-list id="Bib1">
+          <title>References</title>
+          <ref id="CR1">
+            <label>1.</label>
+            <element-citation publication-type="journal">
+              <person-group person-group-type="author">
+                <name>
+                  <surname>Peiris</surname>
+                </name>
+              </person-group>
+              <source>N Engl J Med</source>
+              <year>2003</year>
+              <volume>349</volume>
+              <fpage>2431</fpage>
+              <pub-id pub-id-type="doi">10.1056/NEJMra032498</pub-id>
+              <pub-id pub-id-type="pmid">14681510</pub-id>
+            </element-citation>
+          </ref>
+          <ref id="CR2">
+            <label>2.</label>
+            <element-citation publication-type="journal">
+              <person-group person-group-type="author">
+                <name>
+                  <surname>Nicholls</surname>
+                </name>
+              </person-group>
+              <source>Lancet</source>
+              <year>2003</year>
+              <volume>361</volume>
+              <fpage>1773</fpage>
+              <pub-id pub-id-type="doi">10.1016/S0140-6736(03)13413-7</pub-id>
+              <pub-id pub-id-type="pmid">12781536</pub-id>
+            </element-citation>
+          </ref>
+          <ref id="CR3">
+            <label>3.</label>
+            <element-citation publication-type="journal">
+              <person-group person-group-type="author">
+                <name>
+                  <surname>So</surname>
+                </name>
+              </person-group>
+              <source>Lancet</source>
+              <year>2003</year>
+              <volume>361</volume>
+              <fpage>1615</fpage>
+              <pub-id pub-id-type="doi">10.1016/S0140-6736(03)13265-5</pub-id>
+              <pub-id pub-id-type="pmid">12747883</pub-id>
+            </element-citation>
+          </ref>
+          <ref id="CR4">
+            <label>4.</label>
+            <element-citation publication-type="journal">
+              <person-group person-group-type="author">
+                <name>
+                  <surname>Ho</surname>
+                </name>
+              </person-group>
+              <source>Am J Respir Crit Care Med</source>
+              <year>2003</year>
+              <volume>168</volume>
+              <fpage>1449</fpage>
+              <pub-id pub-id-type="doi">10.1164/rccm.200306-766OC</pub-id>
+              <pub-id pub-id-type="pmid">12947028</pub-id>
+            </element-citation>
+          </ref>
+          <ref id="CR5">
+            <label>5.</label>
+            <element-citation publication-type="journal">
+              <person-group person-group-type="author">
+                <name>
+                  <surname>Bernard</surname>
+                </name>
+              </person-group>
+              <source>N Engl J Med</source>
+              <year>2001</year>
+              <volume>344</volume>
+              <fpage>699</fpage>
+              <pub-id pub-id-type="pmid">11236773</pub-id>
+            </element-citation>
+          </ref>
+        </ref-list>
+      </back>
+    </article>
+  </attachments>
+</envelope>

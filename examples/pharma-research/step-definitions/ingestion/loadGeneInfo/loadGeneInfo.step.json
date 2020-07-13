@@ -1,0 +1,17 @@
+{
+  "lang" : "zxx",
+  "name" : "loadGeneInfo",
+  "description" : null,
+  "type" : "INGESTION",
+  "version" : 1,
+  "options" : {
+    "collections" : [ "geneInfoInputflow", "Gene", "GeneInfo" ],
+    "outputFormat" : "xml",
+    "targetDatabase" : "data-hub-STAGING"
+  },
+  "customHook" : { },
+  "modulePath" : "/custom-modules/ingestion/loadGeneInfo/main.sjs",
+  "retryLimit" : 0,
+  "batchSize" : 100,
+  "threadCount" : 32
+}

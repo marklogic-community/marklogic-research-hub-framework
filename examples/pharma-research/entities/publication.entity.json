@@ -1,0 +1,18 @@
+{
+  "info" : {
+    "title" : "publication",
+    "version" : "0.0.1",
+    "baseUri" : "http://example.com/",
+    "description" : "A Publication entity"     
+  },
+  "definitions" : {
+    "publication" : {
+      "required" : [ ],
+      "pii" : [ ],
+      "elementRangeIndex" : [ ],
+      "rangeIndex" : [ ],
+      "wordLexicon" : [ ],
+      "properties" : { }
+    }
+  }
+}

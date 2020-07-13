@@ -1,0 +1,77 @@
+{
+  "name" : "LoadPositions",
+  "description" : "",
+  "batchSize" : 100,
+  "threadCount" : 4,
+  "stopOnError" : false,
+  "options" : { },
+  "version" : 0,
+  "steps" : {
+    "1" : {
+      "name" : "IngestPosition",
+      "description" : "",
+      "options" : {
+        "additionalCollections" : [ ],
+        "headers" : {
+          "sources" : [ {
+            "name" : "LoadPositions"
+          } ],
+          "createdOn" : "currentDateTime",
+          "createdBy" : "currentUser"
+        },
+        "sourceQuery" : "cts.collectionQuery([])",
+        "collections" : [ "IngestPosition" ],
+        "permissions" : "rest-reader,read,rest-writer,update",
+        "outputFormat" : "json",
+        "targetDatabase" : "data-hub-STAGING"
+      },
+      "customHook" : {
+        "module" : "",
+        "parameters" : { },
+        "user" : "",
+        "runBefore" : false
+      },
+      "retryLimit" : 0,
+      "batchSize" : 100,
+      "threadCount" : 4,
+      "stepDefinitionName" : "default-ingestion",
+      "stepDefinitionType" : "INGESTION",
+      "fileLocations" : {
+        "inputFilePath" : "./data/person-position-matching/positions",
+        "inputFileType" : "csv",
+        "outputURIReplacement" : "^.*/data/,'/'",
+        "separator" : ","
+      }
+    },
+    "2" : {
+      "name" : "HarmonizePosition",
+      "description" : "",
+      "options" : {
+        "additionalCollections" : [ ],
+        "sourceQuery" : "cts.collectionQuery([\"IngestPosition\"])",
+        "mapping" : {
+          "name" : "LoadPositions-HarmonizePosition",
+          "version" : 0
+        },
+        "targetEntity" : "Position",
+        "sourceDatabase" : "data-hub-STAGING",
+        "collections" : [ "HarmonizePosition", "Position" ],
+        "validateEntity" : false,
+        "sourceCollection" : "IngestPosition",
+        "outputFormat" : "json",
+        "targetDatabase" : "data-hub-FINAL"
+      },
+      "customHook" : {
+        "module": "/custom-modules/custom/Position-add-headers-hook.sjs",
+        "parameters" : {
+        },
+        "runBefore" : false
+      },
+      "retryLimit" : null,
+      "batchSize" : 100,
+      "threadCount" : 4,
+      "stepDefinitionName" : "entity-services-mapping",
+      "stepDefinitionType" : "MAPPING"
+    }
+  }
+}

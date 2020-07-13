@@ -1,0 +1,29 @@
+
+ext {
+  RunFlowTask = rootProject.RunFlowTask
+}
+
+task runMountainTopEmployees(type: RunFlowTask, group: project.name) {
+  flowName = "MountainTopEmployees"
+}
+
+task runEmployeesMastering(type: RunFlowTask, group: project.name) {
+  flowName = "EmployeesMastering"
+  mustRunAfter runMountainTopEmployees
+}
+
+// run via - ./gradlew -i examples:hr360:runAll
+task runAll {
+  dependsOn runMountainTopEmployees
+  dependsOn runEmployeesMastering
+}
+
+// run via - ./gradlew -i examples:hr360:runAndDeployAll
+task runAndDeployAll {
+  dependsOn rootProject.tasks.mlDeploy
+  dependsOn ':hubSaveIndexes'
+  dependsOn ':mlUpdateIndexes'
+  dependsOn ':examples:hr360:runAll'
+}
+rootProject.tasks.hubSaveIndexes.mustRunAfter ":mlDeploy"
+rootProject.tasks.mlUpdateIndexes.mustRunAfter ":hubSaveIndexes"

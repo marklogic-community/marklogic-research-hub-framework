@@ -1,0 +1,42 @@
+{
+  "info" : {
+    "title" : "jobreview",
+    "version" : "0.0.1",
+    "baseUri" : "http://marklogic.com/topgun/"
+  },
+  "definitions" : {
+    "jobreview" : {
+      "required" : [ ],
+      "pii" : [ ],
+      "elementRangeIndex" : [ "reasonType" ],
+      "rangeIndex" : [ ],
+      "wordLexicon" : [ ],
+      "properties" : {
+        "employeeId" : {
+          "datatype" : "string",
+          "collation" : "http://marklogic.com/collation/codepoint"
+        },
+        "reasonType" : {
+          "datatype" : "string",
+          "collation" : "http://marklogic.com/collation/codepoint"
+        },
+        "reviewCode" : {
+          "datatype" : "string",
+          "collation" : "http://marklogic.com/collation/codepoint"
+        },
+        "reviewDate" : {
+          "datatype" : "date",
+          "collation" : "http://marklogic.com/collation/codepoint"
+        },
+        "reviewer" : {
+          "datatype" : "string",
+          "collation" : "http://marklogic.com/collation/codepoint"
+        },
+        "reviewId" : {
+          "datatype" : "string",
+          "collation" : "http://marklogic.com/collation/codepoint"
+        }
+      }
+    }
+  }
+}

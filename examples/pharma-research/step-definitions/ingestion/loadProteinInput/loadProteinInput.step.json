@@ -1,0 +1,21 @@
+{
+  "lang" : "zxx",
+  "name" : "loadProteinInput",
+  "description" : null,
+  "type" : "INGESTION",
+  "version" : 1,
+  "options" : {
+    "collections" : [ "proteinInputflow", "Protein" ],
+    "outputFormat" : "xml",
+    "targetDatabase" : "data-hub-STAGING"
+  },
+  "modulePath" : "/custom-modules/ingestion/loadProteinInput/main.sjs",
+  "retryLimit" : 0,
+  "batchSize" : 100,
+  "threadCount" : 32,
+  "fileLocations" : {
+    "inputFilePath" : "data/uniprot/uniprot1M.xml",
+    "outputURIReplacement" : ".*data/uniprot/,''",
+    "inputFileType" : "aggregates"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "lang" : "zxx",
+  "name" : "harmonizeStudy",
+  "description" : "This step is no longer used. Keeping it around in case anyone wants to compare the code to the mapping",
+  "type" : "CUSTOM",
+  "version" : 5,
+  "options" : {
+    "additionalCollections" : [ ],
+    "sourceQuery" : "cts.collectionQuery([\"Study\"])",
+    "targetEntity" : "",
+    "collections" : [ "Study", "mdm-content", "studyContent" ],
+    "sourceDatabase" : "data-hub-STAGING",
+    "sourceCollection" : "Study",
+    "outputFormat" : "json",
+    "targetDatabase" : "data-hub-FINAL"
+  },
+  "customHook" : {
+    "module" : "",
+    "parameters" : { },
+    "user" : "",
+    "runBefore" : false
+  },
+  "modulePath" : "/custom-modules/custom/harmonizeStudy/main.sjs",
+  "retryLimit" : 0,
+  "batchSize" : 100,
+  "threadCount" : 4
+}

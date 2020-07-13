@@ -1,0 +1,18 @@
+{
+  "info" : {
+    "title" : "Drug",
+    "version" : "0.0.1",
+    "baseUri" : "http://example.com/",
+    "description" : "A Drug entity"    
+  },
+  "definitions" : {
+    "Drug" : {
+      "required" : [ ],
+      "pii" : [ ],
+      "elementRangeIndex" : [ ],
+      "rangeIndex" : [ ],
+      "wordLexicon" : [ ],
+      "properties" : { }
+    }
+  }
+}

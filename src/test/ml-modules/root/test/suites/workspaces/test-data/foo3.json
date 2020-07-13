@@ -1,0 +1,124 @@
+{
+  "envelope": {
+    "headers": {
+      "sources": [
+        {
+          "name": "pubmed"
+        }
+      ],
+      "lastestTimeStamp": "2019-09-05T14:15:10.1998304-04:00",
+      "version": "1.0",
+      "createdBy": "admin",
+      "stageDocID": "/PubMed/PMID-3085309.nxml",
+      "commonFacets": {
+        "authorPreferredName": "Dhwani K. Desai",
+        "systemDateTimeCreated": "2019-09-05T14:15:10.1998304-04:00",
+        "lastModifiedDate": "2011-03-03",
+        "institutionPreferredName": [
+          "Leibniz Institute of Marine Sciences (IFM-GEOMAR)"
+        ],
+        "topicPreferredName": []
+      }
+    },
+    "triples": [
+      {
+        "triple": {
+          "subject": "/foo/1/PubMed/PMID-9999993.json",
+          "predicate": "PRH:affiliatedWith",
+          "object": "/institution/leibnizInstituteOfMarineSciences(IFM-GEOMAR).json"
+        }
+      },
+      {
+        "triple": {
+          "subject": "/institution/leibnizInstituteOfMarineSciences(IFM-GEOMAR).json",
+          "predicate": "PRH:preferredName",
+          "object": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "value": "Leibniz Institute of Marine Sciences (IFM-GEOMAR)"
+          }
+        }
+      },
+      {
+        "triple": {
+          "subject": "/institution/leibnizInstituteOfMarineSciences(IFM-GEOMAR).json",
+          "predicate": "PRH:entityType",
+          "object": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "value": "institution"
+          }
+        }
+      },
+      {
+        "triple": {
+          "subject": "/institution/leibnizInstituteOfMarineSciences(IFM-GEOMAR).json",
+          "predicate": "PRH:inCity",
+          "object": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "value": "Kiel"
+          }
+        }
+      },
+      {
+        "triple": {
+          "subject": "/institution/leibnizInstituteOfMarineSciences(IFM-GEOMAR).json",
+          "predicate": "PRH:inCountry",
+          "object": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "value": "Germany"
+          }
+        }
+      },
+      {
+        "triple": {
+          "subject": "/institution/leibnizInstituteOfMarineSciences(IFM-GEOMAR).json",
+          "predicate": "PRH:hasDepartment",
+          "object": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "value": "Leibniz Institute of Marine Sciences (IFM-GEOMAR)_Leibniz Institute of Marine Sciences (IFM-GEOMAR)"
+          }
+        }
+      }
+    ],
+    "instance": {
+      "info": {
+        "title": "Foo",
+        "version": "0.0.3"
+      },
+      "docId": "/foo/1/PubMed/PMID-9999993.json",
+      "personName": "Dhwani K. Desai",
+      "personSurName": "Desai",
+      "personGivenName": "Dhwani K.",
+      "personEmail": null,
+      "publications": [
+        "/PubMed/PMID-3085309.xml"
+      ],
+      "publicationEntities": [
+        {
+          "uri": "/PubMed/PMID-3085309.xml",
+          "preferredName": "ModEnzA: Accurate Identification of Metabolic Enzymes Using Function Specific Profile HMMs with Optimised Discrimination Threshold and Modified Emission Probabilities"
+        }
+      ],
+      "coAuthors": [
+        {
+          "author": "Soumyadeep Nandi"
+        },
+        {
+          "author": "Prashant K. Srivastava"
+        },
+        {
+          "author": "Andrew M. Lynn"
+        }
+      ],
+      "affiliations": [
+        {
+          "organizationDivision": "Leibniz Institute of Marine Sciences (IFM-GEOMAR)",
+          "organizationName": "Leibniz Institute of Marine Sciences (IFM-GEOMAR)",
+          "organizationCity": "Kiel",
+          "organizationCountry": "Germany"
+        }
+      ],
+      "topics": []
+    },
+    "attachments": null
+  }
+}

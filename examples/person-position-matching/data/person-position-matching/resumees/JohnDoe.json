@@ -1,0 +1,6 @@
+{
+  "ID": "CV1",
+  "EmployeeID": "Emp1",
+  "Description": "John is very good with XML, and Data Hub developments",
+  "Skills": ["XML", "Data Hub"]
+}

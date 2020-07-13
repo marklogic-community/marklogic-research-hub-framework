@@ -1,0 +1,34 @@
+<options xmlns="http://marklogic.com/appservices/search">
+  <search-option>unfiltered</search-option>
+  <page-length>10</page-length>
+
+  <!-- Limit all searches to this additional query -->
+  <additional-query>
+    <cts:collection-query xmlns:cts="http://marklogic.com/cts">
+      <cts:uri>workspace</cts:uri>
+    </cts:collection-query>
+  </additional-query>
+
+  <!-- Full-text search options -->
+  <term apply="term">
+    <empty apply="all-results"/>
+  </term>
+
+  <result-decorator apply="decorator"
+      ns="http://marklogic.com/search-decorator"
+      at="/lib/searchResultDecorator.xqy"/>
+
+  <!-- Default sort order. You can also associate states with sort orders to allow switching sort orders -->
+  <sort-order direction="descending">
+    <score/>
+  </sort-order>
+
+  <return-query>1</return-query>
+  
+  <!-- This will extract the person's name from the search.  This path is specific to the person data
+        sample data set.  As of beta release, you may override this by editing the default search route
+        config options used in middle-tier/routes/api/index.js -->
+  <!-- <extract-document-data selected="include">
+    <extract-path>//*:instance/*</extract-path>
+  </extract-document-data> -->
+</options>

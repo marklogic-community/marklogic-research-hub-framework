@@ -1,0 +1,18 @@
+{
+  "lang" : "zxx",
+  "name" : "harmonizeDrug",
+  "description" : null,
+  "type" : "CUSTOM",
+  "version" : 1,
+  "options" : {
+    "collections" : [ "Drug" ],
+    "sourceDatabase" : "data-hub-STAGING",
+    "outputFormat" : "json",
+    "targetDatabase" : "data-hub-FINAL"
+  },
+  "customHook" : { },
+  "modulePath" : "/custom-modules/custom/harmonizeDrug/main.sjs",
+  "retryLimit" : 0,
+  "batchSize" : 100,
+  "threadCount" : 4
+}

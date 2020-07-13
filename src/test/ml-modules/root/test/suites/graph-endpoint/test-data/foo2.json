@@ -1,0 +1,34 @@
+{
+  "envelope": {
+    "headers": {
+      "commonFacets" : {
+        "authorPreferredName": "Test Author Two"
+      }
+    },
+    "triples": [
+      {
+        "triple": {
+          "subject": "/foo/2/PubMed/PMID-9999999.json",
+          "predicate": "PRH:wroteAbout",
+          "object": "/topic/TopicOne.json"
+        },
+        "triple": {
+          "subject": "/foo/2/PubMed/PMID-9999999.json",
+          "predicate": "PRH:entityType",
+          "object": "foo"
+        },
+        "triple": {
+          "subject": "/foo/2/PubMed/PMID-9999999.json",
+          "predicate": "PRH:preferredName",
+          "object": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "value": "Test Author Two"
+          }
+        }
+      }
+    ],
+    "instance": {
+      "publications": ["/PubMed/PMID-9999999.xml"]
+    }
+  }
+}

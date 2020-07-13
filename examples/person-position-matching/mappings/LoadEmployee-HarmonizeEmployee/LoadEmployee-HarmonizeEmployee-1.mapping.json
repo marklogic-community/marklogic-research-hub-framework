@@ -1,0 +1,21 @@
+{
+  "lang" : "zxx",
+  "name" : "LoadEmployee-HarmonizeEmployee",
+  "description" : "Default description",
+  "version" : 1,
+  "targetEntityType" : "http://example.org/Person-0.0.1/Person",
+  "sourceContext" : "/",
+  "sourceURI" : "/person-position-matching/employees/d2227b58-690b-42d0-bec9-da9c0d88f0a4.json",
+  "properties" : {
+    "birthdate" : {
+      "sourcedFrom" : "DOB"
+    },
+    "skill" : {
+      "sourcedFrom" : "tokenize(Skills,\",\")"
+    },
+    "name" : {
+      "sourcedFrom" : "Name"
+    }
+  },
+  "namespaces" : { }
+}

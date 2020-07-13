@@ -1,0 +1,43 @@
+.author-publications {
+  display: flex;
+}
+
+.author-publications .panel {
+  flex: 1 1 18%;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  box-shadow: 0px 1px 4px #aaa;
+  border-radius: 4px;
+}
+
+.author-publications .panel h2 {
+  font-size: 1.9rem;
+  line-height: 1.5;
+  color: #3d87cb;
+}
+
+
+.author-coauthors > .row {
+  display: flex;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+
+.author-coauthors > .row > div {
+  flex: 0 0 20%;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin: 1rem 0;
+}
+
+.author-coauthors .panel {
+  box-shadow: 0px 1px 4px #aaa;
+  border-radius: 4px;
+  height: 100%;
+}
+
+.author-coauthors .panel h2 {
+  font-size: 1.9rem;
+  line-height: 1.5;
+  color: #3d87cb;
+}

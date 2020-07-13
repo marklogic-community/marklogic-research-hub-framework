@@ -1,0 +1,83 @@
+{
+  "name" : "LoadStudy",
+  "description" : "Loads and harmonizes Study Data",
+  "batchSize" : 100,
+  "threadCount" : 4,
+  "stopOnError" : false,
+  "options" : {
+    "sourceQuery" : null
+  },
+  "version" : 0,
+  "steps" : {
+    "1" : {
+      "name" : "drugStudiesLoad",
+      "description" : "This is the default ingestion step",
+      "options" : {
+        "outputFormat" : "xml",
+        "entity" : "Study",
+        "targetDatabase" : "data-hub-STAGING"
+      },
+      "customHook" : { },
+      "retryLimit" : 0,
+      "batchSize" : 0,
+      "threadCount" : 0,
+      "stepDefinitionName" : "default-ingestion",
+      "stepDefinitionType" : "INGESTION",
+      "fileLocations" : { }
+    },
+    "2" : {
+      "name" : "StudyMapper",
+      "description" : "",
+      "options" : {
+        "additionalCollections" : [ ],
+        "sourceQuery" : "cts.collectionQuery([\"Study\"])",
+        "mapping" : {
+          "name" : "LoadStudy-StudyMapper",
+          "version" : 26
+        },
+        "targetEntity" : "Study",
+        "sourceDatabase" : "data-hub-STAGING",
+        "collections" : [ "StudyMapper", "Study" ],
+        "validateEntity" : false,
+        "sourceCollection" : "Study",
+        "outputFormat" : "json",
+        "targetDatabase" : "data-hub-FINAL"
+      },
+      "customHook" : {
+        "module" : "/custom-modules/custom/harmonizeStudy/addStudyEnrichment.sjs",
+        "parameters" : { },
+        "runBefore" : false
+      },
+      "retryLimit" : null,
+      "batchSize" : 100,
+      "threadCount" : 4,
+      "stepDefinitionName" : "entity-services-mapping",
+      "stepDefinitionType" : "MAPPING"
+    },
+    "3" : {
+      "name" : "harmonizeStudy",
+      "description" : "This step is no longer used. Keeping it around in case anyone wants to compare the code to the mapping",
+      "options" : {
+        "additionalCollections" : [ ],
+        "sourceQuery" : "cts.collectionQuery([\"Study\"])",
+        "targetEntity" : "",
+        "collections" : [ "Study", "mdm-content", "studyContent" ],
+        "sourceDatabase" : "data-hub-STAGING",
+        "sourceCollection" : "Study",
+        "outputFormat" : "json",
+        "targetDatabase" : "data-hub-FINAL"
+      },
+      "customHook" : {
+        "module" : "",
+        "parameters" : { },
+        "user" : "",
+        "runBefore" : false
+      },
+      "retryLimit" : 0,
+      "batchSize" : 100,
+      "threadCount" : 4,
+      "stepDefinitionName" : "harmonizeStudy",
+      "stepDefinitionType" : "CUSTOM"
+    }
+  }
+}

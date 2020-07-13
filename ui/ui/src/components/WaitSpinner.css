@@ -1,0 +1,32 @@
+.wait-spinner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  color: #ddd;
+  font-weight: bold;
+  background-color: #000;
+  opacity: 0.5;
+}
+
+.wait-spinner .fa {
+  margin-top: 40px;
+}
+
+.wait-spinner div {
+  text-align: center;
+  display: flex;
+  flex: 1 1;
+  vertical-align: middle;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  font-size: 64pt;
+}

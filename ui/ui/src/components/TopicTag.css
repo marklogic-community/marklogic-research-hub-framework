@@ -1,0 +1,12 @@
+.tag {
+    background-color: #2196f3;
+    display: inline-block;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    color: white;
+}
+/* .tag a { */
+/*     color: white; */
+/* } */

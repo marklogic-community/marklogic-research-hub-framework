@@ -1,0 +1,99 @@
+{
+  "template": {
+    "context": "/envelope[instance/jobopening]",
+    "collections": ["jobopening"],
+
+    "vars": [{
+
+      "name": "PRHPrefix",
+      "val": "'PRH:'"
+
+    },{
+
+      "name": "jobopeningIri",
+      "val": "sem:iri(xdmp:node-uri(.))"
+
+    }],
+
+    "templates": [{
+
+      "context": "instance/jobopening",
+
+      "triples": [{
+        "subject": {
+          "val": "$jobopeningIri"
+        },
+        "predicate": {
+          "val": "sem:iri($PRHPrefix || 'entityType')"
+        },
+        "object": {
+          "val": "lower-case(name(.))"
+        }
+      },{
+        "subject": {
+          "val": "$jobopeningIri"
+        },
+        "predicate": {
+          "val": "sem:iri($PRHPrefix || 'preferredName')"
+        },
+        "object": {
+          "val": "string(jobTitle)"
+        }
+      }]
+    },
+    {
+      "context": "headers",
+      "triples": [{
+        "subject": {
+          "val": "sem:iri(departmentUri)"
+        },
+        "predicate": {
+          "val": "sem:iri($PRHPrefix || 'hasJobOpening')"
+        },
+        "object": {
+          "val": "$jobopeningIri"
+        }
+      }]
+    },{
+      "context": "instance/jobopening/requiredCompetency",
+
+      "vars": [{
+        "name": "skillIri",
+        "val": "sem:iri($PRHPrefix || string(.))"
+      }],
+
+      "triples": [{
+        "subject": {
+          "val": "$skillIri"
+        },
+        "predicate": {
+          "val": "sem:iri($PRHPrefix || 'conceptType')"
+        },
+        "object": {
+          "val": "'skill'"
+        }
+      },{
+        "subject": {
+          "val": "$skillIri"
+        },
+        "predicate": {
+          "val": "sem:iri($PRHPrefix || 'preferredName')"
+        },
+        "object": {
+          "val": "string(.)"
+        }
+      },{
+        "subject": {
+          "val": "$jobopeningIri"
+        },
+        "predicate": {
+          "val": "sem:iri($PRHPrefix || 'requiresSkill')"
+        },
+        "object": {
+          "val": "$skillIri"
+        }
+      }]
+
+    }]
+  }
+}

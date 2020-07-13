@@ -1,0 +1,937 @@
+{
+  "envelope": {
+    "triples": [
+      {
+        "triple": {
+          "subject": "/foo/PubMed/Author-0001.json",
+          "predicate": "PRH:wroteAbout",
+          "object": "/topic/Topic-A.json"
+        },
+        "triple": {
+          "subject": "/topic/Topic-A.json",
+          "predicate": "PRH:entityType",
+          "object": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#string",
+              "value": "topic"
+            }
+        },
+        "triple": {
+          "subject": "/topic/Topic-A.json",
+          "predicate": "PRH:preferredName",
+          "object": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#string",
+              "value": "Topic A"
+            }
+        },
+        "triple": {
+          "subject": "/foo/PubMed/Author-0001.json",
+          "predicate": "PRH:wroteAbout",
+          "object": "/topic/Topic-B.json"
+        },
+        "triple": {
+          "subject": "/topic/Topic-B.json",
+          "predicate": "PRH:entityType",
+          "object": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#string",
+              "value": "topic"
+            }
+        },
+        "triple": {
+          "subject": "/topic/Topic-B.json",
+          "predicate": "PRH:preferredName",
+          "object": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#string",
+              "value": "Topic B"
+            }
+        },
+        "triple": {
+          "subject": "/foo/PubMed/Author-0001.json",
+          "predicate": "PRH:wroteAbout",
+          "object": "/topic/Topic-C.json"
+        },
+        "triple": {
+          "subject": "/topic/Topic-C.json",
+          "predicate": "PRH:entityType",
+          "object": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#string",
+              "value": "topic"
+            }
+        },
+        "triple": {
+          "subject": "/topic/Topic-C.json",
+          "predicate": "PRH:preferredName",
+          "object": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#string",
+              "value": "Topic C"
+            }
+        },
+        "triple": {
+          "subject": "/foo/PubMed/Author-0001.json",
+          "predicate": "PRH:wroteAbout",
+          "object": "/topic/Topic-D.json"
+        },
+        "triple": {
+          "subject": "/topic/Topic-D.json",
+          "predicate": "PRH:entityType",
+          "object": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#string",
+              "value": "topic"
+            }
+        },
+        "triple": {
+          "subject": "/topic/Topic-D.json",
+          "predicate": "PRH:preferredName",
+          "object": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#string",
+              "value": "Topic D"
+            }
+        },
+        "triple": {
+          "subject": "/foo/PubMed/Author-0001.json",
+          "predicate": "PRH:wroteAbout",
+          "object": "/topic/Topic-E.json"
+        },
+        "triple": {
+          "subject": "/topic/Topic-E.json",
+          "predicate": "PRH:entityType",
+          "object": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#string",
+              "value": "topic"
+            }
+        },
+        "triple": {
+          "subject": "/topic/Topic-E.json",
+          "predicate": "PRH:preferredName",
+          "object": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#string",
+              "value": "Topic E"
+            }
+        }, 
+         "triple": {
+          "subject": "/foo/PubMed/Author-0001.json",
+          "predicate": "PRH:wroteAbout",
+          "object": "/topic/Topic-F.json"
+        },
+        "triple": {
+          "subject": "/topic/Topic-F.json",
+          "predicate": "PRH:entityType",
+          "object": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#string",
+              "value": "topic"
+            }
+        },
+        "triple": {
+          "subject": "/topic/Topic-F.json",
+          "predicate": "PRH:preferredName",
+          "object": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#string",
+              "value": "Topic F"
+            }
+        }, 
+        "triple": {
+          "subject": "/foo/PubMed/Author-0001.json",
+          "predicate": "PRH:preferredName",
+          "object": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#string",
+              "value": "Test Author One"
+            }
+        },
+        "triple": {
+          "subject": "/topic/Topic-A.json",
+          "predicate": "PRH:happenedNear",
+          "object": "/place/Place-11.json"
+        },
+        "triple": {
+          "subject": "/topic/Topic-A.json",
+          "predicate": "PRH:happenedNear",
+          "object": "/place/Place-11.json"
+        },
+        "triple": {
+          "subject": "/topic/Topic-A.json",
+          "predicate": "PRH:happenedNear",
+          "object": "/place/Place-12.json"
+        },
+        "triple": {
+          "subject": "/topic/Topic-A.json",
+          "predicate": "PRH:happenedNear",
+          "object": "/place/Place-13.json"
+        },
+        "triple": {
+          "subject": "/topic/Topic-A.json",
+          "predicate": "PRH:happenedNear",
+          "object": "/place/Place-14.json"
+        },
+        "triple": {
+          "subject": "/topic/Topic-A.json",
+          "predicate": "PRH:happenedNear",
+          "object": "/place/Place-15.json"
+        },
+        "triple": {
+          "subject": "/topic/Topic-A.json",
+          "predicate": "PRH:happenedNear",
+          "object": "/place/Place-16.json"
+        },
+        "triple": {
+          "subject": "/topic/Topic-A.json",
+          "predicate": "PRH:happenedNear",
+          "object": "/place/Place-17.json"
+        },
+        "triple": {
+          "subject": "/topic/Topic-A.json",
+          "predicate": "PRH:happenedNear",
+          "object": "/place/Place-18.json"
+        },
+        "triple": {
+          "subject": "/topic/Topic-A.json",
+          "predicate": "PRH:happenedNear",
+          "object": "/place/Place-19.json"
+        },
+        "triple": {
+          "subject": "/topic/Topic-A.json",
+          "predicate": "PRH:happenedNear",
+          "object": "/place/Place-20.json"
+        },
+        "triple": {
+          "subject": "/topic/Topic-A.json",
+          "predicate": "PRH:happenedNear",
+          "object": "/place/Place-21.json"
+        },
+        "triple": {
+          "subject": "/topic/Topic-A.json",
+          "predicate": "PRH:happenedNear",
+          "object": "/place/Place-22.json"
+        },
+        "triple": {
+          "subject": "/topic/Topic-A.json",
+          "predicate": "PRH:happenedNear",
+          "object": "/place/Place-23.json"
+        },
+        "triple": {
+          "subject": "/topic/Topic-A.json",
+          "predicate": "PRH:happenedNear",
+          "object": "/place/Place-24.json"
+        },
+        "triple": {
+          "subject": "/topic/Topic-A.json",
+          "predicate": "PRH:happenedNear",
+          "object": "/place/Place-25.json"
+        },
+        "triple": {
+          "subject": "/topic/Topic-A.json",
+          "predicate": "PRH:happenedNear",
+          "object": "/place/Place-26.json"
+        },
+        "triple": {
+          "subject": "/topic/Topic-A.json",
+          "predicate": "PRH:happenedNear",
+          "object": "/place/Place-27.json"
+        },
+        "triple": {
+          "subject": "/topic/Topic-A.json",
+          "predicate": "PRH:happenedNear",
+          "object": "/place/Place-28.json"
+        },
+        "triple": {
+          "subject": "/topic/Topic-A.json",
+          "predicate": "PRH:happenedNear",
+          "object": "/place/Place-29.json"
+        },
+        "triple": {
+          "subject": "/topic/Topic-A.json",
+          "predicate": "PRH:happenedNear",
+          "object": "/place/Place-30.json"
+        },
+        "triple": {
+          "subject": "/topic/Topic-A.json",
+          "predicate": "PRH:happenedNear",
+          "object": "/place/Place-31.json"
+        },
+        "triple": {
+          "subject": "/topic/Topic-A.json",
+          "predicate": "PRH:happenedNear",
+          "object": "/place/Place-32.json"
+        },
+        "triple": {
+          "subject": "/topic/Topic-A.json",
+          "predicate": "PRH:happenedNear",
+          "object": "/place/Place-33.json"
+        },
+        "triple": {
+          "subject": "/topic/Topic-A.json",
+          "predicate": "PRH:happenedNear",
+          "object": "/place/Place-34.json"
+        },
+        "triple": {
+          "subject": "/topic/Topic-A.json",
+          "predicate": "PRH:happenedNear",
+          "object": "/place/Place-35.json"
+        },
+        "triple": {
+          "subject": "/topic/Topic-A.json",
+          "predicate": "PRH:happenedNear",
+          "object": "/place/Place-36.json"
+        },
+        "triple": {
+          "subject": "/topic/Topic-A.json",
+          "predicate": "PRH:happenedNear",
+          "object": "/place/Place-37.json"
+        },
+        "triple": {
+          "subject": "/topic/Topic-A.json",
+          "predicate": "PRH:happenedNear",
+          "object": "/place/Place-38.json"
+        },
+        "triple": {
+          "subject": "/topic/Topic-A.json",
+          "predicate": "PRH:happenedNear",
+          "object": "/place/Place-39.json"
+        },
+        "triple": {
+          "subject": "/topic/Topic-A.json",
+          "predicate": "PRH:happenedNear",
+          "object": "/place/Place-40.json"
+        },
+        "triple": {
+          "subject": "/topic/Topic-B.json",
+          "predicate": "PRH:happenedNear",
+          "object": "/place/Place-11.json"
+        },
+        "triple": {
+          "subject": "/topic/Topic-B.json",
+          "predicate": "PRH:happenedNear",
+          "object": "/place/Place-12.json"
+        },
+        "triple": {
+          "subject": "/topic/Topic-B.json",
+          "predicate": "PRH:happenedNear",
+          "object": "/place/Place-13.json"
+        },
+        "triple": {
+          "subject": "/topic/Topic-B.json",
+          "predicate": "PRH:happenedNear",
+          "object": "/place/Place-14.json"
+        },
+        "triple": {
+          "subject": "/topic/Topic-B.json",
+          "predicate": "PRH:happenedNear",
+          "object": "/place/Place-15.json"
+        },
+        "triple": {
+          "subject": "/topic/Topic-B.json",
+          "predicate": "PRH:happenedNear",
+          "object": "/place/Place-16.json"
+        },
+        "triple": {
+          "subject": "/topic/Topic-B.json",
+          "predicate": "PRH:happenedNear",
+          "object": "/place/Place-17.json"
+        },
+        "triple": {
+          "subject": "/topic/Topic-B.json",
+          "predicate": "PRH:happenedNear",
+          "object": "/place/Place-18.json"
+        },
+        "triple": {
+          "subject": "/topic/Topic-B.json",
+          "predicate": "PRH:happenedNear",
+          "object": "/place/Place-19.json"
+        },
+        "triple": {
+          "subject": "/topic/Topic-B.json",
+          "predicate": "PRH:happenedNear",
+          "object": "/place/Place-20.json"
+        },
+        "triple": {
+          "subject": "/topic/Topic-C.json",
+          "predicate": "PRH:happenedNear",
+          "object": "/place/Place-13.json"
+        },
+        "triple": {
+          "subject": "/topic/Topic-C.json",
+          "predicate": "PRH:happenedNear",
+          "object": "/place/Place-14.json"
+        },
+        "triple": {
+          "subject": "/topic/Topic-C.json",
+          "predicate": "PRH:happenedNear",
+          "object": "/place/Place-15.json"
+        },
+        "triple": {
+          "subject": "/topic/Topic-C.json",
+          "predicate": "PRH:happenedNear",
+          "object": "/place/Place-16.json"
+        },
+        "triple": {
+          "subject": "/topic/Topic-C.json",
+          "predicate": "PRH:happenedNear",
+          "object": "/place/Place-17.json"
+        },
+        "triple": {
+          "subject": "/topic/Topic-C.json",
+          "predicate": "PRH:happenedNear",
+          "object": "/place/Place-18.json"
+        },
+        "triple": {
+          "subject": "/topic/Topic-C.json",
+          "predicate": "PRH:happenedNear",
+          "object": "/place/Place-19.json"
+        },
+        "triple": {
+          "subject": "/topic/Topic-C.json",
+          "predicate": "PRH:happenedNear",
+          "object": "/place/Place-20.json"
+        },
+        "triple": {
+          "subject": "/topic/Topic-D.json",
+          "predicate": "PRH:happenedNear",
+          "object": "/place/Place-15.json"
+        },
+        "triple": {
+          "subject": "/topic/Topic-D.json",
+          "predicate": "PRH:happenedNear",
+          "object": "/place/Place-16.json"
+        },
+        "triple": {
+          "subject": "/topic/Topic-D.json",
+          "predicate": "PRH:happenedNear",
+          "object": "/place/Place-17.json"
+        },
+        "triple": {
+          "subject": "/topic/Topic-D.json",
+          "predicate": "PRH:happenedNear",
+          "object": "/place/Place-18.json"
+        },
+        "triple": {
+          "subject": "/topic/Topic-D.json",
+          "predicate": "PRH:happenedNear",
+          "object": "/place/Place-19.json"
+        },
+        "triple": {
+          "subject": "/topic/Topic-D.json",
+          "predicate": "PRH:happenedNear",
+          "object": "/place/Place-20.json"
+        },
+        "triple": {
+          "subject": "/topic/Topic-E.json",
+          "predicate": "PRH:happenedNear",
+          "object": "/place/Place-17.json"
+        },
+        "triple": {
+          "subject": "/topic/Topic-E.json",
+          "predicate": "PRH:happenedNear",
+          "object": "/place/Place-18.json"
+        },
+        "triple": {
+          "subject": "/topic/Topic-E.json",
+          "predicate": "PRH:happenedNear",
+          "object": "/place/Place-19.json"
+        },
+        "triple": {
+          "subject": "/topic/Topic-E.json",
+          "predicate": "PRH:happenedNear",
+          "object": "/place/Place-20.json"
+        },
+        "triple": {
+          "subject": "/topic/Topic-F.json",
+          "predicate": "PRH:happenedNear",
+          "object": "/place/Place-19.json"
+        },
+        "triple": {
+          "subject": "/topic/Topic-F.json",
+          "predicate": "PRH:happenedNear",
+          "object": "/place/Place-20.json"
+        },
+        "triple": {
+          "subject": "/place/Place-11.json",
+          "predicate": "PRH:preferredName",
+          "object": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#string",
+              "value": "Place 11"
+            }
+        },
+        "triple": {
+          "subject": "/place/Place-11.json",
+          "predicate": "PRH:entityType",
+          "object": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#string",
+              "value": "institution"
+            }
+        },
+        "triple": {
+          "subject": "/place/Place-12.json",
+          "predicate": "PRH:preferredName",
+          "object": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#string",
+              "value": "Place 12"
+            }
+        },
+        "triple": {
+          "subject": "/place/Place-12.json",
+          "predicate": "PRH:entityType",
+          "object": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#string",
+              "value": "institution"
+            }
+        }, 
+        "triple": {
+          "subject": "/place/Place-13.json",
+          "predicate": "PRH:preferredName",
+          "object": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#string",
+              "value": "Place 13"
+            }
+        },
+        "triple": {
+          "subject": "/place/Place-13.json",
+          "predicate": "PRH:entityType",
+          "object": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#string",
+              "value": "institution"
+            }
+        }, 
+        "triple": {
+          "subject": "/place/Place-14.json",
+          "predicate": "PRH:preferredName",
+          "object": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#string",
+              "value": "Place 14"
+            }
+        },
+        "triple": {
+          "subject": "/place/Place-14.json",
+          "predicate": "PRH:entityType",
+          "object": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#string",
+              "value": "institution"
+            }
+        }, 
+        "triple": {
+          "subject": "/place/Place-15.json",
+          "predicate": "PRH:preferredName",
+          "object": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#string",
+              "value": "Place 15"
+            }
+        },
+        "triple": {
+          "subject": "/place/Place-15.json",
+          "predicate": "PRH:entityType",
+          "object": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#string",
+              "value": "institution"
+            }
+        }, 
+        "triple": {
+          "subject": "/place/Place-16.json",
+          "predicate": "PRH:preferredName",
+          "object": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#string",
+              "value": "Place 16"
+            }
+        },
+        "triple": {
+          "subject": "/place/Place-16.json",
+          "predicate": "PRH:entityType",
+          "object": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#string",
+              "value": "institution"
+            }
+        }, 
+        "triple": {
+          "subject": "/place/Place-17.json",
+          "predicate": "PRH:preferredName",
+          "object": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#string",
+              "value": "Place 17"
+            }
+        },
+        "triple": {
+          "subject": "/place/Place-17.json",
+          "predicate": "PRH:entityType",
+          "object": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#string",
+              "value": "institution"
+            }
+        }, 
+        "triple": {
+          "subject": "/place/Place-18.json",
+          "predicate": "PRH:preferredName",
+          "object": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#string",
+              "value": "Place 18"
+            }
+        },
+        "triple": {
+          "subject": "/place/Place-18.json",
+          "predicate": "PRH:entityType",
+          "object": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#string",
+              "value": "institution"
+            }
+        }, 
+        "triple": {
+          "subject": "/place/Place-19.json",
+          "predicate": "PRH:preferredName",
+          "object": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#string",
+              "value": "Place 19"
+            }
+        },
+        "triple": {
+          "subject": "/place/Place-19.json",
+          "predicate": "PRH:entityType",
+          "object": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#string",
+              "value": "institution"
+            }
+        }, 
+        "triple": {
+          "subject": "/place/Place-20.json",
+          "predicate": "PRH:preferredName",
+          "object": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#string",
+              "value": "Place 20"
+            }
+        },
+        "triple": {
+          "subject": "/place/Place-20.json",
+          "predicate": "PRH:entityType",
+          "object": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#string",
+              "value": "institution"
+            }
+        }, 
+        "triple": {
+          "subject": "/place/Place-21.json",
+          "predicate": "PRH:preferredName",
+          "object": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#string",
+              "value": "Place 21"
+            }
+        },
+        "triple": {
+          "subject": "/place/Place-21.json",
+          "predicate": "PRH:entityType",
+          "object": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#string",
+              "value": "institution"
+            }
+        }, 
+        "triple": {
+          "subject": "/place/Place-22.json",
+          "predicate": "PRH:preferredName",
+          "object": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#string",
+              "value": "Place 22"
+            }
+        },
+        "triple": {
+          "subject": "/place/Place-22.json",
+          "predicate": "PRH:entityType",
+          "object": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#string",
+              "value": "institution"
+            }
+        }, 
+        "triple": {
+          "subject": "/place/Place-23.json",
+          "predicate": "PRH:preferredName",
+          "object": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#string",
+              "value": "Place 23"
+            }
+        },
+        "triple": {
+          "subject": "/place/Place-23.json",
+          "predicate": "PRH:entityType",
+          "object": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#string",
+              "value": "institution"
+            }
+        }, 
+        "triple": {
+          "subject": "/place/Place-24.json",
+          "predicate": "PRH:preferredName",
+          "object": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#string",
+              "value": "Place 24"
+            }
+        },
+        "triple": {
+          "subject": "/place/Place-24.json",
+          "predicate": "PRH:entityType",
+          "object": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#string",
+              "value": "institution"
+            }
+        }, 
+        "triple": {
+          "subject": "/place/Place-25.json",
+          "predicate": "PRH:preferredName",
+          "object": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#string",
+              "value": "Place 25"
+            }
+        },
+        "triple": {
+          "subject": "/place/Place-25.json",
+          "predicate": "PRH:entityType",
+          "object": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#string",
+              "value": "institution"
+            }
+        }, 
+        "triple": {
+          "subject": "/place/Place-26.json",
+          "predicate": "PRH:preferredName",
+          "object": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#string",
+              "value": "Place 26"
+            }
+        },
+        "triple": {
+          "subject": "/place/Place-26.json",
+          "predicate": "PRH:entityType",
+          "object": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#string",
+              "value": "institution"
+            }
+        }, 
+        "triple": {
+          "subject": "/place/Place-27.json",
+          "predicate": "PRH:preferredName",
+          "object": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#string",
+              "value": "Place 27"
+            }
+        },
+        "triple": {
+          "subject": "/place/Place-27.json",
+          "predicate": "PRH:entityType",
+          "object": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#string",
+              "value": "institution"
+            }
+        }, 
+        "triple": {
+          "subject": "/place/Place-28.json",
+          "predicate": "PRH:preferredName",
+          "object": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#string",
+              "value": "Place 28"
+            }
+        },
+        "triple": {
+          "subject": "/place/Place-28.json",
+          "predicate": "PRH:entityType",
+          "object": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#string",
+              "value": "institution"
+            }
+        }, 
+        "triple": {
+          "subject": "/place/Place-29.json",
+          "predicate": "PRH:preferredName",
+          "object": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#string",
+              "value": "Place 29"
+            }
+        },
+        "triple": {
+          "subject": "/place/Place-29.json",
+          "predicate": "PRH:entityType",
+          "object": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#string",
+              "value": "institution"
+            }
+        }, 
+        "triple": {
+          "subject": "/place/Place-30.json",
+          "predicate": "PRH:preferredName",
+          "object": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#string",
+              "value": "Place 30"
+            }
+        },
+        "triple": {
+          "subject": "/place/Place-30.json",
+          "predicate": "PRH:entityType",
+          "object": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#string",
+              "value": "institution"
+            }
+        }, 
+        "triple": {
+          "subject": "/place/Place-31.json",
+          "predicate": "PRH:preferredName",
+          "object": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#string",
+              "value": "Place 31"
+            }
+        },
+        "triple": {
+          "subject": "/place/Place-31.json",
+          "predicate": "PRH:entityType",
+          "object": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#string",
+              "value": "institution"
+            }
+        }, 
+        "triple": {
+          "subject": "/place/Place-32.json",
+          "predicate": "PRH:preferredName",
+          "object": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#string",
+              "value": "Place 32"
+            }
+        },
+        "triple": {
+          "subject": "/place/Place-32.json",
+          "predicate": "PRH:entityType",
+          "object": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#string",
+              "value": "institution"
+            }
+        }, 
+        "triple": {
+          "subject": "/place/Place-33.json",
+          "predicate": "PRH:preferredName",
+          "object": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#string",
+              "value": "Place 33"
+            }
+        },
+        "triple": {
+          "subject": "/place/Place-33.json",
+          "predicate": "PRH:entityType",
+          "object": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#string",
+              "value": "institution"
+            }
+        }, 
+        "triple": {
+          "subject": "/place/Place-34.json",
+          "predicate": "PRH:preferredName",
+          "object": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#string",
+              "value": "Place 34"
+            }
+        },
+        "triple": {
+          "subject": "/place/Place-34.json",
+          "predicate": "PRH:entityType",
+          "object": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#string",
+              "value": "institution"
+            }
+        }, 
+        "triple": {
+          "subject": "/place/Place-35.json",
+          "predicate": "PRH:preferredName",
+          "object": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#string",
+              "value": "Place 35"
+            }
+        },
+        "triple": {
+          "subject": "/place/Place-35.json",
+          "predicate": "PRH:entityType",
+          "object": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#string",
+              "value": "institution"
+            }
+        }, 
+        "triple": {
+          "subject": "/place/Place-36.json",
+          "predicate": "PRH:preferredName",
+          "object": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#string",
+              "value": "Place 36"
+            }
+        },
+        "triple": {
+          "subject": "/place/Place-36.json",
+          "predicate": "PRH:entityType",
+          "object": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#string",
+              "value": "institution"
+            }
+        }, 
+        "triple": {
+          "subject": "/place/Place-37.json",
+          "predicate": "PRH:preferredName",
+          "object": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#string",
+              "value": "Place 37"
+            }
+        },
+        "triple": {
+          "subject": "/place/Place-37.json",
+          "predicate": "PRH:entityType",
+          "object": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#string",
+              "value": "institution"
+            }
+        }, 
+        "triple": {
+          "subject": "/place/Place-38.json",
+          "predicate": "PRH:preferredName",
+          "object": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#string",
+              "value": "Place 38"
+            }
+        },
+        "triple": {
+          "subject": "/place/Place-38.json",
+          "predicate": "PRH:entityType",
+          "object": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#string",
+              "value": "institution"
+            }
+        }, 
+        "triple": {
+          "subject": "/place/Place-39.json",
+          "predicate": "PRH:preferredName",
+          "object": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#string",
+              "value": "Place 39"
+            }
+        },
+        "triple": {
+          "subject": "/place/Place-39.json",
+          "predicate": "PRH:entityType",
+          "object": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#string",
+              "value": "institution"
+            }
+        }, 
+        "triple": {
+          "subject": "/place/Place-40.json",
+          "predicate": "PRH:preferredName",
+          "object": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#string",
+              "value": "Place 40"
+            }
+        },
+        "triple": {
+          "subject": "/place/Place-40.json",
+          "predicate": "PRH:entityType",
+          "object": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#string",
+              "value": "institution"
+            }
+        }, 
+        "triple": {
+          "subject": "/foo/PubMed/Author-0001.json",
+          "predicate": "PRH:authorFrequent",
+          "object": "/foo/PubMed/Author-0002.json"
+        },
+        "triple": {
+          "subject": "/foo/PubMed/Author-0001.json",
+          "predicate": "PRH:entityType",
+          "object": "foo"
+        }
+      }
+    ]
+  }
+}

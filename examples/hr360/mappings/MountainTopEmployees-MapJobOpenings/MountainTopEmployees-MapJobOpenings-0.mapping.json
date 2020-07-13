@@ -1,0 +1,30 @@
+{
+  "lang" : "zxx",
+  "name" : "MountainTopEmployees-MapJobOpenings",
+  "description" : "",
+  "version" : 0,
+  "targetEntityType" : "http://marklogic.com/topgun/jobopening-0.0.1/jobopening",
+  "sourceContext" : "/",
+  "sourceURI" : "./data/hr360/MountainTopEmployees/JobOpenings/c460b239-38a4-4415-9770-7c798743af6d.json",
+  "properties" : {
+    "requiredCompetency" : {
+      "sourcedFrom" : "tokenize(competency,',')"
+    },
+    "jobId" : {
+      "sourcedFrom" : "jobId"
+    },
+    "reqStatus" : {
+      "sourcedFrom" : "status"
+    },
+    "departmentId" : {
+      "sourcedFrom" : "deptId"
+    },
+    "jobTitle" : {
+      "sourcedFrom" : "jobTitle"
+    },
+    "employeeStartDate" : {
+      "sourcedFrom" : "parseDate(startDate,\"MM/DD/YYYY\")"
+    }
+  },
+  "namespaces" : { }
+}

@@ -1,0 +1,18 @@
+{
+  "info" : {
+    "title" : "Workspace",
+    "version" : "0.0.1",
+    "baseUri" : "http://example.org/",
+    "description": "Workspace"
+  },
+  "definitions" : {
+    "Substance" : {
+      "required" : [ ],
+      "pii" : [ ],
+      "elementRangeIndex" : [ ],
+      "rangeIndex" : [ ],
+      "wordLexicon" : [ ],
+      "properties" : { }
+    }
+  }
+}

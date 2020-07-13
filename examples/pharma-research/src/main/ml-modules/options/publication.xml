@@ -1,0 +1,558 @@
+<options xmlns="http://marklogic.com/appservices/search">
+  <search-option>unfiltered</search-option>
+  <page-length>10</page-length>
+
+  <!-- Limit all searches to this additional query -->
+  <additional-query>
+    <cts:collection-query xmlns:cts="http://marklogic.com/cts">
+      <cts:uri>publication</cts:uri>
+    </cts:collection-query>
+  </additional-query>
+
+  <!-- Full-text search options -->
+  <term apply="term">
+    <empty apply="all-results"/>
+    <!--
+      Below some example options for full-text searches. Note that MarkLogic will
+      toggle options automatically depending on caps, wildcards etc.
+      See Usage Notes of http://docs.marklogic.com/cts:word-query for details.
+      Also note that forcing stemmed searches will disable wildcarded searches.
+    -->
+    <term-option>punctuation-insensitive</term-option>
+    <term-option>unstemmed</term-option>
+  </term>
+
+  <!-- Default grammer -->
+  <grammar>
+    <quotation>"</quotation>
+    <implicit>
+      <cts:and-query strength="20" xmlns:cts="http://marklogic.com/cts"/>
+    </implicit>
+    <starter strength="30" apply="grouping" delimiter=")">(</starter>
+    <starter strength="40" apply="prefix" element="cts:not-query">-</starter>
+    <joiner strength="10" apply="infix" element="cts:or-query" tokenize="word">OR</joiner>
+    <joiner strength="20" apply="infix" element="cts:and-query" tokenize="word">AND</joiner>
+    <joiner strength="30" apply="infix" element="cts:near-query" tokenize="word">NEAR</joiner>
+    <joiner strength="30" apply="near2" consume="2" element="cts:near-query">NEAR/</joiner>
+    <joiner strength="50" apply="constraint">:</joiner>
+    <joiner strength="50" apply="constraint" compare="LT" tokenize="word">LT</joiner>
+    <joiner strength="50" apply="constraint" compare="LE" tokenize="word">LE</joiner>
+    <joiner strength="50" apply="constraint" compare="GT" tokenize="word">GT</joiner>
+    <joiner strength="50" apply="constraint" compare="GE" tokenize="word">GE</joiner>
+    <joiner strength="50" apply="constraint" compare="NE" tokenize="word">NE</joiner>
+  </grammar>
+
+  <!-- Default sort order. You can also associate states with sort orders to allow switching sort orders -->
+  <sort-order direction="descending">
+    <score/>
+  </sort-order>
+
+
+  <return-query>1</return-query>
+
+  <!-- Not used, but the default snippeting behavior if no state (see compact/detailed below) was specified -->
+  <transform-results apply="snippet" ns="http://marklogic.com/search-results"
+      at="/lib/snippeting.xqy">
+  </transform-results>
+
+  <!-- The decorator is returning our JSON which is being encoded into a JSON string
+       by the search endpoint. Since this is the only XML data and the other types
+       are JSON, this is getting messed up. For now, sadly, we will just decode the
+       messed up data in the UI. May the API gods have mercy!
+       -->
+  <result-decorator apply="decorator"
+      ns="http://marklogic.com/search-decorator"
+      at="/lib/searchResultDecorator.xqy"/>
+
+  <!-- This controls the snippet size toggle -->
+  <operator name="results">
+    <state name="compact">
+        <transform-results apply="snippet" ns="http://marklogic.com/search-results"
+        at="/lib/snippeting.xqy">
+      </transform-results>
+    </state>
+    <state name="detailed">
+      <transform-results apply="snippet" ns="http://marklogic.com/search-results"
+        at="/lib/snippeting.xqy">
+      </transform-results>
+    </state>
+  </operator>
+
+  <operator name="sort">
+    <state name="score">
+      <sort-order>
+        <score/>
+      </sort-order>
+    </state>
+    <state name="eyeColorAsc">
+      <sort-order
+    direction="ascending" type="xs:string" collation="http://marklogic.com/collation/codepoint">
+        <path-index>eyeColor</path-index>
+      </sort-order>
+    </state>
+    <state name="eyeColorDsc">
+      <sort-order
+    direction="descending" type="xs:string" collation="http://marklogic.com/collation/codepoint">
+        <path-index>eyeColor</path-index>
+      </sort-order>
+    </state>
+  </operator>
+  <!-- Annotations (allowed pretty much anywhere) allow adding text or elements to feed custom components with options that would normally not validate) -->
+  <annotation>Delta options here</annotation>
+
+
+  <constraint name="revisedDate">
+    <range type="xs:date" facet="true">
+      <element name="lastModifiedDate"/>
+
+      <!--
+      The buckets should be in ascending order otherwise you'll get XDMP-BOUNDS issue on search:search
+      -->
+      <bucket name="Jan 1999" ge="1999-01-01" lt="1999-02-01">Jan 1999</bucket>
+      <bucket name="Feb 1999" ge="1999-02-01" lt="1999-03-01">Feb 1999</bucket>
+      <bucket name="Mar 1999" ge="1999-03-01" lt="1999-04-01">Mar 1999</bucket>
+      <bucket name="Apr 1999" ge="1999-04-01" lt="1999-05-01">Apr 1999</bucket>
+      <bucket name="May 1999" ge="1999-05-01" lt="1999-06-01">May 1999</bucket>
+      <bucket name="Jun 1999" ge="1999-06-01" lt="1999-07-01">Jun 1999</bucket>
+      <bucket name="Jul 1999" ge="1999-07-01" lt="1999-08-01">Jul 1999</bucket>
+      <bucket name="Aug 1999" ge="1999-08-01" lt="1999-09-01">Aug 1999</bucket>
+      <bucket name="Sep 1999" ge="1999-09-01" lt="1999-10-01">Sep 1999</bucket>
+      <bucket name="Oct 1999" ge="1999-10-01" lt="1999-11-01">Oct 1999</bucket>
+      <bucket name="Nov 1999" ge="1999-11-01" lt="1999-12-01">Nov 1999</bucket>
+      <bucket name="Dec 1999" ge="1999-12-01" lt="2000-01-01">Dec 1999</bucket>
+      <bucket name="Jan 2000" ge="2000-01-01" lt="2000-02-01">Jan 2000</bucket>
+      <bucket name="Feb 2000" ge="2000-02-01" lt="2000-03-01">Feb 2000</bucket>
+      <bucket name="Mar 2000" ge="2000-03-01" lt="2000-04-01">Mar 2000</bucket>
+      <bucket name="Apr 2000" ge="2000-04-01" lt="2000-05-01">Apr 2000</bucket>
+      <bucket name="May 2000" ge="2000-05-01" lt="2000-06-01">May 2000</bucket>
+      <bucket name="Jun 2000" ge="2000-06-01" lt="2000-07-01">Jun 2000</bucket>
+      <bucket name="Jul 2000" ge="2000-07-01" lt="2000-08-01">Jul 2000</bucket>
+      <bucket name="Aug 2000" ge="2000-08-01" lt="2000-09-01">Aug 2000</bucket>
+      <bucket name="Sep 2000" ge="2000-09-01" lt="2000-10-01">Sep 2000</bucket>
+      <bucket name="Oct 2000" ge="2000-10-01" lt="2000-11-01">Oct 2000</bucket>
+      <bucket name="Nov 2000" ge="2000-11-01" lt="2000-12-01">Nov 2000</bucket>
+      <bucket name="Dec 2000" ge="2000-12-01" lt="2001-01-01">Dec 2000</bucket>
+      <bucket name="Jan 2001" ge="2001-01-01" lt="2001-02-01">Jan 2001</bucket>
+      <bucket name="Feb 2001" ge="2001-02-01" lt="2001-03-01">Feb 2001</bucket>
+      <bucket name="Mar 2001" ge="2001-03-01" lt="2001-04-01">Mar 2001</bucket>
+      <bucket name="Apr 2001" ge="2001-04-01" lt="2001-05-01">Apr 2001</bucket>
+      <bucket name="May 2001" ge="2001-05-01" lt="2001-06-01">May 2001</bucket>
+      <bucket name="Jun 2001" ge="2001-06-01" lt="2001-07-01">Jun 2001</bucket>
+      <bucket name="Jul 2001" ge="2001-07-01" lt="2001-08-01">Jul 2001</bucket>
+      <bucket name="Aug 2001" ge="2001-08-01" lt="2001-09-01">Aug 2001</bucket>
+      <bucket name="Sep 2001" ge="2001-09-01" lt="2001-10-01">Sep 2001</bucket>
+      <bucket name="Oct 2001" ge="2001-10-01" lt="2001-11-01">Oct 2001</bucket>
+      <bucket name="Nov 2001" ge="2001-11-01" lt="2001-12-01">Nov 2001</bucket>
+      <bucket name="Dec 2001" ge="2001-12-01" lt="2002-01-01">Dec 2001</bucket>
+      <bucket name="Jan 2002" ge="2002-01-01" lt="2002-02-01">Jan 2002</bucket>
+      <bucket name="Feb 2002" ge="2002-02-01" lt="2002-03-01">Feb 2002</bucket>
+      <bucket name="Mar 2002" ge="2002-03-01" lt="2002-04-01">Mar 2002</bucket>
+      <bucket name="Apr 2002" ge="2002-04-01" lt="2002-05-01">Apr 2002</bucket>
+      <bucket name="May 2002" ge="2002-05-01" lt="2002-06-01">May 2002</bucket>
+      <bucket name="Jun 2002" ge="2002-06-01" lt="2002-07-01">Jun 2002</bucket>
+      <bucket name="Jul 2002" ge="2002-07-01" lt="2002-08-01">Jul 2002</bucket>
+      <bucket name="Aug 2002" ge="2002-08-01" lt="2002-09-01">Aug 2002</bucket>
+      <bucket name="Sep 2002" ge="2002-09-01" lt="2002-10-01">Sep 2002</bucket>
+      <bucket name="Oct 2002" ge="2002-10-01" lt="2002-11-01">Oct 2002</bucket>
+      <bucket name="Nov 2002" ge="2002-11-01" lt="2002-12-01">Nov 2002</bucket>
+      <bucket name="Dec 2002" ge="2002-12-01" lt="2003-01-01">Dec 2002</bucket>
+      <bucket name="Jan 2003" ge="2003-01-01" lt="2003-02-01">Jan 2003</bucket>
+      <bucket name="Feb 2003" ge="2003-02-01" lt="2003-03-01">Feb 2003</bucket>
+      <bucket name="Mar 2003" ge="2003-03-01" lt="2003-04-01">Mar 2003</bucket>
+      <bucket name="Apr 2003" ge="2003-04-01" lt="2003-05-01">Apr 2003</bucket>
+      <bucket name="May 2003" ge="2003-05-01" lt="2003-06-01">May 2003</bucket>
+      <bucket name="Jun 2003" ge="2003-06-01" lt="2003-07-01">Jun 2003</bucket>
+      <bucket name="Jul 2003" ge="2003-07-01" lt="2003-08-01">Jul 2003</bucket>
+      <bucket name="Aug 2003" ge="2003-08-01" lt="2003-09-01">Aug 2003</bucket>
+      <bucket name="Sep 2003" ge="2003-09-01" lt="2003-10-01">Sep 2003</bucket>
+      <bucket name="Oct 2003" ge="2003-10-01" lt="2003-11-01">Oct 2003</bucket>
+      <bucket name="Nov 2003" ge="2003-11-01" lt="2003-12-01">Nov 2003</bucket>
+      <bucket name="Dec 2003" ge="2003-12-01" lt="2004-01-01">Dec 2003</bucket>
+      <bucket name="Jan 2004" ge="2004-01-01" lt="2004-02-01">Jan 2004</bucket>
+      <bucket name="Feb 2004" ge="2004-02-01" lt="2004-03-01">Feb 2004</bucket>
+      <bucket name="Mar 2004" ge="2004-03-01" lt="2004-04-01">Mar 2004</bucket>
+      <bucket name="Apr 2004" ge="2004-04-01" lt="2004-05-01">Apr 2004</bucket>
+      <bucket name="May 2004" ge="2004-05-01" lt="2004-06-01">May 2004</bucket>
+      <bucket name="Jun 2004" ge="2004-06-01" lt="2004-07-01">Jun 2004</bucket>
+      <bucket name="Jul 2004" ge="2004-07-01" lt="2004-08-01">Jul 2004</bucket>
+      <bucket name="Aug 2004" ge="2004-08-01" lt="2004-09-01">Aug 2004</bucket>
+      <bucket name="Sep 2004" ge="2004-09-01" lt="2004-10-01">Sep 2004</bucket>
+      <bucket name="Oct 2004" ge="2004-10-01" lt="2004-11-01">Oct 2004</bucket>
+      <bucket name="Nov 2004" ge="2004-11-01" lt="2004-12-01">Nov 2004</bucket>
+      <bucket name="Dec 2004" ge="2004-12-01" lt="2005-01-01">Dec 2004</bucket>
+      <bucket name="Jan 2005" ge="2005-01-01" lt="2005-02-01">Jan 2005</bucket>
+      <bucket name="Feb 2005" ge="2005-02-01" lt="2005-03-01">Feb 2005</bucket>
+      <bucket name="Mar 2005" ge="2005-03-01" lt="2005-04-01">Mar 2005</bucket>
+      <bucket name="Apr 2005" ge="2005-04-01" lt="2005-05-01">Apr 2005</bucket>
+      <bucket name="May 2005" ge="2005-05-01" lt="2005-06-01">May 2005</bucket>
+      <bucket name="Jun 2005" ge="2005-06-01" lt="2005-07-01">Jun 2005</bucket>
+      <bucket name="Jul 2005" ge="2005-07-01" lt="2005-08-01">Jul 2005</bucket>
+      <bucket name="Aug 2005" ge="2005-08-01" lt="2005-09-01">Aug 2005</bucket>
+      <bucket name="Sep 2005" ge="2005-09-01" lt="2005-10-01">Sep 2005</bucket>
+      <bucket name="Oct 2005" ge="2005-10-01" lt="2005-11-01">Oct 2005</bucket>
+      <bucket name="Nov 2005" ge="2005-11-01" lt="2005-12-01">Nov 2005</bucket>
+      <bucket name="Dec 2005" ge="2005-12-01" lt="2006-01-01">Dec 2005</bucket>
+      <bucket name="Jan 2006" ge="2006-01-01" lt="2006-02-01">Jan 2006</bucket>
+      <bucket name="Feb 2006" ge="2006-02-01" lt="2006-03-01">Feb 2006</bucket>
+      <bucket name="Mar 2006" ge="2006-03-01" lt="2006-04-01">Mar 2006</bucket>
+      <bucket name="Apr 2006" ge="2006-04-01" lt="2006-05-01">Apr 2006</bucket>
+      <bucket name="May 2006" ge="2006-05-01" lt="2006-06-01">May 2006</bucket>
+      <bucket name="Jun 2006" ge="2006-06-01" lt="2006-07-01">Jun 2006</bucket>
+      <bucket name="Jul 2006" ge="2006-07-01" lt="2006-08-01">Jul 2006</bucket>
+      <bucket name="Aug 2006" ge="2006-08-01" lt="2006-09-01">Aug 2006</bucket>
+      <bucket name="Sep 2006" ge="2006-09-01" lt="2006-10-01">Sep 2006</bucket>
+      <bucket name="Oct 2006" ge="2006-10-01" lt="2006-11-01">Oct 2006</bucket>
+      <bucket name="Nov 2006" ge="2006-11-01" lt="2006-12-01">Nov 2006</bucket>
+      <bucket name="Dec 2006" ge="2006-12-01" lt="2007-01-01">Dec 2006</bucket>
+      <bucket name="Jan 2007" ge="2007-01-01" lt="2007-02-01">Jan 2007</bucket>
+      <bucket name="Feb 2007" ge="2007-02-01" lt="2007-03-01">Feb 2007</bucket>
+      <bucket name="Mar 2007" ge="2007-03-01" lt="2007-04-01">Mar 2007</bucket>
+      <bucket name="Apr 2007" ge="2007-04-01" lt="2007-05-01">Apr 2007</bucket>
+      <bucket name="May 2007" ge="2007-05-01" lt="2007-06-01">May 2007</bucket>
+      <bucket name="Jun 2007" ge="2007-06-01" lt="2007-07-01">Jun 2007</bucket>
+      <bucket name="Jul 2007" ge="2007-07-01" lt="2007-08-01">Jul 2007</bucket>
+      <bucket name="Aug 2007" ge="2007-08-01" lt="2007-09-01">Aug 2007</bucket>
+      <bucket name="Sep 2007" ge="2007-09-01" lt="2007-10-01">Sep 2007</bucket>
+      <bucket name="Oct 2007" ge="2007-10-01" lt="2007-11-01">Oct 2007</bucket>
+      <bucket name="Nov 2007" ge="2007-11-01" lt="2007-12-01">Nov 2007</bucket>
+      <bucket name="Dec 2007" ge="2007-12-01" lt="2008-01-01">Dec 2007</bucket>
+      <bucket name="Jan 2008" ge="2008-01-01" lt="2008-02-01">Jan 2008</bucket>
+      <bucket name="Feb 2008" ge="2008-02-01" lt="2008-03-01">Feb 2008</bucket>
+      <bucket name="Mar 2008" ge="2008-03-01" lt="2008-04-01">Mar 2008</bucket>
+      <bucket name="Apr 2008" ge="2008-04-01" lt="2008-05-01">Apr 2008</bucket>
+      <bucket name="May 2008" ge="2008-05-01" lt="2008-06-01">May 2008</bucket>
+      <bucket name="Jun 2008" ge="2008-06-01" lt="2008-07-01">Jun 2008</bucket>
+      <bucket name="Jul 2008" ge="2008-07-01" lt="2008-08-01">Jul 2008</bucket>
+      <bucket name="Aug 2008" ge="2008-08-01" lt="2008-09-01">Aug 2008</bucket>
+      <bucket name="Sep 2008" ge="2008-09-01" lt="2008-10-01">Sep 2008</bucket>
+      <bucket name="Oct 2008" ge="2008-10-01" lt="2008-11-01">Oct 2008</bucket>
+      <bucket name="Nov 2008" ge="2008-11-01" lt="2008-12-01">Nov 2008</bucket>
+      <bucket name="Dec 2008" ge="2008-12-01" lt="2009-01-01">Dec 2008</bucket>
+      <bucket name="Jan 2009" ge="2009-01-01" lt="2009-02-01">Jan 2009</bucket>
+      <bucket name="Feb 2009" ge="2009-02-01" lt="2009-03-01">Feb 2009</bucket>
+      <bucket name="Mar 2009" ge="2009-03-01" lt="2009-04-01">Mar 2009</bucket>
+      <bucket name="Apr 2009" ge="2009-04-01" lt="2009-05-01">Apr 2009</bucket>
+      <bucket name="May 2009" ge="2009-05-01" lt="2009-06-01">May 2009</bucket>
+      <bucket name="Jun 2009" ge="2009-06-01" lt="2009-07-01">Jun 2009</bucket>
+      <bucket name="Jul 2009" ge="2009-07-01" lt="2009-08-01">Jul 2009</bucket>
+      <bucket name="Aug 2009" ge="2009-08-01" lt="2009-09-01">Aug 2009</bucket>
+      <bucket name="Sep 2009" ge="2009-09-01" lt="2009-10-01">Sep 2009</bucket>
+      <bucket name="Oct 2009" ge="2009-10-01" lt="2009-11-01">Oct 2009</bucket>
+      <bucket name="Nov 2009" ge="2009-11-01" lt="2009-12-01">Nov 2009</bucket>
+      <bucket name="Dec 2009" ge="2009-12-01" lt="2010-01-01">Dec 2009</bucket>
+      <bucket name="Jan 2010" ge="2010-01-01" lt="2010-02-01">Jan 2010</bucket>
+      <bucket name="Feb 2010" ge="2010-02-01" lt="2010-03-01">Feb 2010</bucket>
+      <bucket name="Mar 2010" ge="2010-03-01" lt="2010-04-01">Mar 2010</bucket>
+      <bucket name="Apr 2010" ge="2010-04-01" lt="2010-05-01">Apr 2010</bucket>
+      <bucket name="May 2010" ge="2010-05-01" lt="2010-06-01">May 2010</bucket>
+      <bucket name="Jun 2010" ge="2010-06-01" lt="2010-07-01">Jun 2010</bucket>
+      <bucket name="Jul 2010" ge="2010-07-01" lt="2010-08-01">Jul 2010</bucket>
+      <bucket name="Aug 2010" ge="2010-08-01" lt="2010-09-01">Aug 2010</bucket>
+      <bucket name="Sep 2010" ge="2010-09-01" lt="2010-10-01">Sep 2010</bucket>
+      <bucket name="Oct 2010" ge="2010-10-01" lt="2010-11-01">Oct 2010</bucket>
+      <bucket name="Nov 2010" ge="2010-11-01" lt="2010-12-01">Nov 2010</bucket>
+      <bucket name="Dec 2010" ge="2010-12-01" lt="2011-01-01">Dec 2010</bucket>
+      <bucket name="Jan 2011" ge="2011-01-01" lt="2011-02-01">Jan 2011</bucket>
+      <bucket name="Feb 2011" ge="2011-02-01" lt="2011-03-01">Feb 2011</bucket>
+      <bucket name="Mar 2011" ge="2011-03-01" lt="2011-04-01">Mar 2011</bucket>
+      <bucket name="Apr 2011" ge="2011-04-01" lt="2011-05-01">Apr 2011</bucket>
+      <bucket name="May 2011" ge="2011-05-01" lt="2011-06-01">May 2011</bucket>
+      <bucket name="Jun 2011" ge="2011-06-01" lt="2011-07-01">Jun 2011</bucket>
+      <bucket name="Jul 2011" ge="2011-07-01" lt="2011-08-01">Jul 2011</bucket>
+      <bucket name="Aug 2011" ge="2011-08-01" lt="2011-09-01">Aug 2011</bucket>
+      <bucket name="Sep 2011" ge="2011-09-01" lt="2011-10-01">Sep 2011</bucket>
+      <bucket name="Oct 2011" ge="2011-10-01" lt="2011-11-01">Oct 2011</bucket>
+      <bucket name="Nov 2011" ge="2011-11-01" lt="2011-12-01">Nov 2011</bucket>
+      <bucket name="Dec 2011" ge="2011-12-01" lt="2012-01-01">Dec 2011</bucket>
+      <bucket name="Jan 2012" ge="2012-01-01" lt="2012-02-01">Jan 2012</bucket>
+      <bucket name="Feb 2012" ge="2012-02-01" lt="2012-03-01">Feb 2012</bucket>
+      <bucket name="Mar 2012" ge="2012-03-01" lt="2012-04-01">Mar 2012</bucket>
+      <bucket name="Apr 2012" ge="2012-04-01" lt="2012-05-01">Apr 2012</bucket>
+      <bucket name="May 2012" ge="2012-05-01" lt="2012-06-01">May 2012</bucket>
+      <bucket name="Jun 2012" ge="2012-06-01" lt="2012-07-01">Jun 2012</bucket>
+      <bucket name="Jul 2012" ge="2012-07-01" lt="2012-08-01">Jul 2012</bucket>
+      <bucket name="Aug 2012" ge="2012-08-01" lt="2012-09-01">Aug 2012</bucket>
+      <bucket name="Sep 2012" ge="2012-09-01" lt="2012-10-01">Sep 2012</bucket>
+      <bucket name="Oct 2012" ge="2012-10-01" lt="2012-11-01">Oct 2012</bucket>
+      <bucket name="Nov 2012" ge="2012-11-01" lt="2012-12-01">Nov 2012</bucket>
+      <bucket name="Dec 2012" ge="2012-12-01" lt="2013-01-01">Dec 2012</bucket>
+      <bucket name="Jan 2013" ge="2013-01-01" lt="2013-02-01">Jan 2013</bucket>
+      <bucket name="Feb 2013" ge="2013-02-01" lt="2013-03-01">Feb 2013</bucket>
+      <bucket name="Mar 2013" ge="2013-03-01" lt="2013-04-01">Mar 2013</bucket>
+      <bucket name="Apr 2013" ge="2013-04-01" lt="2013-05-01">Apr 2013</bucket>
+      <bucket name="May 2013" ge="2013-05-01" lt="2013-06-01">May 2013</bucket>
+      <bucket name="Jun 2013" ge="2013-06-01" lt="2013-07-01">Jun 2013</bucket>
+      <bucket name="Jul 2013" ge="2013-07-01" lt="2013-08-01">Jul 2013</bucket>
+      <bucket name="Aug 2013" ge="2013-08-01" lt="2013-09-01">Aug 2013</bucket>
+      <bucket name="Sep 2013" ge="2013-09-01" lt="2013-10-01">Sep 2013</bucket>
+      <bucket name="Oct 2013" ge="2013-10-01" lt="2013-11-01">Oct 2013</bucket>
+      <bucket name="Nov 2013" ge="2013-11-01" lt="2013-12-01">Nov 2013</bucket>
+      <bucket name="Dec 2013" ge="2013-12-01" lt="2014-01-01">Dec 2013</bucket>
+      <bucket name="Jan 2014" ge="2014-01-01" lt="2014-02-01">Jan 2014</bucket>
+      <bucket name="Feb 2014" ge="2014-02-01" lt="2014-03-01">Feb 2014</bucket>
+      <bucket name="Mar 2014" ge="2014-03-01" lt="2014-04-01">Mar 2014</bucket>
+      <bucket name="Apr 2014" ge="2014-04-01" lt="2014-05-01">Apr 2014</bucket>
+      <bucket name="May 2014" ge="2014-05-01" lt="2014-06-01">May 2014</bucket>
+      <bucket name="Jun 2014" ge="2014-06-01" lt="2014-07-01">Jun 2014</bucket>
+      <bucket name="Jul 2014" ge="2014-07-01" lt="2014-08-01">Jul 2014</bucket>
+      <bucket name="Aug 2014" ge="2014-08-01" lt="2014-09-01">Aug 2014</bucket>
+      <bucket name="Sep 2014" ge="2014-09-01" lt="2014-10-01">Sep 2014</bucket>
+      <bucket name="Oct 2014" ge="2014-10-01" lt="2014-11-01">Oct 2014</bucket>
+      <bucket name="Nov 2014" ge="2014-11-01" lt="2014-12-01">Nov 2014</bucket>
+      <bucket name="Dec 2014" ge="2014-12-01" lt="2015-01-01">Dec 2014</bucket>
+      <bucket name="Jan 2015" ge="2015-01-01" lt="2015-02-01">Jan 2015</bucket>
+      <bucket name="Feb 2015" ge="2015-02-01" lt="2015-03-01">Feb 2015</bucket>
+      <bucket name="Mar 2015" ge="2015-03-01" lt="2015-04-01">Mar 2015</bucket>
+      <bucket name="Apr 2015" ge="2015-04-01" lt="2015-05-01">Apr 2015</bucket>
+      <bucket name="May 2015" ge="2015-05-01" lt="2015-06-01">May 2015</bucket>
+      <bucket name="Jun 2015" ge="2015-06-01" lt="2015-07-01">Jun 2015</bucket>
+      <bucket name="Jul 2015" ge="2015-07-01" lt="2015-08-01">Jul 2015</bucket>
+      <bucket name="Aug 2015" ge="2015-08-01" lt="2015-09-01">Aug 2015</bucket>
+      <bucket name="Sep 2015" ge="2015-09-01" lt="2015-10-01">Sep 2015</bucket>
+      <bucket name="Oct 2015" ge="2015-10-01" lt="2015-11-01">Oct 2015</bucket>
+      <bucket name="Nov 2015" ge="2015-11-01" lt="2015-12-01">Nov 2015</bucket>
+      <bucket name="Dec 2015" ge="2015-12-01" lt="2016-01-01">Dec 2015</bucket>
+      <bucket name="Jan 2016" ge="2016-01-01" lt="2016-02-01">Jan 2016</bucket>
+      <bucket name="Feb 2016" ge="2016-02-01" lt="2016-03-01">Feb 2016</bucket>
+      <bucket name="Mar 2016" ge="2016-03-01" lt="2016-04-01">Mar 2016</bucket>
+      <bucket name="Apr 2016" ge="2016-04-01" lt="2016-05-01">Apr 2016</bucket>
+      <bucket name="May 2016" ge="2016-05-01" lt="2016-06-01">May 2016</bucket>
+      <bucket name="Jun 2016" ge="2016-06-01" lt="2016-07-01">Jun 2016</bucket>
+      <bucket name="Jul 2016" ge="2016-07-01" lt="2016-08-01">Jul 2016</bucket>
+      <bucket name="Aug 2016" ge="2016-08-01" lt="2016-09-01">Aug 2016</bucket>
+      <bucket name="Sep 2016" ge="2016-09-01" lt="2016-10-01">Sep 2016</bucket>
+      <bucket name="Oct 2016" ge="2016-10-01" lt="2016-11-01">Oct 2016</bucket>
+      <bucket name="Nov 2016" ge="2016-11-01" lt="2016-12-01">Nov 2016</bucket>
+      <bucket name="Dec 2016" ge="2016-12-01" lt="2017-01-01">Dec 2016</bucket>
+      <bucket name="Jan 2017" ge="2017-01-01" lt="2017-02-01">Jan 2017</bucket>
+      <bucket name="Feb 2017" ge="2017-02-01" lt="2017-03-01">Feb 2017</bucket>
+      <bucket name="Mar 2017" ge="2017-03-01" lt="2017-04-01">Mar 2017</bucket>
+      <bucket name="Apr 2017" ge="2017-04-01" lt="2017-05-01">Apr 2017</bucket>
+      <bucket name="May 2017" ge="2017-05-01" lt="2017-06-01">May 2017</bucket>
+      <bucket name="Jun 2017" ge="2017-06-01" lt="2017-07-01">Jun 2017</bucket>
+      <bucket name="Jul 2017" ge="2017-07-01" lt="2017-08-01">Jul 2017</bucket>
+      <bucket name="Aug 2017" ge="2017-08-01" lt="2017-09-01">Aug 2017</bucket>
+      <bucket name="Sep 2017" ge="2017-09-01" lt="2017-10-01">Sep 2017</bucket>
+      <bucket name="Oct 2017" ge="2017-10-01" lt="2017-11-01">Oct 2017</bucket>
+      <bucket name="Nov 2017" ge="2017-11-01" lt="2017-12-01">Nov 2017</bucket>
+      <bucket name="Dec 2017" ge="2017-12-01" lt="2018-01-01">Dec 2017</bucket>
+      <bucket name="Jan 2018" ge="2018-01-01" lt="2018-02-01">Jan 2018</bucket>
+      <bucket name="Feb 2018" ge="2018-02-01" lt="2018-03-01">Feb 2018</bucket>
+      <bucket name="Mar 2018" ge="2018-03-01" lt="2018-04-01">Mar 2018</bucket>
+      <bucket name="Apr 2018" ge="2018-04-01" lt="2018-05-01">Apr 2018</bucket>
+      <bucket name="May 2018" ge="2018-05-01" lt="2018-06-01">May 2018</bucket>
+      <bucket name="Jun 2018" ge="2018-06-01" lt="2018-07-01">Jun 2018</bucket>
+      <bucket name="Jul 2018" ge="2018-07-01" lt="2018-08-01">Jul 2018</bucket>
+      <bucket name="Aug 2018" ge="2018-08-01" lt="2018-09-01">Aug 2018</bucket>
+      <bucket name="Sep 2018" ge="2018-09-01" lt="2018-10-01">Sep 2018</bucket>
+      <bucket name="Oct 2018" ge="2018-10-01" lt="2018-11-01">Oct 2018</bucket>
+      <bucket name="Nov 2018" ge="2018-11-01" lt="2018-12-01">Nov 2018</bucket>
+      <bucket name="Dec 2018" ge="2018-12-01" lt="2019-01-01">Dec 2018</bucket>
+      <bucket name="Jan 2019" ge="2019-01-01" lt="2019-02-01">Jan 2019</bucket>
+      <bucket name="Feb 2019" ge="2019-02-01" lt="2019-03-01">Feb 2019</bucket>
+      <bucket name="Mar 2019" ge="2019-03-01" lt="2019-04-01">Mar 2019</bucket>
+      <bucket name="Apr 2019" ge="2019-04-01" lt="2019-05-01">Apr 2019</bucket>
+      <bucket name="May 2019" ge="2019-05-01" lt="2019-06-01">May 2019</bucket>
+      <bucket name="Jun 2019" ge="2019-06-01" lt="2019-07-01">Jun 2019</bucket>
+      <bucket name="Jul 2019" ge="2019-07-01" lt="2019-08-01">Jul 2019</bucket>
+      <bucket name="Aug 2019" ge="2019-08-01" lt="2019-09-01">Aug 2019</bucket>
+      <bucket name="Sep 2019" ge="2019-09-01" lt="2019-10-01">Sep 2019</bucket>
+      <bucket name="Oct 2019" ge="2019-10-01" lt="2019-11-01">Oct 2019</bucket>
+      <bucket name="Nov 2019" ge="2019-11-01" lt="2019-12-01">Nov 2019</bucket>
+      <bucket name="Dec 2019" ge="2019-12-01" lt="2020-01-01">Dec 2019</bucket>
+      <bucket name="Jan 2020" ge="2020-01-01" lt="2020-02-01">Jan 2020</bucket>
+      <bucket name="Feb 2020" ge="2020-02-01" lt="2020-03-01">Feb 2020</bucket>
+      <bucket name="Mar 2020" ge="2020-03-01" lt="2020-04-01">Mar 2020</bucket>
+      <bucket name="Apr 2020" ge="2020-04-01" lt="2020-05-01">Apr 2020</bucket>
+      <bucket name="May 2020" ge="2020-05-01" lt="2020-06-01">May 2020</bucket>
+      <bucket name="Jun 2020" ge="2020-06-01" lt="2020-07-01">Jun 2020</bucket>
+      <bucket name="Jul 2020" ge="2020-07-01" lt="2020-08-01">Jul 2020</bucket>
+      <bucket name="Aug 2020" ge="2020-08-01" lt="2020-09-01">Aug 2020</bucket>
+      <bucket name="Sep 2020" ge="2020-09-01" lt="2020-10-01">Sep 2020</bucket>
+      <bucket name="Oct 2020" ge="2020-10-01" lt="2020-11-01">Oct 2020</bucket>
+      <bucket name="Nov 2020" ge="2020-11-01" lt="2020-12-01">Nov 2020</bucket>
+      <bucket name="Dec 2020" ge="2020-12-01" lt="2021-01-01">Dec 2020</bucket>
+      <bucket name="Jan 2021" ge="2021-01-01" lt="2021-02-01">Jan 2021</bucket>
+      <bucket name="Feb 2021" ge="2021-02-01" lt="2021-03-01">Feb 2021</bucket>
+      <bucket name="Mar 2021" ge="2021-03-01" lt="2021-04-01">Mar 2021</bucket>
+      <bucket name="Apr 2021" ge="2021-04-01" lt="2021-05-01">Apr 2021</bucket>
+      <bucket name="May 2021" ge="2021-05-01" lt="2021-06-01">May 2021</bucket>
+      <bucket name="Jun 2021" ge="2021-06-01" lt="2021-07-01">Jun 2021</bucket>
+      <bucket name="Jul 2021" ge="2021-07-01" lt="2021-08-01">Jul 2021</bucket>
+      <bucket name="Aug 2021" ge="2021-08-01" lt="2021-09-01">Aug 2021</bucket>
+      <bucket name="Sep 2021" ge="2021-09-01" lt="2021-10-01">Sep 2021</bucket>
+      <bucket name="Oct 2021" ge="2021-10-01" lt="2021-11-01">Oct 2021</bucket>
+      <bucket name="Nov 2021" ge="2021-11-01" lt="2021-12-01">Nov 2021</bucket>
+      <bucket name="Dec 2021" ge="2021-12-01" lt="2022-01-01">Dec 2021</bucket>
+      <bucket name="Jan 2022" ge="2022-01-01" lt="2022-02-01">Jan 2022</bucket>
+      <bucket name="Feb 2022" ge="2022-02-01" lt="2022-03-01">Feb 2022</bucket>
+      <bucket name="Mar 2022" ge="2022-03-01" lt="2022-04-01">Mar 2022</bucket>
+      <bucket name="Apr 2022" ge="2022-04-01" lt="2022-05-01">Apr 2022</bucket>
+      <bucket name="May 2022" ge="2022-05-01" lt="2022-06-01">May 2022</bucket>
+      <bucket name="Jun 2022" ge="2022-06-01" lt="2022-07-01">Jun 2022</bucket>
+      <bucket name="Jul 2022" ge="2022-07-01" lt="2022-08-01">Jul 2022</bucket>
+      <bucket name="Aug 2022" ge="2022-08-01" lt="2022-09-01">Aug 2022</bucket>
+      <bucket name="Sep 2022" ge="2022-09-01" lt="2022-10-01">Sep 2022</bucket>
+      <bucket name="Oct 2022" ge="2022-10-01" lt="2022-11-01">Oct 2022</bucket>
+      <bucket name="Nov 2022" ge="2022-11-01" lt="2022-12-01">Nov 2022</bucket>
+      <bucket name="Dec 2022" ge="2022-12-01" lt="2023-01-01">Dec 2022</bucket>
+      <bucket name="Jan 2023" ge="2023-01-01" lt="2023-02-01">Jan 2023</bucket>
+      <bucket name="Feb 2023" ge="2023-02-01" lt="2023-03-01">Feb 2023</bucket>
+      <bucket name="Mar 2023" ge="2023-03-01" lt="2023-04-01">Mar 2023</bucket>
+      <bucket name="Apr 2023" ge="2023-04-01" lt="2023-05-01">Apr 2023</bucket>
+      <bucket name="May 2023" ge="2023-05-01" lt="2023-06-01">May 2023</bucket>
+      <bucket name="Jun 2023" ge="2023-06-01" lt="2023-07-01">Jun 2023</bucket>
+      <bucket name="Jul 2023" ge="2023-07-01" lt="2023-08-01">Jul 2023</bucket>
+      <bucket name="Aug 2023" ge="2023-08-01" lt="2023-09-01">Aug 2023</bucket>
+      <bucket name="Sep 2023" ge="2023-09-01" lt="2023-10-01">Sep 2023</bucket>
+      <bucket name="Oct 2023" ge="2023-10-01" lt="2023-11-01">Oct 2023</bucket>
+      <bucket name="Nov 2023" ge="2023-11-01" lt="2023-12-01">Nov 2023</bucket>
+      <bucket name="Dec 2023" ge="2023-12-01" lt="2024-01-01">Dec 2023</bucket>
+      <bucket name="Jan 2024" ge="2024-01-01" lt="2024-02-01">Jan 2024</bucket>
+      <bucket name="Feb 2024" ge="2024-02-01" lt="2024-03-01">Feb 2024</bucket>
+      <bucket name="Mar 2024" ge="2024-03-01" lt="2024-04-01">Mar 2024</bucket>
+      <bucket name="Apr 2024" ge="2024-04-01" lt="2024-05-01">Apr 2024</bucket>
+      <bucket name="May 2024" ge="2024-05-01" lt="2024-06-01">May 2024</bucket>
+      <bucket name="Jun 2024" ge="2024-06-01" lt="2024-07-01">Jun 2024</bucket>
+      <bucket name="Jul 2024" ge="2024-07-01" lt="2024-08-01">Jul 2024</bucket>
+      <bucket name="Aug 2024" ge="2024-08-01" lt="2024-09-01">Aug 2024</bucket>
+      <bucket name="Sep 2024" ge="2024-09-01" lt="2024-10-01">Sep 2024</bucket>
+      <bucket name="Oct 2024" ge="2024-10-01" lt="2024-11-01">Oct 2024</bucket>
+      <bucket name="Nov 2024" ge="2024-11-01" lt="2024-12-01">Nov 2024</bucket>
+      <bucket name="Dec 2024" ge="2024-12-01" lt="2025-01-01">Dec 2024</bucket>
+      <bucket name="Jan 2025" ge="2025-01-01" lt="2025-02-01">Jan 2025</bucket>
+      <bucket name="Feb 2025" ge="2025-02-01" lt="2025-03-01">Feb 2025</bucket>
+      <bucket name="Mar 2025" ge="2025-03-01" lt="2025-04-01">Mar 2025</bucket>
+      <bucket name="Apr 2025" ge="2025-04-01" lt="2025-05-01">Apr 2025</bucket>
+      <bucket name="May 2025" ge="2025-05-01" lt="2025-06-01">May 2025</bucket>
+      <bucket name="Jun 2025" ge="2025-06-01" lt="2025-07-01">Jun 2025</bucket>
+      <bucket name="Jul 2025" ge="2025-07-01" lt="2025-08-01">Jul 2025</bucket>
+      <bucket name="Aug 2025" ge="2025-08-01" lt="2025-09-01">Aug 2025</bucket>
+      <bucket name="Sep 2025" ge="2025-09-01" lt="2025-10-01">Sep 2025</bucket>
+      <bucket name="Oct 2025" ge="2025-10-01" lt="2025-11-01">Oct 2025</bucket>
+      <bucket name="Nov 2025" ge="2025-11-01" lt="2025-12-01">Nov 2025</bucket>
+      <bucket name="Dec 2025" ge="2025-12-01" lt="2026-01-01">Dec 2025</bucket>
+      <bucket name="Jan 2026" ge="2026-01-01" lt="2026-02-01">Jan 2026</bucket>
+      <bucket name="Feb 2026" ge="2026-02-01" lt="2026-03-01">Feb 2026</bucket>
+      <bucket name="Mar 2026" ge="2026-03-01" lt="2026-04-01">Mar 2026</bucket>
+      <bucket name="Apr 2026" ge="2026-04-01" lt="2026-05-01">Apr 2026</bucket>
+      <bucket name="May 2026" ge="2026-05-01" lt="2026-06-01">May 2026</bucket>
+      <bucket name="Jun 2026" ge="2026-06-01" lt="2026-07-01">Jun 2026</bucket>
+      <bucket name="Jul 2026" ge="2026-07-01" lt="2026-08-01">Jul 2026</bucket>
+      <bucket name="Aug 2026" ge="2026-08-01" lt="2026-09-01">Aug 2026</bucket>
+      <bucket name="Sep 2026" ge="2026-09-01" lt="2026-10-01">Sep 2026</bucket>
+      <bucket name="Oct 2026" ge="2026-10-01" lt="2026-11-01">Oct 2026</bucket>
+      <bucket name="Nov 2026" ge="2026-11-01" lt="2026-12-01">Nov 2026</bucket>
+      <bucket name="Dec 2026" ge="2026-12-01" lt="2027-01-01">Dec 2026</bucket>
+      <bucket name="Jan 2027" ge="2027-01-01" lt="2027-02-01">Jan 2027</bucket>
+      <bucket name="Feb 2027" ge="2027-02-01" lt="2027-03-01">Feb 2027</bucket>
+      <bucket name="Mar 2027" ge="2027-03-01" lt="2027-04-01">Mar 2027</bucket>
+      <bucket name="Apr 2027" ge="2027-04-01" lt="2027-05-01">Apr 2027</bucket>
+      <bucket name="May 2027" ge="2027-05-01" lt="2027-06-01">May 2027</bucket>
+      <bucket name="Jun 2027" ge="2027-06-01" lt="2027-07-01">Jun 2027</bucket>
+      <bucket name="Jul 2027" ge="2027-07-01" lt="2027-08-01">Jul 2027</bucket>
+      <bucket name="Aug 2027" ge="2027-08-01" lt="2027-09-01">Aug 2027</bucket>
+      <bucket name="Sep 2027" ge="2027-09-01" lt="2027-10-01">Sep 2027</bucket>
+      <bucket name="Oct 2027" ge="2027-10-01" lt="2027-11-01">Oct 2027</bucket>
+      <bucket name="Nov 2027" ge="2027-11-01" lt="2027-12-01">Nov 2027</bucket>
+      <bucket name="Dec 2027" ge="2027-12-01" lt="2028-01-01">Dec 2027</bucket>
+      <bucket name="Jan 2028" ge="2028-01-01" lt="2028-02-01">Jan 2028</bucket>
+      <bucket name="Feb 2028" ge="2028-02-01" lt="2028-03-01">Feb 2028</bucket>
+      <bucket name="Mar 2028" ge="2028-03-01" lt="2028-04-01">Mar 2028</bucket>
+      <bucket name="Apr 2028" ge="2028-04-01" lt="2028-05-01">Apr 2028</bucket>
+      <bucket name="May 2028" ge="2028-05-01" lt="2028-06-01">May 2028</bucket>
+      <bucket name="Jun 2028" ge="2028-06-01" lt="2028-07-01">Jun 2028</bucket>
+      <bucket name="Jul 2028" ge="2028-07-01" lt="2028-08-01">Jul 2028</bucket>
+      <bucket name="Aug 2028" ge="2028-08-01" lt="2028-09-01">Aug 2028</bucket>
+      <bucket name="Sep 2028" ge="2028-09-01" lt="2028-10-01">Sep 2028</bucket>
+      <bucket name="Oct 2028" ge="2028-10-01" lt="2028-11-01">Oct 2028</bucket>
+      <bucket name="Nov 2028" ge="2028-11-01" lt="2028-12-01">Nov 2028</bucket>
+      <bucket name="Dec 2028" ge="2028-12-01" lt="2029-01-01">Dec 2028</bucket>
+      <bucket name="Jan 2029" ge="2029-01-01" lt="2029-02-01">Jan 2029</bucket>
+      <bucket name="Feb 2029" ge="2029-02-01" lt="2029-03-01">Feb 2029</bucket>
+      <bucket name="Mar 2029" ge="2029-03-01" lt="2029-04-01">Mar 2029</bucket>
+      <bucket name="Apr 2029" ge="2029-04-01" lt="2029-05-01">Apr 2029</bucket>
+      <bucket name="May 2029" ge="2029-05-01" lt="2029-06-01">May 2029</bucket>
+      <bucket name="Jun 2029" ge="2029-06-01" lt="2029-07-01">Jun 2029</bucket>
+      <bucket name="Jul 2029" ge="2029-07-01" lt="2029-08-01">Jul 2029</bucket>
+      <bucket name="Aug 2029" ge="2029-08-01" lt="2029-09-01">Aug 2029</bucket>
+      <bucket name="Sep 2029" ge="2029-09-01" lt="2029-10-01">Sep 2029</bucket>
+      <bucket name="Oct 2029" ge="2029-10-01" lt="2029-11-01">Oct 2029</bucket>
+      <bucket name="Nov 2029" ge="2029-11-01" lt="2029-12-01">Nov 2029</bucket>
+      <bucket name="Dec 2029" ge="2029-12-01" lt="2030-01-01">Dec 2029</bucket>
+    </range>
+  </constraint>
+
+  <constraint name="Author">
+    <range type="xs:string" facet="true" collation="http://marklogic.com/collation/codepoint" >
+      <facet-option>limit=10</facet-option>
+      <facet-option>frequency-order</facet-option>
+      <facet-option>descending</facet-option>
+      <element ns="" name="authorPreferredName"/>
+    </range>
+  </constraint>
+
+  <constraint name="Citations">
+    <range type="xs:int" facet="true">
+        <bucket ge="201" name="201+">201+</bucket>
+        <bucket ge="101" lt="201" name="101-200">101-200</bucket>
+        <bucket ge="51" lt="101" name="51-100">51-100</bucket>
+        <bucket ge="26" lt="51" name="26-50">26-50</bucket>
+        <bucket ge="11" lt="26" name="11-25">11-25</bucket>
+        <bucket ge="1" lt="11" name="1-10">1-10</bucket>
+        <bucket lt="1" name="0">0</bucket>
+      <facet-option>item-order</facet-option>
+      <facet-option>descending</facet-option>
+      <element ns="" name="NumberOfCitations"/>
+    </range>
+  </constraint>
+
+  <constraint name="Topics">
+    <range type="xs:string" facet="true" collation="http://marklogic.com/collation/codepoint">
+      <facet-option>limit=10</facet-option>
+      <facet-option>frequency-order</facet-option>
+      <facet-option>descending</facet-option>
+      <element ns="" name="topicPreferredName"/>
+    </range>
+  </constraint>
+
+  <constraint name="Journal">
+    <range type="xs:string" facet="true" collation="http://marklogic.com/collation/codepoint" >
+      <facet-option>limit=10</facet-option>
+      <facet-option>frequency-order</facet-option>
+      <facet-option>descending</facet-option>
+      <element ns="" name="journalPreferredName"/>
+    </range>
+  </constraint>
+
+  <constraint name="Institution">
+    <range type="xs:string" facet="true" collation="http://marklogic.com/collation/codepoint" >
+      <facet-option>limit=10</facet-option>
+      <facet-option>frequency-order</facet-option>
+      <facet-option>descending</facet-option>
+      <element ns="" name="institutionPreferredName"/>
+    </range>
+  </constraint>
+
+  <!-- example suggestion-source below -->
+  <!--
+  <suggestion-source ref="myconstraint">
+    <suggestion-option>frequency-order</suggestion-option>
+    <suggestion-option>descending</suggestion-option>
+    <suggestion-option>limit=10</suggestion-option>
+  </suggestion-source>
+  -->
+
+  <!-- This will extract the person's name from the search.  This path is specific to the person data
+       sample data set.  As of beta release, you may override this by editing the default search route
+       config options used in middle-tier/routes/api/index.js -->
+  <!-- <extract-document-data selected="include">
+    <extract-path>//*:instance//*:articleTitle</extract-path>
+    <extract-path>//*:instance//*:abstractMessage</extract-path>
+    <extract-path>//*:headers//*:topicPreferredName</extract-path>
+    <extract-path>//*:headers//*:lastModifiedDate</extract-path>
+    <extract-path>//*:headers//*:journalPreferredName</extract-path>
+    <extract-path>//*:headers//*:authorPreferredName</extract-path>
+  </extract-document-data> -->
+
+</options>

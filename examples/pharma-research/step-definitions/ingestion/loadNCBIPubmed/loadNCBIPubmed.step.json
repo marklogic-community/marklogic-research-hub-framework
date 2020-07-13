@@ -1,0 +1,22 @@
+{
+  "lang" : "zxx",
+  "name" : "loadNCBIPubmed",
+  "description" : null,
+  "type" : "INGESTION",
+  "version" : 1,
+  "options" : {
+    "collections" : [ "pubMedInputflowFTP", "publication" ],
+    "outputFormat" : "xml",
+    "targetDatabase" : "data-hub-STAGING"
+  },
+  "customHook" : { },
+  "modulePath" : "/custom-modules/ingestion/loadNCBIPubmed/main.sjs",
+  "retryLimit" : 0,
+  "batchSize" : 100,
+  "threadCount" : 4,
+  "fileLocations" : {
+    "inputFilePath" : "data/comm_use_Daily_Med/",
+    "outputURIReplacement" : ".*PMC,'PMID-'",
+    "inputFileType" : "xml"
+  }
+}

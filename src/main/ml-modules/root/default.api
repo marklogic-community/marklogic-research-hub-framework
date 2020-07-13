@@ -1,0 +1,12 @@
+{
+"monitoring": {
+	"general": {
+	"enabled": true
+	}
+	, 
+	"custom": true, 
+	"documents": 10, 
+	"fragments": 10, 
+	"hosts": 5
+	}
+}

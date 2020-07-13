@@ -1,0 +1,226 @@
+{
+  "envelope": {
+    "headers": {
+      "sources": [
+        {
+          "name": "pubmed"
+        }
+      ],
+      "lastestTimeStamp": "2019-09-05T14:15:21.2349775-04:00",
+      "version": "1.0",
+      "createdBy": "admin",
+      "stageDocID": "/PubMed/PMID-6357343.nxml",
+      "commonFacets": {
+        "authorPreferredName": "Fan Zhang",
+        "systemDateTimeCreated": "2019-09-05T14:15:21.2349775-04:00",
+        "lastModifiedDate": "2019-01-01",
+        "institutionPreferredName": [
+          "University of Vermont",
+          "University of Vermont"
+        ],
+        "topicPreferredName": [
+          "Long non-coding RNA",
+          "Biomarker discovery",
+          "Hepatocellular carcinoma"
+        ]
+      }
+    },
+    "triples": [
+      {
+        "triple": {
+          "subject": "/foo/1/PubMed/PMID-9999992.json",
+          "predicate": "PRH:affiliatedWith",
+          "object": "/institution/universityOfVermont.json"
+        }
+      },
+      {
+        "triple": {
+          "subject": "/institution/universityOfVermont.json",
+          "predicate": "PRH:preferredName",
+          "object": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "value": "University of Vermont"
+          }
+        }
+      },
+      {
+        "triple": {
+          "subject": "/institution/universityOfVermont.json",
+          "predicate": "PRH:entityType",
+          "object": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "value": "institution"
+          }
+        }
+      },
+      {
+        "triple": {
+          "subject": "/institution/universityOfVermont.json",
+          "predicate": "PRH:inCity",
+          "object": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "value": "Burlington"
+          }
+        }
+      },
+      {
+        "triple": {
+          "subject": "/institution/universityOfVermont.json",
+          "predicate": "PRH:inCountry",
+          "object": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "value": "USA"
+          }
+        }
+      },
+      {
+        "triple": {
+          "subject": "/institution/universityOfVermont.json",
+          "predicate": "PRH:hasDepartment",
+          "object": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "value": "Vermont Genetics Network_University of Vermont"
+          }
+        }
+      },
+      {
+        "triple": {
+          "subject": "/foo/1/PubMed/PMID-9999992.json",
+          "predicate": "PRH:affiliatedWith",
+          "object": "/institution/universityOfVermont.json"
+        }
+      },
+      {
+        "triple": {
+          "subject": "/institution/universityOfVermont.json",
+          "predicate": "PRH:preferredName",
+          "object": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "value": "University of Vermont"
+          }
+        }
+      },
+      {
+        "triple": {
+          "subject": "/institution/universityOfVermont.json",
+          "predicate": "PRH:entityType",
+          "object": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "value": "institution"
+          }
+        }
+      },
+      {
+        "triple": {
+          "subject": "/institution/universityOfVermont.json",
+          "predicate": "PRH:inCity",
+          "object": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "value": "Burlington"
+          }
+        }
+      },
+      {
+        "triple": {
+          "subject": "/institution/universityOfVermont.json",
+          "predicate": "PRH:inCountry",
+          "object": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "value": "USA"
+          }
+        }
+      },
+      {
+        "triple": {
+          "subject": "/institution/universityOfVermont.json",
+          "predicate": "PRH:hasDepartment",
+          "object": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "value": "Department of Biology_University of Vermont"
+          }
+        }
+      },
+      {
+        "triple": {
+          "subject": "/foo/1/PubMed/PMID-9999992.json",
+          "predicate": "PRH:wroteAbout",
+          "object": "/topic/longNon-CodingRNA.json"
+        }
+      },
+      {
+        "triple": {
+          "subject": "/foo/1/PubMed/PMID-9999992.json",
+          "predicate": "PRH:wroteAbout",
+          "object": "/topic/biomarkerDiscovery.json"
+        }
+      },
+      {
+        "triple": {
+          "subject": "/foo/1/PubMed/PMID-9999992.json",
+          "predicate": "PRH:wroteAbout",
+          "object": "/topic/hepatocellularCarcinoma.json"
+        }
+      }
+    ],
+    "instance": {
+      "info": {
+        "title": "Foo",
+        "version": "0.0.3"
+      },
+      "docId": "/foo/1/PubMed/PMID-9999992.json",
+      "personName": "Fan Zhang",
+      "personSurName": "Zhang",
+      "personGivenName": "Fan",
+      "personEmail": null,
+      "publications": [
+        "/PubMed/PMID-6357343.xml"
+      ],
+      "publicationEntities": [
+        {
+          "uri": "/PubMed/PMID-6357343.xml",
+          "preferredName": "Identification of long non-coding RNA-related and –coexpressed mRNA biomarkers for hepatocellular carcinoma"
+        }
+      ],
+      "coAuthors": [
+        {
+          "author": "Linda Ding"
+        },
+        {
+          "author": "Li Cui"
+        },
+        {
+          "author": "Robert Barber"
+        },
+        {
+          "author": "Bin Deng"
+        }
+      ],
+      "affiliations": [
+        {
+          "organizationDivision": "Vermont Genetics Network",
+          "organizationName": "University of Vermont",
+          "organizationCity": "Burlington",
+          "organizationCountry": "USA"
+        },
+        {
+          "organizationDivision": "Department of Biology",
+          "organizationName": "University of Vermont",
+          "organizationCity": "Burlington",
+          "organizationCountry": "USA"
+        }
+      ],
+      "topics": [
+        {
+          "topic": "Long non-coding RNA"
+        },
+        {
+          "topic": "Biomarker discovery"
+        },
+        {
+          "topic": "Hepatocellular carcinoma"
+        }
+      ]
+    },
+    "attachments": null
+  }
+}

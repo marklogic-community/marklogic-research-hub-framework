@@ -1,0 +1,224 @@
+{
+  "envelope": {
+    "headers": {
+      "sources": [
+        {
+          "name": "pubmed"
+        }
+      ],
+      "lastestTimeStamp": "2020-05-13T19:00:22.683904Z",
+      "version": "1.0",
+      "createdBy": "demo",
+      "stageDocID": "/PubMed/PMID-6306753.nxml",
+      "commonFacets": {
+        "authorPreferredName": "Chia-Ti Tsai",
+        "systemDateTimeCreated": "2020-05-13T19:00:22.683904Z",
+        "lastModifiedDate": "2018-12-12",
+        "institutionPreferredName": [
+          "National Taiwan University College of Medicine and Hospital",
+          "Graduate Institute of Clinical Medicine"
+        ],
+        "topicPreferredName": [
+          "varicose veins",
+          "HAS2",
+          "RNA seq"
+        ]
+      }
+    },
+    "triples": [
+      {
+        "triple": {
+          "subject": "/author/2/PubMed/PMID-6306753.json",
+          "predicate": "PRH:affiliatedWith",
+          "object": "/institution/nationalTaiwanUniversityCollegeOfMedicineAndHospital.json"
+        }
+      },
+      {
+        "triple": {
+          "subject": "/institution/nationalTaiwanUniversityCollegeOfMedicineAndHospital.json",
+          "predicate": "PRH:preferredName",
+          "object": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "value": "National Taiwan University College of Medicine and Hospital"
+          }
+        }
+      },
+      {
+        "triple": {
+          "subject": "/institution/nationalTaiwanUniversityCollegeOfMedicineAndHospital.json",
+          "predicate": "PRH:entityType",
+          "object": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "value": "institution"
+          }
+        }
+      },
+      {
+        "triple": {
+          "subject": "/institution/nationalTaiwanUniversityCollegeOfMedicineAndHospital.json",
+          "predicate": "PRH:inCity",
+          "object": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "value": "Taipei"
+          }
+        }
+      },
+      {
+        "triple": {
+          "subject": "/institution/nationalTaiwanUniversityCollegeOfMedicineAndHospital.json",
+          "predicate": "PRH:inCountry",
+          "object": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "value": "(J.-J.H.)"
+          }
+        }
+      },
+      {
+        "triple": {
+          "subject": "/institution/nationalTaiwanUniversityCollegeOfMedicineAndHospital.json",
+          "predicate": "PRH:hasDepartment",
+          "object": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "value": "Division of Cardiology, Department of Internal Medicine_National Taiwan University College of Medicine and Hospital"
+          }
+        }
+      },
+      {
+        "triple": {
+          "subject": "/author/2/PubMed/PMID-6306753.json",
+          "predicate": "PRH:affiliatedWith",
+          "object": "/institution/graduateInstituteOfClinicalMedicine.json"
+        }
+      },
+      {
+        "triple": {
+          "subject": "/institution/graduateInstituteOfClinicalMedicine.json",
+          "predicate": "PRH:preferredName",
+          "object": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "value": "Graduate Institute of Clinical Medicine"
+          }
+        }
+      },
+      {
+        "triple": {
+          "subject": "/institution/graduateInstituteOfClinicalMedicine.json",
+          "predicate": "PRH:entityType",
+          "object": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "value": "institution"
+          }
+        }
+      },
+      {
+        "triple": {
+          "subject": "/institution/graduateInstituteOfClinicalMedicine.json",
+          "predicate": "PRH:inCity",
+          "object": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "value": "Taipei"
+          }
+        }
+      },
+      {
+        "triple": {
+          "subject": "/institution/graduateInstituteOfClinicalMedicine.json",
+          "predicate": "PRH:inCountry",
+          "object": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "value": "Taiwan"
+          }
+        }
+      },
+      {
+        "triple": {
+          "subject": "/author/2/PubMed/PMID-6306753.json",
+          "predicate": "PRH:wroteAbout",
+          "object": "/topic/varicoseVeins.json"
+        }
+      },
+      {
+        "triple": {
+          "subject": "/author/2/PubMed/PMID-6306753.json",
+          "predicate": "PRH:wroteAbout",
+          "object": "/topic/hAS2.json"
+        }
+      },
+      {
+        "triple": {
+          "subject": "/author/2/PubMed/PMID-6306753.json",
+          "predicate": "PRH:wroteAbout",
+          "object": "/topic/rNASeq.json"
+        }
+      }
+    ],
+    "instance": {
+      "Author": {
+        "docId": "/author/2/PubMed/PMID-6306753.json",
+        "personName": "Chia-Ti Tsai",
+        "personSurName": "Tsai",
+        "personGivenName": "Chia-Ti",
+        "personEmail": null,
+        "publications": [
+          "/PubMed/PMID-6306753.xml"
+        ],
+        "publicationEntities": [
+          {
+            "uri": "/PubMed/PMID-6306753.xml",
+            "preferredName": "Global Expression Profiling Identifies a Novel Hyaluronan Synthases 2 Gene in the Pathogenesis of Lower Extremity Varicose Veins"
+          }
+        ],
+        "coAuthors": [
+          {
+            "author": "Chia-Shan Hsieh"
+          },
+          {
+            "author": "Yau-Hung Chen"
+          },
+          {
+            "author": "Sheng-Nan Chang"
+          },
+          {
+            "author": "Juey-Jen Hwang"
+          },
+          {
+            "author": "Eric Y. Chuang"
+          },
+          {
+            "author": "I-Hui Wu"
+          }
+        ],
+        "affiliations": [
+          {
+            "organizationDivision": "Division of Cardiology, Department of Internal Medicine",
+            "organizationName": "National Taiwan University College of Medicine and Hospital",
+            "organizationCity": "Taipei",
+            "organizationCountry": "(J.-J.H.)"
+          },
+          {
+            "organizationDivision": "",
+            "organizationName": "Graduate Institute of Clinical Medicine",
+            "organizationCity": "Taipei",
+            "organizationCountry": "Taiwan"
+          }
+        ],
+        "topics": [
+          {
+            "topic": "varicose veins"
+          },
+          {
+            "topic": "HAS2"
+          },
+          {
+            "topic": "RNA seq"
+          }
+        ]
+      },
+      "info": {
+        "title": "Author",
+        "version": "0.0.3"
+      }
+    },
+    "attachments": null
+  }
+}

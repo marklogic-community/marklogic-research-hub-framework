@@ -1,0 +1,218 @@
+{
+  "envelope": {
+    "headers": {
+      "sources": [
+        {
+          "name": "pubmed"
+        }
+      ],
+      "lastestTimeStamp": "2020-05-13T18:47:05.061763Z",
+      "version": "1.0",
+      "createdBy": "demo",
+      "stageDocID": "/PubMed/PMID-5383544.nxml",
+      "commonFacets": {
+        "authorPreferredName": "Juey-Jen Hwang",
+        "systemDateTimeCreated": "2020-05-13T18:47:05.061763Z",
+        "lastModifiedDate": "1970-01-01",
+        "institutionPreferredName": [
+          "National Taiwan University Hospital"
+        ],
+        "topicPreferredName": [
+          "Hypertriglyceridemia",
+          "Omega-3 fatty acids",
+          "Omacor",
+          "Docosahexaenoic acid",
+          "Eicosapentaenoic acid",
+          "Ethnic chinese"
+        ]
+      }
+    },
+    "triples": [
+      {
+        "triple": {
+          "subject": "/author/2/PubMed/PMID-5383544.json",
+          "predicate": "PRH:affiliatedWith",
+          "object": "/institution/nationalTaiwanUniversityHospital.json"
+        }
+      },
+      {
+        "triple": {
+          "subject": "/institution/nationalTaiwanUniversityHospital.json",
+          "predicate": "PRH:preferredName",
+          "object": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "value": "National Taiwan University Hospital"
+          }
+        }
+      },
+      {
+        "triple": {
+          "subject": "/institution/nationalTaiwanUniversityHospital.json",
+          "predicate": "PRH:entityType",
+          "object": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "value": "institution"
+          }
+        }
+      },
+      {
+        "triple": {
+          "subject": "/institution/nationalTaiwanUniversityHospital.json",
+          "predicate": "PRH:inCity",
+          "object": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "value": "Taipei"
+          }
+        }
+      },
+      {
+        "triple": {
+          "subject": "/institution/nationalTaiwanUniversityHospital.json",
+          "predicate": "PRH:inCountry",
+          "object": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "value": "Taiwan"
+          }
+        }
+      },
+      {
+        "triple": {
+          "subject": "/institution/nationalTaiwanUniversityHospital.json",
+          "predicate": "PRH:hasDepartment",
+          "object": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "value": "Division of Cardiology, Department of Internal Medicine_National Taiwan University Hospital"
+          }
+        }
+      },
+      {
+        "triple": {
+          "subject": "/author/2/PubMed/PMID-5383544.json",
+          "predicate": "PRH:wroteAbout",
+          "object": "/topic/hypertriglyceridemia.json"
+        }
+      },
+      {
+        "triple": {
+          "subject": "/author/2/PubMed/PMID-5383544.json",
+          "predicate": "PRH:wroteAbout",
+          "object": "/topic/omega-3FattyAcids.json"
+        }
+      },
+      {
+        "triple": {
+          "subject": "/author/2/PubMed/PMID-5383544.json",
+          "predicate": "PRH:wroteAbout",
+          "object": "/topic/omacor.json"
+        }
+      },
+      {
+        "triple": {
+          "subject": "/author/2/PubMed/PMID-5383544.json",
+          "predicate": "PRH:wroteAbout",
+          "object": "/topic/docosahexaenoicAcid.json"
+        }
+      },
+      {
+        "triple": {
+          "subject": "/author/2/PubMed/PMID-5383544.json",
+          "predicate": "PRH:wroteAbout",
+          "object": "/topic/eicosapentaenoicAcid.json"
+        }
+      },
+      {
+        "triple": {
+          "subject": "/author/2/PubMed/PMID-5383544.json",
+          "predicate": "PRH:wroteAbout",
+          "object": "/topic/ethnicChinese.json"
+        }
+      }
+    ],
+    "instance": {
+      "Author": {
+        "docId": "/author/2/PubMed/PMID-5383544.json",
+        "personName": "Juey-Jen Hwang",
+        "personSurName": "Hwang",
+        "personGivenName": "Juey-Jen",
+        "personEmail": null,
+        "publications": [
+          "/PubMed/PMID-5383544.xml"
+        ],
+        "publicationEntities": [
+          {
+            "uri": "/PubMed/PMID-5383544.xml",
+            "preferredName": "A Randomized, Double-Blind, Placebo-Controlled Clinical Trial to Assess the Efficacy and Safety of Ethyl-Ester Omega-3 Fatty Acid in Taiwanese Hypertriglyceridemic Patients"
+          }
+        ],
+        "coAuthors": [
+          {
+            "author": "Ta-Chen Su"
+          },
+          {
+            "author": "Kuo-Chin Huang"
+          },
+          {
+            "author": "Fu-Tien Chiang"
+          },
+          {
+            "author": "Kuo-Liong Chien"
+          },
+          {
+            "author": "Kuo-Yang Wang"
+          },
+          {
+            "author": "Min-Ji Charng"
+          },
+          {
+            "author": "Wei-Chuan Tsai"
+          },
+          {
+            "author": "Lian-Yu Lin"
+          },
+          {
+            "author": "Runar Vige"
+          },
+          {
+            "author": "José Emilio Ruiz Olivar"
+          },
+          {
+            "author": "Chuen-Den Tseng"
+          }
+        ],
+        "affiliations": [
+          {
+            "organizationDivision": "Division of Cardiology, Department of Internal Medicine",
+            "organizationName": "National Taiwan University Hospital",
+            "organizationCity": "Taipei",
+            "organizationCountry": "Taiwan"
+          }
+        ],
+        "topics": [
+          {
+            "topic": "Hypertriglyceridemia"
+          },
+          {
+            "topic": "Omega-3 fatty acids"
+          },
+          {
+            "topic": "Omacor"
+          },
+          {
+            "topic": "Docosahexaenoic acid"
+          },
+          {
+            "topic": "Eicosapentaenoic acid"
+          },
+          {
+            "topic": "Ethnic chinese"
+          }
+        ]
+      },
+      "info": {
+        "title": "Author",
+        "version": "0.0.3"
+      }
+    },
+    "attachments": null
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "info" : {
+    "title" : "Substance",
+    "version" : "0.0.1",
+    "baseUri" : "http://example.org/",
+    "description": "Substance"
+  },
+  "definitions" : {
+    "Substance" : {
+      "required" : [ ],
+      "pii" : [ ],
+      "elementRangeIndex" : [ ],
+      "rangeIndex" : [ ],
+      "wordLexicon" : [ ],
+      "properties" : { }
+    }
+  }
+}

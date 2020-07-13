@@ -1,0 +1,18 @@
+{
+  "lang" : "zxx",
+  "name" : "rewriteNoMatchCollection",
+  "description" : null,
+  "type" : "CUSTOM",
+  "version" : 1,
+  "options" : {
+    "collections" : [ "rewriteNoMatchCollection" ],
+    "sourceDatabase" : "data-hub-FINAL",
+    "outputFormat" : "json",
+    "targetDatabase" : "data-hub-FINAL"
+  },
+  "customHook" : { },
+  "modulePath" : "/custom-modules/custom/rewriteNoMatchCollection/main.sjs",
+  "retryLimit" : 0,
+  "batchSize" : 100,
+  "threadCount" : 4
+}

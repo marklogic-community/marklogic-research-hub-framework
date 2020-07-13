@@ -1,0 +1,14 @@
+.gradle
+.idea
+.tmp
+gradle-local.properties
+build
+.DS_Store
+/.metadata/
+uml2ES/
+*.rpm
+*.war
+AllPublicXML.zip
+/.vscode/settings.json
+/eval/*.sjs
+data/pharma-research/

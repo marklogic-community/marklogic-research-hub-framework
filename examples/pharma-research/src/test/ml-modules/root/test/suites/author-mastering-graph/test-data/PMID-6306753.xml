@@ -1,0 +1,3096 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<envelope
+  xmlns="http://marklogic.com/entity-services">
+  <headers>
+    <systemDateTimeCreated
+      xmlns="">2020-05-13T20:27:53.557477Z
+    </systemDateTimeCreated>
+    <journalPreferredName
+      xmlns="">Journal of Clinical Medicine
+    </journalPreferredName>
+    <topics
+      xmlns="">
+      <topicPreferredName>varicose veins</topicPreferredName>
+      <topicPreferredName>HAS2</topicPreferredName>
+      <topicPreferredName>RNA seq</topicPreferredName>
+    </topics>
+    <lastModifiedDate
+      xmlns="">2018-12-12
+    </lastModifiedDate>
+    <authors
+      xmlns="">
+      <authorPreferredName>Chia-Shan Hsieh</authorPreferredName>
+      <authorPreferredName>Chia-Ti Tsai</authorPreferredName>
+      <authorPreferredName>Yau-Hung Chen</authorPreferredName>
+      <authorPreferredName>Sheng-Nan Chang</authorPreferredName>
+      <authorPreferredName>Juey-Jen Hwang</authorPreferredName>
+      <authorPreferredName>Eric Y. Chuang</authorPreferredName>
+      <authorPreferredName>I-Hui Wu</authorPreferredName>
+    </authors>
+    <institutions
+      xmlns="">
+      <institutionPreferredName>Department of Life Science, Genome and Systems Biology Degree Program, National Taiwan University, Taipei 10617, Taiwan; </institutionPreferredName>
+      <institutionPreferredName>Bioinformatics and Biostatistics Core, Center of Genomic Medicine, National Taiwan University, Taipei 10055, Taiwan</institutionPreferredName>
+      <institutionPreferredName> (J.-J.H.)</institutionPreferredName>
+      <institutionPreferredName>Graduate Institute of Clinical Medicine, College of Medicine, National Taiwan University, Taipei 10051, Taiwan</institutionPreferredName>
+      <institutionPreferredName>Department of Chemistry, Tamkang University, Taipei 25137, Taiwan; </institutionPreferredName>
+      <institutionPreferredName>Department of Internal Medicine, National Taiwan University Hospital Yun-Lin Branch, Yun-Lin 64041, Taiwan; </institutionPreferredName>
+      <institutionPreferredName>Department of Surgery, National Taiwan University Hospital, Taipei, 10002, Taiwan</institutionPreferredName>
+    </institutions>
+  </headers>
+  <triples>
+    <sem:triple
+      xmlns:sem="http://marklogic.com/semantics">
+      <sem:subject>/PubMed/PMID-6306753.xml</sem:subject>
+      <sem:predicate>PRH:preferredName</sem:predicate>
+      <sem:object datatype="http://www.w3.org/2001/XMLSchema#string">Global Expression Profiling Identifies a Novel Hyaluronan Synthases 2 Gene in the Pathogenesis of Lower Extremity Varicose Veins</sem:object>
+    </sem:triple>
+    <sem:triple
+      xmlns:sem="http://marklogic.com/semantics">
+      <sem:subject>/PubMed/PMID-6306753.xml</sem:subject>
+      <sem:predicate>PRH:entityType</sem:predicate>
+      <sem:object datatype="http://www.w3.org/2001/XMLSchema#string">publication</sem:object>
+    </sem:triple>
+    <sem:triple
+      xmlns:sem="http://marklogic.com/semantics">
+      <sem:subject>/PubMed/PMID-6306753.xml</sem:subject>
+      <sem:predicate>PRH:isRelated</sem:predicate>
+      <sem:object>/gene/619537.json</sem:object>
+    </sem:triple>
+    <sem:triple
+      xmlns:sem="http://marklogic.com/semantics">
+      <sem:subject>/PubMed/PMID-6306753.xml</sem:subject>
+      <sem:predicate>PRH:isRelated</sem:predicate>
+      <sem:object>/gene/3037.json</sem:object>
+    </sem:triple>
+    <sem:triple
+      xmlns:sem="http://marklogic.com/semantics">
+      <sem:subject>/PubMed/PMID-6306753.xml</sem:subject>
+      <sem:predicate>PRH:isRelated</sem:predicate>
+      <sem:object>/gene/2219.json</sem:object>
+    </sem:triple>
+    <sem:triple
+      xmlns:sem="http://marklogic.com/semantics">
+      <sem:subject>/PubMed/PMID-6306753.xml</sem:subject>
+      <sem:predicate>PRH:isRelated</sem:predicate>
+      <sem:object>/gene/762.json</sem:object>
+    </sem:triple>
+    <sem:triple
+      xmlns:sem="http://marklogic.com/semantics">
+      <sem:subject>/PubMed/PMID-6306753.xml</sem:subject>
+      <sem:predicate>PRH:isRelated</sem:predicate>
+      <sem:object>/gene/25818.json</sem:object>
+    </sem:triple>
+    <sem:triple
+      xmlns:sem="http://marklogic.com/semantics">
+      <sem:subject>/PubMed/PMID-6306753.xml</sem:subject>
+      <sem:predicate>PRH:isRelated</sem:predicate>
+      <sem:object>/Protein/uniprot_sprot.xml-0-399586.json</sem:object>
+    </sem:triple>
+    <sem:triple
+      xmlns:sem="http://marklogic.com/semantics">
+      <sem:subject>/PubMed/PMID-6306753.xml</sem:subject>
+      <sem:predicate>PRH:isAbout</sem:predicate>
+      <sem:object>/topic/varicoseVeins.json</sem:object>
+    </sem:triple>
+    <sem:triple
+      xmlns:sem="http://marklogic.com/semantics">
+      <sem:subject>/topic/varicoseVeins.json</sem:subject>
+      <sem:predicate>PRH:preferredName</sem:predicate>
+      <sem:object datatype="http://www.w3.org/2001/XMLSchema#string">varicose veins</sem:object>
+    </sem:triple>
+    <sem:triple
+      xmlns:sem="http://marklogic.com/semantics">
+      <sem:subject>/topic/varicoseVeins.json</sem:subject>
+      <sem:predicate>PRH:entityType</sem:predicate>
+      <sem:object datatype="http://www.w3.org/2001/XMLSchema#string">topic</sem:object>
+    </sem:triple>
+    <sem:triple
+      xmlns:sem="http://marklogic.com/semantics">
+      <sem:subject>/PubMed/PMID-6306753.xml</sem:subject>
+      <sem:predicate>PRH:isAbout</sem:predicate>
+      <sem:object>/topic/hAS2.json</sem:object>
+    </sem:triple>
+    <sem:triple
+      xmlns:sem="http://marklogic.com/semantics">
+      <sem:subject>/topic/hAS2.json</sem:subject>
+      <sem:predicate>PRH:preferredName</sem:predicate>
+      <sem:object datatype="http://www.w3.org/2001/XMLSchema#string">HAS2</sem:object>
+    </sem:triple>
+    <sem:triple
+      xmlns:sem="http://marklogic.com/semantics">
+      <sem:subject>/topic/hAS2.json</sem:subject>
+      <sem:predicate>PRH:entityType</sem:predicate>
+      <sem:object datatype="http://www.w3.org/2001/XMLSchema#string">topic</sem:object>
+    </sem:triple>
+    <sem:triple
+      xmlns:sem="http://marklogic.com/semantics">
+      <sem:subject>/PubMed/PMID-6306753.xml</sem:subject>
+      <sem:predicate>PRH:isAbout</sem:predicate>
+      <sem:object>/topic/rNASeq.json</sem:object>
+    </sem:triple>
+    <sem:triple
+      xmlns:sem="http://marklogic.com/semantics">
+      <sem:subject>/topic/rNASeq.json</sem:subject>
+      <sem:predicate>PRH:preferredName</sem:predicate>
+      <sem:object datatype="http://www.w3.org/2001/XMLSchema#string">RNA seq</sem:object>
+    </sem:triple>
+    <sem:triple
+      xmlns:sem="http://marklogic.com/semantics">
+      <sem:subject>/topic/rNASeq.json</sem:subject>
+      <sem:predicate>PRH:entityType</sem:predicate>
+      <sem:object datatype="http://www.w3.org/2001/XMLSchema#string">topic</sem:object>
+    </sem:triple>
+  </triples>
+  <instance>
+    <info>
+      <title>publication</title>
+      <version>0.0.1</version>
+    </info>
+    <publication>
+      <article
+        xmlns="">
+        <articleTitle>Global Expression Profiling Identifies a Novel Hyaluronan Synthases 2 Gene in the Pathogenesis of Lower Extremity Varicose Veins</articleTitle>
+        <pudMedId>30544995</pudMedId>
+        <pudMedCentralKey>6306753</pudMedCentralKey>
+        <authors>
+          <author>
+            <preferredName>Chia-Shan Hsieh</preferredName>
+            <institutions>
+              <institution>Department of Life Science, Genome and Systems Biology Degree Program, National Taiwan University, Taipei 10617, Taiwan; </institution>
+              <institution>Bioinformatics and Biostatistics Core, Center of Genomic Medicine, National Taiwan University, Taipei 10055, Taiwan</institution>
+            </institutions>
+          </author>
+          <author>
+            <preferredName>Chia-Ti Tsai</preferredName>
+            <institutions>
+              <institution> (J.-J.H.)</institution>
+              <institution>Graduate Institute of Clinical Medicine, College of Medicine, National Taiwan University, Taipei 10051, Taiwan</institution>
+            </institutions>
+          </author>
+          <author>
+            <preferredName>Yau-Hung Chen</preferredName>
+            <institutions>
+              <institution>Department of Chemistry, Tamkang University, Taipei 25137, Taiwan; </institution>
+            </institutions>
+          </author>
+          <author>
+            <preferredName>Sheng-Nan Chang</preferredName>
+            <institutions>
+              <institution>Department of Internal Medicine, National Taiwan University Hospital Yun-Lin Branch, Yun-Lin 64041, Taiwan; </institution>
+            </institutions>
+          </author>
+          <author>
+            <preferredName>Juey-Jen Hwang</preferredName>
+            <institutions>
+              <institution> (J.-J.H.)</institution>
+              <institution>Department of Internal Medicine, National Taiwan University Hospital Yun-Lin Branch, Yun-Lin 64041, Taiwan; </institution>
+            </institutions>
+          </author>
+          <author>
+            <preferredName>Eric Y. Chuang</preferredName>
+            <institutions>
+              <institution>Department of Life Science, Genome and Systems Biology Degree Program, National Taiwan University, Taipei 10617, Taiwan; </institution>
+              <institution>Bioinformatics and Biostatistics Core, Center of Genomic Medicine, National Taiwan University, Taipei 10055, Taiwan</institution>
+            </institutions>
+          </author>
+          <author>
+            <preferredName>I-Hui Wu</preferredName>
+            <institutions>
+              <institution>Graduate Institute of Clinical Medicine, College of Medicine, National Taiwan University, Taipei 10051, Taiwan</institution>
+              <institution>Department of Surgery, National Taiwan University Hospital, Taipei, 10002, Taiwan</institution>
+            </institutions>
+          </author>
+        </authors>
+        <journal>
+          <title>Journal of Clinical Medicine</title>
+          <volume/>
+          <pub-date pub-type="epub">
+            <day>11</day>
+            <month>12</month>
+            <year>2018</year>
+          </pub-date>
+        </journal>
+        <abstracts>
+          <abstract>
+            <abstractTitle>Main</abstractTitle>
+            <abstractMessage>Lower extremities varicose veins (VV) are among the most easily recognized venous abnormalities. The genetic mechanism of VV is largely unknown. In this study, we sought to explore the global expressional change of VV and identify novel genes that might play a role in VV. We used next-generation ribonucleic acid (RNA) sequence (RNA seq) technology to study the global messenger RNA expressional change in the venous samples of five diseased and five control patients. We identified several differentially expressed genes, which were further confirmed by conventional reverse transcription polymerase chain reaction (RT-PCR). Using these significant genes we performed in silico pathway analyses and found distinct transcriptional networks, such as angiogenesis, cell adhesion, vascular injury, and carbohydrate metabolisms that might be involved in the mechanism of VV. Among these significant genes, we also found hyaluronan synthases 2 gene (HAS2) played a pivotal role and governed all these pathways. We further confirmed that HAS2 expression was decreased in the venous samples of patients with VV. Finally, we used a zebrafish model with fluorescence emitting vasculature and red blood cells to see the morphological changes of the venous system and blood flow. We found that HAS2 knockdown in zebrafish resulted in dilated venous structural with static venous flow. HAS2 may modulate the transcriptional networks of angiogenesis, cell adhesion, vascular injury, and carbohydrate metabolisms in venous tissues and downregulation of HAS2 may underlie the mechanism of VV.</abstractMessage>
+          </abstract>
+        </abstracts>
+        <topics>
+          <topic>varicose veins</topic>
+          <topic>HAS2</topic>
+          <topic>RNA seq</topic>
+        </topics>
+        <citations>
+          <NumberOfCitations>41</NumberOfCitations>
+          <citation>
+            <pudMedId>22030459</pudMedId>
+            <articleTitle>Pathogenesis of varicose veins</articleTitle>
+          </citation>
+          <citation>
+            <pudMedId>24497937</pudMedId>
+            <articleTitle>Aberrantly expressed lncRNAs in primary varicose great saphenous veins</articleTitle>
+          </citation>
+          <citation>
+            <pudMedId>18068562</pudMedId>
+            <articleTitle>Primary chronic venous disorders</articleTitle>
+          </citation>
+          <citation>
+            <pudMedId>11331844</pudMedId>
+            <articleTitle>Trends in the incidence of venous stasis syndrome and venous ulcer: A 25-year population-based study</articleTitle>
+          </citation>
+          <citation>
+            <pudMedId>3395496</pudMedId>
+            <articleTitle>The epidemiology of varicose veins: The Framingham Study</articleTitle>
+          </citation>
+          <citation>
+            <pudMedId>16885552</pudMedId>
+            <articleTitle>Chronic venous disease</articleTitle>
+          </citation>
+          <citation>
+            <pudMedId>15723761</pudMedId>
+            <articleTitle>The epidemiology of chronic venous insufficiency and varicose veins</articleTitle>
+          </citation>
+          <citation>
+            <pudMedId>22308533</pudMedId>
+            <articleTitle>Evidence for a genetic role in varicose veins and chronic venous insufficiency</articleTitle>
+          </citation>
+          <citation>
+            <pudMedId>26960630</pudMedId>
+            <articleTitle>Clinico-histopathological study of varicose vein and role of matrix metalloproteinases-1, matrix metalloproteinases-9 and tissue inhibitor of matrix metalloproteinase-1 in varicose vein formation</articleTitle>
+          </citation>
+          <citation>
+            <pudMedId>28413031</pudMedId>
+            <articleTitle>Matrix Metalloproteinases in Remodeling of Lower Extremity Veins and Chronic Venous Disease</articleTitle>
+          </citation>
+          <citation>
+            <pudMedId>28818228</pudMedId>
+            <articleTitle>Phenotypic and functional transformation in smooth muscle cells derived from varicose veins</articleTitle>
+          </citation>
+          <citation>
+            <pudMedId>21195432</pudMedId>
+            <articleTitle>Polymorphisms in MMP-9 and TIMP-2 in Chinese patients with varicose veins</articleTitle>
+          </citation>
+          <citation>
+            <pudMedId>28411716</pudMedId>
+            <articleTitle>Pathophysiology of varicose veins</articleTitle>
+          </citation>
+          <citation>
+            <articleTitle>Pathophysiology of chronic venous disease</articleTitle>
+          </citation>
+          <citation>
+            <pudMedId>25006132</pudMedId>
+            <articleTitle>Genetic polymorphisms of vein wall remodeling in chronic venous disease: A narrative and systematic review</articleTitle>
+          </citation>
+          <citation>
+            <pudMedId>15744037</pudMedId>
+            <articleTitle>Linkage to the FOXC2 region of chromosome 16 for varicose veins in otherwise healthy, unselected sibling pairs</articleTitle>
+          </citation>
+          <citation>
+            <pudMedId>17372167</pudMedId>
+            <articleTitle>Mutations in FOXC2 are strongly associated with primary valve failure in veins of the lower limb</articleTitle>
+          </citation>
+          <citation>
+            <pudMedId>4435791</pudMedId>
+            <articleTitle>A contribution to the problem of the inheritance of primary varicose veins</articleTitle>
+          </citation>
+          <citation>
+            <pudMedId>5365895</pudMedId>
+            <articleTitle>Genetics of varicose veins of the lower extremities</articleTitle>
+          </citation>
+          <citation>
+            <pudMedId>12114478</pudMedId>
+            <articleTitle>Analysis of the phenotypic abnormalities in lymphoedema-distichiasis syndrome in 74 patients with FOXC2 mutations or linkage to 16q24</articleTitle>
+          </citation>
+          <citation>
+            <pudMedId>23849651</pudMedId>
+            <articleTitle>Analysis of the association between an insertion/deletion polymorphism within the 3’ untranslated region of COL1A2 and chronic venous insufficiency</articleTitle>
+          </citation>
+          <citation>
+            <pudMedId>21478096</pudMedId>
+            <articleTitle>Influence of thrombophlebitis on TGF-beta1 and its signaling pathway in the vein wall</articleTitle>
+          </citation>
+          <citation>
+            <pudMedId>20346437</pudMedId>
+            <articleTitle>Integrating pathway analysis and genetics of gene expression for genome-wide association studies</articleTitle>
+          </citation>
+          <citation>
+            <pudMedId>21378990</pudMedId>
+            <articleTitle>Large-scale association analysis identifies 13 new susceptibility loci for coronary artery disease</articleTitle>
+          </citation>
+          <citation>
+            <pudMedId>20206874</pudMedId>
+            <articleTitle>Genome-wide association studies in atherothrombosis</articleTitle>
+          </citation>
+          <citation>
+            <pudMedId>19369657</pudMedId>
+            <articleTitle>Genomewide association studies and human disease</articleTitle>
+          </citation>
+          <citation>
+            <pudMedId>27932624</pudMedId>
+            <articleTitle>Allele rs2010963 C of the VEGFA gene is associated with the decreased risk of primary varicose veins in ethnic Russians</articleTitle>
+          </citation>
+          <citation>
+            <pudMedId>17826252</pudMedId>
+            <articleTitle>Recommended reporting standards for endovenous ablation for the treatment of venous insufficiency: Joint statement of The American Venous Forum and The Society of Interventional Radiology</articleTitle>
+          </citation>
+          <citation>
+            <pudMedId>25251616</pudMedId>
+            <articleTitle>A Randomized Trial Comparing Treatments for Varicose Veins</articleTitle>
+          </citation>
+          <citation>
+            <pudMedId>25326216</pudMedId>
+            <articleTitle>Radiofrequency ablation of the great saphenous vein, comparing one versus two treatment cycles for the proximal vein segment</articleTitle>
+          </citation>
+          <citation>
+            <pudMedId>24609619</pudMedId>
+            <articleTitle>Endovenous heat-induced thrombosis after ablation with 1470 nm laser: Incidence, progression, and risk factors</articleTitle>
+          </citation>
+          <citation>
+            <pudMedId>26831368</pudMedId>
+            <articleTitle>Genome-wide screening identifies a KCNIP1 copy number variant as a genetic predictor for atrial fibrillation</articleTitle>
+          </citation>
+          <citation>
+            <pudMedId>19497933</pudMedId>
+            <articleTitle>SOAP2: An improved ultrafast tool for short read alignment</articleTitle>
+          </citation>
+          <citation>
+            <pudMedId>18516045</pudMedId>
+            <articleTitle>Mapping and quantifying mammalian transcriptomes by RNA-Seq</articleTitle>
+          </citation>
+          <citation>
+            <pudMedId>24336805</pudMedId>
+            <articleTitle>Causal analysis approaches in Ingenuity Pathway Analysis</articleTitle>
+          </citation>
+          <citation>
+            <pudMedId>12167406</pudMedId>
+            <articleTitle>In vivo imaging of embryonic vascular development using transgenic zebrafish</articleTitle>
+          </citation>
+          <citation>
+            <pudMedId>19442608</pudMedId>
+            <articleTitle>Novel and unexpected functions of zebrafish CCAAT box binding transcription factor (NF-Y) B subunit during cartilages development</articleTitle>
+          </citation>
+          <citation>
+            <pudMedId>8589427</pudMedId>
+            <articleTitle>Stages of embryonic development of the zebrafish</articleTitle>
+          </citation>
+          <citation>
+            <pudMedId>17846036</pudMedId>
+            <articleTitle>Clustal W and Clustal X version 2.0</articleTitle>
+          </citation>
+          <citation>
+            <pudMedId>26525671</pudMedId>
+            <articleTitle>Venous-derived angioblasts generate organ-specific vessels during zebrafish embryonic development</articleTitle>
+          </citation>
+          <citation>
+            <pudMedId>10930438</pudMedId>
+            <articleTitle>Disruption of hyaluronan synthase-2 abrogates normal cardiac morphogenesis and hyaluronan-mediated transformation of epithelium to mesenchyme</articleTitle>
+          </citation>
+        </citations>
+        <mle:enrichment
+          xmlns:mle="http://marklogic.com/phr/lib/enrichment">
+          <mle:meta>
+            <mle:entities>
+              <mle:Genes>
+                <mle:Gene preferredName="varicose veins" uri="/gene/619537.json" confidence="0.6112021"/>
+                <mle:Gene preferredName="hyaluronan synthase 2" uri="/gene/3037.json" confidence="0.4835125"/>
+                <mle:Gene preferredName="ficolin 1" uri="/gene/2219.json" confidence="0.4386172"/>
+                <mle:Gene preferredName="carbonic anhydrase 4" uri="/gene/762.json" confidence="0.4069364"/>
+                <mle:Gene preferredName="kallikrein related peptidase 5" uri="/gene/25818.json" confidence="0.3970425"/>
+              </mle:Genes>
+              <mle:Proteins>
+                <mle:Protein preferredName="Ficolin-1" uri="/Protein/uniprot_sprot.xml-0-399586.json" confidence="0.4522846"/>
+              </mle:Proteins>
+              <mle:Drugs/>
+            </mle:entities>
+          </mle:meta>
+        </mle:enrichment>
+      </article>
+    </publication>
+  </instance>
+  <attachments>
+    <article article-type="research-article"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      xmlns:mml="http://www.w3.org/1998/Math/MathML"
+      xmlns="">
+      <?properties open_access?>
+      <front>
+        <journal-meta>
+          <journal-id journal-id-type="nlm-ta">J Clin Med</journal-id>
+          <journal-id journal-id-type="iso-abbrev">J Clin Med</journal-id>
+          <journal-id journal-id-type="publisher-id">jcm</journal-id>
+          <journal-title-group>
+            <journal-title>Journal of Clinical Medicine</journal-title>
+          </journal-title-group>
+          <issn pub-type="epub">2077-0383</issn>
+          <publisher>
+            <publisher-name>MDPI</publisher-name>
+          </publisher>
+        </journal-meta>
+        <article-meta>
+          <article-id pub-id-type="pmid">30544995</article-id>
+          <article-id pub-id-type="pmc">6306753</article-id>
+          <article-id pub-id-type="doi">10.3390/jcm7120537</article-id>
+          <article-id pub-id-type="publisher-id">jcm-07-00537</article-id>
+          <article-categories>
+            <subj-group subj-group-type="heading">
+              <subject>Article</subject>
+            </subj-group>
+          </article-categories>
+          <title-group>
+            <article-title>Global Expression Profiling Identifies a Novel Hyaluronan Synthases 2 Gene in the Pathogenesis of Lower Extremity Varicose Veins</article-title>
+          </title-group>
+          <contrib-group>
+            <contrib contrib-type="author">
+              <name>
+                <surname>Hsieh</surname>
+                <given-names>Chia-Shan</given-names>
+              </name>
+              <xref ref-type="aff" rid="af1-jcm-07-00537">1</xref>
+              <xref ref-type="aff" rid="af2-jcm-07-00537">2</xref>
+            </contrib>
+            <contrib contrib-type="author">
+              <name>
+                <surname>Tsai</surname>
+                <given-names>Chia-Ti</given-names>
+              </name>
+              <xref ref-type="aff" rid="af3-jcm-07-00537">3</xref>
+              <xref ref-type="aff" rid="af4-jcm-07-00537">4</xref>
+            </contrib>
+            <contrib contrib-type="author">
+              <contrib-id contrib-id-type="orcid" authenticated="true">https://orcid.org/0000-0003-4436-7464</contrib-id>
+              <name>
+                <surname>Chen</surname>
+                <given-names>Yau-Hung</given-names>
+              </name>
+              <xref ref-type="aff" rid="af5-jcm-07-00537">5</xref>
+            </contrib>
+            <contrib contrib-type="author">
+              <name>
+                <surname>Chang</surname>
+                <given-names>Sheng-Nan</given-names>
+              </name>
+              <xref ref-type="aff" rid="af6-jcm-07-00537">6</xref>
+            </contrib>
+            <contrib contrib-type="author">
+              <name>
+                <surname>Hwang</surname>
+                <given-names>Juey-Jen</given-names>
+              </name>
+              <xref ref-type="aff" rid="af3-jcm-07-00537">3</xref>
+              <xref ref-type="aff" rid="af6-jcm-07-00537">6</xref>
+            </contrib>
+            <contrib contrib-type="author">
+              <name>
+                <surname>Chuang</surname>
+                <given-names>Eric Y.</given-names>
+              </name>
+              <xref ref-type="aff" rid="af1-jcm-07-00537">1</xref>
+              <xref ref-type="aff" rid="af2-jcm-07-00537">2</xref>
+              <xref rid="c1-jcm-07-00537" ref-type="corresp">*</xref>
+            </contrib>
+            <contrib contrib-type="author">
+              <contrib-id contrib-id-type="orcid" authenticated="true">https://orcid.org/0000-0003-4367-9108</contrib-id>
+              <name>
+                <surname>Wu</surname>
+                <given-names>I-Hui</given-names>
+              </name>
+              <xref ref-type="aff" rid="af4-jcm-07-00537">4</xref>
+              <xref ref-type="aff" rid="af7-jcm-07-00537">7</xref>
+              <xref rid="c1-jcm-07-00537" ref-type="corresp">*</xref>
+            </contrib>
+          </contrib-group>
+          <aff id="af1-jcm-07-00537">
+            <label>1</label>Department of Life Science, Genome and Systems Biology Degree Program, National Taiwan University, Taipei 10617, Taiwan;
+            <email>cometrise@gmail.com</email>
+          </aff>
+          <aff id="af2-jcm-07-00537">
+            <label>2</label>Bioinformatics and Biostatistics Core, Center of Genomic Medicine, National Taiwan University, Taipei 10055, Taiwan
+          </aff>
+          <aff id="af3-jcm-07-00537">
+            <label>3</label>Division of Cardiology, Department of Internal Medicine, National Taiwan University College of Medicine and Hospital, Taipei 10002, Taiwan;
+            <email>cttsai1999@gmail.com</email> (C.-T.T.);
+            <email>jueyhwang@ntu.edu.tw</email> (J.-J.H.)
+          </aff>
+          <aff id="af4-jcm-07-00537">
+            <label>4</label>Graduate Institute of Clinical Medicine, College of Medicine, National Taiwan University, Taipei 10051, Taiwan
+          </aff>
+          <aff id="af5-jcm-07-00537">
+            <label>5</label>Department of Chemistry, Tamkang University, Taipei 25137, Taiwan;
+            <email>yauhung@mail.tku.edu.tw</email>
+          </aff>
+          <aff id="af6-jcm-07-00537">
+            <label>6</label>Department of Internal Medicine, National Taiwan University Hospital Yun-Lin Branch, Yun-Lin 64041, Taiwan;
+            <email>p95421008@ntu.edu.tw</email>
+          </aff>
+          <aff id="af7-jcm-07-00537">
+            <label>7</label>Department of Surgery, National Taiwan University Hospital, Taipei, 10002, Taiwan
+          </aff>
+          <author-notes>
+            <corresp id="c1-jcm-07-00537">
+              <label>*</label>Correspondence:
+              <email>chuangey@ntu.edu.tw</email> (E.Y.C.);
+              <email>aaronihuiwu@gmail.com</email> (I-H.W.); Tel.: +886-2-3366-3660 (E.Y.C.); +886-2-23123456 (ext. 65735) (I-H.W.)
+            </corresp>
+          </author-notes>
+          <pub-date pub-type="epub">
+            <day>11</day>
+            <month>12</month>
+            <year>2018</year>
+          </pub-date>
+          <pub-date pub-type="collection">
+            <month>12</month>
+            <year>2018</year>
+          </pub-date>
+          <volume>7</volume>
+          <issue>12</issue>
+          <elocation-id>537</elocation-id>
+          <history>
+            <date date-type="received">
+              <day>24</day>
+              <month>10</month>
+              <year>2018</year>
+            </date>
+            <date date-type="accepted">
+              <day>07</day>
+              <month>12</month>
+              <year>2018</year>
+            </date>
+          </history>
+          <permissions>
+            <copyright-statement>© 2018 by the authors.</copyright-statement>
+            <copyright-year>2018</copyright-year>
+            <license license-type="open-access">
+              <license-p>Licensee MDPI, Basel, Switzerland. This article is an open access article distributed under the terms and conditions of the Creative Commons Attribution (CC BY) license (
+                <ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by/4.0/">http://creativecommons.org/licenses/by/4.0/</ext-link>).
+              </license-p>
+            </license>
+          </permissions>
+          <abstract>
+            <p>Lower extremities varicose veins (VV) are among the most easily recognized venous abnormalities. The genetic mechanism of VV is largely unknown. In this study, we sought to explore the global expressional change of VV and identify novel genes that might play a role in VV. We used next-generation ribonucleic acid (RNA) sequence (RNA seq) technology to study the global messenger RNA expressional change in the venous samples of five diseased and five control patients. We identified several differentially expressed genes, which were further confirmed by conventional reverse transcription polymerase chain reaction (RT-PCR). Using these significant genes we performed in silico pathway analyses and found distinct transcriptional networks, such as angiogenesis, cell adhesion, vascular injury, and carbohydrate metabolisms that might be involved in the mechanism of VV. Among these significant genes, we also found hyaluronan synthases 2 gene (
+              <italic>HAS2</italic>) played a pivotal role and governed all these pathways. We further confirmed that
+              <italic>HAS2</italic> expression was decreased in the venous samples of patients with VV. Finally, we used a zebrafish model with fluorescence emitting vasculature and red blood cells to see the morphological changes of the venous system and blood flow. We found that
+              <italic>HAS2</italic> knockdown in zebrafish resulted in dilated venous structural with static venous flow.
+              <italic>HAS2</italic> may modulate the transcriptional networks of angiogenesis, cell adhesion, vascular injury, and carbohydrate metabolisms in venous tissues and downregulation of
+              <italic>HAS2</italic> may underlie the mechanism of VV.
+            </p>
+          </abstract>
+          <kwd-group>
+            <kwd>varicose veins</kwd>
+            <kwd>
+              <italic>HAS2</italic>
+            </kwd>
+            <kwd>RNA seq</kwd>
+          </kwd-group>
+        </article-meta>
+      </front>
+      <body>
+        <sec id="sec1-jcm-07-00537">
+          <title>1. Introduction</title>
+          <p>Varicose veins (VVs) of lower extremities are among the most easily recognized vascular abnormalities with superficial venous tortuosity and enlargement [
+            <xref rid="B1-jcm-07-00537" ref-type="bibr">1</xref>]. Clinical manifestations can vary from leg edema to chronic, disabling venous ulceration and it affects around 25% of the adult population [
+            <xref rid="B2-jcm-07-00537" ref-type="bibr">2</xref>]. Age, female sex, family history, pregnancy, obesity, and prolonged standing have been shown to be predisposing factors in several epidemiological studies [
+            <xref rid="B3-jcm-07-00537" ref-type="bibr">3</xref>,
+            <xref rid="B4-jcm-07-00537" ref-type="bibr">4</xref>,
+            <xref rid="B5-jcm-07-00537" ref-type="bibr">5</xref>,
+            <xref rid="B6-jcm-07-00537" ref-type="bibr">6</xref>,
+            <xref rid="B7-jcm-07-00537" ref-type="bibr">7</xref>,
+            <xref rid="B8-jcm-07-00537" ref-type="bibr">8</xref>]. The complex pathophysiology of greater saphenous vein (GSV) valvular reflux and altered extracellular matrix proteins with increased proteolytic enzyme have been addressed as potential mechanisms of VV [
+            <xref rid="B9-jcm-07-00537" ref-type="bibr">9</xref>,
+            <xref rid="B10-jcm-07-00537" ref-type="bibr">10</xref>,
+            <xref rid="B11-jcm-07-00537" ref-type="bibr">11</xref>]. Recently, it has been shown that matrix metalloproteinases may play an important role in the remodeling of venous extracellular matrix and mechanism of VV) [
+            <xref rid="B8-jcm-07-00537" ref-type="bibr">8</xref>,
+            <xref rid="B10-jcm-07-00537" ref-type="bibr">10</xref>,
+            <xref rid="B12-jcm-07-00537" ref-type="bibr">12</xref>,
+            <xref rid="B13-jcm-07-00537" ref-type="bibr">13</xref>,
+            <xref rid="B14-jcm-07-00537" ref-type="bibr">14</xref>,
+            <xref rid="B15-jcm-07-00537" ref-type="bibr">15</xref>]. However, these processes account for only some of the tangled mechanisms, and many more remain to be identified.
+          </p>
+          <p>Genetic study is a powerful tool to identify the novel mechanism of human diseases. Several candidate genes have been identified as the possible susceptibility genes for VV, such as
+            <italic>COL1A2, FOXC2, NOTCH3, TGF-β,</italic> thrombomodulin, and
+            <italic>VEGF1</italic> [
+            <xref rid="B16-jcm-07-00537" ref-type="bibr">16</xref>,
+            <xref rid="B17-jcm-07-00537" ref-type="bibr">17</xref>,
+            <xref rid="B18-jcm-07-00537" ref-type="bibr">18</xref>,
+            <xref rid="B19-jcm-07-00537" ref-type="bibr">19</xref>,
+            <xref rid="B20-jcm-07-00537" ref-type="bibr">20</xref>,
+            <xref rid="B21-jcm-07-00537" ref-type="bibr">21</xref>,
+            <xref rid="B22-jcm-07-00537" ref-type="bibr">22</xref>]. However, whether these genes are true susceptibility genes for VV remains questioned. The study recently provides novel insight into the physiology of lncRNAs and the pathogenesis of varicose veins, but still need to do more for further investigation [
+            <xref rid="B2-jcm-07-00537" ref-type="bibr">2</xref>]. Genome-wide association studies (GWASs), a non-candidate-driven approach, investigate the entire genome and can identify unknown or novel disease-associated single nucleotide polymorphisms (SNPs) or genes. [
+            <xref rid="B23-jcm-07-00537" ref-type="bibr">23</xref>,
+            <xref rid="B24-jcm-07-00537" ref-type="bibr">24</xref>,
+            <xref rid="B25-jcm-07-00537" ref-type="bibr">25</xref>,
+            <xref rid="B26-jcm-07-00537" ref-type="bibr">26</xref>]. Recently, GWASs have identified several novel genes that may be involved in the mechanism of venous pathogenesis [
+            <xref rid="B13-jcm-07-00537" ref-type="bibr">13</xref>,
+            <xref rid="B27-jcm-07-00537" ref-type="bibr">27</xref>].
+          </p>
+          <p>However, it is difficult to correlate the identified significant SNPs by GWAS to the mechanism of disease. Therefore, instead of traditional forward genetic approach, in the present study we used a reverse genetic approach. To this end, we first systematically investigated and compared the global expressional changes in the venous samples of diseased and control patients using the next-generation ribonucleic acid (RNA) sequence (RNA seq) technology. We identified several differentially expressed genes that might be involved in the molecular mechanism of VV. We then used a novel zebrafish model to see the phenotypic changes when these genes were perturbed. </p>
+        </sec>
+        <sec id="sec2-jcm-07-00537">
+          <title>2. Methods</title>
+          <sec id="sec2dot1-jcm-07-00537">
+            <title>2.1. Patient Selection</title>
+            <p>Five patients with VV were consecutively enrolled. All patients were diagnosed and assessed by a vascular surgeon and underwent duplex ultrasonographic scanning to assess suitability for treatment and entry into the study. Inclusion criteria were an age of 18 years or older, the presence of unilateral or bilateral primary symptomatic varicose veins at CEAP classification grade 3 or higher [
+              <xref rid="B28-jcm-07-00537" ref-type="bibr">28</xref>] and reflux of GSV of more than 0.5 s on duplex ultrasonography after calf compression [
+              <xref rid="B29-jcm-07-00537" ref-type="bibr">29</xref>]. Patients with current deep-vein thrombosis, acute superficial vein thrombosis, bleeding diathesis, pregnancy, and contraindications to the use of general or regional anesthesia were excluded. This study was approved by the institutional review board of the National Taiwan University Hospital and informed consent was obtained from participating subjects.
+            </p>
+          </sec>
+          <sec id="sec2dot2-jcm-07-00537">
+            <title>2.2. Surgical Removal of Venous Samples</title>
+            <p>GSV ablation using the ClosureFAST (VNUS Medical Technologies Inc, San Jose, CA, USA) with concomitant stab phlebectomy were done. All the procedures were performed in a two-day inpatient setting. The GSV was cannulated at the most distal point of venous reflux, and the catheter tip was positioned 2 cm distal to the saphenofemoral junction. The GSV was ablated with the concomitant phlebectomy [
+              <xref rid="B30-jcm-07-00537" ref-type="bibr">30</xref>,
+              <xref rid="B31-jcm-07-00537" ref-type="bibr">31</xref>]. The specimen collected from the avulsion phlebectomy were used for analysis.
+            </p>
+            <p>Five control patients were consecutively enrolled. The controls patients had coronary artery disease and ischemic cardiomyopathy. Patients taking steroids or with conditions that could modify leukocyte activity (e.g., rheumatoid arthritis, vasculitis, or other collagen diseases) were excluded. Their GSV samples were harvested during elective coronary artery bypass to serve as venous grafts and the redundant part was used for study. The samples were put into and stored in liquid nitrogen immediately after they were harvested. GSVs competency and diameter were screened by the pre-operative duplex ultrasonography. The baseline characteristics of patients with VV and controls are shown in
+              <xref rid="jcm-07-00537-t001" ref-type="table">Table 1</xref>.
+            </p>
+          </sec>
+          <sec id="sec2dot3-jcm-07-00537">
+            <title>2.3. Sample Preparation and RNA Sequencing</title>
+            <p>Total RNA was extracted from the venous samples. The tissue was homogenized with POLYTRON
+              <sup>®</sup> PT 2100 (Dispergierund Mischtechnik, Littau, Switzerland), and Trizol solution (Gibco BRL, Grand Island, NY, USA) was added for RNA extraction. The extracted RNA was dissolved in diethyl pyrocarbonate-treated distilled water. Spectrophotometry at 260 and 280 nm was performed to measure the amount and quality of RNA. The total RNA samples were first treated with DNase I to degrade any possible deoxyribonucleic acid (DNA) contamination. Then, the messenger RNA (mRNA) was enriched by using the oligo (dT) magnetic beads (for eukaryotes). Mixed with the fragmentation buffer, the mRNA was fragmented into short fragments (about 200 base pair). Then the first strand of complimentary DNA (cDNA) was synthesized by using random hexamer-primer. Buffer, dNTPs, RNase H, and DNA polymerase I were added to synthesize the second strand. The double strand cDNA was purified with magnetic beads. End reparation and 3′-end single nucleotide A (adenine) addition were then performed. Finally, sequencing adaptors were ligated to the fragments. The fragments were enriched by polymerase chain reaction (PCR) amplification. During the quality control step, Agilent 2100 Bioanaylzer (Agilent, Santa Clara, CA, USA) and ABI StepOnePlus Real-Time PCR System (ABI, Foster City, CA 94404, USA) was used to qualify and quantify the sample library. The library products were ready for sequencing via Illumina HiSeqTM 2000 (Illumina, San Diego, CA, USA).
+            </p>
+          </sec>
+          <sec id="sec2dot4-jcm-07-00537">
+            <title>2.4. Reverse Transcription Polymerase Chain Reaction</title>
+            <p>The extraction and quantification of mRNA by means of reverse transcription polymerase chain reaction (RT-PCR) were performed as our standard protocols [
+              <xref rid="B32-jcm-07-00537" ref-type="bibr">32</xref>]. The RNA was then converted to complementary DNA by reverse transcription with random hexanucleotides and avian myeloblastosis virus reverse transcriptase (Boehringer, Mannheim, Germany). The primers are as follows: CA4: forward: 5′-CACTGGTGCTACGAGGTTCA-3′, reverse: 5′-GCAACTGTTTGGCCTGGTAT-3′; CHI3L1: forward: 5′-AAGAACAGGAACCCCAACCT-3′, reverse: 5′-TGTCTCTCCGTCCAGGGTAG-3′; FCN1: forward: 5′-GCTCGCTGTCCTGCTAGTCT-3′, reverse: 5′-CTCCAATGACACCTGCCTCT-3′; HAS2: forward: 5′-GCCTCATCTGTGGAGATGGT-3′, reverse: 5′-ATGCACTGAACACACCCAAA-3′. KLK5: forward: 5′-AGTCAGAAAAGGTGCGAGGA-3′, reverse: 5′-TAATCTCCCCAGGACACGAG-3′.
+            </p>
+          </sec>
+          <sec id="sec2dot5-jcm-07-00537">
+            <title>2.5. Bioinformatics Analysis of RNA Sequence Data</title>
+            <p>High quality reads with less than 10% unknown bases and median quality scores above 20 were extracted from the raw RNA-seq data. Cleaned reads were mapped to the reference genome hg19 using SOAPaligner/SOAP2 (Beijing Genomics Institute, Beijing, China) [
+              <xref rid="B33-jcm-07-00537" ref-type="bibr">33</xref>] with no more than two mismatches allowed in the alignment. The expression level for each gene was calculated using the RPKM method [
+              <xref rid="B34-jcm-07-00537" ref-type="bibr">34</xref>]. If there was more than one transcript for a gene, the longest transcript was used to calculate expression level and coverage. Function annotation could provide gene ontology (GO) annotation information.
+            </p>
+          </sec>
+          <sec id="sec2dot6-jcm-07-00537">
+            <title>2.6. Screening of Differentially Expressed Genes (DEGs)</title>
+            <p>This analysis included the screening of genes that were differentially expressed among samples, GO functional enrichment analysis and KEGG pathway enrichment analysis for these DEGs. We used false discovery rate (FDR) ≤0.001 and the absolute value of log2 ratio ≥1 as the threshold to judge the significance of gene expression difference. </p>
+          </sec>
+          <sec id="sec2dot7-jcm-07-00537">
+            <title>2.7. Pathway and Network Analysis</title>
+            <p>While so many components are implicated in the mechanism of a complex trait disease, it is difficult to infer which components play a determining role. In this scenario, pathway analysis is a tool used to identify possible biological pathways involving related components. Ingenuity pathway analysis (IPA) is a powerful analysis and pathway-search tool that uncovers the significance of omics data and identifies new targets or candidate biomarkers within the context of biological systems. IPA has been specifically designed for the analysis, integration, and interpretation of data derived from omics experiments. Therefore, in the present study, to derive a possible pathway that may be implicated in the mechanism of AF related thromboembolic stroke, data were analyzed through the use of IPA (QIAGEN Inc., Germantown, MD, USA) [
+              <xref rid="B35-jcm-07-00537" ref-type="bibr">35</xref>]. The significance values for the canonical pathways in IPA was calculated using the right-tailed Fisher’s exact test. The
+              <italic>p</italic>-value for a given pathway annotation is calculated by considering (1) the number of DEGs that participate in that pathway and (2) the total number of genes that are known to be associated with that pathway in the selected reference set. Higher the number of DEGs involved, the more likely it is that the association is not due to random chance, and thus more significant the
+              <italic>p</italic>-value is. Similarly, the larger the total number of genes known to be associated with the pathway, the greater the likelihood that an association is due to random chance, and the
+              <italic>p</italic>-value accordingly becomes less significant. The
+              <italic>p</italic>-value identifies statistically significant over-representation of DEGs in a given pathway. The null hypothesis (H
+              <sub>0</sub>) states.
+            </p>
+            <p>H
+              <sub>0</sub> = overlap of molecules for a particular biological category is due to chance.
+            </p>
+            <p>If
+              <italic>p</italic>-value &lt; 0.005, we reject the null hypothesis.
+            </p>
+            <p>This implies the association between a set of DEGs in our experiment and a given pathway is not due to random chance. </p>
+          </sec>
+          <sec id="sec2dot8-jcm-07-00537">
+            <title>2.8. Zebrafish Model</title>
+            <p>
+              <italic>Tg</italic>(
+              <italic>fli1</italic>:
+              <italic>egfp</italic>)
+              <italic>xTg</italic>(
+              <italic>gata1</italic>:
+              <italic>dsRed</italic>) (
+              <italic>egfp</italic>,
+              <italic>enhanced</italic> green fluorescent protein), zebrafish with green fluorescence emitting vasculature and red fluorescence emitting red blood cells were obtained from the Zebrafish International Resource Center (Eugene, OR, USA) [
+              <xref rid="B36-jcm-07-00537" ref-type="bibr">36</xref>]. Both wild-type (WT; AB strain) and
+              <italic>Tg</italic>(
+              <italic>fli1</italic>:
+              <italic>egfp</italic>)
+              <italic>xTg</italic>(
+              <italic>gata1</italic>:
+              <italic>dsRed</italic>) zebrafish were kept under a 14-h light and 10-h dark photoperiod at 28.5 °C. The procedures for zebrafish culture, embryo collection, and fluorescence observation have been described previously [
+              <xref rid="B37-jcm-07-00537" ref-type="bibr">37</xref>]. We followed the standard criteria to design the zebrafish developmental stages [
+              <xref rid="B38-jcm-07-00537" ref-type="bibr">38</xref>]. The zebrafish experiments were approved by the Institutional Animal Care and Use Committee of the National Taiwan University College of Medicine. The anesthesia and euthanasia were performed with diluted tricane methanesulfonate (160 mg/L) and benzocaine hydrochloride (250 mg/L).
+            </p>
+          </sec>
+          <sec id="sec2dot9-jcm-07-00537">
+            <title>2.9. Antisense Morpholino Design and Microinjection</title>
+            <p>Morpholino oligonucleotides (MO) complementary to the 5′- translational start codon flanking sequences of zebrafish targeted gene mRNAs was designed and purchased (Gene Tools LLC, Philomath, OR, USA). Zebrafish
+              <italic>has2</italic>-morpholino (
+              <italic>has2</italic>-MO: 5′-GCTGACCGCTTTATCACATCTCATC-3′) was established based on zebrafish hyaluronan synthase 2 (
+              <italic>has2</italic>) cDNA sequences (Gene Tools LLC, Philomath, OR, USA). It was prepared at stocking concentrations of 1 mM and diluted with double-distilled water to concentrations of 100, 250, 375, and 500 μM (4.5 ng per 2.3 nL). Morpholino oligonucleotide stocks (3 mmol/L) were diluted to 0.3 to 1.2 mmol/L in Danieau solution (58 mmol/L NaCl, 0.7 mmol/L KCl, 0.4 mmol/L MgSO4, 0.6 mmol/L Ca(NO
+              <sub>3</sub>)
+              <sub>2</sub>, 5 mmol/L HEPES, pH 7.6) before injection into the yolks of freshly fertilized fish eggs. Approximately 1 nL of morpholino oligonucleotides were injected into 40 to 180 embryos at the one- to four-cell stage, and the embryos were allowed to develop at 29 °C.
+            </p>
+          </sec>
+          <sec id="sec2dot10-jcm-07-00537">
+            <title>2.10. Statistical Methods</title>
+            <p>Continuous data were presented as means ± standard deviation (SD) and analyzed by using the Mann-Whitney
+              <italic>U</italic> test for two-group comparisons. Categorical data were compared with the Fisher’s exact test.
+            </p>
+          </sec>
+        </sec>
+        <sec id="sec3-jcm-07-00537">
+          <title>3. Results</title>
+          <sec id="sec3dot1-jcm-07-00537">
+            <title>3.1. Global Expressional Profiling of VV</title>
+            <p>Global expressional profiling of venous samples from patients with VV and normal venous samples using the RNA seq technique was performed. The expressional profiling of the significantly up or downregulated genes with log2 ratio &gt;7 were listed in
+              <xref rid="jcm-07-00537-t002" ref-type="table">Table 2</xref>. Among all these differentially expressed genes, many of them encode proteins functioning as extracellular matrix enzymes, such as Kallikrein-related peptidase 5 (KLK5), chitinase-3-like protein 1 (CHI3L1), hyaluronan synthase 2 (HAS2), and carbonic anhydrase 4 (CA4). These proteins may be involved in remodeling of extracellular matrix proteins and play important roles in vascular integrity and scaffolding. The others are genes encoding cytokines such as chemokine (C-X-C motif) ligand 1 (CXCL1), chemokine (C-X-C motif) ligand 8 (CXCL8), colony stimulating factor 3 (CSF3), and interleukin 6 (IL-6), implicating the importance of paracrine factors related to cell growth and inflammation in the mechanism of VV.
+            </p>
+            <p>Because these genes might be implicated in the mechanism of VV, we did a pathway analysis to elucidate the possible translational meaning and significance (
+              <xref rid="jcm-07-00537-t003" ref-type="table">Table 3</xref>;
+              <xref ref-type="fig" rid="jcm-07-00537-f001">Figure 1</xref>). Interestingly, the results show that decreased angiogenesis, decreased cell-to-cell binding, decreased cell invasion or motility, and enhanced vascular lesion pathways are involved in the mechanism of VV. The results also show that increased carbohydrate accumulation may be involved in the mechanism of VV. Among all these pathways,
+              <italic>HAS2</italic> gene downregulation plays a pivotal role to regulate and govern all these pathways (
+              <xref ref-type="fig" rid="jcm-07-00537-f001">Figure 1</xref>).
+            </p>
+            <p>We then validated several differentially expressed genes identified in the RNA seq by conventional RT-PCR using VV and control venous samples. Among all the up or downregulated genes in VV samples, there were several genes encoding enzymes in the extracellular matrix such as KLK5, CHI3L1, HAS2, and CA4. We have validated the expressional changes by conventional RT-PCR for these genes (
+              <xref ref-type="fig" rid="jcm-07-00537-f002">Figure 2</xref>). The result showed decreased mRNA levels of
+              <italic>CHI3L1</italic>,
+              <italic>HAS2</italic>, and
+              <italic>CA4</italic> genes and increased mRNA level of
+              <italic>KLK5</italic> gene in VV samples, which was similar to the result of RNA seq. We also found another gene Ficolin 1 (
+              <italic>FCN1</italic>) encoding extracellular space protein the mRNA level of which was also decreased in the VV samples.
+            </p>
+          </sec>
+          <sec id="sec3dot2-jcm-07-00537">
+            <title>3.2. Downregulation of Hyaluronan Synthases 2 in Venous Tissues from Patients with VV</title>
+            <p>Among all these extracellular matrix enzyme genes, we were particularly interested in the
+              <italic>HAS2</italic> gene because it played a pivotal role in the pathway analysis, which modulated all the VV-related pathways (
+              <xref ref-type="fig" rid="jcm-07-00537-f001">Figure 1</xref>). The role of HAS in vascular biology has never been addressed before. Because of its possible important role in the mechanism of VV, we repeated the experiment again and confirmed that the mRNA level was significantly lowered in the venous samples from patients with VV (
+              <italic>p</italic> &lt; 0.0001) (
+              <xref ref-type="fig" rid="jcm-07-00537-f003">Figure 3</xref>).
+            </p>
+          </sec>
+          <sec id="sec3dot3-jcm-07-00537">
+            <title>3.3. Knockdown of HAS2 Results in Venous Dilation and Blood Flow Stasis in Zebrafish</title>
+            <p>
+              <italic>Tg</italic>(
+              <italic>fli1</italic>:
+              <italic>egfp</italic>)
+              <italic>xTg</italic>(
+              <italic>gata1</italic>:
+              <italic>dsRed</italic>) zebrafish with green fluorescence emitting vasculature and red fluorescence emitting red blood cells were used to observe the anatomic change of vasculature (green fluorescence) and blood flow (red fluorescence) and to explore the functional role of the identified gene. We first compared the homology of amino acid sequence of
+              <italic>HAS2</italic> among species using Clustal W [
+              <xref rid="B39-jcm-07-00537" ref-type="bibr">39</xref>].
+              <italic>HAS2</italic> is evolutionally conservative and expressed in both low and high vertebrates, indicating its important biological function (
+              <xref ref-type="app" rid="app1-jcm-07-00537">Figure S1</xref>). The similarity of amino acid sequence of HAS2 between zebrafish and humans was up to 81.3% (
+              <xref ref-type="app" rid="app1-jcm-07-00537">Figure S2</xref>).
+            </p>
+            <p>Morpholino experiment was quantitatively performed to further define the role of HAS2 in the mechanism of VV. In fish with mild phenotypes, a local dilation of venous structure in the caudal vein plexus (CVP) was found, which resulted in a protruding bulb in the tail, mimicking human VV phenotype of protruding venous dilatation (
+              <xref ref-type="fig" rid="jcm-07-00537-f004">Figure 4</xref>A–D). In fish with moderate phenotypes, dilation of veins, such as intersegmental vein (ISV) or sub-intestinal vein (SIV), was found (
+              <xref ref-type="fig" rid="jcm-07-00537-f005">Figure 5</xref>). Sluggish blood flow in CVP was also noted (
+              <xref ref-type="app" rid="app1-jcm-07-00537">Supplementary Movie 1 and Movie 2</xref>), mimicking the human VV phenotype of venous blood flow stasis and leg edema. Furthermore, venous branches were also noted in the SIV of the MO-injected fish, which was a consequence of either a dysregulated angiogenetic process or a delay of retraction of leading venous buds during development [
+              <xref rid="B40-jcm-07-00537" ref-type="bibr">40</xref>]. It implies that this is a dysregulated angiogenetic process since
+              <italic>HAS2</italic> plays a pivotal role in the angiogenesis network, which is one of the key altered pathways in our transcriptome analysis (
+              <xref ref-type="fig" rid="jcm-07-00537-f001">Figure 1</xref>). In those with severe phenotypes, tangled veins were found in the distal tail which resulted in malformation of tail (
+              <xref ref-type="fig" rid="jcm-07-00537-f004">Figure 4</xref>E,F;
+              <xref ref-type="app" rid="app1-jcm-07-00537">Supplementary Movie 3</xref>).
+            </p>
+            <p>Quantitative data after the injection of
+              <italic>HAS2</italic> MO in more than 1000 embryos are shown in
+              <xref rid="jcm-07-00537-t004" ref-type="table">Table 4</xref>. There was a dose-response relationship. Higher dose of MO (375 uM) was associated with a higher percentage of fish with defective vascular phenotypes than lower dose MO (250 uM). In the highest dose group (500 uM), because of the lethality of high-dose MO, most of the embryos were dead (91%). The survived embryos were probably those without or with mild MO effect and thus there was a relatively lower percentage of survived fish with defect vasculature (43%), compared to those with a medium dose of MO injection (72%) (375 uM) (
+              <xref rid="jcm-07-00537-t004" ref-type="table">Table 4</xref>). Therefore, we confirm that disruption of HAS2 function directly leads to vascular malformation in vertebrates.
+            </p>
+          </sec>
+        </sec>
+        <sec id="sec4-jcm-07-00537">
+          <title>4. Discussion</title>
+          <p>In the present study, we first used a global expressional profiling to address the molecular mechanism of VV. We further found several important pathways, such as angiogenesis, cell binding, vascular lesion and carbohydrate metabolism possibly involved in the mechanism of VV. We further used a zebrafish model to address the functional role of an identified gene
+            <italic>HAS2</italic> in the mechanism of VV.
+          </p>
+          <p>In the last decade, the pathophysiological theories of VV shifted from purely mechanical factors to hypotheses focusing on complex molecular and histopathologic alterations in the vessel wall and the extracellular matrix, which may be caused by the genetic inheritance [
+            <xref rid="B1-jcm-07-00537" ref-type="bibr">1</xref>,
+            <xref rid="B18-jcm-07-00537" ref-type="bibr">18</xref>,
+            <xref rid="B19-jcm-07-00537" ref-type="bibr">19</xref>]. In our study, we identified the global expressional change of downregulations of
+            <italic>CHI3L1</italic>,
+            <italic>HAS2</italic>, and
+            <italic>CA4</italic>, and upregulation of
+            <italic>KLK5</italic> in the varicose venous samples with both RNA seq technique and conventional RT-PCR.
+          </p>
+          <p>All these genes encode extracellular matrix enzymes, compatible with the concept of histopathologic alterations in the extracellular matrix as a potential mechanism of VV. Extracellular matrix may provide a scaffold for the vascular structure and integrity. When the components of extracellular matrix have been altered (e.g., decomposition of extracellular matrix proteins by excessive enzyme digestion or accumulation of extracellular matrix proteins by decreased enzyme digestion), the scaffold function may deteriorate, resulting in a weakening of vascular wall support and dilatation or protrusion of the vasculature, a pathognomonic picture of VV. Furthermore, after pathway analysis using all the differentially expressed genes, we found decreased angiogenesis, decreased cellular binding and invasion, increased carbohydrate accumulation, and vascular lesion were all involved in the mechanism of VV. All these pathways are novel and have been rarely addressed as the potential mechanism of VV.</p>
+          <p>Decreased angiogenesis may implicate impaired repair or proliferative activities of vessels and an injury model of VV. Furthermore, an involvement of vascular lesion network also supports the hypothesis of this injury model of VV. Decreased cell-cell binding and invasion may implicate decreased structural integrity of vessels, indicating weakening of vessel wall and possible protrusion of vessel wall, which is the prototype phenotype of VV. Our study also shows that increased carbohydrate accumulation may be involved in the pathogenesis of VV; however, further studies are required to elucidate the detailed mechanism.</p>
+          <p>As mentioned before, recent studies have also highlighted the pathological changes in the extracellular matrix as the potential mechanism of VV [
+            <xref rid="B1-jcm-07-00537" ref-type="bibr">1</xref>,
+            <xref rid="B8-jcm-07-00537" ref-type="bibr">8</xref>,
+            <xref rid="B10-jcm-07-00537" ref-type="bibr">10</xref>,
+            <xref rid="B12-jcm-07-00537" ref-type="bibr">12</xref>,
+            <xref rid="B13-jcm-07-00537" ref-type="bibr">13</xref>,
+            <xref rid="B15-jcm-07-00537" ref-type="bibr">15</xref>]. Among all these extracellular matrix enzyme genes,
+            <italic>HAS2</italic> expression was decreased in VV samples. Hyaluronan or hyaluronic acid (HA) is a high molecular weight unbranched polysaccharide, and is a major constituent of the extracellular matrix and synthesized by hyaluronan synthases (HAS), which are membrane-bound enzymes and use UDP-α-
+            <italic>N</italic>-acetyl-
+            <sc>d</sc>-glucosamine and UDP-α-
+            <sc>d</sc>-glucuronate as substrates to produce the glycosaminoglycan hyaluronan at the cell surface and extrude it through the membrane into the extracellular space. In our zebrafish model, we found disruption of
+            <italic>HAS2</italic> function directly led to venous malformation in vertebrates. Although
+            <italic>HAS2</italic> has been shown to play a role in vascular morphogenesis [
+            <xref rid="B41-jcm-07-00537" ref-type="bibr">41</xref>], its specific role in venous tissues and the pathophysiology of the most important human venous diseases—that is, VV—has never been addressed before. The mechanism by which
+            <italic>HAS2</italic> cause VV may be through its pivotal role to modulate and govern multiple pathways that cause VV, such as angiogenesis, cell to cell adhesion, vascular lesion, and carbohydrate metabolism.
+          </p>
+          <p>There are limitations in the present study. First, there were only five patients in each group and the differences of genetic results we found between VV patients and non-VV patients might be due to something else not related to VV. Second, the genetic changes in the VV samples might be post-transcriptional or happened due to the local environment in the legs, and the zebrafish model only showed a systemic effect. Therefore, HAS2 might not be the gene responsible for VV. Third, we did not have negative scrambled MO control group, positive control group with other MOs targeting to
+            <italic>HAS2</italic> and rescue studies. Therefore, we could not rule out a non-specific effect of MO. Finally, some of our control patients had diabetes that could modify leukocyte activity and might affect the genetic results.
+          </p>
+          <p>However, there is little doubt that the development and progression of VV and venous ulcer disease is multifactorial and includes a moderate-to-strong genetic component [
+            <xref rid="B8-jcm-07-00537" ref-type="bibr">8</xref>]. The genetic studies of VV conducted to date are few and have few functional implications. This is the first study to investigate the global gene expressional profiling in determining the candidate gene of VV. In this study, we show the possible role of
+            <italic>HAS2</italic> gene in the pathogenesis of VV in both global expression and functional study.
+          </p>
+        </sec>
+      </body>
+      <back>
+        <app-group>
+          <app id="app1-jcm-07-00537">
+            <title>Supplementary Materials</title>
+            <p>The Figure S1, Figure S2 and Supplementary Movie 1–3 are available online at
+              <uri xlink:href="http://www.mdpi.com/2077-0383/7/12/537/s1">http://www.mdpi.com/2077-0383/7/12/537/s1</uri>.
+            </p>
+            <supplementary-material content-type="local-data" id="jcm-07-00537-s001">
+              <media xlink:href="jcm-07-00537-s001.zip">
+                <caption>
+                  <p>Click here for additional data file.</p>
+                </caption>
+              </media>
+            </supplementary-material>
+          </app>
+        </app-group>
+        <notes>
+          <title>Author Contributions</title>
+          <p>Conceptualization, C.-S.H., C.-T.T., E.Y.C., and I-H.W.; Methodology, C.-S.H., C.-T.T., and Y.-H.C.; Software, C.-S.H. and S.-N.C.; Validation, E.Y.C. and I-H.W.; Formal Analysis, C.-S.H. and I-H.W.; Investigation, C.-S.H., C.-T.T., and I-H.W.; Resources, J.-J.H., E.Y.C., and I-H.W.; Data Curation, C.-S.H. and Y.-H.C.; Writing—Original Draft Preparation, C.-S.H. and C.-T.T.; Writing—Review &amp; Editing, C.-S.H., C.-T.T, E.Y.C. and I-H.W.; Visualization, E.Y.C. and I-H.W.; Supervision, E.Y.C. and I-H.W.; Project Administration, E.Y.C. and I-H.W.; Funding Acquisition, E.Y.C. and I-H.W.</p>
+        </notes>
+        <notes>
+          <title>Funding</title>
+          <p>The work was supported by two grants from the Ministry of Science and Technology (MOST) in Taiwan (MOST104-2314-B-002-202 and 105-2628-B-002-050-MY2). We thank all the participating patients for their contribution to this study. We also thank the second Core Lab of the National Taiwan University Hospital for technological assistance and laboratory facility support.</p>
+        </notes>
+        <notes notes-type="COI-statement">
+          <title>Conflicts of Interest</title>
+          <p>The authors declare no conflict of interest.</p>
+        </notes>
+        <ref-list>
+          <title>References</title>
+          <ref id="B1-jcm-07-00537">
+            <label>1.</label>
+            <element-citation publication-type="journal">
+              <person-group person-group-type="author">
+                <name>
+                  <surname>Oklu</surname>
+                  <given-names>R.</given-names>
+                </name>
+                <name>
+                  <surname>Habito</surname>
+                  <given-names>R.</given-names>
+                </name>
+                <name>
+                  <surname>Mayr</surname>
+                  <given-names>M.</given-names>
+                </name>
+                <name>
+                  <surname>Deipolyi</surname>
+                  <given-names>A.R.</given-names>
+                </name>
+                <name>
+                  <surname>Albadawi</surname>
+                  <given-names>H.</given-names>
+                </name>
+                <name>
+                  <surname>Hesketh</surname>
+                  <given-names>R.</given-names>
+                </name>
+                <name>
+                  <surname>Walker</surname>
+                  <given-names>T.G.</given-names>
+                </name>
+                <name>
+                  <surname>Linskey</surname>
+                  <given-names>K.R.</given-names>
+                </name>
+                <name>
+                  <surname>Long</surname>
+                  <given-names>C.A.</given-names>
+                </name>
+                <name>
+                  <surname>Wicky</surname>
+                  <given-names>S.</given-names>
+                </name>
+                <etal/>
+              </person-group>
+              <article-title>Pathogenesis of varicose veins</article-title>
+              <source>J. Vasc. Interv. Radiol.</source>
+              <year>2012</year>
+              <volume>23</volume>
+              <fpage>33</fpage>
+              <lpage>39</lpage>
+              <pub-id pub-id-type="doi">10.1016/j.jvir.2011.09.010</pub-id>
+              <pub-id pub-id-type="pmid">22030459</pub-id>
+            </element-citation>
+          </ref>
+          <ref id="B2-jcm-07-00537">
+            <label>2.</label>
+            <element-citation publication-type="journal">
+              <person-group person-group-type="author">
+                <name>
+                  <surname>Li</surname>
+                  <given-names>X.</given-names>
+                </name>
+                <name>
+                  <surname>Jiang</surname>
+                  <given-names>X.Y.</given-names>
+                </name>
+                <name>
+                  <surname>Ge</surname>
+                  <given-names>J.</given-names>
+                </name>
+                <name>
+                  <surname>Wang</surname>
+                  <given-names>J.</given-names>
+                </name>
+                <name>
+                  <surname>Chen</surname>
+                  <given-names>G.J.</given-names>
+                </name>
+                <name>
+                  <surname>Xu</surname>
+                  <given-names>L.</given-names>
+                </name>
+                <name>
+                  <surname>Xie</surname>
+                  <given-names>D.Y.</given-names>
+                </name>
+                <name>
+                  <surname>Yuan</surname>
+                  <given-names>T.Y.</given-names>
+                </name>
+                <name>
+                  <surname>Zhang</surname>
+                  <given-names>D.S.</given-names>
+                </name>
+                <name>
+                  <surname>Zhang</surname>
+                  <given-names>H.</given-names>
+                </name>
+                <etal/>
+              </person-group>
+              <article-title>Aberrantly expressed lncRNAs in primary varicose great saphenous veins</article-title>
+              <source>PLoS ONE</source>
+              <year>2014</year>
+              <volume>9</volume>
+              <elocation-id>e86156</elocation-id>
+              <pub-id pub-id-type="doi">10.1371/journal.pone.0086156</pub-id>
+              <pub-id pub-id-type="pmid">24497937</pub-id>
+            </element-citation>
+          </ref>
+          <ref id="B3-jcm-07-00537">
+            <label>3.</label>
+            <element-citation publication-type="journal">
+              <person-group person-group-type="author">
+                <name>
+                  <surname>Meissner</surname>
+                  <given-names>M.H.</given-names>
+                </name>
+                <name>
+                  <surname>Gloviczki</surname>
+                  <given-names>P.</given-names>
+                </name>
+                <name>
+                  <surname>Bergan</surname>
+                  <given-names>J.</given-names>
+                </name>
+                <name>
+                  <surname>Kistner</surname>
+                  <given-names>R.L.</given-names>
+                </name>
+                <name>
+                  <surname>Morrison</surname>
+                  <given-names>N.</given-names>
+                </name>
+                <name>
+                  <surname>Pannier</surname>
+                  <given-names>F.</given-names>
+                </name>
+                <name>
+                  <surname>Pappas</surname>
+                  <given-names>P.J.</given-names>
+                </name>
+                <name>
+                  <surname>Rabe</surname>
+                  <given-names>E.</given-names>
+                </name>
+                <name>
+                  <surname>Raju</surname>
+                  <given-names>S.</given-names>
+                </name>
+                <name>
+                  <surname>Villavicencio</surname>
+                  <given-names>J.L.</given-names>
+                </name>
+              </person-group>
+              <article-title>Primary chronic venous disorders</article-title>
+              <source>J. Vasc. Surg.</source>
+              <year>2007</year>
+              <volume>46</volume>
+              <issue>Suppl. S</issue>
+              <fpage>54s</fpage>
+              <lpage>67s</lpage>
+              <pub-id pub-id-type="doi">10.1016/j.jvs.2007.08.038</pub-id>
+              <pub-id pub-id-type="pmid">18068562</pub-id>
+            </element-citation>
+          </ref>
+          <ref id="B4-jcm-07-00537">
+            <label>4.</label>
+            <element-citation publication-type="journal">
+              <person-group person-group-type="author">
+                <name>
+                  <surname>Heit</surname>
+                  <given-names>J.A.</given-names>
+                </name>
+                <name>
+                  <surname>Rooke</surname>
+                  <given-names>T.W.</given-names>
+                </name>
+                <name>
+                  <surname>Silverstein</surname>
+                  <given-names>M.D.</given-names>
+                </name>
+                <name>
+                  <surname>Mohr</surname>
+                  <given-names>D.N.</given-names>
+                </name>
+                <name>
+                  <surname>Lohse</surname>
+                  <given-names>C.M.</given-names>
+                </name>
+                <name>
+                  <surname>Petterson</surname>
+                  <given-names>T.M.</given-names>
+                </name>
+                <name>
+                  <surname>O’Fallon</surname>
+                  <given-names>W.M.</given-names>
+                </name>
+                <name>
+                  <surname>Melton</surname>
+                  <given-names>L.J.</given-names>
+                  <suffix>3rd</suffix>
+                </name>
+              </person-group>
+              <article-title>Trends in the incidence of venous stasis syndrome and venous ulcer: A 25-year population-based study</article-title>
+              <source>J. Vasc. Surg.</source>
+              <year>2001</year>
+              <volume>33</volume>
+              <fpage>1022</fpage>
+              <lpage>1027</lpage>
+              <pub-id pub-id-type="doi">10.1067/mva.2001.113308</pub-id>
+              <pub-id pub-id-type="pmid">11331844</pub-id>
+            </element-citation>
+          </ref>
+          <ref id="B5-jcm-07-00537">
+            <label>5.</label>
+            <element-citation publication-type="journal">
+              <person-group person-group-type="author">
+                <name>
+                  <surname>Brand</surname>
+                  <given-names>F.N.</given-names>
+                </name>
+                <name>
+                  <surname>Dannenberg</surname>
+                  <given-names>A.L.</given-names>
+                </name>
+                <name>
+                  <surname>Abbott</surname>
+                  <given-names>R.D.</given-names>
+                </name>
+                <name>
+                  <surname>Kannel</surname>
+                  <given-names>W.B.</given-names>
+                </name>
+              </person-group>
+              <article-title>The epidemiology of varicose veins: The Framingham Study</article-title>
+              <source>Am. J. Prev. Med.</source>
+              <year>1988</year>
+              <volume>4</volume>
+              <fpage>96</fpage>
+              <lpage>101</lpage>
+              <pub-id pub-id-type="doi">10.1016/S0749-3797(18)31203-0</pub-id>
+              <pub-id pub-id-type="pmid">3395496</pub-id>
+            </element-citation>
+          </ref>
+          <ref id="B6-jcm-07-00537">
+            <label>6.</label>
+            <element-citation publication-type="journal">
+              <person-group person-group-type="author">
+                <name>
+                  <surname>Bergan</surname>
+                  <given-names>J.J.</given-names>
+                </name>
+                <name>
+                  <surname>Schmid-Schonbein</surname>
+                  <given-names>G.W.</given-names>
+                </name>
+                <name>
+                  <surname>Smith</surname>
+                  <given-names>P.D.</given-names>
+                </name>
+                <name>
+                  <surname>Nicolaides</surname>
+                  <given-names>A.N.</given-names>
+                </name>
+                <name>
+                  <surname>Boisseau</surname>
+                  <given-names>M.R.</given-names>
+                </name>
+                <name>
+                  <surname>Eklof</surname>
+                  <given-names>B.</given-names>
+                </name>
+              </person-group>
+              <article-title>Chronic venous disease</article-title>
+              <source>N. Engl. J. Med.</source>
+              <year>2006</year>
+              <volume>355</volume>
+              <fpage>488</fpage>
+              <lpage>498</lpage>
+              <pub-id pub-id-type="doi">10.1056/NEJMra055289</pub-id>
+              <pub-id pub-id-type="pmid">16885552</pub-id>
+            </element-citation>
+          </ref>
+          <ref id="B7-jcm-07-00537">
+            <label>7.</label>
+            <element-citation publication-type="journal">
+              <person-group person-group-type="author">
+                <name>
+                  <surname>Beebe-Dimmer</surname>
+                  <given-names>J.L.</given-names>
+                </name>
+                <name>
+                  <surname>Pfeifer</surname>
+                  <given-names>J.R.</given-names>
+                </name>
+                <name>
+                  <surname>Engle</surname>
+                  <given-names>J.S.</given-names>
+                </name>
+                <name>
+                  <surname>Schottenfeld</surname>
+                  <given-names>D.</given-names>
+                </name>
+              </person-group>
+              <article-title>The epidemiology of chronic venous insufficiency and varicose veins</article-title>
+              <source>Ann. Epidemiol.</source>
+              <year>2005</year>
+              <volume>15</volume>
+              <fpage>175</fpage>
+              <lpage>184</lpage>
+              <pub-id pub-id-type="doi">10.1016/j.annepidem.2004.05.015</pub-id>
+              <pub-id pub-id-type="pmid">15723761</pub-id>
+            </element-citation>
+          </ref>
+          <ref id="B8-jcm-07-00537">
+            <label>8.</label>
+            <element-citation publication-type="journal">
+              <person-group person-group-type="author">
+                <name>
+                  <surname>Krysa</surname>
+                  <given-names>J.</given-names>
+                </name>
+                <name>
+                  <surname>Jones</surname>
+                  <given-names>G.T.</given-names>
+                </name>
+                <name>
+                  <surname>van Rij</surname>
+                  <given-names>A.M.</given-names>
+                </name>
+              </person-group>
+              <article-title>Evidence for a genetic role in varicose veins and chronic venous insufficiency</article-title>
+              <source>Phlebology</source>
+              <year>2012</year>
+              <volume>27</volume>
+              <fpage>329</fpage>
+              <lpage>335</lpage>
+              <pub-id pub-id-type="doi">10.1258/phleb.2011.011030</pub-id>
+              <pub-id pub-id-type="pmid">22308533</pub-id>
+            </element-citation>
+          </ref>
+          <ref id="B9-jcm-07-00537">
+            <label>9.</label>
+            <element-citation publication-type="journal">
+              <person-group person-group-type="author">
+                <name>
+                  <surname>Naik</surname>
+                  <given-names>B.</given-names>
+                </name>
+                <name>
+                  <surname>Kumar</surname>
+                  <given-names>M.</given-names>
+                </name>
+                <name>
+                  <surname>Khanna</surname>
+                  <given-names>A.K.</given-names>
+                </name>
+                <name>
+                  <surname>Suman</surname>
+                  <given-names>P.K.</given-names>
+                </name>
+              </person-group>
+              <article-title>Clinico-histopathological study of varicose vein and role of matrix metalloproteinases-1, matrix metalloproteinases-9 and tissue inhibitor of matrix metalloproteinase-1 in varicose vein formation</article-title>
+              <source>Indian J. Pathol. Microbiol.</source>
+              <year>2016</year>
+              <volume>59</volume>
+              <fpage>25</fpage>
+              <lpage>30</lpage>
+              <pub-id pub-id-type="doi">10.4103/0377-4929.178217</pub-id>
+              <pub-id pub-id-type="pmid">26960630</pub-id>
+            </element-citation>
+          </ref>
+          <ref id="B10-jcm-07-00537">
+            <label>10.</label>
+            <element-citation publication-type="journal">
+              <person-group person-group-type="author">
+                <name>
+                  <surname>Chen</surname>
+                  <given-names>Y.</given-names>
+                </name>
+                <name>
+                  <surname>Peng</surname>
+                  <given-names>W.</given-names>
+                </name>
+                <name>
+                  <surname>Raffetto</surname>
+                  <given-names>J.D.</given-names>
+                </name>
+                <name>
+                  <surname>Khalil</surname>
+                  <given-names>R.A.</given-names>
+                </name>
+              </person-group>
+              <article-title>Matrix Metalloproteinases in Remodeling of Lower Extremity Veins and Chronic Venous Disease</article-title>
+              <source>Prog. Mol. Biol. Transl. Sci.</source>
+              <year>2017</year>
+              <volume>147</volume>
+              <fpage>267</fpage>
+              <lpage>299</lpage>
+              <pub-id pub-id-type="doi">10.1016/bs.pmbts.2017.02.003</pub-id>
+              <pub-id pub-id-type="pmid">28413031</pub-id>
+            </element-citation>
+          </ref>
+          <ref id="B11-jcm-07-00537">
+            <label>11.</label>
+            <element-citation publication-type="journal">
+              <person-group person-group-type="author">
+                <name>
+                  <surname>Xu</surname>
+                  <given-names>Y.</given-names>
+                </name>
+                <name>
+                  <surname>Bei</surname>
+                  <given-names>Y.</given-names>
+                </name>
+                <name>
+                  <surname>Li</surname>
+                  <given-names>Y.</given-names>
+                </name>
+                <name>
+                  <surname>Chu</surname>
+                  <given-names>H.</given-names>
+                </name>
+              </person-group>
+              <article-title>Phenotypic and functional transformation in smooth muscle cells derived from varicose veins</article-title>
+              <source>J. Vasc. Surg. Venous Lymphat. Disord.</source>
+              <year>2017</year>
+              <volume>5</volume>
+              <fpage>723</fpage>
+              <lpage>733</lpage>
+              <pub-id pub-id-type="doi">10.1016/j.jvsv.2017.04.009</pub-id>
+              <pub-id pub-id-type="pmid">28818228</pub-id>
+            </element-citation>
+          </ref>
+          <ref id="B12-jcm-07-00537">
+            <label>12.</label>
+            <element-citation publication-type="journal">
+              <person-group person-group-type="author">
+                <name>
+                  <surname>Xu</surname>
+                  <given-names>H.M.</given-names>
+                </name>
+                <name>
+                  <surname>Zhao</surname>
+                  <given-names>Y.</given-names>
+                </name>
+                <name>
+                  <surname>Zhang</surname>
+                  <given-names>X.M.</given-names>
+                </name>
+                <name>
+                  <surname>Zhu</surname>
+                  <given-names>T.</given-names>
+                </name>
+                <name>
+                  <surname>Fu</surname>
+                  <given-names>W.G.</given-names>
+                </name>
+              </person-group>
+              <article-title>Polymorphisms in MMP-9 and TIMP-2 in Chinese patients with varicose veins</article-title>
+              <source>J. Surg. Res.</source>
+              <year>2011</year>
+              <volume>168</volume>
+              <fpage>e143</fpage>
+              <lpage>e148</lpage>
+              <pub-id pub-id-type="doi">10.1016/j.jss.2010.11.002</pub-id>
+              <pub-id pub-id-type="pmid">21195432</pub-id>
+            </element-citation>
+          </ref>
+          <ref id="B13-jcm-07-00537">
+            <label>13.</label>
+            <element-citation publication-type="journal">
+              <person-group person-group-type="author">
+                <name>
+                  <surname>Jacobs</surname>
+                  <given-names>B.N.</given-names>
+                </name>
+                <name>
+                  <surname>Andraska</surname>
+                  <given-names>E.A.</given-names>
+                </name>
+                <name>
+                  <surname>Obi</surname>
+                  <given-names>A.T.</given-names>
+                </name>
+                <name>
+                  <surname>Wakefield</surname>
+                  <given-names>T.W.</given-names>
+                </name>
+              </person-group>
+              <article-title>Pathophysiology of varicose veins</article-title>
+              <source>J. Vasc. Surg. Venous Lymphat. Disord.</source>
+              <year>2017</year>
+              <volume>5</volume>
+              <fpage>460</fpage>
+              <lpage>467</lpage>
+              <pub-id pub-id-type="doi">10.1016/j.jvsv.2016.12.014</pub-id>
+              <pub-id pub-id-type="pmid">28411716</pub-id>
+            </element-citation>
+          </ref>
+          <ref id="B14-jcm-07-00537">
+            <label>14.</label>
+            <element-citation publication-type="journal">
+              <person-group person-group-type="author">
+                <name>
+                  <surname>Raffetto</surname>
+                  <given-names>J.D.</given-names>
+                </name>
+                <name>
+                  <surname>Mannello</surname>
+                  <given-names>F.</given-names>
+                </name>
+              </person-group>
+              <article-title>Pathophysiology of chronic venous disease</article-title>
+              <source>Int. Angiol. J. Int. Union Angiol.</source>
+              <year>2014</year>
+              <volume>33</volume>
+              <fpage>212</fpage>
+              <lpage>221</lpage>
+            </element-citation>
+          </ref>
+          <ref id="B15-jcm-07-00537">
+            <label>15.</label>
+            <element-citation publication-type="journal">
+              <person-group person-group-type="author">
+                <name>
+                  <surname>Bharath</surname>
+                  <given-names>V.</given-names>
+                </name>
+                <name>
+                  <surname>Kahn</surname>
+                  <given-names>S.R.</given-names>
+                </name>
+                <name>
+                  <surname>Lazo-Langner</surname>
+                  <given-names>A.</given-names>
+                </name>
+              </person-group>
+              <article-title>Genetic polymorphisms of vein wall remodeling in chronic venous disease: A narrative and systematic review</article-title>
+              <source>Blood</source>
+              <year>2014</year>
+              <volume>124</volume>
+              <fpage>1242</fpage>
+              <lpage>1250</lpage>
+              <pub-id pub-id-type="doi">10.1182/blood-2014-03-558478</pub-id>
+              <pub-id pub-id-type="pmid">25006132</pub-id>
+            </element-citation>
+          </ref>
+          <ref id="B16-jcm-07-00537">
+            <label>16.</label>
+            <element-citation publication-type="journal">
+              <person-group person-group-type="author">
+                <name>
+                  <surname>Ng</surname>
+                  <given-names>M.Y.</given-names>
+                </name>
+                <name>
+                  <surname>Andrew</surname>
+                  <given-names>T.</given-names>
+                </name>
+                <name>
+                  <surname>Spector</surname>
+                  <given-names>T.D.</given-names>
+                </name>
+                <name>
+                  <surname>Jeffery</surname>
+                  <given-names>S.</given-names>
+                </name>
+              </person-group>
+              <article-title>Linkage to the FOXC2 region of chromosome 16 for varicose veins in otherwise healthy, unselected sibling pairs</article-title>
+              <source>J. Med. Genet.</source>
+              <year>2005</year>
+              <volume>42</volume>
+              <fpage>235</fpage>
+              <lpage>239</lpage>
+              <pub-id pub-id-type="doi">10.1136/jmg.2004.024075</pub-id>
+              <pub-id pub-id-type="pmid">15744037</pub-id>
+            </element-citation>
+          </ref>
+          <ref id="B17-jcm-07-00537">
+            <label>17.</label>
+            <element-citation publication-type="journal">
+              <person-group person-group-type="author">
+                <name>
+                  <surname>Mellor</surname>
+                  <given-names>R.H.</given-names>
+                </name>
+                <name>
+                  <surname>Brice</surname>
+                  <given-names>G.</given-names>
+                </name>
+                <name>
+                  <surname>Stanton</surname>
+                  <given-names>A.W.</given-names>
+                </name>
+                <name>
+                  <surname>French</surname>
+                  <given-names>J.</given-names>
+                </name>
+                <name>
+                  <surname>Smith</surname>
+                  <given-names>A.</given-names>
+                </name>
+                <name>
+                  <surname>Jeffery</surname>
+                  <given-names>S.</given-names>
+                </name>
+                <name>
+                  <surname>Levick</surname>
+                  <given-names>J.R.</given-names>
+                </name>
+                <name>
+                  <surname>Burnand</surname>
+                  <given-names>K.G.</given-names>
+                </name>
+                <name>
+                  <surname>Mortimer</surname>
+                  <given-names>P.S.</given-names>
+                </name>
+              </person-group>
+              <article-title>Mutations in FOXC2 are strongly associated with primary valve failure in veins of the lower limb</article-title>
+              <source>Circulation</source>
+              <year>2007</year>
+              <volume>115</volume>
+              <fpage>1912</fpage>
+              <lpage>1920</lpage>
+              <pub-id pub-id-type="doi">10.1161/CIRCULATIONAHA.106.675348</pub-id>
+              <pub-id pub-id-type="pmid">17372167</pub-id>
+            </element-citation>
+          </ref>
+          <ref id="B18-jcm-07-00537">
+            <label>18.</label>
+            <element-citation publication-type="journal">
+              <person-group person-group-type="author">
+                <name>
+                  <surname>Matousek</surname>
+                  <given-names>V.</given-names>
+                </name>
+                <name>
+                  <surname>Prerovsky</surname>
+                  <given-names>I.</given-names>
+                </name>
+              </person-group>
+              <article-title>A contribution to the problem of the inheritance of primary varicose veins</article-title>
+              <source>Hum. Hered.</source>
+              <year>1974</year>
+              <volume>24</volume>
+              <fpage>225</fpage>
+              <lpage>235</lpage>
+              <pub-id pub-id-type="pmid">4435791</pub-id>
+            </element-citation>
+          </ref>
+          <ref id="B19-jcm-07-00537">
+            <label>19.</label>
+            <element-citation publication-type="journal">
+              <person-group person-group-type="author">
+                <name>
+                  <surname>Hauge</surname>
+                  <given-names>M.</given-names>
+                </name>
+                <name>
+                  <surname>Gundersen</surname>
+                  <given-names>J.</given-names>
+                </name>
+              </person-group>
+              <article-title>Genetics of varicose veins of the lower extremities</article-title>
+              <source>Hum. Hered.</source>
+              <year>1969</year>
+              <volume>19</volume>
+              <fpage>573</fpage>
+              <lpage>580</lpage>
+              <pub-id pub-id-type="doi">10.1159/000152268</pub-id>
+              <pub-id pub-id-type="pmid">5365895</pub-id>
+            </element-citation>
+          </ref>
+          <ref id="B20-jcm-07-00537">
+            <label>20.</label>
+            <element-citation publication-type="journal">
+              <person-group person-group-type="author">
+                <name>
+                  <surname>Brice</surname>
+                  <given-names>G.</given-names>
+                </name>
+                <name>
+                  <surname>Mansour</surname>
+                  <given-names>S.</given-names>
+                </name>
+                <name>
+                  <surname>Bell</surname>
+                  <given-names>R.</given-names>
+                </name>
+                <name>
+                  <surname>Collin</surname>
+                  <given-names>J.R.</given-names>
+                </name>
+                <name>
+                  <surname>Child</surname>
+                  <given-names>A.H.</given-names>
+                </name>
+                <name>
+                  <surname>Brady</surname>
+                  <given-names>A.F.</given-names>
+                </name>
+                <name>
+                  <surname>Sarfarazi</surname>
+                  <given-names>M.</given-names>
+                </name>
+                <name>
+                  <surname>Burnand</surname>
+                  <given-names>K.G.</given-names>
+                </name>
+                <name>
+                  <surname>Jeffery</surname>
+                  <given-names>S.</given-names>
+                </name>
+                <name>
+                  <surname>Mortimer</surname>
+                  <given-names>P.</given-names>
+                </name>
+                <etal/>
+              </person-group>
+              <article-title>Analysis of the phenotypic abnormalities in lymphoedema-distichiasis syndrome in 74 patients with FOXC2 mutations or linkage to 16q24</article-title>
+              <source>J. Med. Genet.</source>
+              <year>2002</year>
+              <volume>39</volume>
+              <fpage>478</fpage>
+              <lpage>483</lpage>
+              <pub-id pub-id-type="doi">10.1136/jmg.39.7.478</pub-id>
+              <pub-id pub-id-type="pmid">12114478</pub-id>
+            </element-citation>
+          </ref>
+          <ref id="B21-jcm-07-00537">
+            <label>21.</label>
+            <element-citation publication-type="journal">
+              <person-group person-group-type="author">
+                <name>
+                  <surname>Jin</surname>
+                  <given-names>Y.</given-names>
+                </name>
+                <name>
+                  <surname>Xu</surname>
+                  <given-names>G.</given-names>
+                </name>
+                <name>
+                  <surname>Huang</surname>
+                  <given-names>J.</given-names>
+                </name>
+                <name>
+                  <surname>Zhou</surname>
+                  <given-names>D.</given-names>
+                </name>
+                <name>
+                  <surname>Huang</surname>
+                  <given-names>X.</given-names>
+                </name>
+                <name>
+                  <surname>Shen</surname>
+                  <given-names>L.</given-names>
+                </name>
+              </person-group>
+              <article-title>Analysis of the association between an insertion/deletion polymorphism within the 3’ untranslated region of COL1A2 and chronic venous insufficiency</article-title>
+              <source>Ann. Vasc. Surg.</source>
+              <year>2013</year>
+              <volume>27</volume>
+              <fpage>959</fpage>
+              <lpage>963</lpage>
+              <pub-id pub-id-type="doi">10.1016/j.avsg.2013.04.001</pub-id>
+              <pub-id pub-id-type="pmid">23849651</pub-id>
+            </element-citation>
+          </ref>
+          <ref id="B22-jcm-07-00537">
+            <label>22.</label>
+            <element-citation publication-type="journal">
+              <person-group person-group-type="author">
+                <name>
+                  <surname>Kowalewski</surname>
+                  <given-names>R.</given-names>
+                </name>
+                <name>
+                  <surname>Malkowski</surname>
+                  <given-names>A.</given-names>
+                </name>
+                <name>
+                  <surname>Gacko</surname>
+                  <given-names>M.</given-names>
+                </name>
+                <name>
+                  <surname>Sobolewski</surname>
+                  <given-names>K.</given-names>
+                </name>
+              </person-group>
+              <article-title>Influence of thrombophlebitis on TGF-beta1 and its signaling pathway in the vein wall</article-title>
+              <source>Folia Histochem. Cytobiol.</source>
+              <year>2010</year>
+              <volume>48</volume>
+              <fpage>542</fpage>
+              <lpage>548</lpage>
+              <pub-id pub-id-type="doi">10.2478/v10042-010-0041-z</pub-id>
+              <pub-id pub-id-type="pmid">21478096</pub-id>
+            </element-citation>
+          </ref>
+          <ref id="B23-jcm-07-00537">
+            <label>23.</label>
+            <element-citation publication-type="journal">
+              <person-group person-group-type="author">
+                <name>
+                  <surname>Zhong</surname>
+                  <given-names>H.</given-names>
+                </name>
+                <name>
+                  <surname>Yang</surname>
+                  <given-names>X.</given-names>
+                </name>
+                <name>
+                  <surname>Kaplan</surname>
+                  <given-names>L.M.</given-names>
+                </name>
+                <name>
+                  <surname>Molony</surname>
+                  <given-names>C.</given-names>
+                </name>
+                <name>
+                  <surname>Schadt</surname>
+                  <given-names>E.E.</given-names>
+                </name>
+              </person-group>
+              <article-title>Integrating pathway analysis and genetics of gene expression for genome-wide association studies</article-title>
+              <source>Am. J. Hum. Genet.</source>
+              <year>2010</year>
+              <volume>86</volume>
+              <fpage>581</fpage>
+              <lpage>591</lpage>
+              <pub-id pub-id-type="doi">10.1016/j.ajhg.2010.02.020</pub-id>
+              <pub-id pub-id-type="pmid">20346437</pub-id>
+            </element-citation>
+          </ref>
+          <ref id="B24-jcm-07-00537">
+            <label>24.</label>
+            <element-citation publication-type="journal">
+              <person-group person-group-type="author">
+                <name>
+                  <surname>Schunkert</surname>
+                  <given-names>H.</given-names>
+                </name>
+                <name>
+                  <surname>Konig</surname>
+                  <given-names>I.R.</given-names>
+                </name>
+                <name>
+                  <surname>Kathiresan</surname>
+                  <given-names>S.</given-names>
+                </name>
+                <name>
+                  <surname>Reilly</surname>
+                  <given-names>M.P.</given-names>
+                </name>
+                <name>
+                  <surname>Assimes</surname>
+                  <given-names>T.L.</given-names>
+                </name>
+                <name>
+                  <surname>Holm</surname>
+                  <given-names>H.</given-names>
+                </name>
+                <name>
+                  <surname>Preuss</surname>
+                  <given-names>M.</given-names>
+                </name>
+                <name>
+                  <surname>Stewart</surname>
+                  <given-names>A.F.</given-names>
+                </name>
+                <name>
+                  <surname>Barbalic</surname>
+                  <given-names>M.</given-names>
+                </name>
+                <name>
+                  <surname>Gieger</surname>
+                  <given-names>C.</given-names>
+                </name>
+                <etal/>
+              </person-group>
+              <article-title>Large-scale association analysis identifies 13 new susceptibility loci for coronary artery disease</article-title>
+              <source>Nat. Genet.</source>
+              <year>2011</year>
+              <volume>43</volume>
+              <fpage>333</fpage>
+              <lpage>338</lpage>
+              <pub-id pub-id-type="doi">10.1038/ng.784</pub-id>
+              <pub-id pub-id-type="pmid">21378990</pub-id>
+            </element-citation>
+          </ref>
+          <ref id="B25-jcm-07-00537">
+            <label>25.</label>
+            <element-citation publication-type="journal">
+              <person-group person-group-type="author">
+                <name>
+                  <surname>Lotta</surname>
+                  <given-names>L.A.</given-names>
+                </name>
+              </person-group>
+              <article-title>Genome-wide association studies in atherothrombosis</article-title>
+              <source>Eur. J. Intern. Med.</source>
+              <year>2010</year>
+              <volume>21</volume>
+              <fpage>74</fpage>
+              <lpage>78</lpage>
+              <pub-id pub-id-type="doi">10.1016/j.ejim.2009.11.003</pub-id>
+              <pub-id pub-id-type="pmid">20206874</pub-id>
+            </element-citation>
+          </ref>
+          <ref id="B26-jcm-07-00537">
+            <label>26.</label>
+            <element-citation publication-type="journal">
+              <person-group person-group-type="author">
+                <name>
+                  <surname>Hardy</surname>
+                  <given-names>J.</given-names>
+                </name>
+                <name>
+                  <surname>Singleton</surname>
+                  <given-names>A.</given-names>
+                </name>
+              </person-group>
+              <article-title>Genomewide association studies and human disease</article-title>
+              <source>N. Engl. J. Med.</source>
+              <year>2009</year>
+              <volume>360</volume>
+              <fpage>1759</fpage>
+              <lpage>1768</lpage>
+              <pub-id pub-id-type="doi">10.1056/NEJMra0808700</pub-id>
+              <pub-id pub-id-type="pmid">19369657</pub-id>
+            </element-citation>
+          </ref>
+          <ref id="B27-jcm-07-00537">
+            <label>27.</label>
+            <element-citation publication-type="journal">
+              <person-group person-group-type="author">
+                <name>
+                  <surname>Shadrina</surname>
+                  <given-names>A.S.</given-names>
+                </name>
+                <name>
+                  <surname>Smetanina</surname>
+                  <given-names>M.A.</given-names>
+                </name>
+                <name>
+                  <surname>Sokolova</surname>
+                  <given-names>E.A.</given-names>
+                </name>
+                <name>
+                  <surname>Shamovskaya</surname>
+                  <given-names>D.V.</given-names>
+                </name>
+                <name>
+                  <surname>Sevost’ianova</surname>
+                  <given-names>K.S.</given-names>
+                </name>
+                <name>
+                  <surname>Shevela</surname>
+                  <given-names>A.I.</given-names>
+                </name>
+                <name>
+                  <surname>Soldatsky</surname>
+                  <given-names>E.Y.</given-names>
+                </name>
+                <name>
+                  <surname>Seliverstov</surname>
+                  <given-names>E.I.</given-names>
+                </name>
+                <name>
+                  <surname>Demekhova</surname>
+                  <given-names>M.Y.</given-names>
+                </name>
+                <name>
+                  <surname>Shonov</surname>
+                  <given-names>O.A.</given-names>
+                </name>
+                <etal/>
+              </person-group>
+              <article-title>Allele rs2010963 C of the VEGFA gene is associated with the decreased risk of primary varicose veins in ethnic Russians</article-title>
+              <source>Phlebology</source>
+              <year>2018</year>
+              <volume>33</volume>
+              <fpage>27</fpage>
+              <lpage>35</lpage>
+              <pub-id pub-id-type="doi">10.1177/0268355516683611</pub-id>
+              <pub-id pub-id-type="pmid">27932624</pub-id>
+            </element-citation>
+          </ref>
+          <ref id="B28-jcm-07-00537">
+            <label>28.</label>
+            <element-citation publication-type="journal">
+              <person-group person-group-type="author">
+                <name>
+                  <surname>Kundu</surname>
+                  <given-names>S.</given-names>
+                </name>
+                <name>
+                  <surname>Lurie</surname>
+                  <given-names>F.</given-names>
+                </name>
+                <name>
+                  <surname>Millward</surname>
+                  <given-names>S.F.</given-names>
+                </name>
+                <name>
+                  <surname>Padberg</surname>
+                  <given-names>F.</given-names>
+                  <suffix>Jr.</suffix>
+                </name>
+                <name>
+                  <surname>Vedantham</surname>
+                  <given-names>S.</given-names>
+                </name>
+                <name>
+                  <surname>Elias</surname>
+                  <given-names>S.</given-names>
+                </name>
+                <name>
+                  <surname>Khilnani</surname>
+                  <given-names>N.M.</given-names>
+                </name>
+                <name>
+                  <surname>Marston</surname>
+                  <given-names>W.</given-names>
+                </name>
+                <name>
+                  <surname>Cardella</surname>
+                  <given-names>J.F.</given-names>
+                </name>
+                <name>
+                  <surname>Meissner</surname>
+                  <given-names>M.H.</given-names>
+                </name>
+                <etal/>
+              </person-group>
+              <article-title>Recommended reporting standards for endovenous ablation for the treatment of venous insufficiency: Joint statement of The American Venous Forum and The Society of Interventional Radiology</article-title>
+              <source>J. Vasc. Surg.</source>
+              <year>2007</year>
+              <volume>46</volume>
+              <fpage>582</fpage>
+              <lpage>589</lpage>
+              <pub-id pub-id-type="doi">10.1016/j.jvs.2007.05.025</pub-id>
+              <pub-id pub-id-type="pmid">17826252</pub-id>
+            </element-citation>
+          </ref>
+          <ref id="B29-jcm-07-00537">
+            <label>29.</label>
+            <element-citation publication-type="journal">
+              <person-group person-group-type="author">
+                <name>
+                  <surname>Brittenden</surname>
+                  <given-names>J.</given-names>
+                </name>
+                <name>
+                  <surname>Cotton</surname>
+                  <given-names>S.C.</given-names>
+                </name>
+                <name>
+                  <surname>Elders</surname>
+                  <given-names>A.</given-names>
+                </name>
+                <name>
+                  <surname>Ramsay</surname>
+                  <given-names>C.R.</given-names>
+                </name>
+                <name>
+                  <surname>Norrie</surname>
+                  <given-names>J.</given-names>
+                </name>
+                <name>
+                  <surname>Burr</surname>
+                  <given-names>J.</given-names>
+                </name>
+                <name>
+                  <surname>Campbell</surname>
+                  <given-names>B.</given-names>
+                </name>
+                <name>
+                  <surname>Bachoo</surname>
+                  <given-names>P.</given-names>
+                </name>
+                <name>
+                  <surname>Chetter</surname>
+                  <given-names>I.</given-names>
+                </name>
+                <name>
+                  <surname>Gough</surname>
+                  <given-names>M.</given-names>
+                </name>
+                <etal/>
+              </person-group>
+              <article-title>A Randomized Trial Comparing Treatments for Varicose Veins</article-title>
+              <source>N. Engl. J. Med.</source>
+              <year>2014</year>
+              <volume>371</volume>
+              <fpage>1218</fpage>
+              <lpage>1227</lpage>
+              <pub-id pub-id-type="doi">10.1056/NEJMoa1400781</pub-id>
+              <pub-id pub-id-type="pmid">25251616</pub-id>
+            </element-citation>
+          </ref>
+          <ref id="B30-jcm-07-00537">
+            <label>30.</label>
+            <element-citation publication-type="journal">
+              <person-group person-group-type="author">
+                <name>
+                  <surname>Sufian</surname>
+                  <given-names>S.</given-names>
+                </name>
+                <name>
+                  <surname>Arnez</surname>
+                  <given-names>A.</given-names>
+                </name>
+                <name>
+                  <surname>Labropoulos</surname>
+                  <given-names>N.</given-names>
+                </name>
+                <name>
+                  <surname>Nguyen</surname>
+                  <given-names>K.</given-names>
+                </name>
+                <name>
+                  <surname>Satwah</surname>
+                  <given-names>V.</given-names>
+                </name>
+                <name>
+                  <surname>Marquez</surname>
+                  <given-names>J.</given-names>
+                </name>
+                <name>
+                  <surname>Chowla</surname>
+                  <given-names>A.</given-names>
+                </name>
+                <name>
+                  <surname>Lakhanpal</surname>
+                  <given-names>S.</given-names>
+                </name>
+              </person-group>
+              <article-title>Radiofrequency ablation of the great saphenous vein, comparing one versus two treatment cycles for the proximal vein segment</article-title>
+              <source>Phlebology</source>
+              <year>2015</year>
+              <volume>30</volume>
+              <fpage>724</fpage>
+              <lpage>728</lpage>
+              <pub-id pub-id-type="doi">10.1177/0268355514556142</pub-id>
+              <pub-id pub-id-type="pmid">25326216</pub-id>
+            </element-citation>
+          </ref>
+          <ref id="B31-jcm-07-00537">
+            <label>31.</label>
+            <element-citation publication-type="journal">
+              <person-group person-group-type="author">
+                <name>
+                  <surname>Sufian</surname>
+                  <given-names>S.</given-names>
+                </name>
+                <name>
+                  <surname>Arnez</surname>
+                  <given-names>A.</given-names>
+                </name>
+                <name>
+                  <surname>Labropoulos</surname>
+                  <given-names>N.</given-names>
+                </name>
+                <name>
+                  <surname>Lakhanpal</surname>
+                  <given-names>S.</given-names>
+                </name>
+              </person-group>
+              <article-title>Endovenous heat-induced thrombosis after ablation with 1470 nm laser: Incidence, progression, and risk factors</article-title>
+              <source>Phlebology</source>
+              <year>2015</year>
+              <volume>30</volume>
+              <fpage>325</fpage>
+              <lpage>330</lpage>
+              <pub-id pub-id-type="doi">10.1177/0268355514526588</pub-id>
+              <pub-id pub-id-type="pmid">24609619</pub-id>
+            </element-citation>
+          </ref>
+          <ref id="B32-jcm-07-00537">
+            <label>32.</label>
+            <element-citation publication-type="journal">
+              <person-group person-group-type="author">
+                <name>
+                  <surname>Tsai</surname>
+                  <given-names>C.T.</given-names>
+                </name>
+                <name>
+                  <surname>Hsieh</surname>
+                  <given-names>C.S.</given-names>
+                </name>
+                <name>
+                  <surname>Chang</surname>
+                  <given-names>S.N.</given-names>
+                </name>
+                <name>
+                  <surname>Chuang</surname>
+                  <given-names>E.Y.</given-names>
+                </name>
+                <name>
+                  <surname>Ueng</surname>
+                  <given-names>K.C.</given-names>
+                </name>
+                <name>
+                  <surname>Tsai</surname>
+                  <given-names>C.F.</given-names>
+                </name>
+                <name>
+                  <surname>Lin</surname>
+                  <given-names>T.H.</given-names>
+                </name>
+                <name>
+                  <surname>Wu</surname>
+                  <given-names>C.K.</given-names>
+                </name>
+                <name>
+                  <surname>Lee</surname>
+                  <given-names>J.K.</given-names>
+                </name>
+                <name>
+                  <surname>Lin</surname>
+                  <given-names>L.Y.</given-names>
+                </name>
+                <etal/>
+              </person-group>
+              <article-title>Genome-wide screening identifies a KCNIP1 copy number variant as a genetic predictor for atrial fibrillation</article-title>
+              <source>Nat. Commun.</source>
+              <year>2016</year>
+              <volume>7</volume>
+              <fpage>10190</fpage>
+              <pub-id pub-id-type="doi">10.1038/ncomms10190</pub-id>
+              <pub-id pub-id-type="pmid">26831368</pub-id>
+            </element-citation>
+          </ref>
+          <ref id="B33-jcm-07-00537">
+            <label>33.</label>
+            <element-citation publication-type="journal">
+              <person-group person-group-type="author">
+                <name>
+                  <surname>Li</surname>
+                  <given-names>R.</given-names>
+                </name>
+                <name>
+                  <surname>Yu</surname>
+                  <given-names>C.</given-names>
+                </name>
+                <name>
+                  <surname>Li</surname>
+                  <given-names>Y.</given-names>
+                </name>
+                <name>
+                  <surname>Lam</surname>
+                  <given-names>T.W.</given-names>
+                </name>
+                <name>
+                  <surname>Yiu</surname>
+                  <given-names>S.M.</given-names>
+                </name>
+                <name>
+                  <surname>Kristiansen</surname>
+                  <given-names>K.</given-names>
+                </name>
+                <name>
+                  <surname>Wang</surname>
+                  <given-names>J.</given-names>
+                </name>
+              </person-group>
+              <article-title>SOAP2: An improved ultrafast tool for short read alignment</article-title>
+              <source>Bioinformatics</source>
+              <year>2009</year>
+              <volume>25</volume>
+              <fpage>1966</fpage>
+              <lpage>1967</lpage>
+              <pub-id pub-id-type="doi">10.1093/bioinformatics/btp336</pub-id>
+              <pub-id pub-id-type="pmid">19497933</pub-id>
+            </element-citation>
+          </ref>
+          <ref id="B34-jcm-07-00537">
+            <label>34.</label>
+            <element-citation publication-type="journal">
+              <person-group person-group-type="author">
+                <name>
+                  <surname>Mortazavi</surname>
+                  <given-names>A.</given-names>
+                </name>
+                <name>
+                  <surname>Williams</surname>
+                  <given-names>B.A.</given-names>
+                </name>
+                <name>
+                  <surname>McCue</surname>
+                  <given-names>K.</given-names>
+                </name>
+                <name>
+                  <surname>Schaeffer</surname>
+                  <given-names>L.</given-names>
+                </name>
+                <name>
+                  <surname>Wold</surname>
+                  <given-names>B.</given-names>
+                </name>
+              </person-group>
+              <article-title>Mapping and quantifying mammalian transcriptomes by RNA-Seq</article-title>
+              <source>Nat. Methods</source>
+              <year>2008</year>
+              <volume>5</volume>
+              <fpage>621</fpage>
+              <lpage>628</lpage>
+              <pub-id pub-id-type="doi">10.1038/nmeth.1226</pub-id>
+              <pub-id pub-id-type="pmid">18516045</pub-id>
+            </element-citation>
+          </ref>
+          <ref id="B35-jcm-07-00537">
+            <label>35.</label>
+            <element-citation publication-type="journal">
+              <person-group person-group-type="author">
+                <name>
+                  <surname>Kramer</surname>
+                  <given-names>A.</given-names>
+                </name>
+                <name>
+                  <surname>Green</surname>
+                  <given-names>J.</given-names>
+                </name>
+                <name>
+                  <surname>Pollard</surname>
+                  <given-names>J.</given-names>
+                  <suffix>Jr.</suffix>
+                </name>
+                <name>
+                  <surname>Tugendreich</surname>
+                  <given-names>S.</given-names>
+                </name>
+              </person-group>
+              <article-title>Causal analysis approaches in Ingenuity Pathway Analysis</article-title>
+              <source>Bioinformatics</source>
+              <year>2014</year>
+              <volume>30</volume>
+              <fpage>523</fpage>
+              <lpage>530</lpage>
+              <pub-id pub-id-type="doi">10.1093/bioinformatics/btt703</pub-id>
+              <pub-id pub-id-type="pmid">24336805</pub-id>
+            </element-citation>
+          </ref>
+          <ref id="B36-jcm-07-00537">
+            <label>36.</label>
+            <element-citation publication-type="journal">
+              <person-group person-group-type="author">
+                <name>
+                  <surname>Lawson</surname>
+                  <given-names>N.D.</given-names>
+                </name>
+                <name>
+                  <surname>Weinstein</surname>
+                  <given-names>B.M.</given-names>
+                </name>
+              </person-group>
+              <article-title>In vivo imaging of embryonic vascular development using transgenic zebrafish</article-title>
+              <source>Dev. Biol.</source>
+              <year>2002</year>
+              <volume>248</volume>
+              <fpage>307</fpage>
+              <lpage>318</lpage>
+              <pub-id pub-id-type="doi">10.1006/dbio.2002.0711</pub-id>
+              <pub-id pub-id-type="pmid">12167406</pub-id>
+            </element-citation>
+          </ref>
+          <ref id="B37-jcm-07-00537">
+            <label>37.</label>
+            <element-citation publication-type="journal">
+              <person-group person-group-type="author">
+                <name>
+                  <surname>Chen</surname>
+                  <given-names>Y.H.</given-names>
+                </name>
+                <name>
+                  <surname>Lin</surname>
+                  <given-names>Y.T.</given-names>
+                </name>
+                <name>
+                  <surname>Lee</surname>
+                  <given-names>G.H.</given-names>
+                </name>
+              </person-group>
+              <article-title>Novel and unexpected functions of zebrafish CCAAT box binding transcription factor (NF-Y) B subunit during cartilages development</article-title>
+              <source>Bone</source>
+              <year>2009</year>
+              <volume>44</volume>
+              <fpage>777</fpage>
+              <lpage>784</lpage>
+              <pub-id pub-id-type="doi">10.1016/j.bone.2009.01.374</pub-id>
+              <pub-id pub-id-type="pmid">19442608</pub-id>
+            </element-citation>
+          </ref>
+          <ref id="B38-jcm-07-00537">
+            <label>38.</label>
+            <element-citation publication-type="journal">
+              <person-group person-group-type="author">
+                <name>
+                  <surname>Kimmel</surname>
+                  <given-names>C.B.</given-names>
+                </name>
+                <name>
+                  <surname>Ballard</surname>
+                  <given-names>W.W.</given-names>
+                </name>
+                <name>
+                  <surname>Kimmel</surname>
+                  <given-names>S.R.</given-names>
+                </name>
+                <name>
+                  <surname>Ullmann</surname>
+                  <given-names>B.</given-names>
+                </name>
+                <name>
+                  <surname>Schilling</surname>
+                  <given-names>T.F.</given-names>
+                </name>
+              </person-group>
+              <article-title>Stages of embryonic development of the zebrafish</article-title>
+              <source>Dev. Dyn.</source>
+              <year>1995</year>
+              <volume>203</volume>
+              <fpage>253</fpage>
+              <lpage>310</lpage>
+              <pub-id pub-id-type="doi">10.1002/aja.1002030302</pub-id>
+              <pub-id pub-id-type="pmid">8589427</pub-id>
+            </element-citation>
+          </ref>
+          <ref id="B39-jcm-07-00537">
+            <label>39.</label>
+            <element-citation publication-type="journal">
+              <person-group person-group-type="author">
+                <name>
+                  <surname>Larkin</surname>
+                  <given-names>M.A.</given-names>
+                </name>
+                <name>
+                  <surname>Blackshields</surname>
+                  <given-names>G.</given-names>
+                </name>
+                <name>
+                  <surname>Brown</surname>
+                  <given-names>N.P.</given-names>
+                </name>
+                <name>
+                  <surname>Chenna</surname>
+                  <given-names>R.</given-names>
+                </name>
+                <name>
+                  <surname>McGettigan</surname>
+                  <given-names>P.A.</given-names>
+                </name>
+                <name>
+                  <surname>McWilliam</surname>
+                  <given-names>H.</given-names>
+                </name>
+                <name>
+                  <surname>Valentin</surname>
+                  <given-names>F.</given-names>
+                </name>
+                <name>
+                  <surname>Wallace</surname>
+                  <given-names>I.M.</given-names>
+                </name>
+                <name>
+                  <surname>Wilm</surname>
+                  <given-names>A.</given-names>
+                </name>
+                <name>
+                  <surname>Lopez</surname>
+                  <given-names>R.</given-names>
+                </name>
+                <etal/>
+              </person-group>
+              <article-title>Clustal W and Clustal X version 2.0</article-title>
+              <source>Bioinformatics</source>
+              <year>2007</year>
+              <volume>23</volume>
+              <fpage>2947</fpage>
+              <lpage>2948</lpage>
+              <pub-id pub-id-type="doi">10.1093/bioinformatics/btm404</pub-id>
+              <pub-id pub-id-type="pmid">17846036</pub-id>
+            </element-citation>
+          </ref>
+          <ref id="B40-jcm-07-00537">
+            <label>40.</label>
+            <element-citation publication-type="journal">
+              <person-group person-group-type="author">
+                <name>
+                  <surname>Hen</surname>
+                  <given-names>G.</given-names>
+                </name>
+                <name>
+                  <surname>Nicenboim</surname>
+                  <given-names>J.</given-names>
+                </name>
+                <name>
+                  <surname>Mayseless</surname>
+                  <given-names>O.</given-names>
+                </name>
+                <name>
+                  <surname>Asaf</surname>
+                  <given-names>L.</given-names>
+                </name>
+                <name>
+                  <surname>Shin</surname>
+                  <given-names>M.</given-names>
+                </name>
+                <name>
+                  <surname>Busolin</surname>
+                  <given-names>G.</given-names>
+                </name>
+                <name>
+                  <surname>Hofi</surname>
+                  <given-names>R.</given-names>
+                </name>
+                <name>
+                  <surname>Almog</surname>
+                  <given-names>G.</given-names>
+                </name>
+                <name>
+                  <surname>Tiso</surname>
+                  <given-names>N.</given-names>
+                </name>
+                <name>
+                  <surname>Lawson</surname>
+                  <given-names>N.D.</given-names>
+                </name>
+                <etal/>
+              </person-group>
+              <article-title>Venous-derived angioblasts generate organ-specific vessels during zebrafish embryonic development</article-title>
+              <source>Development</source>
+              <year>2015</year>
+              <volume>142</volume>
+              <fpage>4266</fpage>
+              <lpage>4278</lpage>
+              <pub-id pub-id-type="doi">10.1242/dev.129247</pub-id>
+              <pub-id pub-id-type="pmid">26525671</pub-id>
+            </element-citation>
+          </ref>
+          <ref id="B41-jcm-07-00537">
+            <label>41.</label>
+            <element-citation publication-type="journal">
+              <person-group person-group-type="author">
+                <name>
+                  <surname>Camenisch</surname>
+                  <given-names>T.D.</given-names>
+                </name>
+                <name>
+                  <surname>Spicer</surname>
+                  <given-names>A.P.</given-names>
+                </name>
+                <name>
+                  <surname>Brehm-Gibson</surname>
+                  <given-names>T.</given-names>
+                </name>
+                <name>
+                  <surname>Biesterfeldt</surname>
+                  <given-names>J.</given-names>
+                </name>
+                <name>
+                  <surname>Augustine</surname>
+                  <given-names>M.L.</given-names>
+                </name>
+                <name>
+                  <surname>Calabro</surname>
+                  <given-names>A.</given-names>
+                  <suffix>Jr.</suffix>
+                </name>
+                <name>
+                  <surname>Kubalak</surname>
+                  <given-names>S.</given-names>
+                </name>
+                <name>
+                  <surname>Klewer</surname>
+                  <given-names>S.E.</given-names>
+                </name>
+                <name>
+                  <surname>McDonald</surname>
+                  <given-names>J.A.</given-names>
+                </name>
+              </person-group>
+              <article-title>Disruption of hyaluronan synthase-2 abrogates normal cardiac morphogenesis and hyaluronan-mediated transformation of epithelium to mesenchyme</article-title>
+              <source>J. Clin. Investig.</source>
+              <year>2000</year>
+              <volume>106</volume>
+              <fpage>349</fpage>
+              <lpage>360</lpage>
+              <pub-id pub-id-type="doi">10.1172/JCI10272</pub-id>
+              <pub-id pub-id-type="pmid">10930438</pub-id>
+            </element-citation>
+          </ref>
+        </ref-list>
+      </back>
+      <floats-group>
+        <fig id="jcm-07-00537-f001" orientation="portrait" position="float">
+          <label>Figure 1</label>
+          <caption>
+            <p>Pathway or network analysis derived from the differentially expressed genes identified by next-generation RNA sequence technology (RNA seq) between venous samples of control patients and those of patients with varicose vein.
+              <italic>N</italic> = 5 for each group.
+            </p>
+          </caption>
+          <graphic xlink:href="jcm-07-00537-g001"/>
+        </fig>
+        <fig id="jcm-07-00537-f002" orientation="portrait" position="float">
+          <label>Figure 2</label>
+          <caption>
+            <p>Validation of the differentially expressed genes identified by next-generation RNA sequence technology (RNA seq) using reverse transcription polymerase chain reaction (RT-PCR) in venous samples of control patients (CL) and those of patients with varicose vein (VV).
+              <italic>N</italic> = 5 for each group.
+              <italic>CA4</italic>, carbonic anhydrase 4;
+              <italic>CHI3L1</italic>, chitinase-3-like protein 1;
+              <italic>FCN1</italic>, Ficolin-1;
+              <italic>HAS2</italic>, hyaluronan synthase 2;
+              <italic>KLK</italic>5, kallikrein-related peptidase.
+            </p>
+          </caption>
+          <graphic xlink:href="jcm-07-00537-g002"/>
+        </fig>
+        <fig id="jcm-07-00537-f003" orientation="portrait" position="float">
+          <label>Figure 3</label>
+          <caption>
+            <p>Expression of the hyaluronan synthases 2 gene (
+              <italic>HAS2</italic>) in venous samples from control patients (CL) and patients with varicose vein (VV). (
+              <bold>A</bold>) Expression of
+              <italic>HAS2</italic> gene evaluated by reverse transcription polymerase chain reaction (RT-PCR); (
+              <bold>B</bold>) Dot plot of quantification of RT-PCR product by densitometry.
+              <italic>N</italic> = 5 for each group. *
+              <italic>p</italic> &lt; 0.05.
+            </p>
+          </caption>
+          <graphic xlink:href="jcm-07-00537-g003"/>
+        </fig>
+        <fig id="jcm-07-00537-f004" orientation="portrait" position="float">
+          <label>Figure 4</label>
+          <caption>
+            <p>Knockdown of hyaluronan synthases 2 gene (
+              <italic>HAS2</italic>) in zebrafish embryos leads to defective venous structure with blood flow stasis.
+              <italic>Tg</italic>(
+              <italic>fli1</italic>:
+              <italic>egfp</italic>)
+              <italic>xTg</italic>(
+              <italic>gata1</italic>:
+              <italic>dsRed</italic>) zebrafish with green fluorescence emitting vasculature and red fluorescence emitting red blood cells are used to observe the anatomic change of vasculature (green fluorescence) and blood flow (red fluorescence). (
+              <bold>A</bold>) Morphology of the tail of a representative wild-type zebrafish (48 hpf) under bright field microscope; (
+              <bold>B</bold>) Vascular structure of the same zebrafish tail under fluorescence microscope; (
+              <bold>C</bold>) Morphology of the tail of a representative
+              <italic>HAS2</italic>-morpholino (MO) injected zebrafish (48 hpf) under bright field microscope. A protruding bulb in the tail is noted (black arrow), mimicking human phenotype of varicose vein; (
+              <bold>D</bold>) Vascular structure of the same HAS2-MO injected zebrafish tail under fluorescence microscope. A corresponding local dilation of venous structure in the caudal vein plexus (CVP) is found (white arrow); (
+              <bold>E</bold>) Morphology of a representative
+              <italic>HAS2</italic>-morpholino (MO) injected zebrafish (48 hpf) with tail malformation under bright field microscope; (
+              <bold>F</bold>) Vascular structure of the same HAS2-MO injected zebrafish tail under fluorescence microscope. Tangled veins are found in the mal-formatted tail (white stars). Magnification is 100× in (
+              <bold>A</bold>–
+              <bold>D</bold>) and 200× in (
+              <bold>E</bold>,
+              <bold>F</bold>). Scale bar = 100 μm. Hpf indicates hours post-fertilization.
+            </p>
+          </caption>
+          <graphic xlink:href="jcm-07-00537-g004"/>
+        </fig>
+        <fig id="jcm-07-00537-f005" orientation="portrait" position="float">
+          <label>Figure 5</label>
+          <caption>
+            <p>Knockdown of hyaluronan synthases 2 gene (HAS2) in zebrafish embryos leads to dilated venous structure.
+              <italic>Tg</italic>(
+              <italic>fli1</italic>:
+              <italic>egfp</italic>)
+              <italic>xTg</italic>(
+              <italic>gata1</italic>:
+              <italic>dsRed</italic>) zebrafish with green fluorescence emitting vasculature are used to observe the anatomic change of vasculature. (
+              <bold>A</bold>) Inter-segmental veins (ISVs) in the tail of a representative wild-type zebrafish (48 hpf) under fluorescence microscope (arrows); (
+              <bold>B</bold>) Dilated ISVs in the tail of a representative HAS2-morpholino (MO) injected zebrafish (48 hpf) under fluorescence microscope (arrows); (
+              <bold>C</bold>) The sub-intestinal vein (SIV) in the tail of a representative wild-type zebrafish (48 hpf) under fluorescence microscope (arrow); (
+              <bold>D</bold>) The dilated SIV (arrow) with protruding branches (arrowheads) in the tail of a representative HAS2-morpholino (MO) injected zebrafish (48 hpf) under fluorescence microscope. Hpf indicates hours post-fertilization. Magnification is 400×. Scale bar = 100 μm.
+            </p>
+          </caption>
+          <graphic xlink:href="jcm-07-00537-g005"/>
+        </fig>
+        <table-wrap id="jcm-07-00537-t001" orientation="portrait" position="float">
+          <object-id pub-id-type="pii">jcm-07-00537-t001_Table 1</object-id>
+          <label>Table 1</label>
+          <caption>
+            <p>Clinical characteristics of patients of the two groups</p>
+          </caption>
+          <table frame="hsides" rules="groups">
+            <thead>
+              <tr>
+                <th align="center" valign="middle" style="border-top:solid thin;border-bottom:solid thin" rowspan="1" colspan="1">Variables</th>
+                <th align="center" valign="middle" style="border-top:solid thin;border-bottom:solid thin" rowspan="1" colspan="1">VV (
+                  <italic>n</italic> = 5)
+                </th>
+                <th align="center" valign="middle" style="border-top:solid thin;border-bottom:solid thin" rowspan="1" colspan="1">Controls (
+                  <italic>n</italic> = 5)
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Age (yr)</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">69.6 ± 14.7</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">75 ± 11.4</td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">BMI</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">26.1 ± 2.8</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">22.6 ± 1.8</td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Male</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">2</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">5</td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">DM</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">0</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">3</td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">HTN</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">2</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">3</td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">HLP</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">1</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">4</td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1">Smoke</td>
+                <td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1">0</td>
+                <td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1">2</td>
+              </tr>
+            </tbody>
+          </table>
+          <table-wrap-foot>
+            <fn>
+              <p>BMI, body mass index; DM, diabetes mellitus; HPL, hyperlipidemia; HTN, hypertension; VV, varicose vein; yr, years.</p>
+            </fn>
+          </table-wrap-foot>
+        </table-wrap>
+        <table-wrap id="jcm-07-00537-t002" orientation="portrait" position="float">
+          <object-id pub-id-type="pii">jcm-07-00537-t002_Table 2</object-id>
+          <label>Table 2</label>
+          <caption>
+            <p>Highly differentially expressed gene list between venous samples from control (CTL) patients and patients with varicose veins (VV).</p>
+          </caption>
+          <table frame="hsides" rules="groups">
+            <thead>
+              <tr>
+                <th rowspan="2" align="center" valign="middle" style="border-top:solid thin;border-bottom:solid thin" colspan="1">Gene</th>
+                <th align="center" valign="middle" style="border-top:solid thin;border-bottom:solid thin" rowspan="1" colspan="1">Log2 Ratio</th>
+                <th align="center" valign="middle" style="border-top:solid thin;border-bottom:solid thin" rowspan="1" colspan="1">Regulation</th>
+                <th rowspan="2" align="center" valign="middle" style="border-top:solid thin;border-bottom:solid thin" colspan="1">Location</th>
+                <th rowspan="2" align="center" valign="middle" style="border-top:solid thin;border-bottom:solid thin" colspan="1">Type(s)</th>
+              </tr>
+              <tr>
+                <th align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1">(VV/CTL)</th>
+                <th align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1">(VV/CTL)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">
+                  <italic>CRABP1</italic>
+                </td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">11.98</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Up</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Cytoplasm</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">transporter</td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">
+                  <italic>SNORA77</italic>
+                </td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">10.16</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Up</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Other</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">other</td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">
+                  <italic>DPEP1</italic>
+                </td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">9.69</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Up</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Cytoplasm</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">peptidase</td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">
+                  <italic>PSORS1C1</italic>
+                </td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">9.56</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Up</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Other</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">other</td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">
+                  <italic>CST2</italic>
+                </td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">9.32</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Up</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Extracellular Space</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">other</td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">
+                  <italic>HLA-DQA2</italic>
+                </td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">8.68</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Up</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Plasma Membrane</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">transmembrane receptor</td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">
+                  <italic>CLIC3</italic>
+                </td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">8.46</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Up</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Nucleus</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">ion channel</td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">
+                  <italic>WFDC10B</italic>
+                </td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">8.20</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Up</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Extracellular Space</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">other</td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">
+                  <italic>KLK5</italic>
+                </td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">7.77</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Up</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Extracellular Space</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">peptidase</td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">
+                  <italic>CPNE7</italic>
+                </td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">7.51</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Up</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Cytoplasm</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">transporter</td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">
+                  <italic>CHAD</italic>
+                </td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">7.39</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Up</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Extracellular Space</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">other</td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">
+                  <italic>WFDC3</italic>
+                </td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">7.16</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Up</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Extracellular Space</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">other</td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">
+                  <italic>S100A8</italic>
+                </td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">−12.33</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Down</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Cytoplasm</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">other</td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">
+                  <italic>GSTT1</italic>
+                </td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">−11.46</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Down</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Cytoplasm</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">enzyme</td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">
+                  <italic>CXCL1</italic>
+                </td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">−10.01</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Down</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Extracellular Space</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">cytokine</td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">
+                  <italic>DAB1</italic>
+                </td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">−9.99</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Down</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Cytoplasm</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">other</td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">
+                  <italic>CHI3L1</italic>
+                </td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">−9.98</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Down</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Extracellular Space</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">enzyme</td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">
+                  <italic>CSF3</italic>
+                </td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">−9.96</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Down</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Extracellular Space</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">cytokine</td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">
+                  <italic>CXCL8</italic>
+                </td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">−9.56</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Down</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Extracellular Space</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">cytokine</td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">
+                  <italic>FCGR3A/FCGR3B</italic>
+                </td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">−9.28</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Down</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Plasma Membrane</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">transmembrane receptor</td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">
+                  <italic>S100A12</italic>
+                </td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">−8.95</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Down</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Cytoplasm</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">other</td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">
+                  <italic>CD33</italic>
+                </td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">−8.70</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Down</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Plasma Membrane</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">other</td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">
+                  <italic>FCN1</italic>
+                </td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">−8.53</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Down</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Extracellular Space</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">other</td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">
+                  <italic>PQLC2L</italic>
+                </td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">−8.10</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Down</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Other</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">other</td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">
+                  <italic>AQP9</italic>
+                </td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">−7.93</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Down</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Plasma Membrane</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">transporter</td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">
+                  <italic>SELE</italic>
+                </td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">−7.85</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Down</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Plasma Membrane</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">transmembrane receptor</td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">
+                  <italic>HAS2</italic>
+                </td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">−7.69</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Down</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">extracellular matrix</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">enzyme</td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">
+                  <italic>CA4</italic>
+                </td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">−7.63</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Down</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Plasma Membrane</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">enzyme</td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">
+                  <italic>IL6</italic>
+                </td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">−7.62</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Down</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Extracellular Space</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">cytokine</td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">
+                  <italic>THEM5</italic>
+                </td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">−7.58</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Down</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Cytoplasm</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">enzyme</td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">
+                  <italic>ZNF385B</italic>
+                </td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">−7.52</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Down</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Nucleus</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">other</td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">
+                  <italic>SRGAP2B</italic>
+                </td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">−7.39</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Down</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Other</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">other</td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">
+                  <italic>FCGR2C</italic>
+                </td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">−7.18</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Down</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Plasma Membrane</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">transmembrane receptor</td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">
+                  <italic>IL1R2</italic>
+                </td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">−7.13</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Down</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Plasma Membrane</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">transmembrane receptor</td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">
+                  <italic>ALAS2</italic>
+                </td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">−7.08</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Down</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Cytoplasm</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">enzyme</td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1">
+                  <italic>HHATL</italic>
+                </td>
+                <td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1">−7.08</td>
+                <td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1">Down</td>
+                <td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1">Cytoplasm</td>
+                <td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1">enzyme</td>
+              </tr>
+            </tbody>
+          </table>
+        </table-wrap>
+        <table-wrap id="jcm-07-00537-t003" orientation="portrait" position="float">
+          <object-id pub-id-type="pii">jcm-07-00537-t003_Table 3</object-id>
+          <label>Table 3</label>
+          <caption>
+            <p>Pathways involved in the transcriptional regulation of varicose veins</p>
+          </caption>
+          <table frame="hsides" rules="groups">
+            <thead>
+              <tr>
+                <th align="center" valign="middle" style="border-top:solid thin;border-bottom:solid thin" rowspan="1" colspan="1">Diseases or Functions Annotation</th>
+                <th align="center" valign="middle" style="border-top:solid thin;border-bottom:solid thin" rowspan="1" colspan="1">
+                  <italic>p</italic>-Value *
+                </th>
+                <th align="center" valign="middle" style="border-top:solid thin;border-bottom:solid thin" rowspan="1" colspan="1">Predicted Activation State</th>
+                <th align="center" valign="middle" style="border-top:solid thin;border-bottom:solid thin" rowspan="1" colspan="1">Molecules</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Angiogenesis</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">8.48 × 10
+                  <sup>−5</sup>
+                </td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Decreased</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">CHI3L1, CSF3, CXCL1, CXCL8, HAS2, IL6, S100A12, S100A8, SELE</td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Binding of cells</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">3.07 × 10
+                  <sup>−4</sup>
+                </td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Decreased</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">CXCL1, CXCL8, HAS2, IL1R2, IL6, SELE</td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Invasion of cells</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">3.43 × 10
+                  <sup>−4</sup>
+                </td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Decreased</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">CHI3L1, CSF3, CXCL1, CXCL8, HAS2, IL6, S100A12, S100A8</td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Vascular lesion</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">7.74 × 10
+                  <sup>−4</sup>
+                </td>
+                <td align="center" valign="middle" rowspan="1" colspan="1"/>
+                <td align="center" valign="middle" rowspan="1" colspan="1">HAS2, IL6, S100A12, SELE</td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">Synthesis of carbohydrate</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">1.32 × 10
+                  <sup>−3</sup>
+                </td>
+                <td align="center" valign="middle" rowspan="1" colspan="1"/>
+                <td align="center" valign="middle" rowspan="1" colspan="1">AQP9, CXCL8, HAS2, IL1R2, IL6</td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1">Accumulation of carbohydrate</td>
+                <td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1">1.93 × 10
+                  <sup>−3</sup>
+                </td>
+                <td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"/>
+                <td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1">CXCL1, CXCL8, HAS2</td>
+              </tr>
+            </tbody>
+          </table>
+          <table-wrap-foot>
+            <fn>
+              <p>*
+                <italic>p</italic>-value was calculated using the right-tailed Fisher’s exact test.
+              </p>
+            </fn>
+          </table-wrap-foot>
+        </table-wrap>
+        <table-wrap id="jcm-07-00537-t004" orientation="portrait" position="float">
+          <object-id pub-id-type="pii">jcm-07-00537-t004_Table 4</object-id>
+          <label>Table 4</label>
+          <caption>
+            <p>Morphological phenotypes of zebrafish embryos (fli1/gata1) derived from fertilized eggs injected with
+              <italic>HAS2</italic>-MO.
+            </p>
+          </caption>
+          <table frame="hsides" rules="groups">
+            <thead>
+              <tr>
+                <th rowspan="2" align="center" valign="middle" style="border-top:solid thin;border-bottom:solid thin" colspan="1">Injection Dose (μM)</th>
+                <th rowspan="2" align="center" valign="middle" style="border-top:solid thin;border-bottom:solid thin" colspan="1">Injected Embryos</th>
+                <th align="center" valign="middle" style="border-top:solid thin;border-bottom:solid thin" rowspan="1" colspan="1">Survival Embryos
+                  <sup>1</sup>
+                </th>
+                <th rowspan="2" align="center" valign="middle" style="border-top:solid thin;border-bottom:solid thin" colspan="1">GFP-Positive Embryos</th>
+                <th rowspan="2" align="center" valign="middle" style="border-top:solid thin;border-bottom:solid thin" colspan="1">Embryos without Defective Vascular Phenotypes (%) *</th>
+                <th rowspan="2" align="center" valign="middle" style="border-top:solid thin;border-bottom:solid thin" colspan="1">Embryos with Defective Vascular Phenotypes (%) *</th>
+              </tr>
+              <tr>
+                <th align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1">(Survival Rates %)
+                  <sup>2</sup>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">250</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">231</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">145 (62%)</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">132</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">84 (63%)</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">48 (37%)</td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" rowspan="1" colspan="1">375</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">563</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">254 (45%)</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">240</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">68 (28%)</td>
+                <td align="center" valign="middle" rowspan="1" colspan="1">172 (72%)</td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1">500</td>
+                <td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1">502</td>
+                <td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1">49 (9%)</td>
+                <td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1">28</td>
+                <td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1">16 (57%)</td>
+                <td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1">12 (43%)</td>
+              </tr>
+            </tbody>
+          </table>
+          <table-wrap-foot>
+            <fn>
+              <p>
+                <sup>1</sup> Total numbers of the survival embryos at 48 hpf.
+                <sup>2</sup> Survival rates indicate the numbers of survival embryos among the numbers of injected embryos at 48 hpf. * Percentages indicate the numbers of no defect or vascular defective embryos among the numbers of GFP-positive embryos at 48 hpf. hpf, hours post-fertilization. GFP, green fluorescent protein.
+              </p>
+            </fn>
+          </table-wrap-foot>
+        </table-wrap>
+      </floats-group>
+    </article>
+  </attachments>
+</envelope>

@@ -1,0 +1,18 @@
+{
+  "database-name": "%%mlStagingDbName%%",
+  "schema-database": "%%mlStagingSchemasDbName%%",
+  "triggers-database": "%%mlStagingTriggersDbName%%",
+  "triple-index": true,
+  "collection-lexicon": true,
+  "uri-lexicon": true,
+  "range-element-index": [
+    {
+      "scalar-type": "dateTime",
+      "namespace-uri": "",
+      "localname": "systemDateTimeCreated",
+      "collation": "http://marklogic.com/collation/codepoint",
+      "range-value-positions": false,
+      "invalid-values": "reject"
+    }
+   ]
+}

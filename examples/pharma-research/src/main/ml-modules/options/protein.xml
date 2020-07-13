@@ -1,0 +1,143 @@
+<options xmlns="http://marklogic.com/appservices/search">
+  <search-option>unfiltered</search-option>
+  <page-length>10</page-length>
+
+  <!-- Limit all searches to this additional query -->
+  <additional-query>
+    <cts:collection-query xmlns:cts="http://marklogic.com/cts">
+      <cts:uri>Protein</cts:uri>
+    </cts:collection-query>
+  </additional-query>
+
+  <!-- Full-text search options -->
+  <term apply="term">
+    <empty apply="all-results"/>
+    <!--
+      Below some example options for full-text searches. Note that MarkLogic will
+      toggle options automatically depending on caps, wildcards etc.
+      See Usage Notes of http://docs.marklogic.com/cts:word-query for details.
+      Also note that forcing stemmed searches will disable wildcarded searches.
+    -->
+    <term-option>punctuation-insensitive</term-option>
+    <term-option>unstemmed</term-option>
+  </term>
+
+  <!-- Default grammer -->
+  <grammar>
+    <quotation>"</quotation>
+    <implicit>
+      <cts:and-query strength="20" xmlns:cts="http://marklogic.com/cts"/>
+    </implicit>
+    <starter strength="30" apply="grouping" delimiter=")">(</starter>
+    <starter strength="40" apply="prefix" element="cts:not-query">-</starter>
+    <joiner strength="10" apply="infix" element="cts:or-query" tokenize="word">OR</joiner>
+    <joiner strength="20" apply="infix" element="cts:and-query" tokenize="word">AND</joiner>
+    <joiner strength="30" apply="infix" element="cts:near-query" tokenize="word">NEAR</joiner>
+    <joiner strength="30" apply="near2" consume="2" element="cts:near-query">NEAR/</joiner>
+    <joiner strength="50" apply="constraint">:</joiner>
+    <joiner strength="50" apply="constraint" compare="LT" tokenize="word">LT</joiner>
+    <joiner strength="50" apply="constraint" compare="LE" tokenize="word">LE</joiner>
+    <joiner strength="50" apply="constraint" compare="GT" tokenize="word">GT</joiner>
+    <joiner strength="50" apply="constraint" compare="GE" tokenize="word">GE</joiner>
+    <joiner strength="50" apply="constraint" compare="NE" tokenize="word">NE</joiner>
+  </grammar>
+
+  <!-- Default sort order. You can also associate states with sort orders to allow switching sort orders -->
+  <sort-order direction="descending">
+    <score/>
+  </sort-order>
+
+  <return-query>1</return-query>
+
+    <!-- Not used, but the default snippeting behavior if no state (see compact/detailed below) was specified -->
+  <transform-results apply="snippet" ns="http://marklogic.com/search-results"
+      at="/lib/snippeting.xqy">
+  </transform-results>
+
+ <result-decorator apply="decorator"
+      ns="http://marklogic.com/search-decorator"
+      at="/lib/searchResultDecorator.xqy"/>
+
+  <!-- This controls the snippet size toggle -->
+  <operator name="results">
+    <state name="compact">
+        <transform-results apply="snippet" ns="http://marklogic.com/search-results"
+        at="/lib/snippeting.xqy">
+      </transform-results>
+    </state>
+    <state name="detailed">
+      <transform-results apply="snippet" ns="http://marklogic.com/search-results"
+        at="/lib/snippeting.xqy">
+      </transform-results>
+    </state>
+  </operator>
+
+  <operator name="sort">
+    <state name="score">
+      <sort-order>
+        <score/>
+      </sort-order>
+    </state>
+    <state name="eyeColorAsc">
+      <sort-order
+    direction="ascending" type="xs:string" collation="http://marklogic.com/collation/codepoint">
+        <path-index>eyeColor</path-index>
+      </sort-order>
+    </state>
+    <state name="eyeColorDsc">
+      <sort-order
+    direction="descending" type="xs:string" collation="http://marklogic.com/collation/codepoint">
+        <path-index>eyeColor</path-index>
+      </sort-order>
+    </state>
+  </operator>
+  <!-- Annotations (allowed pretty much anywhere) allow adding text or elements to feed custom components with options that would normally not validate) -->
+  <annotation>Delta options here</annotation>
+
+  <!-- Facet based on document collections, simple yet elegant -->
+  <!-- <constraint name="Collection"> -->
+    <!-- <collection facet="true" /> -->
+    <!-- optionally enable a prefix to see a specific subset of facets
+    <collection facet="true" prefix="data/" />
+    -->
+  <!-- </constraint> -->
+
+  <!-- Common Facets -->
+  <constraint name="Family">
+    <range type="xs:string" facet="true" collation="http://marklogic.com/collation/codepoint">
+      <facet-option>limit=10</facet-option>
+      <facet-option>frequency-order</facet-option>
+      <facet-option>descending</facet-option>
+      <element ns="" name="family"/>
+    </range>
+  </constraint>
+
+  <constraint name="Sub-Family">
+    <range type="xs:string" facet="true" collation="http://marklogic.com/collation/codepoint">
+      <facet-option>limit=10</facet-option>
+      <facet-option>frequency-order</facet-option>
+      <facet-option>descending</facet-option>
+      <element ns="" name="subfamily"/>
+    </range>
+  </constraint>  
+
+  <constraint name="Sub-Sub-Family">
+    <range type="xs:string" facet="true" collation="http://marklogic.com/collation/codepoint">
+      <facet-option>limit=10</facet-option>
+      <facet-option>frequency-order</facet-option>
+      <facet-option>descending</facet-option>
+      <element ns="" name="subsubfamily"/>
+    </range>
+  </constraint>
+
+  <constraint name="Targeting-Drug">
+    <range type="xs:string" facet="true" collation="http://marklogic.com/collation/codepoint">
+      <facet-option>limit=10</facet-option>
+      <facet-option>frequency-order</facet-option>
+      <facet-option>descending</facet-option>
+      <path-index>//Protein/drug/name</path-index>
+    </range>
+  </constraint>
+
+
+</options>

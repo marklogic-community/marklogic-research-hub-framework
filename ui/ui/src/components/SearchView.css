@@ -1,0 +1,121 @@
+.search-view {
+  display: flex;
+  justify-content: stretch;
+}
+
+.search-view aside {
+  flex: 0 0 20%;
+  display: flex;
+  flex-flow: column;
+  background-color: #fafbfc;
+}
+
+.search-view aside .sections,
+.search-view aside .facets {
+  border-right-width: 0;
+}
+
+.search-view aside .facets h4,
+.search-view aside .facets hr {
+  display: none;
+}
+
+.facet-group {
+  color: #A2AAAD;
+}
+
+.facet-group .facet-values {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.facet-group .facet-values li a {
+  color: #666;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.facet-group .facet-values li a:hover {
+  text-decoration: none;
+}
+.facet-group .facet-values li a i {
+  margin-right: 0.35em;
+}
+.facet-group .facet-values li a label {
+  display: inline;
+}
+.facet-group .facet-values li span {
+  margin-left: 0.25em;
+}
+.facet-group .facet-values li span:before { content: '(' }
+.facet-group .facet-values li span:after { content: ')' }
+
+aside .workspace-navigator,
+.search-container header {
+  background-color: #fff;
+  border-bottom: solid 1px #eee;
+  height: 12rem;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+aside .workspace-navigator h2 {
+  margin: 0 0 1em;
+}
+
+.search-container header {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+}
+
+.search-container .uber-facets ul {
+  padding: 0;
+  margin-top: -3px;
+}
+
+.search-container .uber-facets ul li {
+  padding-top: 0;
+}
+
+.search-container .uber-facets li button {
+  background: #fff;
+  color: #000;
+  text-transform: capitalize;
+  font-size: 2rem;
+  border-bottom: solid 3px #FFF;
+  border-radius: 0;
+  box-shadow: none;
+}
+.search-container .uber-facets li button:focus {
+  outline: solid 1px transparent;
+  border-bottom-color: #eee;
+}
+
+.search-container .uber-facets li button.selected {
+  border-bottom-color: #6da5d8;
+}
+
+.search-container .uber-facets li button i { display: none; }
+
+.search-container header form[role="search"] {
+  width: 80rem;
+}
+
+.search-container .search-response {
+  padding: 15px;
+  background-color: #fafbfc;
+}
+
+.search-response > .row {
+  border-left: solid 1px #D0D3D4;
+  padding: 15px;
+}
+
+.search-response .panel-info,
+.search-response .well {
+  background: transparent;
+}
+
+.search-response .panel-body h2 { color: #6da5d8; }

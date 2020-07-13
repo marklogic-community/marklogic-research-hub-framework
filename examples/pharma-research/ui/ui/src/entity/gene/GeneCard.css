@@ -1,0 +1,7 @@
+.gene-info-container {
+    display: flex;
+}
+
+.gene-info {
+    margin-left: 10px;
+}

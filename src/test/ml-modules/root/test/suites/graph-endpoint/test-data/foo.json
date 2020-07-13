@@ -1,0 +1,89 @@
+{
+  "envelope": {
+    "triples": [
+      {
+        "triple": {
+          "subject": "/foo/1/PubMed/PMID-9999999.json",
+          "predicate": "PRH:wroteAbout",
+          "object": "/topic/TopicOne.json"
+        },
+        "triple": {
+          "subject": "/topic/TopicOne.json",
+          "predicate": "PRH:entityType",
+          "object": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#string",
+              "value": "topic"
+            }
+        },
+        "triple": {
+          "subject": "/topic/TopicOne.json",
+          "predicate": "PRH:preferredName",
+          "object": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#string",
+              "value": "Topic One"
+            }
+        },
+        "triple": {
+          "subject": "/foo/1/PubMed/PMID-9999999.json",
+          "predicate": "PRH:wroteAbout",
+          "object": "/topic/TopicTwo.json"
+        },
+        "triple": {
+          "subject": "/topic/TopicTwo.json",
+          "predicate": "PRH:entityType",
+          "object": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#string",
+              "value": "topic"
+            }
+        },
+        "triple": {
+          "subject": "/topic/TopicTwo.json",
+          "predicate": "PRH:preferredName",
+          "object": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#string",
+              "value": "Topic Two"
+            }
+        },
+        "triple": {
+          "subject": "/foo/1/PubMed/PMID-9999999.json",
+          "predicate": "PRH:preferredName",
+          "object": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#string",
+              "value": "Test Author One"
+            }
+        },
+        "triple": {
+          "subject": "/foo/1/PubMed/PMID-9999999.json",
+          "predicate": "PRH:affiliatedWith",
+          "object": "/place/PlaceOne.json"
+        },
+        "triple": {
+          "subject": "/place/PlaceOne.json",
+          "predicate": "PRH:preferredName",
+          "object": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#string",
+              "value": "Place One"
+            }
+        },
+        "triple": {
+          "subject": "/place/PlaceOne.json",
+          "predicate": "PRH:entityType",
+          "object": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#string",
+              "value": "institution"
+            }
+        },
+        "triple": {
+          "subject": "/foo/1/PubMed/PMID-9999999.json",
+          "predicate": "PRH:authorFrequent",
+          "object": "/foo/2/PubMed/PMID-9999999.json"
+        },
+        "triple": {
+          "subject": "/foo/1/PubMed/PMID-9999999.json",
+          "predicate": "PRH:entityType",
+          "object": "foo"
+        }
+      }
+    ]
+  }
+}

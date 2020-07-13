@@ -1,0 +1,77 @@
+.glyphicon-spin {
+  animation: spin 2000ms infinite linear;
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(359deg);
+	}
+}
+
+.ml-qtext-input {
+	color: #1D252D;
+	background: #FFFFFF;
+	border: 2px solid #D0D3D4 !important;
+	border-right: 0px solid #D0D3D4 !important;
+	padding-left: 32px !important;
+	padding-top: 26px !important;
+	padding-bottom: 26px !important;
+	border-top-left-radius: 32px !important;
+	border-bottom-left-radius: 32px !important;
+	box-shadow: none !important;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px !important;
+	line-height: 29px;
+}
+
+.ml-qtext-input:focus {
+	border-color: none !important;
+	outline: none !important;
+	box-shadow: none !important;
+}
+
+.ml-execute-search {
+	background-color: #ffffff;
+	border-top: 2px solid #D0D3D4 !important;
+	border-bottom: 2px solid #D0D3D4 !important;
+	border-right: 2px solid #D0D3D4 !important;
+	border-top-right-radius:32px !important;
+	border-bottom-right-radius:32px !important;
+	box-shadow: none;
+	padding-top: 15.5px;
+	padding-bottom: 12.5px;
+	padding-left: 24px;
+	padding-right: 24px;
+}
+
+.ml-search-item {
+  border-top: 2px solid #D0D3D4 !important;
+  border-bottom: 2px solid #D0D3D4 !important;
+  padding-top: 15.5px;
+  padding-bottom: 12.5px;
+}
+
+.ml-search-item:not(*:root) {
+  padding-bottom: 13.5px !important;
+}
+
+
+/*
+WEIRD fix for Webkit based browsers not respecting the
+rounding up of subpixels when using .5, must use .51px
+instead if you want it to successfully round.
+
+Solution is to target Webkit browsers and force a
+specific override for proper padding.
+*/
+.ml-execute-search:not(*:root) {
+	padding-bottom: 13.5px !important;
+}
+
+.ml-execute-search:hover {
+	background-color: #f9f9f9 !important;
+}

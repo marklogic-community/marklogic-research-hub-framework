@@ -1,0 +1,57 @@
+{
+  "template": {
+    "context": "/envelope[instance/resume]",
+    "collections": ["resume"],
+
+    "vars": [{
+
+      "name": "PRHPrefix",
+      "val": "'PRH:'"
+
+    },{
+
+      "name": "resumeIri",
+      "val": "sem:iri(xdmp:node-uri(.))"
+
+    }],
+
+    "templates": [{
+      "context": "instance/resume",
+      "triples": [{
+        "subject": {
+          "val": "$resumeIri"
+        },
+        "predicate": {
+          "val": "sem:iri($PRHPrefix || 'entityType')"
+        },
+        "object": {
+          "val": "lower-case(name(.))"
+        }
+      },{
+        "subject": {
+          "val": "$resumeIri"
+        },
+        "predicate": {
+          "val": "sem:iri($PRHPrefix || 'preferredName')"
+        },
+        "object": {
+          "val": "string(resumeId)"
+        }
+      }]
+    },
+    {
+      "context": "headers",
+      "triples": [{
+        "subject": {
+          "val": "sem:iri(employeeUri)"
+        },
+        "predicate": {
+          "val": "sem:iri($PRHPrefix || 'hasResume')"
+        },
+        "object": {
+          "val": "$resumeIri"
+        }
+      }]
+    }]
+  }
+}

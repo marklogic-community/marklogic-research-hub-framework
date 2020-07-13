@@ -1,0 +1,156 @@
+/* Contains Color Styles */
+/* Primary Colors */
+/* ML PURPLE */
+.purple-bg { background: #44499C !important; }
+.purple-fg { color: #44499C !important; }
+.purple-bd { border-width: 2px; border-style: solid !important; border-color: #44499C !important;}
+
+/* ML RED */
+.red-bg { background: #CB333B !important; }
+.red-fg { color: #CB333B !important; }
+.red-bd { border-width: 2px; border-style: solid !important; border-color: #CB333B !important; }
+
+/* Neutral Colors */
+/* WHITE */
+.white-bg { background: #FFFFFF !important; }
+.white-fg { color: #FFFFFF !important }
+.white-bd { border-width: 2px; border-style: solid !important; border-color: #FFFFFF !important }
+
+/* GREY 1 */
+.gray-1-bg { background: #F3F6F8 !important; }
+.gray-1-fg { color: #F3F6F8 !important }
+.gray-1-bd { border-width: 2px; border-style: solid !important; border-color: #F3F6F8 !important }
+
+/* GREY 2 */
+.gray-2-bg { background: #F3F4F4 !important; }
+.gray-2-fg { color: #F3F4F4 !important }
+.gray-2-bd { border-width: 2px; border-style: solid !important; border-color: #F3F4F4 !important }
+
+/* GREY 3 */
+.gray-3-bg { background: #E7E9E9 !important; }
+.gray-3-fg { color: #E7E9E9 !important }
+.gray-3-bd { border-width: 2px; border-style: solid !important; border-color: #E7E9E9 !important }
+
+/* GREY 4 */
+.gray-4-bg { background: #DCDEDF !important; }
+.gray-4-fg { color: #DCDEDF !important }
+.gray-4-bd { border-width: 2px; border-style: solid !important; border-color: #DCDEDF !important }
+
+/* GREY 5 */
+.gray-5-bg { background: #D0D3D4 !important; }
+.gray-5-fg { color: #D0D3D4 !important }
+.gray-5-bd { border-width: 2px; border-style: solid !important; border-color: #D0D3D4 !important }
+
+/* GREY 6 */
+.gray-6-bg { background: #C1C6C8 !important; }
+.gray-6-fg { color: #C1C6C8 !important }
+.gray-6-bd { border-width: 2px; border-style: solid !important; border-color: #C1C6C8 !important }
+
+/* GREY 7 */
+.gray-7-bg { background: #A2AAAD !important; }
+.gray-7-fg { color: #A2AAAD !important }
+.gray-7-bd { border-width: 2px; border-style: solid !important; border-color: #A2AAAD !important }
+
+/* GREY 8 */
+.gray-8-bg { background: #7C878E !important; }
+.gray-8-fg { color: #7C878E !important }
+.gray-8-bd { border-width: 2px; border-style: solid !important; border-color: #7C878E !important }
+
+/* GREY 9 */
+.gray-9-bg { background: #5B6770 !important; }
+.gray-9-fg { color: #5B6770 !important }
+.gray-9-bd { border-width: 2px; border-style: solid !important; border-color: #5B6770 !important }
+
+/* GREY 10 */
+.gray-10-bg { background: #333F48 !important; }
+.gray-10-fg { color: #333F48 !important }
+.gray-10-bd { border-width: 2px; border-style: solid !important; border-color: #333F48 !important }
+
+/* GREY 11 */
+.gray-11-bg { background: #1D252D !important; }
+.gray-11-fg { color: #1D252D !important }
+.gray-11-bd { border-width: 2px; border-style: solid !important; border-color: #1D252D !important }
+
+/* Secondary Accent Colors */
+/* RED ACCENT */
+.red-accent-bg { background: #F4364C !important; }
+.red-accent-fg { color: #F4364C !important }
+.red-accent-bd { border-width: 2px; border-style: solid !important; border-color: #F4364C !important }
+
+/* PURPLE ACCENT 1 */
+.purple-accent-1-bg { background: #343579 !important; }
+.purple-accent-1-fg { color: #343579 !important }
+.purple-accent-1-bd { border-width: 2px; border-style: solid !important; border-color: #343579 !important }
+
+/* PURPLE ACCENT 2 */
+.purple-accent-2-bg { background: #6068B2 !important; }
+.purple-accent-2-fg { color: #6068B2 !important }
+.purple-accent-2-bd { border-width: 2px; border-style: solid !important; border-color: #6068B2 !important }
+
+/* PURPLE ACCENT 3 */
+.purple-accent-3-bg { background: #9CB0E3 !important; }
+.purple-accent-3-fg { color: #9CB0E3 !important }
+.purple-accent-3-bd { border-width: 2px; border-style: solid !important; border-color: #9CB0E3 !important }
+
+/* Bright Accent Colors */
+/* BRIGHT GREEN ACCENT */
+.bright-green-accent-bg { background: #47FFDE !important; }
+.bright-green-accent-fg { color: #47FFDE !important }
+.bright-green-accent-bd { border-width: 2px; border-style: solid !important; border-color: #47FFDE !important }
+
+/* BRIGHT PURPLE ACCENT */
+.bright-purple-accent-bg { background: #8E9FFF !important; }
+.bright-purple-accent-fg { color: #8E9FFF !important }
+.bright-purple-accent-bd { border-width: 2px; border-style: solid !important; border-color: #8E9FFF !important }
+
+/* BRIGHT PINK ACCENT */
+.bright-pink-accent-bg { background: #FB637E !important; }
+.bright-pink-accent-fg { color: #FB637E !important }
+.bright-pink-accent-bd { border-width: 2px; border-style: solid !important; border-color: #FB637E !important }
+
+/* Functional UI Colors */
+/* HEALTHY LIGHT */
+.healthy-light-bg { background: #3AD6BC !important; }
+.healthy-light-fg { color: #3AD6BC !important }
+.healthy-light-bd { border-width: 2px; border-style: solid !important; border-color: #3AD6BC !important }
+
+/* HEALTHY DARK */
+.healthy-dark-bg { background: #00B388 !important; }
+.healthy-dark-fg { color: #00B388 !important }
+.healthy-dark-bd { border-width: 2px; border-style: solid !important; border-color: #00B388 !important }
+
+/* RISK LIGHT */
+.risk-light-bg { background: #FBD872 !important; }
+.risk-light-fg { color: #FBD872 !important }
+.risk-light-bd { border-width: 2px; border-style: solid !important; border-color: #FBD872 !important }
+
+/* RISK DARK */
+.risk-dark-bg { background: #FFBD3E !important; }
+.risk-dark-fg { color: #FFBD3E !important }
+.risk-dark-bd { border-width: 2px; border-style: solid !important; border-color: #FFBD3E !important }
+
+/* CRITICAL LIGHT */
+.critical-light-bg { background: #F76C83 !important; }
+.critical-light-fg { color: #F76C83 !important }
+.critical-light-bd { border-width: 2px; border-style: solid !important; border-color: #F76C83 !important }
+
+/* CRITICAL DARK */
+.critical-dark-bg { background: #F4364C !important; }
+.critical-dark-fg { color: #F4364C !important }
+.critical-dark-bd { border-width: 2px; border-style: solid !important; border-color: #F4364C !important }
+
+/* SECURITY LIGHT */
+.security-light-bg { background: #8BBEE8 !important; }
+.security-light-fg { color: #8BBEE8 !important }
+.security-light-bd { border-width: 2px; border-style: solid !important; border-color: #8BBEE8 !important }
+
+/* SECURITY DARK */
+.security-dark-bg { background: #3D87CB !important; }
+.security-dark-fg { color: #3D87CB !important }
+.security-dark-bd { border-width: 2px; border-style: solid !important; border-color: #3D87CB !important }
+
+/* Interface Colors */
+/* PRIMARY LINK */
+.primary-link-bg { background: #4DAFB2 !important; }
+.primary-link-fg { color: #4DAFB2 !important }
+.primary-link-bd { border-width: 2px; border-style: solid !important; border-color: #4DAFB2 !important }

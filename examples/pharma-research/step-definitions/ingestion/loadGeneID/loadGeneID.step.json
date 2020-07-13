@@ -1,0 +1,22 @@
+{
+  "lang" : "zxx",
+  "name" : "loadGeneID",
+  "description" : null,
+  "type" : "INGESTION",
+  "version" : 1,
+  "options" : {
+    "collections" : [ "geneIDInputflow", "Gene", "GeneID" ],
+    "outputFormat" : "xml",
+    "targetDatabase" : "data-hub-STAGING"
+  },
+  "customHook" : { },
+  "modulePath" : "/custom-modules/ingestion/loadGeneID/main.sjs",
+  "retryLimit" : 0,
+  "batchSize" : 100,
+  "threadCount" : 32,
+  "fileLocations" : {
+    "inputFilePath" : "data/ncbi_gene/mim2gene_medgen.tsv.txt",
+    "outputURIReplacement" : ".*data/ncbi_gene/,''",
+    "inputFileType" : "delimited_text"
+  }
+}

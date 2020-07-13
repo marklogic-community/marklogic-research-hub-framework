@@ -1,0 +1,18 @@
+{
+  "info" : {
+    "title" : "Skill",
+    "version" : "0.0.1",
+    "baseUri" : "http://example.org/",
+    "description": "Skill"
+  },
+  "definitions" : {
+    "Substance" : {
+      "required" : [ ],
+      "pii" : [ ],
+      "elementRangeIndex" : [ ],
+      "rangeIndex" : [ ],
+      "wordLexicon" : [ ],
+      "properties" : { }
+    }
+  }
+}

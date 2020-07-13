@@ -1,0 +1,45 @@
+{
+  "name" : "LoadDrug",
+  "description" : "This is the default flow containing all of the default steps",
+  "batchSize" : 100,
+  "threadCount" : 4,
+  "stopOnError" : false,
+  "options" : {
+    "sourceQuery" : null
+  },
+  "version" : 0,
+  "steps" : {
+    "1" : {
+      "name" : "drugZipLoad",
+      "description" : "This is the default ingestion step",
+      "options" : {
+        "entity" : "Drug",
+        "targetDatabase" : "data-hub-STAGING"
+      },
+      "customHook" : { },
+      "retryLimit" : 0,
+      "batchSize" : 0,
+      "threadCount" : 0,
+      "stepDefinitionName" : "drugZipLoad",
+      "stepDefinitionType" : "INGESTION",
+      "fileLocations" : { }
+    },
+    "2" : {
+      "name" : "harmonizeDrug",
+      "description" : "This is the custom harmonization step",
+      "options" : {
+        "sourceQuery" : "cts.collectionQuery('Drug')",
+        "sourceDatabase" : "data-hub-STAGING",
+        "collections" : [ "Drug", "mdm-content", "drugContent" ],
+        "outputFormat" : "json",
+        "targetDatabase" : "data-hub-FINAL"
+      },
+      "customHook" : null,
+      "retryLimit" : 0,
+      "batchSize" : 0,
+      "threadCount" : 0,
+      "stepDefinitionName" : "harmonizeDrug",
+      "stepDefinitionType" : "CUSTOM"
+    }
+  }
+}

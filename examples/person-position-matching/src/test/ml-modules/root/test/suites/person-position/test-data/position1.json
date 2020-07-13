@@ -1,0 +1,49 @@
+{
+  "envelope": {
+    "headers": {
+      "sources": [
+        {
+          "name": "LoadPositions"
+        }
+      ],
+      "createdOn": "2020-02-05T13:47:50.569911Z",
+      "createdBy": "admin",
+      "createdUsingFile": "/Users/phare/src/ml/research-hub/./data/person-position-matching/positions/positions.csv"
+    },
+    "triples": [],
+    "instance": {
+      "info": {
+        "title": "Position",
+        "version": "0.0.1",
+        "baseUri": "http://example.org/"
+      },
+      "Position": {
+        "description": "Semantic Expert",
+        "requiredSkill": [
+          "SPARQL"
+        ]
+      }
+    },
+    "attachments": {
+      "envelope": {
+        "headers": {
+          "sources": [
+            {
+              "name": "LoadPositions"
+            }
+          ],
+          "createdOn": "2020-02-05T13:47:50.569911Z",
+          "createdBy": "admin",
+          "createdUsingFile": "/Users/phare/src/ml/research-hub/./data/person-position-matching/positions/positions.csv"
+        },
+        "triples": [],
+        "instance": {
+          "ID": "Pos2",
+          "Name": "Semantic Expert",
+          "Requirements": "SPARQL"
+        },
+        "attachments": null
+      }
+    }
+  }
+}

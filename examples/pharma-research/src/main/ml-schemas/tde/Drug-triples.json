@@ -1,0 +1,124 @@
+{
+  "template": {
+    "context": "/envelope[instance/Drug]",
+    "collections": ["Drug"],
+
+    "vars": [{
+
+      "name": "PRHPrefix",
+      "val": "'PRH:'"
+
+    },{
+
+      "name": "drugIri",
+      "val": "sem:iri(xdmp:node-uri(.))"
+
+    }],
+
+    "templates": [{
+
+      "context": "instance/Drug",
+
+      "triples": [{
+
+        "subject": {
+          "val": "$drugIri"
+        },
+        "predicate": {
+          "val": "sem:iri($PRHPrefix || 'entityType')"
+        },
+        "object": {
+          "val": "lower-case(name(.))"
+        }
+
+      },{
+
+        "subject": {
+          "val": "$drugIri"
+        },
+        "predicate": {
+          "val": "sem:iri($PRHPrefix || 'preferredName')"
+        },
+        "object": {
+          "val": "string(drugName)"
+        }
+
+      }]
+
+    },{
+
+      "context": "headers/activeSubstances",
+
+      "vars": [{
+
+        "name": "activeIngredientIRI",
+        "val": "sem:iri( uri )"
+
+      }],
+
+      "triples": [{
+
+        "subject": {
+          "val": "$drugIri"
+        },
+        "predicate": {
+          "val": "sem:iri($PRHPrefix || 'hasActiveIngredient')"
+        },
+        "object": {
+          "val": "$activeIngredientIRI"
+        }
+
+      },{
+
+        "subject": {
+          "val": "$activeIngredientIRI"
+        },
+        "predicate": {
+          "val": "sem:iri($PRHPrefix || 'entityType')"
+        },
+        "object": {
+          "val": "'activeIngredient'"
+        }
+
+      },{
+
+        "subject": {
+          "val": "$activeIngredientIRI"
+        },
+        "predicate": {
+          "val": "sem:iri($PRHPrefix || 'preferredName')"
+        },
+        "object": {
+          "val": "string(name)"
+        }
+
+      }]
+
+    },{
+
+      "context": "headers/relatedStudies",
+
+      "vars": [{
+
+        "name": "studyIri",
+        "val": "sem:iri( . )"
+
+      }],
+
+      "triples": [{
+
+        "subject": {
+          "val": "$drugIri"
+        },
+        "predicate": {
+          "val": "sem:iri($PRHPrefix || 'isRelated')"
+        },
+        "object": {
+          "val": "$studyIri"
+        }
+
+      }]
+
+    }]
+  }
+}

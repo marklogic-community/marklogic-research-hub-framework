@@ -1,0 +1,69 @@
+{
+  "lang" : "zxx",
+  "name" : "MountainTopEmployees-MapEmployees",
+  "description" : "",
+  "version" : 0,
+  "targetEntityType" : "http://marklogic.com/topgun/employee-0.0.1/employee",
+  "sourceContext" : "/",
+  "sourceURI" : "./data/hr360/MountainTopEmployees/MountainTopEmployees/3e0e60aa-6b08-4ed3-b78f-d47e32045684.json",
+  "properties" : {
+    "lastName" : {
+      "sourcedFrom" : "last_name"
+    },
+    "jobEffectiveDate" : {
+      "sourcedFrom" : "parseDate(hire_date,\"MM/DD/YYYY\")"
+    },
+    "jobStatus" : {
+      "sourcedFrom" : "status"
+    },
+    "address" : {
+      "sourcedFrom" : "concat(addr1,' ',addr2)"
+    },
+    "city" : {
+      "sourcedFrom" : "city"
+    },
+    "bonus" : {
+      "sourcedFrom" : "bonus"
+    },
+    "mobileNumber" : {
+      "sourcedFrom" : "mobile"
+    },
+    "departmentId" : {
+      "sourcedFrom" : "dept_num"
+    },
+    "postalCode" : {
+      "sourcedFrom" : "zip"
+    },
+    "jobTitle" : {
+      "sourcedFrom" : "job_title"
+    },
+    "baseSalary" : {
+      "sourcedFrom" : "base_salary"
+    },
+    "employeeId" : {
+      "sourcedFrom" : "emp_id"
+    },
+    "languageSkills" : {
+      "sourcedFrom" : "tokenize(languages,',')"
+    },
+    "firstName" : {
+      "sourcedFrom" : "first_name"
+    },
+    "phoneNumber" : {
+      "sourcedFrom" : "mobile"
+    },
+    "toolSkills" : {
+      "sourcedFrom" : "tokenize(tools,',')"
+    },
+    "state" : {
+      "sourcedFrom" : "state"
+    },
+    "productSkills" : {
+      "sourcedFrom" : "tokenize(products,',')"
+    },
+    "email" : {
+      "sourcedFrom" : "work_email"
+    }
+  },
+  "namespaces" : { }
+}

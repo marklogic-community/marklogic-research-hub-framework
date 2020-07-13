@@ -1,0 +1,86 @@
+{
+    "info": {
+        "title": "Author",
+        "version": "0.0.1",
+        "baseUri": "http://example.com/",
+        "description": "WeightedAssociations are basically item,,weight pairs that indicate how strongly an Author (e.g.) is associated withsome concept or entityt.\n"
+    },
+    "definitions": {
+        "Author": {
+            "properties": {
+                "coAuthors": {
+                    "datatype": "array",
+                    "items": {
+                        "$ref": "#/definitions/CoAuthorAssociation"
+                    },
+                    "description": ""
+                },
+                "coauthor": {
+                    "$ref": "#/definitions/CoAuthorAssociation",
+                    "description": ""
+                },
+                "topics": {
+                    "datatype": "array",
+                    "items": {
+                        "$ref": "#/definitions/TopicAssociation"
+                    },
+                    "description": ""
+                },
+                "topicassociation": {
+                    "$ref": "#/definitions/TopicAssociation",
+                    "description": ""
+                },
+                "affiliations": {
+                    "datatype": "array",
+                    "items": {
+                        "$ref": "#/definitions/OrganizationAssociation"
+                    },
+                    "description": ""
+                },
+                "personIdentifier": {
+                    "datatype": "string",
+                    "description": "The identifier for the person"
+                },
+                "personSex": {
+                    "datatype": "string",
+                    "description": "The gender code denotes the gender or sex of a person"
+                },
+                "personBirthDate": {
+                    "datatype": "date",
+                    "description": "The date a person was born"
+                },
+                "personAlternateNames": {
+                    "datatype": "array",
+                    "items": {
+                        "$ref": "#/definitions/PersonNameType"
+                    },
+                    "description": ""
+                },
+                "personName": {
+                    "$ref": "#/definitions/PersonNameType",
+                    "description": ""
+                },
+                "personSurName": {
+                    "datatype": "string",
+                    "description": "the person's surname"
+                },
+                "personGivenName": {
+                    "datatype": "string",
+                    "description": "the person's given name"
+                },
+                "organizationName": {
+                    "datatype": "string",
+                    "description": "the org name"
+                }
+            },
+            "description": "",
+            "required": [
+                "personIdentifier",
+                "personSex",
+                "personBirthDate",
+                "personName"
+            ],
+            "primaryKey": "personIdentifier"
+        }
+    }
+}

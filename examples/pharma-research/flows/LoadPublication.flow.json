@@ -1,0 +1,63 @@
+{
+  "name" : "LoadPublication",
+  "description" : "This is the default flow containing all of the default steps",
+  "batchSize" : 100,
+  "threadCount" : 4,
+  "stopOnError" : false,
+  "options" : {
+    "sourceQuery" : null
+  },
+  "version" : 0,
+  "steps" : {
+    "1" : {
+      "name" : "loadNCBIPubmed",
+      "description" : "This is the default ingestion step",
+      "options" : {
+        "entity" : "publication",
+        "targetDatabase" : "data-hub-STAGING"
+      },
+      "customHook" : { },
+      "retryLimit" : 0,
+      "batchSize" : 0,
+      "threadCount" : 0,
+      "stepDefinitionName" : "loadNCBIPubmed",
+      "stepDefinitionType" : "INGESTION",
+      "fileLocations" : { }
+    },
+    "2" : {
+      "name" : "harmonizePubMedXML",
+      "description" : "This is the custom harmonization step",
+      "options" : {
+        "sourceQuery" : "cts.collectionQuery('publication')",
+        "sourceDatabase" : "data-hub-STAGING",
+        "collections" : [ "publication", "Publication" ],
+        "outputFormat" : "xml",
+        "targetDatabase" : "data-hub-FINAL"
+      },
+      "customHook" : null,
+      "retryLimit" : 0,
+      "batchSize" : 0,
+      "threadCount" : 0,
+      "stepDefinitionName" : "harmonizePubMedXML",
+      "stepDefinitionType" : "CUSTOM"
+    },
+    "3" : {
+      "name" : "harmonizePubMedAuthor",
+      "description" : "This is the custom harmonization step",
+      "options" : {
+        "sourceQuery" : "cts.collectionQuery('publication')",
+        "sourceDatabase" : "data-hub-STAGING",
+        "collections" : [ "Author", "authorUnprocessed", "authorContent" ],
+        "outputFormat" : "json",
+        "entity" : "Author",
+        "targetDatabase" : "data-hub-FINAL"
+      },
+      "customHook" : null,
+      "retryLimit" : 0,
+      "batchSize" : 0,
+      "threadCount" : 0,
+      "stepDefinitionName" : "harmonizePubMedAuthor",
+      "stepDefinitionType" : "CUSTOM"
+    }
+  }
+}

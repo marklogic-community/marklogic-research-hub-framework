@@ -1,0 +1,19 @@
+{
+  "info" : {
+    "title" : "Protein",
+    "version" : "0.0.1",
+    "baseUri" : "http://example.com/",
+    "description" : "An Protein entity"
+  },
+  "definitions" : {
+    "Protein" : {
+      "description" : "The Protein entity root.",
+      "required" : [ ],
+      "rangeIndex" : [ ],
+      "elementRangeIndex" : [ ],
+      "wordLexicon" : [ ],
+      "pii" : [ ],
+      "properties" : { }
+    }
+  }
+}

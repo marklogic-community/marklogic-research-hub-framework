@@ -1,0 +1,75 @@
+{
+  "name" : "LoadGeneData",
+  "description" : "This is the default flow containing all of the default steps",
+  "batchSize" : 100,
+  "threadCount" : 4,
+  "stopOnError" : false,
+  "options" : {
+    "sourceQuery" : null
+  },
+  "version" : 0,
+  "steps" : {
+    "1" : {
+      "name" : "loadGeneInfo",
+      "description" : "This is the custom ingestion step",
+      "options" : {
+        "entity" : "Gene",
+        "targetDatabase" : "data-hub-STAGING"
+      },
+      "customHook" : { },
+      "retryLimit" : 0,
+      "batchSize" : 0,
+      "threadCount" : 0,
+      "stepDefinitionName" : "loadGeneInfo",
+      "stepDefinitionType" : "INGESTION",
+      "fileLocations" : { }
+    },
+    "2" : {
+      "name" : "loadGeneID",
+      "description" : "This is the default ingestion step",
+      "options" : {
+        "entity" : "Gene",
+        "targetDatabase" : "data-hub-STAGING"
+      },
+      "customHook" : null,
+      "retryLimit" : 0,
+      "batchSize" : 0,
+      "threadCount" : 0,
+      "stepDefinitionName" : "loadGeneID",
+      "stepDefinitionType" : "INGESTION",
+      "fileLocations" : { }
+    },
+    "3" : {
+      "name" : "loadDiseaseName",
+      "description" : "This is the default ingestion step",
+      "options" : {
+        "entity" : "Gene",
+        "targetDatabase" : "data-hub-STAGING"
+      },
+      "customHook" : null,
+      "retryLimit" : 0,
+      "batchSize" : 0,
+      "threadCount" : 0,
+      "stepDefinitionName" : "loadDiseaseName",
+      "stepDefinitionType" : "INGESTION",
+      "fileLocations" : { }
+    },
+    "4" : {
+      "name" : "harmonizeGenes",
+      "description" : "This is the default mapping step",
+      "options" : {
+        "sourceQuery" : "cts.andQuery([cts.collectionQuery('GeneInfo'),cts.notQuery(cts.elementValueQuery(xs.QName('__tax_id'), '63221')),cts.notQuery(cts.elementValueQuery(xs.QName('__tax_id'), '741158'))])",
+        "sourceDatabase" : "data-hub-STAGING",
+        "collections" : [ "Gene" ],
+        "outputFormat" : "json",
+        "targetDatabase" : "data-hub-FINAL"
+      },
+      "customHook" : null,
+      "retryLimit" : 0,
+      "batchSize" : 0,
+      "threadCount" : 0,
+      "stepDefinitionName" : "harmonizeGenes",
+      "stepDefinitionType" : "CUSTOM"
+    }
+  }
+}

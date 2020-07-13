@@ -1,0 +1,878 @@
+ext {
+  MlcpTask = rootProject.MlcpTask
+  RunFlowTask = rootProject.RunFlowTask
+  ServerEvalTask = rootProject.ServerEvalTask
+
+  defaultLoadThreads = rootProject.ext.defaultLoadThreads
+  defaultHarmonizeThreads = rootProject.ext.defaultHarmonizeThreads
+  sslFlag = rootProject.ext.sslFlag
+
+  mlHost = rootProject.ext.mlHost
+  mlUsername = rootProject.ext.mlUsername
+  mlPassword = rootProject.ext.mlPassword
+  mlStagingPort = rootProject.ext.mlStagingPort
+  mlFinalPort = rootProject.ext.mlFinalPort
+  mlFinalDbName = rootProject.ext.mlFinalDbName
+  mlModulesDbName = rootProject.ext.mlFinalDbName
+
+  inputPathStudies = rootProject.ext.inputPathStudies
+  inputPathDrugs = rootProject.ext.inputPathDrugs
+  inputPathGenes = rootProject.ext.inputPathGenes
+  inputPathDisease = rootProject.ext.inputPathDisease
+  inputPathProteins = rootProject.ext.inputPathProteins
+  inputPathPubMedCentral = rootProject.ext.inputPathPubMedCentral
+  inputPathCovid = rootProject.ext.inputPathCovid
+  inputPathCido = rootProject.ext.inputPathCido
+}
+
+// a task to put monthly buckets on revisedDate constraint in publications.xml (years now-20 to now+10)
+task rpaasUpdateRevisedDateBuckets(
+  type: ServerEvalTask,
+  group: project.name
+) {
+  description 'Update revisedDate constraint buckets'
+  xquery = 'xquery version "1.0-ml";\n' +
+    'xdmp:invoke("/ext/schemes/eval/update-revised-date-buckets.xqy", (),\n' +
+    '        <options xmlns="xdmp:eval">\n' +
+    '          <database>{xdmp:database("' + mlModulesDbName + '")}</database>\n' +
+    '        </options>\n' +
+    ')'
+}
+
+// a task to test the author ingestion
+task pubMedInputflow(type: MlcpTask, group: project.name) {
+    classpath = rootProject.configurations.mlcp
+    workingDir = rootProject.projectDir
+    command = "IMPORT"
+    port = mlStagingPort.toInteger()
+    ssl = sslFlag
+    args = [
+        "-thread_count", project.hasProperty("pubMedInputflowHarmonizeThreads") ? pubMedInputflowHarmonizeThreads.toInteger() : defaultHarmonizeThreads,
+        "-input_file_path", "$rootProject.projectDir/data/pharma-research/PubMedData/nbci/testData/",
+        "-output_collections", "pubMedInputflow,publication",
+        "-output_permissions", "rest-reader,read,rest-writer,update",
+        "-document_type", "xml",
+        "-output_uri_replace", ".*data/pharma-research/PubMedData/nbci/testData/,''",
+        "-output_uri_prefix", "/PubMed/",
+        "-transform_module", "/data-hub/4/transforms/mlcp-flow-transform.sjs",
+        "-transform_param", "entity-name=publication,flow-name=nbciPubmedPublication",
+        "-modules_root", "/",
+    ]
+}
+
+// the PubMed Central .xml.tar.gz file links
+def pubmedLinks = [
+  "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_bulk/comm_use.A-B.xml.tar.gz",
+  "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_bulk/comm_use.C-H.xml.tar.gz",
+  "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_bulk/comm_use.I-N.xml.tar.gz",
+  "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_bulk/comm_use.O-Z.xml.tar.gz"
+]
+
+//////////////////////////////////////////////////
+// Download the PubMed Central data files to path `downloadDirPubMed`
+/////////////////////////////////////////////////
+task downloadPubMedData() {
+  def dir = new File(downloadDirPubMed)
+  if(!dir.exists()) {
+    dir.mkdirs()
+  }
+  doLast {
+    pubmedLinks.eachWithIndex { link, index ->
+      def filename = link.split("/")[-1]
+      def f = new File(dir, filename)
+
+      println "Downloading " + link + " to " + f.getAbsolutePath()
+      new URL(link).withInputStream { i -> f.withOutputStream { it << i } }
+    }
+  }
+}
+
+//////////////////////////////////////////////////
+// Unzip PubMed data .xml.tar.gz files in `downloadDirPubMed`
+//
+// This uses the `tar` command.
+//
+// NOTE: On Windows, install Cygwin and put the Cygwin binaries in your PATH environment variable.
+/////////////////////////////////////////////////
+task unzipPubMedData() {
+  def dir = new File(downloadDirPubMed)
+  if(!dir.exists()) {
+    dir.mkdirs()
+  }
+
+  doLast {
+    pubmedLinks.eachWithIndex { link, index ->
+      def fileName = link.split("/")[-1]
+      def dotSplit = fileName.split("\\.")
+      def outputDirName = dotSplit[-5] + "." + dotSplit[-4]
+
+      def zipFile = new File(dir, fileName)
+      def outputDir = new File(dir, outputDirName)
+
+      if (zipFile.exists()) {
+        println "Unzipping " + zipFile + " to " + outputDir
+
+        if (!outputDir.exists()) {
+          outputDir.mkdirs()
+        }
+
+        exec {
+          workingDir outputDir.getAbsolutePath()
+          commandLine 'tar', '-xzf', '../' + fileName
+        }
+      }
+    }
+  }
+}
+
+//////////////////////////////////////////////////
+// Pick documents by year and month.
+//
+// This uses the `grep` command.
+//
+// NOTE: On Windows, install Cygwin and put the Cygwin binaries in your PATH environment variable.
+/////////////////////////////////////////////////
+task pickDocumentByYearMonth() {
+  def dir = new File(downloadDirPubMed)
+  if(!dir.exists()) {
+    dir.mkdirs()
+  }
+
+  doLast {
+    pubmedLinks.eachWithIndex { link, index ->
+      def fileName = link.split("/")[-1]
+      def dotSplit = fileName.split("\\.")
+      def unzipOutputDirName = dotSplit[-5] + "." + dotSplit[-4]
+
+      def zipFile = new File(dir, fileName)
+      def unzipOutputDir = new File(dir, unzipOutputDirName)
+
+      def pickedDir = new File(pickedDirPubMed)
+      if (!pickedDir.exists()) {
+        pickedDir.mkdirs()
+      }
+
+      println "Picked documents will be moved to: " + pickedDir.getAbsolutePath()
+
+      if (unzipOutputDir.exists()) {
+        println "Picking documents for month: " + year + "-" + month
+
+        def grepCommand = []
+        grepCommand.push("grep")
+        grepCommand.push("-lR")
+        grepCommand.push("-e")
+        grepCommand.push("<month>" + month + "</month>\\s*<year>" + year + "</year>")
+
+        // store the output
+        def stdout = new ByteArrayOutputStream()
+        exec {
+          workingDir unzipOutputDir.getAbsolutePath()
+          commandLine grepCommand
+          standardOutput = stdout
+        }
+
+        def outputStr = stdout.toString()
+        def pickedDocumentList = outputStr.split("\\r?\\n")
+        pickedDocumentList.eachWithIndex { documentFileName, documentIndex ->
+          println "Picked: " + documentFileName
+
+          def mvCommand = []
+          mvCommand.push("mv")
+          mvCommand.push(documentFileName)
+          mvCommand.push(pickedDir.getAbsolutePath())
+
+          exec {
+            workingDir unzipOutputDir.getAbsolutePath()
+            commandLine mvCommand
+          }
+        }
+        println "Done."
+      }
+    }
+  }
+}
+
+//////////////////////////////////////////////////
+// Run the Publications input flow on the `pickedDirPubMed` directory.
+/////////////////////////////////////////////////
+task pubMedInputflowByYearMonth(type: MlcpTask, group: project.name) {
+  classpath = rootProject.configurations.mlcp
+  workingDir = rootProject.projectDir
+  command = "IMPORT"
+  port = mlStagingPort.toInteger()
+  ssl = sslFlag
+  args = [
+    "-input_file_path", pickedDirPubMed,
+    "-output_collections", "pubMedInputflowFTP,publication",
+    "-output_permissions", "rest-reader,read,rest-writer,update",
+    "-document_type", "xml",
+    "-output_uri_replace", ".*PMC,'PMID-'",
+    "-output_uri_prefix", "/PubMed/",
+    "-transform_module", "/data-hub/5/transforms/mlcp-flow-transform.sjs",
+    "-transform_param", "entity-name=publication,step=1,flow-name=LoadPublication"
+  ]
+}
+
+//////////////////////////////////////////////////
+// Users the pubMedFlow to ingest all the pubdata
+/////////////////////////////////////////////////
+// you to ahead of time download the pubdata from the ftp site
+// then unzip and change the input file path to the location you want.
+// ftp site: ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_bulk/
+// only need to pull the files that are common_use and end it .xml and not .txt
+task pubMedInputflowFTP(type: MlcpTask, group: project.name) {
+    classpath = rootProject.configurations.mlcp
+    workingDir = rootProject.projectDir
+    command = "IMPORT"
+    port = mlStagingPort.toInteger()
+    ssl = sslFlag
+    args = [
+       "-input_file_path", inputPathPubMedCentral,
+        "-output_collections", "pubMedInputflowFTP,publication",
+        "-output_permissions", "rest-reader,read,rest-writer,update",
+        "-document_type", "xml",
+        "-output_uri_replace", ".*PMC,'PMID-'",
+        "-output_uri_prefix", "/PubMed/",
+        "-transform_module", "/data-hub/5/transforms/mlcp-flow-transform.sjs",
+        "-transform_param", "entity-name=publication,step=1,flow-name=LoadPublication"
+    ]
+}
+
+// load a decent sized laptop dataset for testing #GHR-32
+// https://project.marklogic.com/jira/browse/GRH-32
+// since it's a dump from prh-blue, just load them w/o dhf flows
+// right into staging. The files necessary for this to work are at:
+// https://wiki.marklogic.com/display/PM/RPS+Datasets.
+// Look for "Laptop Pubmed dataset" and download the 4 zip files.
+// Drop them into the data/laptop_pubs folder. You will need to create the folder
+task pubMedInputflowStaging(type: MlcpTask, group: project.name) {
+    classpath = rootProject.configurations.mlcp
+    workingDir = rootProject.projectDir
+    command = "IMPORT"
+    port = mlStagingPort.toInteger()
+    ssl = sslFlag
+    args = [
+       "-input_file_path", "$rootProject.projectDir/data/pharma-research/laptop_pubs",
+        "-output_collections", "pubMedInputflowFTP,publication",
+        "-output_permissions", "rest-reader,read,rest-writer,update",
+        "-input_file_type", "documents",
+        "-input_compressed",
+        "-document_type", "xml",
+        "-output_uri_replace", ".*PMC,'PMID-'"
+    ]
+}
+
+task pubMedInputflowByLetter(type: MlcpTask, group: project.name) {
+    classpath = rootProject.configurations.mlcp
+    workingDir = rootProject.projectDir
+    command = "IMPORT"
+    port = mlStagingPort.toInteger()
+    ssl = sslFlag
+    args = [
+       "-input_file_path", "$rootProject.projectDir/data/pharma-research/PubMed/" + letter + "/" ,
+        "-output_collections", "pubMedInputflowFTP,publication",
+        "-output_permissions", "rest-reader,read,rest-writer,update",
+        "-document_type", "xml",
+        "-output_uri_replace", ".*PMC,'PMID-'",
+        "-output_uri_prefix", "/PubMed/",
+        "-transform_module", "/data-hub/4/transforms/mlcp-flow-transform.sjs",
+        "-transform_param", "entity-name=publication,flow-name=nbciPubmedPublication",
+        "-modules_root", "/",
+    ]
+}
+
+//a task to test the pdf ingestion
+task pdfInputflow(type: MlcpTask, group: project.name) {
+    classpath = rootProject.configurations.mlcp
+    workingDir = rootProject.projectDir
+    command = "IMPORT"
+    port = mlStagingPort.toInteger()
+    ssl = sslFlag
+    args = [
+        "-input_file_path", "$rootProject.projectDir/data/pharma-research/pdf",
+        "-input_file_type", "documents",
+        "-output_collections", "Substance,ingest-pdf,input",
+        "-output_permissions", "rest-reader,read,rest-writer,update",
+        "-output_uri_prefix", "/Substance",
+        "-output_uri_suffix", ".xml",
+        "-output_uri_replace", ".*/data/pharma-research/pdf,''",
+        "-document_type", "binary",
+        "-transform_module", "/data-hub/4/transforms/mlcp-flow-transform.sjs",
+        "-transform_param", "entity-name=Substance,flow-name=ingest-pdf",
+        "-modules_root", "/",
+    ]
+}
+
+//////////////////////////////////////////////////
+// Uses the CovidFlow to ingest all the covid data
+/////////////////////////////////////////////////
+// you to ahead of time download the covid data from:
+// https://pages.semanticscholar.org/coronavirus-research
+// then unzip and put the files in:
+// data/pharma-research/coronavirus/custom_license/
+task covidInputFlow(type: MlcpTask, group: project.name) {
+    classpath = rootProject.configurations.mlcp
+    workingDir = rootProject.projectDir
+    command = "IMPORT"
+    port = mlStagingPort.toInteger()
+    ssl = sslFlag
+    args = [
+       "-input_file_path", "$rootProject.projectDir/$inputPathCovid",
+        "-output_collections", "LoadCustom",
+        "-output_permissions", "rest-reader,read,rest-writer,update",
+        "-document_type", "json",
+        "-output_uri_replace", ".*data/,''",
+        "-output_uri_prefix", "/",
+        "-transform_module", "/data-hub/5/transforms/mlcp-flow-transform.sjs",
+        "-transform_param", "entity-name=publication,step=1,flow-name=LoadCovid"
+    ]
+}
+
+// Download the cido .owl file from http://bioportal.bioontology.org/ontologies/CIDO
+// and put it in data/pharma-research/coronavirus/cido/cido.owl
+task loadCido(type: MlcpTask, group: project.name) {
+    classpath = rootProject.configurations.mlcp
+    workingDir = rootProject.projectDir
+    command = "IMPORT"
+    port = mlFinalPort.toInteger()
+    ssl = sslFlag
+    args = [
+       "-input_file_path", "$rootProject.projectDir/$inputPathCido",
+        "-output_collections", "cido",
+        "-output_permissions", "rest-reader,read,rest-writer,update",
+        "-input_file_type", "rdf",
+        "-output_uri_replace", ".*data/,''",
+        "-output_uri_prefix", "/cido/"
+    ]
+}
+
+//
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+// USE THIS TASK TO LOAD DAILYMED DRUG DATA FROM U.S. NATIONAL LIBRARY OF MEDICINE  CITE
+/////////////////////////////////////////////////
+// you to ahead of time download the full drug lable data from the DailyMed Website
+// then unzip and change the input file path to the location you want. They will contain zipfiles
+// this task should load all the zipfiles
+// SITE : https://dailymed.nlm.nih.gov/dailymed/spl-resources-all-drug-labels.cfm
+/////////////////////////////////////////////////////////////////////////////////////////////////
+task drugZipLoad(type: MlcpTask, group: project.name) {
+    classpath = rootProject.configurations.mlcp
+    workingDir = rootProject.projectDir
+    command = "IMPORT"
+    port = mlStagingPort.toInteger()
+    ssl = sslFlag
+    args = [
+        "-thread_count", project.hasProperty("drugZipLoadThreads") ? drugZipLoadThreads.toInteger() : defaultLoadThreads,
+        "-input_file_path", inputPathDrugs,
+        "-output_collections", "Drug,loadzipDrug,input",
+        "-output_permissions", "rest-reader,read,rest-writer,update",
+        "-document_type", "binary",
+        "-output_uri_replace", ".*" + inputPathDrugs + ",''",
+        "-output_uri_prefix", "/drug",
+        "-output_uri_suffix", "\"\"",
+        "-transform_module", "/data-hub/5/transforms/mlcp-flow-transform.sjs",
+        "-transform_param", 'entity-name=Drug,flow-name=loadDrug,step=1'
+    ]
+    jvmArgs = ['-Xmx2G']
+}
+
+// loadStudyDataDev has been removed. create a proper gradle-<envname>.properties or override inputPathStudies to force dev data
+
+task downloadStudyData(group: project.name) {
+  doLast {
+    def dir = new File(inputPathStudies)
+    if(!dir.exists()) {
+        dir.mkdirs()
+    }
+    def f = new File(dir, 'AllPublicXML.zip')
+    if (!f.exists()) {
+        new URL('https://clinicaltrials.gov/AllPublicXML.zip').withInputStream{ i -> f.withOutputStream{ it << i }}
+    }
+  }
+}
+
+task loadStudyData(type: MlcpTask, group: project.name) {
+    classpath = rootProject.configurations.mlcp
+    workingDir = rootProject.projectDir
+    command = "IMPORT"
+    port = mlStagingPort.toInteger()
+    ssl = sslFlag
+    args = [
+        "-thread_count", project.hasProperty("loadStudyDataThreads") ? loadStudyDataThreads.toInteger() : defaultLoadThreads,
+        "-input_file_path", inputPathStudies,
+        "-input_file_type", "documents",
+        "-input_compressed",
+        "-document_type", "xml",
+        "-output_collections", "Study,loadStudies,input",
+        "-output_permissions", "rest-reader,read,rest-writer,update",
+        "-document_type", "xml",
+        "-output_uri_replace", ".*" + inputPathStudies +"/.*zip/,''",
+        "-output_uri_prefix", "/drugStudyData/",
+        "-output_uri_suffix", "\"\"",
+        "-transform_module", "/data-hub/5/transforms/mlcp-flow-transform.sjs",
+        "-transform_namespace", "http://marklogic.com/data-hub/mlcp-flow-transform",
+        "-transform_param", "entity-name=Study,flow-name=loadStudy,step=1",
+    ]
+}
+
+task harmonizeStudy(type: RunFlowTask, group: project.name) {
+  steps = ['2']
+  flowName = "LoadStudy"
+  showOptions = true
+  batchSize = 80
+  threadCount = project.hasProperty("harmonizeStudyThreads") ? harmonizeStudyThreads.toInteger() : defaultHarmonizeThreads
+}
+
+// a task to test gene ingestion
+task geneInfoInputflow(type: MlcpTask, group: project.name) {
+    def inputDir = inputPathGenes.substring(0, inputPathGenes.lastIndexOf('/'))
+
+    classpath = rootProject.configurations.mlcp
+    workingDir = rootProject.projectDir
+    command = "IMPORT"
+    port = mlStagingPort.toInteger()
+    ssl = sslFlag
+    args = [
+        "-thread_count", project.hasProperty("geneInfoInputflowThreads") ? geneInfoInputflowThreads.toInteger() : defaultLoadThreads,
+        "-input_file_path", inputPathGenes,
+        "-input_file_type", "delimited_text",
+        "-delimiter", "\t",
+        "-output_collections", "geneInfoInputflow,Gene,GeneInfo",
+        "-output_permissions", "rest-reader,read,rest-writer,update",
+        "-document_type", "xml",
+        "-output_uri_replace", ".*"  + inputDir + "/,''",
+        "-output_uri_prefix", "/Gene/",
+        "-generate_uri", "true",
+        "-transform_module", "/data-hub/5/transforms/mlcp-flow-transform.sjs",
+        "-transform_namespace", "http://marklogic.com/data-hub/mlcp-flow-transform",
+        "-transform_param", "entity-name=Gene,flow-name=LoadGeneData,step=1"
+    ]
+}
+
+// a task to test gene ID ingestion
+task geneIDInputflow(type: MlcpTask, group: project.name) {
+    classpath = rootProject.configurations.mlcp
+    workingDir = rootProject.projectDir
+    command = "IMPORT"
+    port = mlStagingPort.toInteger()
+    ssl = sslFlag
+    args = [
+        "-thread_count", project.hasProperty("geneIDInputflowThreads") ? geneIDInputflowThreads.toInteger() : defaultLoadThreads,
+        "-input_file_path", "$rootProject.projectDir/data/pharma-research/ncbi_gene/mim2gene_medgen.tsv.txt",
+        "-input_file_type", "delimited_text",
+        "-delimiter", "\t",
+        "-output_collections", "geneIDInputflow,Gene,GeneID",
+        "-output_permissions", "rest-reader,read,rest-writer,update",
+        "-document_type", "xml",
+        "-output_uri_replace", ".*data/pharma-research/ncbi_gene/,''",
+        "-output_uri_prefix", "/Gene/",
+        "-generate_uri", "true",
+        "-transform_module", "/data-hub/5/transforms/mlcp-flow-transform.sjs",
+        "-transform_namespace", "http://marklogic.com/data-hub/mlcp-flow-transform",
+        "-transform_param", "entity-name=Gene,flow-name=LoadGeneData,step=2"
+    ]
+}
+
+// a task to test disease names ingestion
+task diseaseNameInputflow(type: MlcpTask, group: project.name) {
+    def inputDir = inputPathDisease.substring(0, inputPathDisease.lastIndexOf('/'))
+
+    classpath = rootProject.configurations.mlcp
+    workingDir = rootProject.projectDir
+    command = "IMPORT"
+    port = mlStagingPort.toInteger()
+    ssl = sslFlag
+    args = [
+        "-thread_count", project.hasProperty("diseaseNameInputflowThreads") ? diseaseNameInputflowThreads.toInteger() : defaultLoadThreads,
+        "-input_file_path", "$rootProject.projectDir/$inputPathDisease",
+        "-input_file_type", "delimited_text",
+        "-delimiter", "|",
+        "-output_collections", "diseaseNameInputflow,Gene,DiseaseName",
+        "-output_permissions", "rest-reader,read,rest-writer,update",
+        "-document_type", "xml",
+        "-output_uri_replace", ".*" + inputDir + "/,''",
+        "-output_uri_prefix", "/Gene/",
+        "-generate_uri", "true",
+        "-transform_module", "/data-hub/5/transforms/mlcp-flow-transform.sjs",
+        "-transform_namespace", "http://marklogic.com/data-hub/mlcp-flow-transform",
+        "-transform_param", "entity-name=Gene,flow-name=LoadGeneData,step=3"
+    ]
+}
+
+task proteinInputflow(type: MlcpTask, group: project.name) {
+    def inputDir = inputPathProteins.substring(0, inputPathProteins.lastIndexOf('/'))
+
+    classpath = rootProject.configurations.mlcp
+    workingDir = rootProject.projectDir
+    command = "IMPORT"
+    port = mlStagingPort.toInteger()
+    ssl = sslFlag
+    args = [
+        "-thread_count", project.hasProperty("proteinInputflowThreads") ? proteinInputflowThreads.toInteger() : defaultLoadThreads,
+        "-input_file_path", inputPathProteins,
+        "-input_file_type", "aggregates",
+        "-aggregate_record_element", "entry",
+        "-aggregate_record_namespace", "http://uniprot.org/uniprot",
+        "-output_collections", "proteinInputflow,Protein",
+        "-output_permissions", "rest-reader,read,rest-writer,update",
+        "-output_uri_replace", ".*" + inputDir + "/,''",
+        "-output_uri_prefix", "/Protein/",
+        "-output_uri_suffix", ".xml",
+        "-transform_module", "/data-hub/5/transforms/mlcp-flow-transform.sjs",
+        "-transform_namespace", "http://marklogic.com/data-hub/mlcp-flow-transform",
+        "-transform_param", "entity-name=Protein,step=1,flow-name=LoadProtein"
+    ]
+}
+
+task proteinInputflowBig(type: MlcpTask, group: project.name) {
+    classpath = rootProject.configurations.mlcp
+    workingDir = rootProject.projectDir
+    command = "IMPORT"
+    port = mlStagingPort.toInteger()
+    ssl = sslFlag
+    args = [
+        "-thread_count", project.hasProperty("proteinInputflowBigThreads") ? proteinInputflowBigThreads.toInteger() : defaultLoadThreads,
+        "-input_file_path", "$rootProject.projectDir/data/pharma-research/PubMed/uniprot/uniprot_sprot.xml",
+        "-input_file_type", "aggregates",
+        "-aggregate_record_element", "entry",
+        "-aggregate_record_namespace", "http://uniprot.org/uniprot",
+        "-output_collections", "proteinInputflow,Protein",
+        "-output_permissions", "rest-reader,read,rest-writer,update",
+        "-output_uri_replace", ".*data/pharma-research/PubMed/uniprot/,''",
+        "-output_uri_prefix", "/Protein/",
+        "-output_uri_suffix", ".xml",
+        "-transform_module", "/data-hub/5/transforms/mlcp-flow-transform.sjs",
+        "-transform_namespace", "http://marklogic.com/data-hub/mlcp-flow-transform",
+        "-transform_param", "entity-name=Protein,step=1,flow-name=LoadProtein",
+    ]
+}
+
+task harmonizeGenes(type: RunFlowTask, group: project.name) {
+  mustRunAfter geneInfoInputflow
+  mustRunAfter geneIDInputflow
+  mustRunAfter diseaseNameInputflow
+
+  steps = ["4"]
+  flowName = "LoadGeneData"
+  showOptions = true
+  batchSize = 100
+  threadCount = project.hasProperty("harmonizeGenesThreads") ? harmonizeGenesThreads.toInteger() : defaultHarmonizeThreads
+}
+
+task ingestGeneData(group: project.name) {
+  dependsOn geneInfoInputflow
+  dependsOn geneIDInputflow
+  dependsOn diseaseNameInputflow
+  dependsOn harmonizeGenes
+}
+
+task runAuthorMatch(type: RunFlowTask, group: project.name) {
+  steps = ['1']
+  flowName = "SmartMasteringProcess"
+  showOptions = true
+  batchSize = 100
+  threadCount = project.hasProperty("runAuthorMatchThreads") ? runAuthorMatchThreads.toInteger() : defaultHarmonizeThreads
+}
+
+task runAuthorMerge(type: RunFlowTask, group: project.name) {
+  steps = ['2']
+  flowName = "SmartMasteringProcess"
+  showOptions = true
+  batchSize = project.hasProperty("runAuthorMergeBatchSize") ? runAuthorMergeBatchSize.toInteger() : 10
+  threadCount = project.hasProperty("runAuthorMergeThreads") ? runAuthorMergeThreads.toInteger() : defaultHarmonizeThreads
+}
+
+task runOnlyRewriteHeadersTriples(type: RunFlowTask, group: project.name) {
+  steps = ['3']
+  flowName = "SmartMasteringProcess"
+  showOptions = true
+  batchSize = 10
+  threadCount = project.hasProperty("runOnlyRewriteHeadersTriplesThreads") ? runOnlyRewriteHeadersTriplesThreads.toInteger() : defaultHarmonizeThreads
+}
+
+task runOnlyNoMatchCollection(type: RunFlowTask, group: project.name) {
+  steps = ['4']
+  flowName = "SmartMasteringProcess"
+  showOptions = true
+  batchSize = 100
+  threadCount = project.hasProperty("runOnlyNoMatchCollectionThreads") ? runOnlyNoMatchCollectionThreads.toInteger() : defaultHarmonizeThreads
+}
+
+task harmonizePubMedAuthor(type: RunFlowTask, group: project.name) {
+  steps = ['3']
+  flowName = "LoadPublication"
+  showOptions = true
+  batchSize = 1
+  threadCount = project.hasProperty("harmonizePubMedAuthorThreads") ? harmonizePubMedAuthorThreads.toInteger() : defaultHarmonizeThreads
+}
+
+
+task pubmedXMLharmonization(type: RunFlowTask, group: project.name) {
+  steps = ['2']
+  flowName = "LoadPublication"
+  showOptions = true
+  batchSize = 100
+  threadCount = project.hasProperty("pubmedXMLharmonizationThreads") ? pubmedXMLharmonizationThreads.toInteger() : defaultHarmonizeThreads
+}
+
+task harmonizeDrug(type: RunFlowTask, group: project.name) {
+  steps = ['2']
+  flowName = "LoadDrug"
+  showOptions = true
+  batchSize = 1
+  threadCount = project.hasProperty("harmonizeDrugThreads") ? harmonizeDrugThreads.toInteger() : defaultHarmonizeThreads
+}
+
+task harmonizeProtein(type: RunFlowTask, group: project.name) {
+  steps = ['2']
+  flowName = "LoadProtein"
+  showOptions = true
+  batchSize = 1
+  threadCount = project.hasProperty("harmonizeProteinThreads") ? harmonizeProteinThreads.toInteger() : defaultHarmonizeThreads
+}
+
+task covidHarmonizePubs(type: RunFlowTask, group: project.name) {
+  steps = ['3']
+  flowName = "LoadCovid"
+  showOptions = true
+  batchSize = 100
+  threadCount = project.hasProperty("covidHarmonizePubsThreads") ? covidHarmonizePubsThreads.toInteger() : defaultHarmonizeThreads
+}
+
+task covidHarmonizeAuthors(type: RunFlowTask, group: project.name) {
+  steps = ['2']
+  flowName = "LoadCovid"
+  showOptions = true
+  batchSize = 100
+  threadCount = project.hasProperty("covidHarmonizeAuthorsThreads") ? covidHarmonizeAuthorsThreads.toInteger() : defaultHarmonizeThreads
+}
+
+task harmonizeAll(group: project.name) {
+  dependsOn harmonizeStudy
+  dependsOn harmonizeDrug
+  dependsOn harmonizeProtein
+  dependsOn harmonizeGenes
+  dependsOn pubmedXMLharmonization
+  dependsOn harmonizePubMedAuthor
+
+  harmonizeProtein.mustRunAfter harmonizeDrug
+  harmonizeDrug.mustRunAfter harmonizeStudy
+  pubmedXMLharmonization.mustRunAfter harmonizeGenes
+  pubmedXMLharmonization.mustRunAfter harmonizeProtein
+  pubmedXMLharmonization.mustRunAfter harmonizeDrug
+  harmonizePubMedAuthor.mustRunAfter pubmedXMLharmonization
+}
+
+task runSmartMaster(group: project.name) {
+  dependsOn runAuthorMatch
+  dependsOn runAuthorMerge
+  dependsOn runOnlyRewriteHeadersTriples
+  dependsOn runOnlyNoMatchCollection
+
+  runAuthorMerge.mustRunAfter runAuthorMatch
+  runOnlyRewriteHeadersTriples.mustRunAfter runAuthorMerge
+  runOnlyNoMatchCollection.mustRunAfter runOnlyRewriteHeadersTriples
+}
+
+task loadPubMedCentral(group: project.name) {
+  dependsOn pubMedInputflowFTP
+  dependsOn pubmedXMLharmonization
+  dependsOn harmonizePubMedAuthor
+
+  pubmedXMLharmonization.mustRunAfter pubMedInputflowFTP
+  harmonizePubMedAuthor.mustRunAfter pubMedInputflowFTP
+}
+
+/**
+ * Load the PubMed Central updates for a given year and month.
+ * This task use the following tasks:
+ * downloadPubMedData:
+ *    to download the PubMed Central .xml.tar.gz files into path `downloadDirPubMed`
+ * unzipPubMedData:
+ *    to unzip the downloaded zip files
+ * pickDocumentByYearMonth:
+ *    to pick documents for the given year and month via grep
+ *    and move them to path `pickedDirPubMed`
+ * pubMedInputflowByYearMonth:
+ *    to ingest the publications in `pickedDirPubMed`
+ *
+ * Run:
+ *    ./gradlew -i loadPubMedCentralByYearMonth -Pyear=2020 -Pmonth=1
+ */
+task loadPubMedCentralByYearMonth(group: project.name) {
+  dependsOn downloadPubMedData
+  dependsOn unzipPubMedData
+  dependsOn pickDocumentByYearMonth
+  dependsOn pubMedInputflowByYearMonth
+  dependsOn pubmedXMLharmonization
+  dependsOn harmonizePubMedAuthor
+
+  unzipPubMedData.mustRunAfter downloadPubMedData
+  pickDocumentByYearMonth.mustRunAfter unzipPubMedData
+  pubMedInputflowByYearMonth.mustRunAfter pickDocumentByYearMonth
+  pubmedXMLharmonization.mustRunAfter pubMedInputflowByYearMonth
+  harmonizePubMedAuthor.mustRunAfter pubMedInputflowByYearMonth
+}
+
+task loadCovid(group: project.name) {
+  dependsOn loadCido
+  dependsOn covidInputFlow
+  dependsOn covidHarmonizePubs
+  dependsOn covidHarmonizeAuthors
+
+  covidInputFlow.mustRunAfter loadCido
+  covidHarmonizePubs.mustRunAfter covidInputFlow
+  covidHarmonizeAuthors.mustRunAfter covidInputFlow
+}
+
+task ingestProteinData(group: project.name) {
+  dependsOn proteinInputflow
+  dependsOn harmonizeProtein
+
+  harmonizeProtein.mustRunAfter proteinInputflow
+}
+
+task loadDrugs(group: project.name) {
+
+  dependsOn drugZipLoad
+  dependsOn harmonizeDrug
+
+  harmonizeDrug.mustRunAfter drugZipLoad
+}
+
+task loadStudies(group: project.name) {
+    dependsOn downloadStudyData
+    dependsOn loadStudyData
+    dependsOn harmonizeStudy
+
+    loadStudyData.mustRunAfter downloadStudyData
+    harmonizeStudy.mustRunAfter loadStudyData
+}
+
+// loadStudiesDev removed. override inputPathStudies in properties files to configure which study data set used
+
+task copyWorkspaceConfig(type: MlcpTask, group: project.name) {
+
+  classpath = rootProject.configurations.mlcp
+  workingDir = rootProject.projectDir
+  port = mlFinalPort.toInteger()
+  command = "IMPORT"
+  database = mlFinalDbName
+  ssl = sslFlag
+  input_file_path = "$rootProject.projectDir/data/pharma-research/workspace/"
+  output_collections = "copyWorkspaceConfig"
+  output_uri_replace = ".*data/pharma-research/workspace/,''"
+  output_uri_prefix = "/Workspace/config/"
+}
+
+//Enrichment Configuraiton
+task loadEnrichmentConfig(type: MlcpTask, group: project.name) {
+
+  classpath = rootProject.configurations.mlcp
+  workingDir = rootProject.projectDir
+  //port = mlFinalPort.toInteger()
+  port = mlStagingPort.toInteger()
+  command = "IMPORT"
+  ssl = sslFlag
+  input_file_path = "$rootProject.projectDir/Project.projectDir/src/main/ml-modules/root/lib/enrichment/configuration/"
+  output_collections = "enrichmentConfig"
+  output_permissions = "rest-reader,read,rest-writer,update"
+  output_uri_replace = ".*src/main/ml-modules/root/lib/enrichment/configuration/,''"
+  output_uri_prefix = "/enrich/configuration/"
+}
+
+// TODO: fix this - replace with ohdsi vocab loading routines or generate correct method for loading all vocab ontologies
+def ontologyName() {
+  ontologyName
+}
+
+// this will remove all ontologies if no -PontologyName= is ommitted
+task rpaasRemoveOntology(type: com.marklogic.gradle.task.ServerEvalTask, group: rpaasGroup) {
+    description 'Runs XQuery to delete ontology prior to loading a new set.'
+    xquery = 'xquery version "1.0-ml";\n' +
+            'xdmp:invoke-function(\n' +
+            '  function() { xdmp:collection-delete("vocabulary-' + ontologyName() + '") },\n' +
+            '        <options xmlns="xdmp:eval">\n' +
+            '          <database>{xdmp:database("' + mlFinalDbName + '")}</database>\n' +
+            '        </options>\n' +
+            ')'
+}
+
+// need to uncomment dependency on subsequent loads - ought to include a check against collection
+task rpaasDeployOntology(
+  // dependsOn: [rpaasRemoveOntology],
+  type: com.marklogic.gradle.task.MlcpTask,
+  group: rpaasGroup
+) {
+  description 'Inserts Ontology triples into the Final DB.'
+
+  doFirst {
+    database = mlFinalDbName
+    port = mlFinalPort.toInteger()
+    ssl = sslFlag
+    classpath = rootProject.configurations.mlcp
+    command = "IMPORT"
+    input_file_path = "$rootProject.projectDir/data/pharma-research/ontologies/" + ontologyName() + '/'
+    input_file_type = 'RDF'
+    def collections = '"vocabulary-' + ontologyName() + ',ontology-' + ontologyName() + '-updated-at-' + buildTime() + '"'
+    args = ['-mode', 'local', '-thread_count', project.hasProperty("rpaasDeployOntologyThreads") ? rpaasDeployOntologyThreads.toInteger() : defaultLoadThreads, '-output_collections', collections]
+  }
+}
+
+task deployRxNormOntology {
+  doFirst {
+    project.ext.ontologyName = 'RxNorm'
+  }
+  finalizedBy rpaasDeployOntology
+}
+
+task deployOmopcdmOntology {
+  doFirst {
+    project.ext.ontologyName = 'omopcdm'
+  }
+  finalizedBy rpaasDeployOntology
+}
+
+task rpaasDeployTestData(
+  type: com.marklogic.gradle.task.MlcpTask,
+  group: rpaasTestGroup
+) {
+  description 'Inserts test data into the Final DB.'
+  doFirst {
+    database = mlFinalDbName
+    port = mlFinalPort.toInteger()
+    ssl = sslFlag
+  }
+  classpath = rootProject.configurations.mlcp
+  command = "IMPORT"
+  input_file_path = "$rootProject.projectDir/data/pharma-research/devtest/"
+  input_file_type = 'archive'
+  args = ['-mode', 'local', '-thread_count', project.hasProperty("rpaasDeployTestDataThreads") ? rpaasDeployTestDataThreads.toInteger() : defaultLoadThreads]
+}
+
+// run via - ./gradlew -i examples:pharma-research:runAll
+task runAll {
+  dependsOn copyWorkspaceConfig
+  dependsOn deployRxNormOntology
+  dependsOn deployOmopcdmOntology
+  dependsOn rpaasDeployTestData
+  dependsOn loadStudies
+  dependsOn loadDrugs
+  dependsOn ingestGeneData
+  dependsOn ingestProteinData
+  dependsOn loadPubMedCentral
+  dependsOn runSmartMaster
+}
+
+// run via - ./gradlew -i examples:pharma-research:runAndDeployAll
+task runAndDeployAll {
+    dependsOn rootProject.tasks.mlDeploy
+    dependsOn(':examples:pharma-research:runAll')
+}
+
+task runCovid {
+  dependsOn loadCovid
+  dependsOn runSmartMaster
+  runSmartMaster.mustRunAfter loadCovid
+}

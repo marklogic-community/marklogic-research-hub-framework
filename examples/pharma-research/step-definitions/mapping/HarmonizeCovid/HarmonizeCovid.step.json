@@ -1,0 +1,28 @@
+{
+  "lang" : "zxx",
+  "name" : "HarmonizeCovid",
+  "description" : "",
+  "type" : "MAPPING",
+  "version" : 2,
+  "options" : {
+    "additionalCollections" : [ ],
+    "sourceQuery" : "cts.collectionQuery([\"LoadCustom\"])",
+    "targetEntity" : "publication",
+    "collections" : [ "HarmonizeCovid", "publication" ],
+    "sourceDatabase" : "data-hub-STAGING",
+    "permissions" : "rest-reader,read,rest-writer,update",
+    "sourceCollection" : "LoadCustom",
+    "outputFormat" : "xml",
+    "targetDatabase" : "data-hub-FINAL"
+  },
+  "customHook" : {
+    "module" : "",
+    "parameters" : { },
+    "user" : "",
+    "runBefore" : false
+  },
+  "modulePath" : "/custom-modules/mapping/HarmonizeCovid/main.sjs",
+  "retryLimit" : 0,
+  "batchSize" : 100,
+  "threadCount" : 4
+}

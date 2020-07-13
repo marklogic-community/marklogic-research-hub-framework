@@ -1,0 +1,45 @@
+{
+  "info" : {
+    "title" : "jobopening",
+    "version" : "0.0.1",
+    "baseUri" : "http://marklogic.com/topgun/"
+  },
+  "definitions" : {
+    "jobopening" : {
+      "required" : [ ],
+      "pii" : [ ],
+      "elementRangeIndex" : [ "requiredCompetency" ],
+      "rangeIndex" : [ ],
+      "wordLexicon" : [ ],
+      "properties" : {
+        "departmentId" : {
+          "datatype" : "string",
+          "collation" : "http://marklogic.com/collation/codepoint"
+        },
+        "employeeStartDate" : {
+          "datatype" : "date",
+          "collation" : "http://marklogic.com/collation/codepoint"
+        },
+        "jobId" : {
+          "datatype" : "string",
+          "collation" : "http://marklogic.com/collation/codepoint"
+        },
+        "jobTitle" : {
+          "datatype" : "string",
+          "collation" : "http://marklogic.com/collation/codepoint"
+        },
+        "reqStatus" : {
+          "datatype" : "string",
+          "collation" : "http://marklogic.com/collation/codepoint"
+        },
+        "requiredCompetency" : {
+          "datatype" : "array",
+          "items" : {
+            "datatype" : "string",
+            "collation" : "http://marklogic.com/collation/codepoint"
+          }
+        }
+      }
+    }
+  }
+}

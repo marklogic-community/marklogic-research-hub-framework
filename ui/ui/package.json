@@ -1,0 +1,77 @@
+{
+  "name": "grove-react-ui",
+  "version": "1.0.0-rc.1",
+  "private": true,
+  "engines": {
+    "node": ">=8.10.0",
+    "npm": ">=5.7.0"
+  },
+  "dependencies": {
+    "@marklogic-community/grove-core-react-components": "^1.0.0",
+    "@marklogic-community/grove-crud-redux": "^1.0.0",
+    "@marklogic-community/grove-react-visjs-graph": "^1.0.0-rc.2",
+    "@marklogic-community/grove-search-redux": "github:marklogic-community/grove-search-redux#3-do-not-duplicate-filters",
+    "@marklogic-community/grove-user-redux": "git+https://github.com/dalaidunc/grove-user-redux.git#d3f25f9b486d1e7ef36bad7add3fc83a57d8ec48",
+    "bootstrap": "^3.4.1",
+    "grove-core-react-redux-containers": "git+https://project.marklogic.com/repo/scm/~pmcelwee/grove-core-react-redux-containers.git#1.0.0-rc.1",
+    "highcharts": "^7.2.1",
+    "highcharts-react-official": "^2.2.2",
+    "jquery": "^3.4.1",
+    "prop-types": "^15.7.2",
+    "query-string": "^6.9.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-redux": "^5.1.2",
+    "react-scripts": "^3.3.0",
+    "react-transition-group": "^4.3.0",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0",
+    "webfontloader": "^1.6.28"
+  },
+  "grove": {
+    "templateID": "grove-react-ui",
+    "templateVersion": "1.0.0-rc.1"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "start": "react-scripts start",
+    "devtools-server": "node start-remote-redux-devtools-server.js",
+    "build": "react-scripts build",
+    "test": "npm run lint && react-scripts test --no-watch",
+    "test:watch": "npm run lint && react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "eslint-config-prettier": "^6.9.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "http-proxy-middleware": "^0.20.0",
+    "jest-enzyme": "^4.0.2",
+    "nock": "^9.6.1",
+    "prettier": "^1.19.1",
+    "react-test-renderer": "^16.12.0"
+  },
+  "license": "Apache-2.0",
+  "contributors": [
+    {
+      "name": "Patrick McElwee",
+      "url": "https://github.com/patrickmcelwee"
+    },
+    {
+      "name": "Marianne Myers",
+      "url": "https://github.com/mariannemyers"
+    },
+    {
+      "name": "Geert Josten",
+      "url": "https://github.com/grtjn"
+    }
+  ],
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}

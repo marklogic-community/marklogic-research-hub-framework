@@ -1,0 +1,31 @@
+import static groovy.io.FileVisitResult.*
+import static groovy.io.FileType.*
+
+rootProject.name = 'research-hub'
+
+// Look for sub-projects, and mount them automatically
+
+def skipDirs = ~/^(build|src|out)/
+def preDir = {
+  if (skipDirs.matcher(it.name).matches())
+    return SKIP_SUBTREE
+}
+
+def getProjectName(String dir) {
+  return dir.minus(rootDir.toString() + File.separator).replace(File.separator, ":")
+}
+
+rootDir.traverse(
+  type: DIRECTORIES,
+  preDir: preDir) { dir ->
+
+  def dstr = dir.toString()
+
+  if ((!skipDirs.matcher(dir.name)) &&
+    new File(dstr + "/build.gradle").exists()) {
+    def pname = getProjectName(dstr)
+
+    println "Subproject $dstr auto-detected by settings.gradle, loading as $pname"
+    include pname
+  }
+}

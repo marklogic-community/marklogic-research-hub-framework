@@ -1,0 +1,43 @@
+{
+  "envelope": {
+    "headers": {
+      "loadDate": "2019-09-10T14:26:35.8306094-04:00"
+    },
+    "triples": [
+      {
+        "triple": {
+          "subject": "/user/admin.json",
+          "predicate": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "value": "hasWorkspace"
+          },
+          "object": "/workspace/workspaces-test.json"
+        }
+      }
+    ],
+    "instance": {
+      "workspace": {
+        "name": "TestWorkspace",
+        "description": "Description",
+        "id": "workspaces-test",
+        "creator": {
+          "uri": "/user/admin.json",
+          "preferredName": "admin"
+        },
+        "created": "2019-09-10T14:26:35.8306094-04:00",
+        "lastModified": "2019-09-10T14:37:35.4153886-04:00",
+        "entities": {},
+        "sharedWith": {}
+      },
+      "info": {
+        "title": "workspace"
+      }
+    },
+    "attachments": {
+      "input": {
+        "name": "TestWorkspace",
+        "entities": {}
+      }
+    }
+  }
+}

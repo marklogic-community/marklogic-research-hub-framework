@@ -1,0 +1,19 @@
+{
+  "info" : {
+    "title" : "Gene",
+    "version" : "0.0.1",
+    "baseUri" : "http://example.com/",
+    "description" : "An Gene entity"
+  },
+  "definitions" : {
+    "Gene" : {
+      "description" : "The Gene entity root.",
+      "required" : [ ],
+      "pii" : [ ],
+      "elementRangeIndex" : [ ],
+      "rangeIndex" : [ ],
+      "wordLexicon" : [ ],
+      "properties" : { }
+    }
+  }
+}

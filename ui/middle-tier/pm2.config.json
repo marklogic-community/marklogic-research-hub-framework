@@ -1,0 +1,24 @@
+{
+    "script" : "node-app.js",
+    "env_test" : {
+        "NODE_ENV" : "test",
+        "GROVE_UI_BUILD_PATH" : "../ui/build",
+        "name" : "TEST"
+    },
+    "env_development" : {
+        "NODE_ENV" : "development",
+        "GROVE_UI_BUILD_PATH" : "../ui/build",
+        "name" : "Development"
+    },
+    "env_DHS" : {
+        "NODE_ENV" : "DHS",
+        "GROVE_UI_BUILD_PATH" : "../ui/build",
+        "name" : "DHS"
+    },
+    "env_production" : {
+        "NODE_ENV" : "prod",
+        "GROVE_UI_BUILD_PATH" : "../ui/build",
+        "name" : "Production"
+    }
+}
+

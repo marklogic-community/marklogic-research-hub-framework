@@ -1,0 +1,60 @@
+{
+  "lang" : "zxx",
+  "name" : "EmployeesMastering-MapCoastalEmployees",
+  "description" : "",
+  "version" : 0,
+  "targetEntityType" : "http://marklogic.com/topgun/employee-0.0.1/employee",
+  "sourceContext" : "/",
+  "sourceURI" : "./data/hr360/CoastalEmployees/55003.json",
+  "properties" : {
+    "lastName" : {
+      "sourcedFrom" : "l_name"
+    },
+    "jobEffectiveDate" : {
+      "sourcedFrom" : "start_date"
+    },
+    "jobStatus" : {
+      "sourcedFrom" : "status"
+    },
+    "address" : {
+      "sourcedFrom" : "concat(address1,\" \",address2)"
+    },
+    "city" : {
+      "sourcedFrom" : "city"
+    },
+    "mobileNumber" : {
+      "sourcedFrom" : "cell_phone"
+    },
+    "departmentId" : {
+      "sourcedFrom" : "dept_num"
+    },
+    "jobTitle" : {
+      "sourcedFrom" : "job_title"
+    },
+    "postalCode" : {
+      "sourcedFrom" : "zip"
+    },
+    "employeeId" : {
+      "sourcedFrom" : "employee_id"
+    },
+    "languageSkills" : {
+      "sourcedFrom" : "competency/languages"
+    },
+    "firstName" : {
+      "sourcedFrom" : "f_name"
+    },
+    "toolSkills" : {
+      "sourcedFrom" : "competency/tools"
+    },
+    "state" : {
+      "sourcedFrom" : "state"
+    },
+    "productSkills" : {
+      "sourcedFrom" : "competency/products"
+    },
+    "email" : {
+      "sourcedFrom" : "email"
+    }
+  },
+  "namespaces" : { }
+}

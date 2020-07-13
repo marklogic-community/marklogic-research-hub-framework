@@ -1,0 +1,44 @@
+{
+  "envelope": {
+    "headers": {
+      "commonFacets" : {
+        "authorPreferredName": "Test Author Two"
+      }
+    },
+    "triples": [
+      {
+        "triple": {
+          "subject": "/foo/PubMed/Author-0002.json",
+          "predicate": "PRH:wroteAbout",
+          "object": "/topic/Topic-A.json"
+        },
+        "triple": {
+          "subject": "/foo/PubMed/Author-0002.json",
+          "predicate": "PRH:wroteAbout",
+          "object": "/topic/Topic-B.json"
+        },
+        "triple": {
+          "subject": "/foo/PubMed/Author-0002.json",
+          "predicate": "PRH:wroteAbout",
+          "object": "/topic/Topic-C.json"
+        },
+        "triple": {
+          "subject": "/foo/PubMed/Author-0002.json",
+          "predicate": "PRH:entityType",
+          "object": "foo"
+        },
+        "triple": {
+          "subject": "/foo/PubMed/Author-0002.json",
+          "predicate": "PRH:preferredName",
+          "object": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "value": "Test Author Two"
+          }
+        }
+      }
+    ],
+    "instance": {
+      "publications": ["/PubMed/PMID-9999999.xml"]
+    }
+  }
+}

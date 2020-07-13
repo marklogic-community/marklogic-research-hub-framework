@@ -1,0 +1,87 @@
+{
+  "template": {
+    "context": "/envelope[instance/Position]",
+    "collections": ["Position"],
+
+    "vars": [{
+
+      "name": "PRHPrefix",
+      "val": "'PRH:'"
+
+    },{
+
+      "name": "positionIri",
+      "val": "sem:iri(xdmp:node-uri(.))"
+
+    }],
+
+    "templates": [{
+
+      "context": "instance/Position",
+
+      "triples": [{
+        "subject": {
+          "val": "$positionIri"
+        },
+        "predicate": {
+          "val": "sem:iri($PRHPrefix || 'entityType')"
+        },
+        "object": {
+          "val": "lower-case(name(.))"
+        }
+      },{
+        "subject": {
+          "val": "$positionIri"
+        },
+        "predicate": {
+          "val": "sem:iri($PRHPrefix || 'preferredName')"
+        },
+        "object": {
+          "val": "string(description)"
+        }
+      }]
+
+    },{
+
+      "context": "instance/Position/requiredSkill",
+
+      "vars": [{
+        "name": "skillIri",
+        "val": "sem:iri($PRHPrefix || string(.))"
+      }],
+
+      "triples": [{
+        "subject": {
+          "val": "$skillIri"
+        },
+        "predicate": {
+          "val": "sem:iri($PRHPrefix || 'conceptType')"
+        },
+        "object": {
+          "val": "'skill'"
+        }
+      },{
+        "subject": {
+          "val": "$skillIri"
+        },
+        "predicate": {
+          "val": "sem:iri($PRHPrefix || 'preferredName')"
+        },
+        "object": {
+          "val": "string(.)"
+        }
+      },{
+        "subject": {
+          "val": "$positionIri"
+        },
+        "predicate": {
+          "val": "sem:iri($PRHPrefix || 'requiresSkill')"
+        },
+        "object": {
+          "val": "$skillIri"
+        }
+      }]
+
+    }]
+  }
+}

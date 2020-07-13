@@ -1,0 +1,87 @@
+{
+  "template": {
+    "context": "/envelope[instance/Person]",
+    "collections": ["Person"],
+
+    "vars": [{
+
+      "name": "PRHPrefix",
+      "val": "'PRH:'"
+
+    },{
+
+      "name": "personIri",
+      "val": "sem:iri(xdmp:node-uri(.))"
+
+    }],
+
+    "templates": [{
+
+      "context": "instance/Person",
+
+      "triples": [{
+        "subject": {
+          "val": "$personIri"
+        },
+        "predicate": {
+          "val": "sem:iri($PRHPrefix || 'entityType')"
+        },
+        "object": {
+          "val": "lower-case(name(.))"
+        }
+      },{
+        "subject": {
+          "val": "$personIri"
+        },
+        "predicate": {
+          "val": "sem:iri($PRHPrefix || 'preferredName')"
+        },
+        "object": {
+          "val": "string(name)"
+        }
+      }]
+
+    },{
+
+      "context": "instance/Person/skill",
+
+      "vars": [{
+        "name": "skillIri",
+        "val": "sem:iri($PRHPrefix || string(.))"
+      }],
+
+      "triples": [{
+        "subject": {
+          "val": "$skillIri"
+        },
+        "predicate": {
+          "val": "sem:iri($PRHPrefix || 'conceptType')"
+        },
+        "object": {
+          "val": "lower-case(name(.))"
+        }
+      },{
+        "subject": {
+          "val": "$skillIri"
+        },
+        "predicate": {
+          "val": "sem:iri($PRHPrefix || 'preferredName')"
+        },
+        "object": {
+          "val": "string(.)"
+        }
+      },{
+        "subject": {
+          "val": "$personIri"
+        },
+        "predicate": {
+          "val": "sem:iri($PRHPrefix || 'hasSkill')"
+        },
+        "object": {
+          "val": "$skillIri"
+        }
+      }]
+
+    }]
+  }
+}
