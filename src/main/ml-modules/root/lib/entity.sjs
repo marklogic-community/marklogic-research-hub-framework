@@ -75,7 +75,7 @@ function getDataByDocument(entityDocument, optionsIn){
   if (entityURI != null){
     let entity = createEntity(entityDocument.root);
 
-    result.type = entity.getType(entity);
+    result.type = entity.getType();
 
     result.preferredName = entity.getPreferredName();
 
