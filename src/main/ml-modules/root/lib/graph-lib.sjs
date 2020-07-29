@@ -86,11 +86,8 @@ function fetchNodeInfoMapWithCache(uris) {
 }
 
 function expandToGraph(uris, predicates, expansionSpec, targetEntity) {
-  if (predicates == null) {
-    return null;
-  }
-  if (predicates.length === 0) {
-    return null;
+  if (predicates == null || predicates.length === 0) {
+    return [];
   }
 
   predicates = predicates
