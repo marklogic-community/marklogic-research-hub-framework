@@ -97,7 +97,7 @@
     </range>
   </constraint>
   <constraint name="LanguageSkill">
-    <range type="xs:string" facet="true" collation="http://marklogic.com/collation/" >
+    <range type="xs:string" facet="true" collation="http://marklogic.com/collation/codepoint" >
       <facet-option>limit=10</facet-option>
       <facet-option>frequency-order</facet-option>
       <facet-option>descending</facet-option>
@@ -105,7 +105,7 @@
     </range>
   </constraint>
   <constraint name="ToolSkill">
-    <range type="xs:string" facet="true" collation="http://marklogic.com/collation/" >
+    <range type="xs:string" facet="true" collation="http://marklogic.com/collation/codepoint" >
       <facet-option>limit=10</facet-option>
       <facet-option>frequency-order</facet-option>
       <facet-option>descending</facet-option>
@@ -113,7 +113,7 @@
     </range>
   </constraint>
   <constraint name="ProductSkill">
-    <range type="xs:string" facet="true" collation="http://marklogic.com/collation/" >
+    <range type="xs:string" facet="true" collation="http://marklogic.com/collation/codepoint" >
       <facet-option>limit=10</facet-option>
       <facet-option>frequency-order</facet-option>
       <facet-option>descending</facet-option>
