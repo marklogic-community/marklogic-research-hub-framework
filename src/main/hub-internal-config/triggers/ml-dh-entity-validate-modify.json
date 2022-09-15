@@ -17,18 +17,22 @@
   "module-root": "/",
   "enabled": true,
   "recursive": true,
-  "task-priority": "normal",
+  "task-priority": "higher",
   "permission": [
-    {
-      "role-name": "%%mlDataHubAdminRole%%",
-      "capability": "update"
-    },
     {
       "role-name": "%%mlFlowDeveloperRole%%",
       "capability": "update"
     },
     {
       "role-name": "%%mlFlowOperatorRole%%",
+      "capability": "read"
+    },
+    {
+      "role-name": "data-hub-developer",
+      "capability": "update"
+    },
+    {
+      "role-name": "data-hub-common",
       "capability": "read"
     }
   ]
