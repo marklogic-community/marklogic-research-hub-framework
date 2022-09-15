@@ -11,7 +11,7 @@ There are two main steps to use this application:
 ## 1. Install Research Hub
 #### Prerequites
 1. MarkLogic 9.0-11 or 10.0-3
-2. DataHub 5.1.0 (included)
+2. DataHub 5.7.2 (included)
 3. Java 8+ (used for running QuickStart and gradle-wrapper)
 4. Node 10 or 12
 5. Optionally Docker Desktop if you want/need to run MarkLogic inside a container
