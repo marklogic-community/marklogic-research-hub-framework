@@ -135,7 +135,7 @@ To compile the frontend (necessary for production), you'd run:
 
 Execute the following task to run the datahub flows for this example:
 
-- `./gradlew -i runAllPPM`
+- `./gradlew -i examples:person-position-matching:runAll`
 
 ## Uninstall
 
