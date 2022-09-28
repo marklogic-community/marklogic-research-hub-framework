@@ -87,13 +87,14 @@ def buildTime() {
     return df.format(new Date())
 }
 
-// Database client config for mlUnitTest
+/* Database client config for mlUnitTest
 ext {
   mlUnitTest.databaseClientConfig.host = mlHost
   mlUnitTest.databaseClientConfig.port = mlTestFinalPort.toInteger()
   mlUnitTest.databaseClientConfig.username = mlUsername
   mlUnitTest.databaseClientConfig.password = mlPassword
 }
+/*
 
 /**
  * Delete a collection in the Final Database.
