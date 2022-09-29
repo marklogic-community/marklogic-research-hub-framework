@@ -274,6 +274,7 @@ Append the following indexes to `src/main/ml-config/databases/final-database.jso
         "range-value-positions": false,
         "invalid-values": "reject"
       }
+    ]
 
 NOTE: Make sure to append into `range-element-index` and `range-path-index` properties if they already exist!
 
