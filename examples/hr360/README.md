@@ -65,6 +65,71 @@ And add an import for `Skill`, and include it in the `export` section so it look
     workspace
   }
 
+### Adding necessary indexes
+
+Append the following indexes to `src\main\ml-config\databases\final-database.json`:
+
+    "range-element-index": [
+          {
+            "scalar-type": "string",
+            "namespace-uri": "",
+            "localname": "requiredCompetency",
+            "collation": "http://marklogic.com/collation/codepoint",
+            "range-value-positions": false,
+            "invalid-values": "reject"
+          },
+          {
+            "scalar-type": "string",
+            "namespace-uri": "",
+            "localname": "departmentName",
+            "collation": "http://marklogic.com/collation/codepoint",
+            "range-value-positions": false,
+            "invalid-values": "reject"
+          },
+          {
+            "scalar-type": "string",
+            "namespace-uri": "",
+            "localname": "location",
+            "collation": "http://marklogic.com/collation/codepoint",
+            "range-value-positions": false,
+            "invalid-values": "reject"
+          },
+          {
+            "scalar-type": "string",
+            "namespace-uri": "",
+            "localname": "reasonType",
+            "collation": "http://marklogic.com/collation/codepoint",
+            "range-value-positions": false,
+            "invalid-values": "reject"
+          },
+          {
+            "scalar-type": "string",
+            "namespace-uri": "",
+            "localname": "category",
+            "collation": "http://marklogic.com/collation/codepoint",
+            "range-value-positions": false,
+            "invalid-values": "reject"
+          },
+          {
+            "scalar-type": "string",
+            "namespace-uri": "",
+            "localname": "languageSkills",
+            "collation": "http://marklogic.com/collation/codepoint",
+            "range-value-positions": false,
+            "invalid-values": "reject"
+          },
+          {
+            "scalar-type": "string",
+            "namespace-uri": "",
+            "localname": "toolSkills",
+            "collation": "http://marklogic.com/collation/codepoint",
+            "range-value-positions": false,
+            "invalid-values": "reject"
+          }
+        ]
+
+NOTE: Make sure to append into the `range-element-index` property if it already exists!
+
 ### Build and deploy the changes
 
 Use this commands to deploy all the changes and code to the backend:
