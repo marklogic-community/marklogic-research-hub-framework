@@ -127,7 +127,7 @@ To compile the frontend (necessary for production), you'd run:
 
 Execute the following task to run the datahub flows for this example:
 
-- `./gradlew -i examples:person-position-matching:runAll`
+- `./gradlew -i examples:person-position-matching:runAndDeployAll`
 
 ## Uninstall
 
