@@ -6,14 +6,6 @@ Installation will require a few manual steps, mostly to put necessary files in p
 
 ## Installation
 
-### Extracting the distribution
-
-Unzip the reference into the root folder of your Research Hub project:
-
-- `unzip person-position-matching.zip`
-
-This will not install anything yet, just provide you with the necessary files without harming the existing project.
-
 ### Enabling example tasks in Gradle
 
 No action required. The example comes with a build.gradle file of its own, which is included into the main research-hub gradle project automatically. You can verify if it is indeed recognized using:
