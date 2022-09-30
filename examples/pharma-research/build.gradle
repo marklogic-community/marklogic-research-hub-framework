@@ -227,7 +227,7 @@ task pubMedInputflowFTP(type: MlcpTask, group: project.name) {
     port = mlStagingPort.toInteger()
     ssl = sslFlag
     args = [
-       "-input_file_path", inputPathPubMedCentral,
+       "-input_file_path", "$rootProject.projectDir/$inputPathPubMedCentral",
         "-output_collections", "pubMedInputflowFTP,publication",
         "-output_permissions", "rest-reader,read,rest-writer,update",
         "-document_type", "xml",
@@ -412,7 +412,7 @@ task loadStudyData(type: MlcpTask, group: project.name) {
         "-output_uri_suffix", "\"\"",
         "-transform_module", "/data-hub/5/transforms/mlcp-flow-transform.sjs",
         "-transform_namespace", "http://marklogic.com/data-hub/mlcp-flow-transform",
-        "-transform_param", "entity-name=Study,flow-name=loadStudy,step=1",
+        "-transform_param", "entity-name=Study,flow-name=LoadStudy,step=1",
     ]
 }
 
