@@ -335,7 +335,9 @@ First, it is necessary to download the full drug label data from the [DailyMed](
 
 ### 7 Run the group tasks to ingest and harmonize a sample Publications and Author
 
-This will create some simple pubmed and author documents for you. It depends on the enirchment code for the final document for PubMed data:
+First, download the pubmed xml files from [https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_bulk/](https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_bulk/) to $/pharma/data/pharma-research/comm_use_Daily_Med (or another location and update inputPathPubMedCentral variable in your gradle properties file to the correct location).
+
+This will create some simple pubmed and author documents for you. It depends on the enrichment code for the final document for PubMed data:
 
   `./gradlew loadPubMedCentral`
 
