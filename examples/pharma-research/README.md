@@ -274,12 +274,13 @@ Append the following indexes to `src/main/ml-config/databases/final-database.jso
         "range-value-positions": false,
         "invalid-values": "reject"
       }
+    ]
 
 NOTE: Make sure to append into `range-element-index` and `range-path-index` properties if they already exist!
 
 ### 1. Deploy DHF
 
-    ./gradlew mlDeploy
+  `./gradlew mlDeploy`
 
 NOTE: After you do mlDeploy or mlRedeploy, Please make sure you do ./gradlew mlLoadModules as we determined some issue with SMT on Dave's local environment
 
@@ -293,54 +294,54 @@ Currently only the RxNorm ontology and a sample omopcdm ontology are included in
 
 Each ontology needs to be named and placed in a folder of the same name within the `data/ontologies` directory of this source code.
 
-    ./gradlew rpaasDeployOntology -PontologyName=RxNorm
+  `./gradlew rpaasDeployOntology -PontologyName=RxNorm`
 
-    ./gradlew rpaasDeployOntology -PontologyName=omopcdm
+  `./gradlew rpaasDeployOntology -PontologyName=omopcdm`
 
 ### 2.2 Load dev data
 
+**NOTE FOR WINDOWS USERS**
+Embedded MLCP is required for many of the following steps. One piece that is required is the winutils.exe tool and an environment variable set so that it can be located by MLCP. It will be necessary to download this tool and place it in a 'bin' directory. Then, set HADOOP_HOME to the parent of the bin directory. For instance, if the tool is located in C:\Projects\mlcp\bin, set HADOOP_HOME to C:\Projects\mlcp with:
+
+`set HADOOP_HOME=C:\Projects\mlcp`
+
+For more information, see [this](https://stackoverflow.com/questions/35652665/java-io-ioexception-could-not-locate-executable-null-bin-winutils-exe-in-the-ha) discussion on stackoverflow.
+
 Run the rpaasDeployTestData job - this contains a set of documents and triples that will allow the dictionary job to work.
 
-    ./gradlew rpaasDeployTestData
+  `./gradlew rpaasDeployTestData`
 
 ### 3 run the group tasks to ingest and harmonize Study Data
 
-You have two options. Choose one:
-
-#### 3.1 Test data for development
-
-If you want a small set of data for development, run:
-
-    ./gradlew loadStudiesDev
-
-#### 3.2 Full dataset (huge)
-
 If you want the entire study dataset, run:
 
-    ./gradlew loadStudies
+  `./gradlew loadStudies`
 
-### 4 run the group tasks to ingest and harmonize Drug Data a) or b) depending on OS
+if you want a subset, override inputPathStudies in properties files to configure which study data set used.
 
-    a) ./gradlew loadDrugs for linux/Unix
-    b) ./gradlew loadWindowsDrugs for Windows
+### 4 run the group tasks to ingest and harmonize Drug Data
+
+First, it is necessary to download the full drug label data from the [DailyMed](https://dailymed.nlm.nih.gov/dailymed/spl-resources-all-drug-labels.cfm) website. Unzip the files to $/pharma/data/pharma-research/drugZip
+
+  `./gradlew loadDrugs`
 
 ### 5 Run the group tasks to ingest and harmonize Gene Data
 
-    ./gradlew ingestGeneData
+  `./gradlew ingestGeneData`
 
 ### 6 Run the group tasks to ingest and harmonize Protein Data
 
-    ./gradlew ingestProteinData
+  `./gradlew ingestProteinData`
 
 ### 7 Run the group tasks to ingest and harmonize a sample Publications and Author
 
 This will create some simple pubmed and author documents for you. It depends on the enirchment code for the final document for PubMed data:
 
-    ./gradlew loadPubMedCentral
+  `./gradlew loadPubMedCentral`
 
 ### 8 Run mastering:
 
-    ./gradlew runSmartMaster
+  `./gradlew runSmartMaster`
 
 ## UI Application (built with the Grove toolkit)
 
@@ -350,7 +351,7 @@ The UI is contained within `ui/`. The README in that directory has information o
 
 To deploy the unit tests, run:
 
-    ./gradlew hubDeployTestResources
+  `./gradlew hubDeployTestResources`
 
 this will create the HTTP server and database for the unit tests.
 
