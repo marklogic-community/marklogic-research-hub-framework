@@ -372,7 +372,7 @@ task drugZipLoad(type: MlcpTask, group: project.name) {
         "-output_uri_prefix", "/drug",
         "-output_uri_suffix", "\"\"",
         "-transform_module", "/data-hub/5/transforms/mlcp-flow-transform.sjs",
-        "-transform_param", 'entity-name=Drug,flow-name=loadDrug,step=1'
+        "-transform_param", 'entity-name=Drug,flow-name=LoadDrug,step=1'
     ]
     jvmArgs = ['-Xmx2G']
 }
