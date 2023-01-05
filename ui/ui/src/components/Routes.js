@@ -2,7 +2,7 @@ import React from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import queryString from 'query-string';
 
-import { DetailContainer } from 'grove-core-react-redux-containers';
+import { DetailContainer } from '@marklogic-community/grove-core-react-redux-containers';
 
 import LoginContainer from 'containers/LoginContainer';
 

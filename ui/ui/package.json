@@ -13,7 +13,7 @@
     "@marklogic-community/grove-search-redux": "github:marklogic-community/grove-search-redux#3-do-not-duplicate-filters",
     "@marklogic-community/grove-user-redux": "git+https://github.com/dalaidunc/grove-user-redux.git#d3f25f9b486d1e7ef36bad7add3fc83a57d8ec48",
     "bootstrap": "^3.4.1",
-    "grove-core-react-redux-containers": "git+https://project.marklogic.com/repo/scm/~pmcelwee/grove-core-react-redux-containers.git#1.0.0-rc.1",
+    "@marklogic-community/grove-core-react-redux-containers": "github:marklogic-community/grove-core-react-redux-containers.git#1.0.0",
     "highcharts": "^7.2.1",
     "highcharts-react-official": "^2.2.2",
     "jquery": "^3.4.1",
