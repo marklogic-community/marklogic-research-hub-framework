@@ -1,6 +1,0 @@
-{
-  "local-name" : "evalInDatabase",
-  "document-uri" : "/data-hub/5/impl/hub-utils.sjs",
-  "modules-database" : "%%mlModulesDbName%%",
-  "role" : [ "data-hub-admin" ]
-}
