@@ -11,7 +11,6 @@ buildscript {
       maven {url 'https://developer.marklogic.com/maven2/'}
       mavenLocal()
       mavenCentral()
-      jcenter()
     }
   }
   dependencies {
@@ -40,7 +39,6 @@ plugins {
 }
 
 repositories {
-    jcenter()
 	// To use gradle in disconnected mode, you just need to set the 'disconnected' property. E.g. gradle compileJava -Pdisconnected
 	if (project.hasProperty("disconnected") && !"FALSE".equalsIgnoreCase(disconnected)) {
 		println "Using offline dependency repositories"
