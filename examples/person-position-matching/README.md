@@ -62,54 +62,11 @@ export default {
 
 ### Adding necessary indexes
 
-Append the following indexes to `src\main\ml-config\databases\final-database.json`:
+Add to /gradle.properties a line to merge person-position-matching indexes with the base final database configuration:
 
-    "range-element-index": [
-      {
-        "scalar-type": "string",
-        "namespace-uri": "",
-        "localname": "Education",
-        "collation": "http://marklogic.com/collation/codepoint",
-        "range-value-positions": false,
-        "invalid-values": "reject"
-      },
-      {
-        "scalar-type": "string",
-        "namespace-uri": "",
-        "localname": "Experience",
-        "collation": "http://marklogic.com/collation/codepoint",
-        "range-value-positions": false,
-        "invalid-values": "reject"
-      },
-      {
-        "scalar-type": "string",
-        "namespace-uri": "",
-        "localname": "Skill",
-        "collation": "http://marklogic.com/collation/codepoint",
-        "range-value-positions": false,
-        "invalid-values": "reject"
-      },
-      {
-        "scalar-type": "string",
-        "namespace-uri": "",
-        "localname": "Requirement",
-        "collation": "http://marklogic.com/collation/codepoint",
-        "range-value-positions": false,
-        "invalid-values": "reject"
-      }
-    ],
-    "range-path-index": [
-      {
-        "scalar-type": "string",
-        "collation": "http://marklogic.com/collation/",
-        "path-expression": "/matchSummary/URIsToProcess",
-        "range-value-positions": true,
-        "invalid-values": "reject"
-      }
-    ]
+  `mlConfigPaths=src/main/ml-config,examples/person-position-matching/src/main/ml-config`
 
-NOTE: Make sure to append into the `range-element-index` property if it already exists!
-
+This line will include the indexes defined in the `examples\person-position-matching\src\main\ml-config\databases\final-database.json` file to the base version of the final database defined in `src\main\ml-config\databases\final-database.json`.
 
 ### Build and deploy the changes
 
