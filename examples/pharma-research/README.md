@@ -96,190 +96,15 @@ Append the contents of `examples/pharma-research/extra-gradle.properties` to `./
 
 ### Adding necessary indexes
 
-Append the following indexes to `src/main/ml-config/databases/final-database.json`:
+Add to /gradle.properties a line to merge pharma-research indexes with the base final database configuration:
 
-    "range-element-index": [
-      {
-        "scalar-type": "int",
-        "namespace-uri": "",
-        "localname": "NumberOfCitations",
-        "collation": "http://marklogic.com/collation/codepoint",
-        "range-value-positions": false,
-        "invalid-values": "reject"
-      },
-      {
-        "scalar-type": "string",
-        "namespace-uri": "",
-        "localname": "authorPreferredName",
-        "collation": "http://marklogic.com/collation/codepoint",
-        "range-value-positions": false,
-        "invalid-values": "reject"
-      },
-      {
-        "scalar-type": "string",
-        "namespace-uri": "",
-        "localname": "institutionPreferredName",
-        "collation": "http://marklogic.com/collation/codepoint",
-        "range-value-positions": false,
-        "invalid-values": "reject"
-      },
-      {
-        "scalar-type": "string",
-        "namespace-uri": "",
-        "localname": "topicPreferredName",
-        "collation": "http://marklogic.com/collation/codepoint",
-        "range-value-positions": false,
-        "invalid-values": "reject"
-      },
-      {
-        "scalar-type": "date",
-        "namespace-uri": "",
-        "localname": "lastModifiedDate",
-        "collation": "http://marklogic.com/collation/codepoint",
-        "range-value-positions": false,
-        "invalid-values": "reject"
-      },
-      {
-        "scalar-type": "dateTime",
-        "namespace-uri": "",
-        "localname": "systemDateTimeCreated",
-        "collation": "http://marklogic.com/collation/codepoint",
-        "range-value-positions": false,
-        "invalid-values": "reject"
-      },
-      {
-        "scalar-type": "string",
-        "namespace-uri": "",
-        "localname": "journalPreferredName",
-        "collation": "http://marklogic.com/collation/codepoint",
-        "range-value-positions": false,
-        "invalid-values": "reject"
-      },
-      {
-        "scalar-type": "string",
-        "namespace-uri": "",
-        "localname": "typeOfGene",
-        "collation": "http://marklogic.com/collation/codepoint",
-        "range-value-positions": false,
-        "invalid-values": "reject"
-      },
-      {
-        "scalar-type": "string",
-        "namespace-uri": "",
-        "localname": "chromosome",
-        "collation": "http://marklogic.com/collation/codepoint",
-        "range-value-positions": false,
-        "invalid-values": "reject"
-      },
-      {
-        "scalar-type": "string",
-        "namespace-uri": "",
-        "localname": "mapLocation",
-        "collation": "http://marklogic.com/collation/codepoint",
-        "range-value-positions": false,
-        "invalid-values": "reject"
-      },
-      {
-        "scalar-type": "string",
-        "namespace-uri": "",
-        "localname": "relatedDiseaseNames",
-        "collation": "http://marklogic.com/collation/codepoint",
-        "range-value-positions": false,
-        "invalid-values": "reject"
-      },
-      {
-        "scalar-type": "string",
-        "namespace-uri": "",
-        "localname": "activeSubstanceNames",
-        "collation": "http://marklogic.com/collation/codepoint",
-        "range-value-positions": false,
-        "invalid-values": "reject"
-      },
-      {
-        "scalar-type": "string",
-        "namespace-uri": "",
-        "localname": "drugName",
-        "collation": "http://marklogic.com/collation/codepoint",
-        "range-value-positions": false,
-        "invalid-values": "reject"
-      },
-      {
-        "scalar-type": "string",
-        "namespace-uri": "",
-        "localname": "genericMedicineName",
-        "collation": "http://marklogic.com/collation/codepoint",
-        "range-value-positions": false,
-        "invalid-values": "reject"
-      },
-      {
-        "scalar-type": "string",
-        "namespace-uri": "",
-        "localname": "family",
-        "collation": "http://marklogic.com/collation/codepoint",
-        "range-value-positions": false,
-        "invalid-values": "reject"
-      },
-      {
-        "scalar-type": "string",
-        "namespace-uri": "",
-        "localname": "subfamily",
-        "collation": "http://marklogic.com/collation/codepoint",
-        "range-value-positions": false,
-        "invalid-values": "reject"
-      },
-      {
-        "scalar-type": "string",
-        "namespace-uri": "",
-        "localname": "subsubfamily",
-        "collation": "http://marklogic.com/collation/codepoint",
-        "range-value-positions": false,
-        "invalid-values": "reject"
-      },
-      {
-        "scalar-type": "int",
-        "namespace-uri": "",
-        "localname": "armCount",
-        "collation": "http://marklogic.com/collation/codepoint",
-        "range-value-positions": false,
-        "invalid-values": "reject"
-      },
-      {
-        "scalar-type": "string",
-        "namespace-uri": "",
-        "localname": "armType",
-        "collation": "http://marklogic.com/collation/codepoint",
-        "range-value-positions": false,
-        "invalid-values": "reject"
-      }
-    ],
-    "range-path-index": [
-      {
-        "scalar-type": "string",
-        "collation": "http://marklogic.com/collation/",
-        "path-expression": "/matchSummary/URIsToProcess",
-        "range-value-positions": true,
-        "invalid-values": "reject"
-      },
-      {
-        "scalar-type": "string",
-        "collation": "http://marklogic.com/collation/codepoint",
-        "path-expression": "//topicName",
-        "range-value-positions": false,
-        "invalid-values": "reject"
-      },
-      {
-        "scalar-type": "string",
-        "collation": "http://marklogic.com/collation/codepoint",
-        "path-expression": "//Protein/drug/name",
-        "range-value-positions": false,
-        "invalid-values": "reject"
-      }
+  `mlConfigPaths=src/main/ml-config,examples/pharma-research/src/main/ml-config`
 
-NOTE: Make sure to append into `range-element-index` and `range-path-index` properties if they already exist!
+This line will include the indexes defined in the `examples\pharma-research\src\main\ml-config\databases\final-database.json` file to the base version of the final database defined in `src\main\ml-config\databases\final-database.json`.
 
 ### 1. Deploy DHF
 
-    ./gradlew mlDeploy
+  `./gradlew mlDeploy`
 
 NOTE: After you do mlDeploy or mlRedeploy, Please make sure you do ./gradlew mlLoadModules as we determined some issue with SMT on Dave's local environment
 
@@ -293,54 +118,56 @@ Currently only the RxNorm ontology and a sample omopcdm ontology are included in
 
 Each ontology needs to be named and placed in a folder of the same name within the `data/ontologies` directory of this source code.
 
-    ./gradlew rpaasDeployOntology -PontologyName=RxNorm
+  `./gradlew rpaasDeployOntology -PontologyName=RxNorm`
 
-    ./gradlew rpaasDeployOntology -PontologyName=omopcdm
+  `./gradlew rpaasDeployOntology -PontologyName=omopcdm`
 
 ### 2.2 Load dev data
 
+**NOTE FOR WINDOWS USERS**
+Embedded MLCP is required for many of the following steps. One piece that is required is the winutils.exe tool and an environment variable set so that it can be located by MLCP. It will be necessary to download this tool and place it in a 'bin' directory. Then, set HADOOP_HOME to the parent of the bin directory. For instance, if the tool is located in C:\Projects\mlcp\bin, set HADOOP_HOME to C:\Projects\mlcp with:
+
+`set HADOOP_HOME=C:\Projects\mlcp`
+
+For more information, see [this](https://stackoverflow.com/questions/35652665/java-io-ioexception-could-not-locate-executable-null-bin-winutils-exe-in-the-ha) discussion on stackoverflow.
+
 Run the rpaasDeployTestData job - this contains a set of documents and triples that will allow the dictionary job to work.
 
-    ./gradlew rpaasDeployTestData
+  `./gradlew rpaasDeployTestData`
 
 ### 3 run the group tasks to ingest and harmonize Study Data
 
-You have two options. Choose one:
-
-#### 3.1 Test data for development
-
-If you want a small set of data for development, run:
-
-    ./gradlew loadStudiesDev
-
-#### 3.2 Full dataset (huge)
-
 If you want the entire study dataset, run:
 
-    ./gradlew loadStudies
+  `./gradlew loadStudies`
 
-### 4 run the group tasks to ingest and harmonize Drug Data a) or b) depending on OS
+if you want a subset, override inputPathStudies in properties files to configure which study data set used.
 
-    a) ./gradlew loadDrugs for linux/Unix
-    b) ./gradlew loadWindowsDrugs for Windows
+### 4 run the group tasks to ingest and harmonize Drug Data
+
+First, it is necessary to download the full drug label data from the [DailyMed](https://dailymed.nlm.nih.gov/dailymed/spl-resources-all-drug-labels.cfm) website. Unzip the files to $/pharma/data/pharma-research/drugZip
+
+  `./gradlew loadDrugs`
 
 ### 5 Run the group tasks to ingest and harmonize Gene Data
 
-    ./gradlew ingestGeneData
+  `./gradlew ingestGeneData`
 
 ### 6 Run the group tasks to ingest and harmonize Protein Data
 
-    ./gradlew ingestProteinData
+  `./gradlew ingestProteinData`
 
 ### 7 Run the group tasks to ingest and harmonize a sample Publications and Author
 
-This will create some simple pubmed and author documents for you. It depends on the enirchment code for the final document for PubMed data:
+First, download the pubmed xml files from [https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_bulk/](https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_bulk/) to $/pharma/data/pharma-research/comm_use_Daily_Med (or another location and update inputPathPubMedCentral variable in your gradle properties file to the correct location).
 
-    ./gradlew loadPubMedCentral
+This will create some simple pubmed and author documents for you. It depends on the enrichment code for the final document for PubMed data:
+
+  `./gradlew loadPubMedCentral`
 
 ### 8 Run mastering:
 
-    ./gradlew runSmartMaster
+  `./gradlew runSmartMaster`
 
 ## UI Application (built with the Grove toolkit)
 
@@ -350,7 +177,7 @@ The UI is contained within `ui/`. The README in that directory has information o
 
 To deploy the unit tests, run:
 
-    ./gradlew hubDeployTestResources
+  `./gradlew hubDeployTestResources`
 
 this will create the HTTP server and database for the unit tests.
 

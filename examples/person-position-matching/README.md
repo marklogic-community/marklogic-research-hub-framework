@@ -6,14 +6,6 @@ Installation will require a few manual steps, mostly to put necessary files in p
 
 ## Installation
 
-### Extracting the distribution
-
-Unzip the reference into the root folder of your Research Hub project:
-
-- `unzip person-position-matching.zip`
-
-This will not install anything yet, just provide you with the necessary files without harming the existing project.
-
 ### Enabling example tasks in Gradle
 
 No action required. The example comes with a build.gradle file of its own, which is included into the main research-hub gradle project automatically. You can verify if it is indeed recognized using:
@@ -70,54 +62,11 @@ export default {
 
 ### Adding necessary indexes
 
-Append the following indexes to `src\main\ml-config\databases\final-database.json`:
+Add to /gradle.properties a line to merge person-position-matching indexes with the base final database configuration:
 
-    "range-element-index": [
-      {
-        "scalar-type": "string",
-        "namespace-uri": "",
-        "localname": "Education",
-        "collation": "http://marklogic.com/collation/codepoint",
-        "range-value-positions": false,
-        "invalid-values": "reject"
-      },
-      {
-        "scalar-type": "string",
-        "namespace-uri": "",
-        "localname": "Experience",
-        "collation": "http://marklogic.com/collation/codepoint",
-        "range-value-positions": false,
-        "invalid-values": "reject"
-      },
-      {
-        "scalar-type": "string",
-        "namespace-uri": "",
-        "localname": "Skill",
-        "collation": "http://marklogic.com/collation/codepoint",
-        "range-value-positions": false,
-        "invalid-values": "reject"
-      },
-      {
-        "scalar-type": "string",
-        "namespace-uri": "",
-        "localname": "Requirement",
-        "collation": "http://marklogic.com/collation/codepoint",
-        "range-value-positions": false,
-        "invalid-values": "reject"
-      }
-    ],
-    "range-path-index": [
-      {
-        "scalar-type": "string",
-        "collation": "http://marklogic.com/collation/",
-        "path-expression": "/matchSummary/URIsToProcess",
-        "range-value-positions": true,
-        "invalid-values": "reject"
-      }
-    ]
+  `mlConfigPaths=src/main/ml-config,examples/person-position-matching/src/main/ml-config`
 
-NOTE: Make sure to append into the `range-element-index` property if it already exists!
-
+This line will include the indexes defined in the `examples\person-position-matching\src\main\ml-config\databases\final-database.json` file to the base version of the final database defined in `src\main\ml-config\databases\final-database.json`.
 
 ### Build and deploy the changes
 
@@ -135,7 +84,7 @@ To compile the frontend (necessary for production), you'd run:
 
 Execute the following task to run the datahub flows for this example:
 
-- `./gradlew -i runAllPPM`
+- `./gradlew -i examples:person-position-matching:runAndDeployAll`
 
 ## Uninstall
 

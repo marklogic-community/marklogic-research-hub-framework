@@ -5,7 +5,7 @@ import { Entity } from 'entity';
 import EntityComponent from 'components/EntityComponent';
 
 import { actions, selectors } from '@marklogic-community/grove-crud-redux';
-import { bindSelectors } from 'grove-core-react-redux-containers';
+import { bindSelectors } from '@marklogic-community/grove-core-react-redux-containers';
 
 const boundSelectors = bindSelectors(selectors, 'documents');
 

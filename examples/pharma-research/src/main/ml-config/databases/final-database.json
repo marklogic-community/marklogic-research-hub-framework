@@ -1,10 +1,10 @@
 {
-  "database-name": "%%mlJobDbName%%",
+  "database-name": "%%mlFinalDbName%%",
   "range-element-index": [
     {
-      "scalar-type": "string",
+      "scalar-type": "int",
       "namespace-uri": "",
-      "localname": "jobId",
+      "localname": "NumberOfCitations",
       "collation": "http://marklogic.com/collation/codepoint",
       "range-value-positions": false,
       "invalid-values": "reject"
@@ -12,7 +12,7 @@
     {
       "scalar-type": "string",
       "namespace-uri": "",
-      "localname": "jobName",
+      "localname": "authorPreferredName",
       "collation": "http://marklogic.com/collation/codepoint",
       "range-value-positions": false,
       "invalid-values": "reject"
@@ -20,47 +20,31 @@
     {
       "scalar-type": "string",
       "namespace-uri": "",
-      "localname": "flow",
+      "localname": "institutionPreferredName",
       "collation": "http://marklogic.com/collation/codepoint",
       "range-value-positions": false,
-      "invalid-values": "ignore"
+      "invalid-values": "reject"
+    },
+    {
+      "scalar-type": "string",
+      "namespace-uri": "",
+      "localname": "topicPreferredName",
+      "collation": "http://marklogic.com/collation/codepoint",
+      "range-value-positions": false,
+      "invalid-values": "reject"
+    },
+    {
+      "scalar-type": "date",
+      "namespace-uri": "",
+      "localname": "lastModifiedDate",
+      "collation": "http://marklogic.com/collation/codepoint",
+      "range-value-positions": false,
+      "invalid-values": "reject"
     },
     {
       "scalar-type": "dateTime",
       "namespace-uri": "",
-      "localname": "startTime",
-      "collation": "",
-      "range-value-positions": false,
-      "invalid-values": "ignore"
-    },
-    {
-      "scalar-type": "dateTime",
-      "namespace-uri": "",
-      "localname": "endTime",
-      "collation": "",
-      "range-value-positions": false,
-      "invalid-values": "ignore"
-    },
-    {
-      "scalar-type": "dateTime",
-      "namespace-uri": "",
-      "localname": "timeStarted",
-      "collation": "",
-      "range-value-positions": false,
-      "invalid-values": "ignore"
-    },
-    {
-      "scalar-type": "dateTime",
-      "namespace-uri": "",
-      "localname": "timeEnded",
-      "collation": "",
-      "range-value-positions": false,
-      "invalid-values": "ignore"
-    },
-    {
-      "scalar-type": "string",
-      "namespace-uri": "",
-      "localname": "status",
+      "localname": "systemDateTimeCreated",
       "collation": "http://marklogic.com/collation/codepoint",
       "range-value-positions": false,
       "invalid-values": "reject"
@@ -68,7 +52,7 @@
     {
       "scalar-type": "string",
       "namespace-uri": "",
-      "localname": "entityName",
+      "localname": "journalPreferredName",
       "collation": "http://marklogic.com/collation/codepoint",
       "range-value-positions": false,
       "invalid-values": "reject"
@@ -76,7 +60,7 @@
     {
       "scalar-type": "string",
       "namespace-uri": "",
-      "localname": "flowName",
+      "localname": "typeOfGene",
       "collation": "http://marklogic.com/collation/codepoint",
       "range-value-positions": false,
       "invalid-values": "reject"
@@ -84,7 +68,87 @@
     {
       "scalar-type": "string",
       "namespace-uri": "",
-      "localname": "flowType",
+      "localname": "chromosome",
+      "collation": "http://marklogic.com/collation/codepoint",
+      "range-value-positions": false,
+      "invalid-values": "reject"
+    },
+    {
+      "scalar-type": "string",
+      "namespace-uri": "",
+      "localname": "mapLocation",
+      "collation": "http://marklogic.com/collation/codepoint",
+      "range-value-positions": false,
+      "invalid-values": "reject"
+    },
+    {
+      "scalar-type": "string",
+      "namespace-uri": "",
+      "localname": "relatedDiseaseNames",
+      "collation": "http://marklogic.com/collation/codepoint",
+      "range-value-positions": false,
+      "invalid-values": "reject"
+    },
+    {
+      "scalar-type": "string",
+      "namespace-uri": "",
+      "localname": "activeSubstanceNames",
+      "collation": "http://marklogic.com/collation/codepoint",
+      "range-value-positions": false,
+      "invalid-values": "reject"
+    },
+    {
+      "scalar-type": "string",
+      "namespace-uri": "",
+      "localname": "drugName",
+      "collation": "http://marklogic.com/collation/codepoint",
+      "range-value-positions": false,
+      "invalid-values": "reject"
+    },
+    {
+      "scalar-type": "string",
+      "namespace-uri": "",
+      "localname": "genericMedicineName",
+      "collation": "http://marklogic.com/collation/codepoint",
+      "range-value-positions": false,
+      "invalid-values": "reject"
+    },
+    {
+      "scalar-type": "string",
+      "namespace-uri": "",
+      "localname": "family",
+      "collation": "http://marklogic.com/collation/codepoint",
+      "range-value-positions": false,
+      "invalid-values": "reject"
+    },
+    {
+      "scalar-type": "string",
+      "namespace-uri": "",
+      "localname": "subfamily",
+      "collation": "http://marklogic.com/collation/codepoint",
+      "range-value-positions": false,
+      "invalid-values": "reject"
+    },
+    {
+      "scalar-type": "string",
+      "namespace-uri": "",
+      "localname": "subsubfamily",
+      "collation": "http://marklogic.com/collation/codepoint",
+      "range-value-positions": false,
+      "invalid-values": "reject"
+    },
+    {
+      "scalar-type": "int",
+      "namespace-uri": "",
+      "localname": "armCount",
+      "collation": "http://marklogic.com/collation/codepoint",
+      "range-value-positions": false,
+      "invalid-values": "reject"
+    },
+    {
+      "scalar-type": "string",
+      "namespace-uri": "",
+      "localname": "armType",
       "collation": "http://marklogic.com/collation/codepoint",
       "range-value-positions": false,
       "invalid-values": "reject"
@@ -93,50 +157,24 @@
   "range-path-index": [
     {
       "scalar-type": "string",
-      "path-expression": "/trace/hasError",
+      "collation": "http://marklogic.com/collation/",
+      "path-expression": "/matchSummary/URIsToProcess",
+      "range-value-positions": true,
+      "invalid-values": "reject"
+    },
+    {
+      "scalar-type": "string",
       "collation": "http://marklogic.com/collation/codepoint",
+      "path-expression": "//topicName",
       "range-value-positions": false,
       "invalid-values": "reject"
     },
     {
       "scalar-type": "string",
-      "path-expression": "/trace/flowType",
       "collation": "http://marklogic.com/collation/codepoint",
-      "range-value-positions": false,
-      "invalid-values": "reject"
-    },
-    {
-      "scalar-type": "string",
-      "path-expression": "/trace/jobId",
-      "collation": "http://marklogic.com/collation/codepoint",
-      "range-value-positions": false,
-      "invalid-values": "reject"
-    },
-    {
-      "scalar-type": "string",
-      "path-expression": "/trace/traceId",
-      "collation": "http://marklogic.com/collation/codepoint",
-      "range-value-positions": false,
-      "invalid-values": "reject"
-    },
-    {
-      "scalar-type": "string",
-      "path-expression": "/trace/identifier",
-      "collation": "http://marklogic.com/collation/codepoint",
-      "range-value-positions": false,
-      "invalid-values": "reject"
-    },
-    {
-      "scalar-type": "dateTime",
-      "path-expression": "/trace/created",
-      "collation": "",
+      "path-expression": "//Protein/drug/name",
       "range-value-positions": false,
       "invalid-values": "reject"
     }
-  ],
-  "schema-database": "%%mlStagingSchemasDbName%%",
-  "triggers-database": "%%mlStagingTriggersDbName%%",
-  "triple-index": true,
-  "collection-lexicon": true,
-  "uri-lexicon": true
+  ]
 }

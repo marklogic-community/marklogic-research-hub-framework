@@ -65,6 +65,15 @@ And add an import for `Skill`, and include it in the `export` section so it look
     workspace
   }
 
+### Adding necessary indexes
+
+Add to /gradle.properties a line to merge hr360 indexes with the base final database configuration:
+
+  `mlConfigPaths=src/main/ml-config,examples/hr360/src/main/ml-config`
+
+This line will include the indexes defined in the `examples\hr360\src\main\ml-config\databases\final-database.json` file to the base version of the final database defined in `src\main\ml-config\databases\final-database.json`.
+
+
 ### Build and deploy the changes
 
 Use this commands to deploy all the changes and code to the backend:

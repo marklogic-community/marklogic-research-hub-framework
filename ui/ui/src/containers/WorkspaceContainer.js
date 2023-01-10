@@ -4,7 +4,7 @@ import Workspace from '../components/Workspace';
 import { Entity } from 'entity';
 
 import { actions, selectors } from '@marklogic-community/grove-crud-redux';
-import { bindSelectors } from 'grove-core-react-redux-containers';
+import { bindSelectors } from '@marklogic-community/grove-core-react-redux-containers';
 const boundSelectors = bindSelectors(selectors, 'documents');
 
 const mapStateToProps = (state, ownProps) => {

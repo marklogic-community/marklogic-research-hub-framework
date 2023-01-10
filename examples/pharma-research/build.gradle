@@ -216,7 +216,7 @@ task pubMedInputflowByYearMonth(type: MlcpTask, group: project.name) {
 //////////////////////////////////////////////////
 // Users the pubMedFlow to ingest all the pubdata
 /////////////////////////////////////////////////
-// you to ahead of time download the pubdata from the ftp site
+// Ahead of time, download the pubdata from the ftp site
 // then unzip and change the input file path to the location you want.
 // ftp site: ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_bulk/
 // only need to pull the files that are common_use and end it .xml and not .txt
@@ -227,7 +227,7 @@ task pubMedInputflowFTP(type: MlcpTask, group: project.name) {
     port = mlStagingPort.toInteger()
     ssl = sslFlag
     args = [
-       "-input_file_path", inputPathPubMedCentral,
+       "-input_file_path", "$rootProject.projectDir/$inputPathPubMedCentral",
         "-output_collections", "pubMedInputflowFTP,publication",
         "-output_permissions", "rest-reader,read,rest-writer,update",
         "-document_type", "xml",
@@ -306,7 +306,7 @@ task pdfInputflow(type: MlcpTask, group: project.name) {
 //////////////////////////////////////////////////
 // Uses the CovidFlow to ingest all the covid data
 /////////////////////////////////////////////////
-// you to ahead of time download the covid data from:
+// Ahead of time, download the covid data from:
 // https://pages.semanticscholar.org/coronavirus-research
 // then unzip and put the files in:
 // data/pharma-research/coronavirus/custom_license/
@@ -351,7 +351,7 @@ task loadCido(type: MlcpTask, group: project.name) {
 //////////////////////////////////////////////////////////////////////////////////////////////
 // USE THIS TASK TO LOAD DAILYMED DRUG DATA FROM U.S. NATIONAL LIBRARY OF MEDICINE  CITE
 /////////////////////////////////////////////////
-// you to ahead of time download the full drug lable data from the DailyMed Website
+// Ahead of time, download the full drug lable data from the DailyMed Website
 // then unzip and change the input file path to the location you want. They will contain zipfiles
 // this task should load all the zipfiles
 // SITE : https://dailymed.nlm.nih.gov/dailymed/spl-resources-all-drug-labels.cfm
@@ -364,7 +364,7 @@ task drugZipLoad(type: MlcpTask, group: project.name) {
     ssl = sslFlag
     args = [
         "-thread_count", project.hasProperty("drugZipLoadThreads") ? drugZipLoadThreads.toInteger() : defaultLoadThreads,
-        "-input_file_path", inputPathDrugs,
+        "-input_file_path", "$rootProject.projectDir/$inputPathDrugs",
         "-output_collections", "Drug,loadzipDrug,input",
         "-output_permissions", "rest-reader,read,rest-writer,update",
         "-document_type", "binary",
@@ -372,7 +372,7 @@ task drugZipLoad(type: MlcpTask, group: project.name) {
         "-output_uri_prefix", "/drug",
         "-output_uri_suffix", "\"\"",
         "-transform_module", "/data-hub/5/transforms/mlcp-flow-transform.sjs",
-        "-transform_param", 'entity-name=Drug,flow-name=loadDrug,step=1'
+        "-transform_param", 'entity-name=Drug,flow-name=LoadDrug,step=1'
     ]
     jvmArgs = ['-Xmx2G']
 }
@@ -412,7 +412,7 @@ task loadStudyData(type: MlcpTask, group: project.name) {
         "-output_uri_suffix", "\"\"",
         "-transform_module", "/data-hub/5/transforms/mlcp-flow-transform.sjs",
         "-transform_namespace", "http://marklogic.com/data-hub/mlcp-flow-transform",
-        "-transform_param", "entity-name=Study,flow-name=loadStudy,step=1",
+        "-transform_param", "entity-name=Study,flow-name=LoadStudy,step=1",
     ]
 }
 

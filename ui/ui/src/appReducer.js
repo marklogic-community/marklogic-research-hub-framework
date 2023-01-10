@@ -1,4 +1,4 @@
-// import { coreAppReducer } from 'grove-core-react-redux-containers';
+// import { coreAppReducer } from '@marklogic-community/grove-core-react-redux-containers';
 import { combineReducers } from 'redux';
 import { createReducer as createSearchReducer } from '@marklogic-community/grove-search-redux';
 import documents from '@marklogic-community/grove-crud-redux';
