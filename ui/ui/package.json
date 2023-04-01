@@ -16,7 +16,7 @@
     "@marklogic-community/grove-core-react-redux-containers": "github:marklogic-community/grove-core-react-redux-containers.git#1.0.0",
     "highcharts": "^7.2.1",
     "highcharts-react-official": "^2.2.2",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "prop-types": "^15.7.2",
     "query-string": "^6.9.0",
     "react": "^16.12.0",
